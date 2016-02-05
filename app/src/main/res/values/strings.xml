@@ -6,5 +6,7 @@
     <string name="stringStatusIdle">...Idle</string>
     <string name="action_settings">Settings</string>
     <string name="app_title">Sylvac Calipers</string>
-    <string name="help_info"> To use this app.....</string>
+    <string name="help_info">
+        App requires you to grant location permissions in order to scan for Bluetooth devices.
+        Tap a device on the \'Connect\' screen to establish a connection.</string>
 </resources>

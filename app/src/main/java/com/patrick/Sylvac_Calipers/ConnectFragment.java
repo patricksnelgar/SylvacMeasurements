@@ -5,6 +5,7 @@ import android.Manifest;
 import android.app.AlertDialog;
 import android.bluetooth.BluetoothAdapter;
 import android.bluetooth.BluetoothDevice;
+import android.bluetooth.BluetoothGatt;
 import android.bluetooth.BluetoothGattService;
 import android.bluetooth.BluetoothManager;
 import android.bluetooth.le.BluetoothLeScanner;
@@ -40,6 +41,13 @@ import java.util.List;
  */
 public class ConnectFragment extends Fragment {
 
+    public static final String GATT_CONNECTED = "GATT_CONNECTED";
+    public static final String GATT_DISCONNECTED = "GATT_DISCONNECTED";
+    public static final String GATT_SERVICES_DISCOVERED = "GATT_SERVICES_DISCOVERED";
+    public static final String DEVICE_ADDRESS = "DEVICE_ADDRESS";
+    public static final String EXTRA_DATA = "EXTRA_DATA";
+    public static final String DATA_AVAILABLE = "DATA_AVAILABLE";
+    public static final String CHARACTERISTIC_ID = "CHARACTERISTIC_ID";
     public static String TAG = ConnectFragment.class.getName();
     private static final int PERMISSION_REQUEST_COARSE_LOCATION = 1;
     private ArrayList<DiscoveredDevice> mDiscoveredDevices = new ArrayList<>();
@@ -48,7 +56,9 @@ public class ConnectFragment extends Fragment {
     private BluetoothManager mBtManager;
     private BluetoothAdapter mBtAdapter;
     private BluetoothReceiver mBtReciever;
+    private BluetoothGatt mGattDevice;
     private MainActivity mParentActivity;
+    private BluetoothLeGattCallback mCallback;
     private Handler mHandler = new Handler(Looper.getMainLooper());
     private ConnectionManager mConnectionManager;
     private  ListView mListDevices;
@@ -56,8 +66,10 @@ public class ConnectFragment extends Fragment {
     private boolean deviceConnected = false;
     private boolean locationPermRequested = false;
     private SharedPreferences prefs;
-
+    private String mBluetoothDeviceAddress = null;
     private boolean isScanning = false;
+    private BluetoothGatt mBluetoothGatt;
+
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -77,7 +89,29 @@ public class ConnectFragment extends Fragment {
         mBtManager = (BluetoothManager) getActivity().getSystemService(Context.BLUETOOTH_SERVICE);
         mBtAdapter = mBtManager.getAdapter();
 
+        mCallback = new BluetoothLeGattCallback(mConnectionManager);
+
         prefs = PreferenceManager.getDefaultSharedPreferences(mParentActivity);
+
+        if (ContextCompat.checkSelfPermission(mParentActivity, android.Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
+            Log.e(TAG, "Permissions failed");
+            if(!locationPermRequested) {
+                AlertDialog.Builder builder = new AlertDialog.Builder(mParentActivity);
+                builder.setTitle("This app needs location access");
+                builder.setMessage("Please enable location access in order to receive Bluetooth scan results.");
+                builder.setPositiveButton(android.R.string.ok, null);
+                builder.setOnDismissListener(new DialogInterface.OnDismissListener() {
+                    @Override
+                    public void onDismiss(DialogInterface dialog) {
+                        requestPermissions(new String[]{Manifest.permission.ACCESS_COARSE_LOCATION}, PERMISSION_REQUEST_COARSE_LOCATION);
+                    }
+                });
+                builder.show();
+                locationPermRequested = true;
+            }
+        }
+
+        mConnectionManager = new ConnectionManager(mParentActivity, null);
     }
 
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState){
@@ -89,7 +123,7 @@ public class ConnectFragment extends Fragment {
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 Log.i(TAG, "Device at index: " + position + " selected");
                 BluetoothDevice _device = mDiscoveredDevices.get(position).btDevice;
-                connectToDevice(_device);
+                connectToDevice(_device.getAddress());
             }
         });
 
@@ -135,6 +169,7 @@ public class ConnectFragment extends Fragment {
 
         mListDevices.setAdapter(mDeviceAdapter);
 
+
         if (mBtAdapter != null) {
             // Get all the paired bluetooth devices
             for (BluetoothDevice mBtDevice : mBtAdapter.getBondedDevices()) {
@@ -149,9 +184,8 @@ public class ConnectFragment extends Fragment {
                     mDiscoveredDevices.add(new DiscoveredDevice(mBtDevice.getName() + " ", true, "", mBtDevice.getAddress(), mBtDevice));
                 }
             }
+            mDeviceAdapter.notifyDataSetChanged();
         }
-
-        mDeviceAdapter.notifyDataSetChanged();
 
     }
 
@@ -163,82 +197,91 @@ public class ConnectFragment extends Fragment {
             return;
         } else {
             mBluetoothScanner = mBtAdapter.getBluetoothLeScanner();
-            prepareForScan();
+            scanForDevices(true);
         }
     }
+
     @Override
-    public void onDestroyView() {
-        super.onDestroyView();
-        stopScan();
-    }
-
-    public void connectToDevice(BluetoothDevice btDevice){
-        if(isConnecting || deviceConnected) {
-            mHandler.post(new Runnable() {
-                @Override
-                public void run() {
-                    Toast.makeText(ConnectFragment.this.mParentActivity, "Communication is busy", Toast.LENGTH_SHORT).show();
-                }
-            });
-        } else{
-            this.mConnectionManager = new ConnectionManager(this.mParentActivity, btDevice.getAddress());
-            this.mConnectionManager.connect();
+    public void onPause() {
+        super.onPause();
+        if(mBluetoothScanner != null){
+            scanForDevices(false);
         }
     }
 
-    private void prepareForScan(){
-        if(mBtAdapter == null || mBtManager == null || mBluetoothScanner == null){
-            Log.i(TAG, "Cannot scan, null objects");
+    @Override
+    public void onDestroy() {
+        if(mConnectionManager.getBluetoothGatt() == null) {
+            super.onDestroy();
             return;
         }
-        if(isScanning || isConnecting){
-            return;
-        }else {
-            this.isScanning = true;
+        mConnectionManager.removeBluetoothGatt();
+        super.onDestroy();
+    }
 
-            if (ContextCompat.checkSelfPermission(mParentActivity, android.Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
-                Log.e(TAG, "Permissions failed");
-                if(!locationPermRequested) {
-                    AlertDialog.Builder builder = new AlertDialog.Builder(mParentActivity);
-                    builder.setTitle("This app needs location access");
-                    builder.setMessage("Please enable location access in order to receive Bluetooth scan results.");
-                    builder.setPositiveButton(android.R.string.ok, null);
-                    builder.setOnDismissListener(new DialogInterface.OnDismissListener() {
-                        @Override
-                        public void onDismiss(DialogInterface dialog) {
-                            requestPermissions(new String[]{Manifest.permission.ACCESS_COARSE_LOCATION}, PERMISSION_REQUEST_COARSE_LOCATION);
-                        }
-                    });
-                    builder.show();
-                    locationPermRequested = true;
-                }
-            } else {
-                mBluetoothScanner.startScan(null, new ScanSettings.Builder().setScanMode(ScanSettings.SCAN_MODE_LOW_LATENCY).build(), this.scanCallback);
+    public void scanForDevices(boolean scan){
+
+        if(mBtAdapter.isEnabled()){
+            if(scan){
                 Log.i(TAG, "Scanning for devices");
-                mHandler.postDelayed(new Runnable() {
-                    @Override
-                    public void run() {
-                        if (ConnectFragment.this.isScanning)
-                            ConnectFragment.this.stopScan();
-                    }
-                }, 15000L);
+                mBluetoothScanner.startScan(null, new ScanSettings.Builder().setScanMode(ScanSettings.SCAN_MODE_LOW_LATENCY).build(), scanCallback);
+            } else {
+                Log.i(TAG, "Stopping scan");
+                mBluetoothScanner.stopScan(scanCallback);
             }
         }
     }
 
-    private void stopScan(){
-        Log.i(TAG, "Scanning stoppedd");
-        this.isScanning = false;
-        mBluetoothScanner.stopScan(this.scanCallback);
-        if(!isConnecting) prepareForScan();
+    public boolean connectToDevice(String mAddress){
+        scanForDevices(false);
+        if(mBtAdapter == null || mAddress == null){
+            Log.i(TAG, "BluetoothAdapter not initialized or invalid address");
+            return false;
+        }
+        if (mBluetoothDeviceAddress != null && mAddress.equals(mBluetoothDeviceAddress) && mBluetoothGatt != null){
+            Log.i(TAG, "Trying to use an existing connection");
+            if(mBluetoothGatt.connect()){
+                // We are connected
+                return true;
+            } else {
+                return false;
+            }
+        }
+
+        final BluetoothDevice _device = mBtAdapter.getRemoteDevice(mAddress);
+        if(_device == null){
+            Log.w(TAG, "Device not found");
+            return false;
+        }
+
+        mBluetoothGatt = _device.connectGatt(mParentActivity, false, mCallback);
+        Log.i(TAG, "Trying to create a new connection");
+        mBluetoothDeviceAddress = mAddress;
+        return true;
+    }
+
+    public void disconnect(){
+        if(mBtAdapter == null || mBluetoothGatt == null) {
+            Log.i(TAG, "BluetoothAdapter not initialized");
+            return;
+        }
+
+        mBluetoothGatt.disconnect();
+    }
+
+    public void close(){
+        if(mBluetoothGatt == null) return;
+
+        mBluetoothGatt.close();
+        mBluetoothGatt = null;
     }
 
     private static IntentFilter makeGattUpdateIntentFilter() {
         IntentFilter localIntentFilter = new IntentFilter();
-        localIntentFilter.addAction("Connexion reussi");
-        localIntentFilter.addAction("Deconnexion reussi ou inattendue");
-        localIntentFilter.addAction("Services decouverts");
-        localIntentFilter.addAction("Donnees transmises");
+        localIntentFilter.addAction(DATA_AVAILABLE);
+        localIntentFilter.addAction(GATT_CONNECTED);
+        localIntentFilter.addAction(GATT_DISCONNECTED);
+        localIntentFilter.addAction(GATT_SERVICES_DISCOVERED);
         return localIntentFilter;
     }
 
@@ -251,12 +294,24 @@ public class ConnectFragment extends Fragment {
         public void onScanResult(int callbackType, ScanResult result) {
             Log.i(TAG, "ScanResult: " + result.toString());
             BluetoothDevice _device = result.getDevice();
-            DiscoveredDevice _mDevice = new DiscoveredDevice(_device.getName(), false, "", _device.getAddress(), _device);
-            if (!mDiscoveredDevices.contains(_mDevice) || mDiscoveredDevices.size() == 0) {
-                mDiscoveredDevices.add(_mDevice);
-                Log.i(TAG, "New device discovered! " + _device.getName());
+            if(prefs.getBoolean("sylvac_devices", false)) {
+                if (_device.getName().matches("^(SY|IBRBLE|MTY).*$")) {
+                    DiscoveredDevice _mDevice = new DiscoveredDevice(_device.getName(), false, "", _device.getAddress(), _device);
+                    if (!mDiscoveredDevices.contains(_mDevice) || mDiscoveredDevices.size() == 0) {
+                        mDiscoveredDevices.add(_mDevice);
+                        Log.i(TAG, "New device discovered! " + _device.getName());
+                        mDeviceAdapter.notifyDataSetChanged();
+                    }
+                }
+            } else {
+                DiscoveredDevice _mDevice = new DiscoveredDevice(_device.getName(), false, "", _device.getAddress(), _device);
+                if (!mDiscoveredDevices.contains(_mDevice) || mDiscoveredDevices.size() == 0) {
+                    mDiscoveredDevices.add(_mDevice);
+                    Log.i(TAG, "New device discovered! " + _device.getName());
+                    mDeviceAdapter.notifyDataSetChanged();
+                }
             }
-            mDeviceAdapter.notifyDataSetChanged();
+
         }
 
         @Override

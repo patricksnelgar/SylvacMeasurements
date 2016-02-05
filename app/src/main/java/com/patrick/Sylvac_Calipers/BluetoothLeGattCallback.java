@@ -4,7 +4,11 @@ import android.bluetooth.BluetoothGatt;
 import android.bluetooth.BluetoothGattCallback;
 import android.bluetooth.BluetoothGattCharacteristic;
 import android.bluetooth.BluetoothGattDescriptor;
+import android.bluetooth.BluetoothProfile;
+import android.os.Handler;
+import android.os.Looper;
 import android.util.Log;
+import android.widget.Toast;
 
 /**
  * Created by Patrick on 27/01/2016.
@@ -13,6 +17,11 @@ public class BluetoothLeGattCallback extends BluetoothGattCallback {
 
     private static final String TAG = BluetoothLeGattCallback.class.getSimpleName();
     private static ConnectionManager mConnectionManager;
+    private Handler mHandler = new Handler(Looper.getMainLooper());
+
+    private static final int STATE_DISCONNECTED = 0;
+    private static final int STATE_CONNECTING = 1;
+    private static final int STATE_CONNECTED = 2;
 
     public BluetoothLeGattCallback(ConnectionManager pConMan){
         this.mConnectionManager = pConMan;
@@ -20,72 +29,47 @@ public class BluetoothLeGattCallback extends BluetoothGattCallback {
 
     @Override
     public void onCharacteristicChanged(BluetoothGatt gatt, BluetoothGattCharacteristic bluetoothCharacteristic) {
-        Log.i(TAG, "Characteristic changed");
-        mConnectionManager.broadcastUpdate("Donnees transmises", bluetoothCharacteristic);
+        mConnectionManager.broadcastUpdate(ConnectFragment.DATA_AVAILABLE, bluetoothCharacteristic);
     }
 
     @Override
     public void onCharacteristicRead(BluetoothGatt gatt, BluetoothGattCharacteristic bluetoothCharacteristic, int status) {
-        Log.i(TAG, "Reading data");
-        if(status == 0)
-            mConnectionManager.broadcastUpdate("Donnees transmises", bluetoothCharacteristic);
+       if(status == BluetoothGatt.GATT_SUCCESS)
+            mConnectionManager.broadcastUpdate(ConnectFragment.DATA_AVAILABLE, bluetoothCharacteristic);
     }
 
     @Override
     public void onConnectionStateChange(BluetoothGatt gatt, int status, int newState) {
-        ConnectionState lConnectionState = mConnectionManager.getConnectionState();
-        if(newState == 2) {
-            mConnectionManager.removeTimeout();
-            if (status == 0) {
-                Log.i(TAG, "Connection successful, finalize");
-                mConnectionManager.startServiceDiscovery();
+        if(newState == BluetoothProfile.STATE_CONNECTED) {
+            Log.i(TAG, "Connection successful, finalize");
+            mConnectionManager.broadcastUpdate(ConnectFragment.GATT_CONNECTED);
+            gatt.discoverServices();
 
-            }
+        } else if(newState == BluetoothProfile.STATE_DISCONNECTED){
+            mConnectionManager.broadcastUpdate(ConnectFragment.GATT_DISCONNECTED);
         }
 
-        //state disconnected
-        if(newState == 0) mConnectionManager.setConnectionState(ConnectionState.NOT_CONNECTED);
-        /*
-        do{
-            if(lConnectionState == ConnectionState.CONNECTING){
-                Log.i(TAG, "Trying to connect... status: " + status);
-                mConnectionManager.redoConnection(ConnectionState.NOT_CONNECTED);
-                return;
-            }
-            Log.i(TAG, "Trying to connect... status: " + status);
-            mConnectionManager.redoConnection(ConnectionState.UNDESIRED_CONNECTION);
-
-            if(newState != 0){
-                break;
-            }
-
-            Log.i(TAG, "Disconnection successful or unexpected");
-            mConnectionManager.broadcastUpdate("Disconnection successful or unexpected");
-        } while (lConnectionState == ConnectionState.DESIRED_DISCONNECTION);
-
-        Log.i(TAG, "Undesired disconnection from: " + gatt.getDevice().getAddress());
-        mConnectionManager.redoConnection(ConnectionState.UNDESIRED_DISCONNECTION);
-        return;
-        */
     }
 
     @Override
     public void onDescriptorWrite(BluetoothGatt gatt, BluetoothGattDescriptor descriptor, int status) {
         if(status == 0){
-            Log.i(TAG, "Notification active!");
+            Log.i(TAG, "Notification actually active!");
         }
         descriptor.setValue(BluetoothGattDescriptor.ENABLE_NOTIFICATION_VALUE);
         gatt.writeDescriptor(descriptor);
-        mConnectionManager.setConnectionState(ConnectionState.CONNECTED);
+
     }
 
     @Override
     public void onServicesDiscovered(BluetoothGatt gatt, int status) {
-        // status  = 0 when the device has been explored successfully
-        //if(status != 0)
-        //    mConnectionManager.serviceDiscovered(true);
-        if(status == 0){
-            mConnectionManager.registerToServices();
+        if (status == BluetoothGatt.GATT_SUCCESS){
+            mConnectionManager.broadcastUpdate(ConnectFragment.GATT_SERVICES_DISCOVERED);
+            CommunicationManager.enableNotification(gatt);
+            CommunicationManager.enableIndication(gatt);
+        } else {
+            Log.i(TAG, " onServicesDiscovered received: " + status);
         }
+
     }
 }

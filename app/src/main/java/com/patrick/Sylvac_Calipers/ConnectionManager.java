@@ -61,8 +61,6 @@ public class ConnectionManager implements CommunicationCharacteristics{
                 }
             }
         };
-
-        makeConnection();
     }
 
     public boolean initializeBluetooth(){
@@ -94,12 +92,15 @@ public class ConnectionManager implements CommunicationCharacteristics{
     }
 
     public void makeConnection(){
-        switch (this.currentState){
+        switch (currentState){
             case CONNECTING:
+                Log.i(TAG, "makeConnection() - Connecting state");
+                break;
             case DESIRED_DISCONNECTION:
+                break;
             case NOT_CONNECTED:
-            default:
-                return;
+                connect();
+                break;
             case CONNECTED:
                 if(!this.hasLock) take();
                 if(this.hasLock){
@@ -117,25 +118,21 @@ public class ConnectionManager implements CommunicationCharacteristics{
                 }
                 release();
                 return;
+            default:
+                return;
         }
-        //closeGatt();
     }
 
     public boolean connect(){
+        this.callback = new BluetoothLeGattCallback(this);
         if(mBluetoothAdpater == null || this.deviceAddress == null) Log.i(TAG, "Adapter or device address not set");
-        do{
-            BluetoothDevice lBluetoothDevice = mBluetoothAdpater.getRemoteDevice(this.deviceAddress);
-            if(lBluetoothDevice == null){
-                Log.i(TAG, "Could not find instrument");
-                return false;
-            }
-            this.mHandler.postDelayed(this.timeoutRunnable, 12000L);
-            if(this.deviceAddress != null && this.mBluetoothGatt != null){
-                return this.mBluetoothGatt.connect();
-            }
-            this.callback = new BluetoothLeGattCallback(this);
-            this.mBluetoothGatt = lBluetoothDevice.connectGatt(this.parent, false, this.callback);
-        } while(this.mBluetoothGatt == null);
+        BluetoothDevice lBluetoothDevice = mBluetoothAdpater.getRemoteDevice(this.deviceAddress);
+        if(lBluetoothDevice == null){
+            Log.i(TAG, "Could not find instrument");
+            return false;
+        }
+
+        this.mBluetoothGatt = lBluetoothDevice.connectGatt(this.parent, false, this.callback);
         return true;
     }
 
@@ -152,35 +149,13 @@ public class ConnectionManager implements CommunicationCharacteristics{
         mBluetoothGatt = lBluetoothDevice.connectGatt(this.parent, false, this.callback);
     }
 
-    public void finishConnection(){
-        ConnectionState lConnectionState = ConnectionState.RECONNECTING;
-        broadcastUpdate("Connexion reussi");
-        if(this.mBluetoothGatt == null){
-            Log.i(TAG, "Undesired connection");
-            redoConnection(ConnectionState.UNDESIRED_CONNECTION);
-            return;
-        }
-        Log.i(TAG, "Starting service discovery");
-        this.mBluetoothGatt.discoverServices();
-    }
-
-    private void closeGatt(){
+    public void closeGatt(){
         if(this.mBluetoothGatt != null){
             this.mBluetoothGatt.disconnect();
             this.mBluetoothGatt.close();
             this.mBluetoothGatt = null;
         }
     }
-
-    public void startServiceDiscovery(){
-        mBluetoothGatt.discoverServices();
-    }
-
-    public void registerToServices(){
-        CommunicationManager.enableIndication(mBluetoothGatt);
-        CommunicationManager.enableNotification(mBluetoothGatt);
-    }
-
 
     public void setConnectionState(com.patrick.Sylvac_Calipers.ConnectionState pConnectionState){
         this.previousState = this.currentState;
@@ -189,10 +164,6 @@ public class ConnectionManager implements CommunicationCharacteristics{
 
     private void connectionTimeout(){
         this.mHandler.postDelayed(this.timeoutRunnable, 12000L);
-    }
-
-    public void removeTimeout(){
-        this.mHandler.removeCallbacks(this.timeoutRunnable);
     }
 
     private void take(){
@@ -225,19 +196,30 @@ public class ConnectionManager implements CommunicationCharacteristics{
     }
 
     public void broadcastUpdate(String intentAction){
-        LocalBroadcastManager.getInstance(this.parent).sendBroadcast(new Intent(intentAction).putExtra("DEVICE_ADDRESS", this.deviceAddress));
+        LocalBroadcastManager.getInstance(this.parent).sendBroadcast(new Intent(intentAction).putExtra(ConnectFragment.DEVICE_ADDRESS, this.deviceAddress));
     }
 
     public void broadcastUpdate(String intentAction, BluetoothGattCharacteristic recievedCharacteristic){
         Intent _intent = new Intent(intentAction);
-        _intent.putExtra("DEVICE_ADDRESS", this.deviceAddress);
+        _intent.putExtra(ConnectFragment.DEVICE_ADDRESS, this.deviceAddress);
         if((TX_ANSWER_FROM_INSTRUMENT_UUID.equals(recievedCharacteristic.getUuid())) || (TX_RECEIVED_DATA_UUID.equals(recievedCharacteristic.getUuid()))){
             byte[] characteristicValue = recievedCharacteristic.getValue();
-            _intent.putExtra("NUM_CANAL", recievedCharacteristic.getUuid().toString());
-            if(characteristicValue != null && characteristicValue.length > 0) _intent.putExtra("EXTRA_DATA", characteristicValue);
+            _intent.putExtra(ConnectFragment.CHARACTERISTIC_ID, recievedCharacteristic.getUuid().toString());
+            if(characteristicValue != null && characteristicValue.length > 0) _intent.putExtra(ConnectFragment.EXTRA_DATA, characteristicValue);
         }
         LocalBroadcastManager.getInstance(this.parent).sendBroadcast(_intent);
     }
 
     public ConnectionState getConnectionState() { return this.currentState; }
+
+    public MainActivity getMainActivity() { return parent; }
+
+    public BluetoothDevice getBluetoothDevice() { return mBluetoothGatt.getDevice(); }
+
+    public BluetoothGatt getBluetoothGatt() { return mBluetoothGatt; }
+
+    public void removeBluetoothGatt(){
+        mBluetoothGatt.close();
+        mBluetoothGatt = null;
+    }
 }
