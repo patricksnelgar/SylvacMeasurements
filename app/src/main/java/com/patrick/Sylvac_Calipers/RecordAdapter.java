@@ -1,0 +1,34 @@
+package com.patrick.Sylvac_Calipers;
+
+import android.content.Context;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.ArrayAdapter;
+import android.widget.TextView;
+
+import java.util.List;
+
+/**
+ * Created by Patrick on 12/02/2016.
+ */
+public class RecordAdapter extends ArrayAdapter<Record> {
+
+    public RecordAdapter(Context context, int resourceID, List<Record> records){
+        super(context, resourceID, records);
+    }
+
+    public View getView(int position, View convertView, ViewGroup parent){
+        Record _single = getItem(position);
+
+        if(convertView == null) convertView = LayoutInflater.from(getContext()).inflate(R.layout.single_record, parent, false);
+
+        TextView textViewID = (TextView) convertView.findViewById(R.id.textRecordID);
+        TextView textViewData = (TextView) convertView.findViewById(R.id.textRecordData);
+
+        textViewID.setText(_single.getEntryID().trim());
+        textViewData.setText(_single.getMeasurementsString());
+
+        return convertView;
+    }
+}

@@ -18,20 +18,23 @@ public class BluetoothReceiver extends BroadcastReceiver {
         String extra = (String)intent.getCharSequenceExtra("DEVICE_ADDRESS");
         Log.i(TAG, "Action received: " + action + " from: " + extra);
         switch (action){
-            case "Donnees transmises":
+            case ConnectFragment.DATA_AVAILABLE:
                 String extraData = new String(intent.getByteArrayExtra("EXTRA_DATA"));
                 String canal = (String)intent.getCharSequenceExtra("NUM_CANAL");
                 Log.i(TAG, "Extra data: " + extraData + " Canal: " + canal);
                 break;
-            case "Connexion reussi":
+            case ConnectFragment.GATT_CONNECTED:
                 Log.i(TAG, "Device Connected!");
                 break;
-            case "Deconnexion reussi ou inattendue":
+            case ConnectFragment.GATT_DISCONNECTED:
                 Log.i(TAG, "Instrument disconnected");
                 break;
-            case "Services decouverts":
+            case ConnectFragment.GATT_SERVICES_DISCOVERED:
                 Log.i(TAG, "Services discovered!");
+            case ConnectFragment.CONNECTION_COMPLETE:
+                Log.i(TAG, "CONNECTION_COMPLETE");
             default:
+                Log.w(TAG, "Action not handled: " + action);
                 break;
         }
     }

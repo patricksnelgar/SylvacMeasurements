@@ -16,13 +16,6 @@ import android.util.Log;
  */
 public class ConnectionManager implements CommunicationCharacteristics{
 
-    public enum BondState {
-        DEVICE_ONLY,
-        INSTRUMENT_ONLY,
-        TWO_WAY,
-        NO_BOND
-    }
-
     private static final String TAG = ConnectionManager.class.getSimpleName();
     private static final Object lock = new Object();
     private static BluetoothAdapter mBluetoothAdpater;

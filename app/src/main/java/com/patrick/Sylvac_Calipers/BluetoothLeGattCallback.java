@@ -34,27 +34,33 @@ public class BluetoothLeGattCallback extends BluetoothGattCallback {
 
     @Override
     public void onCharacteristicRead(BluetoothGatt gatt, BluetoothGattCharacteristic bluetoothCharacteristic, int status) {
-       if(status == BluetoothGatt.GATT_SUCCESS)
+       /*if(status == BluetoothGatt.GATT_SUCCESS)
             mConnectionManager.broadcastUpdate(ConnectFragment.DATA_AVAILABLE, bluetoothCharacteristic);
+            */
+        Log.i(TAG, "Characteristic read: " + bluetoothCharacteristic.getUuid());
     }
 
     @Override
     public void onConnectionStateChange(BluetoothGatt gatt, int status, int newState) {
+        Log.i(TAG,"status: "+status+" newState: "+newState );
         if(newState == BluetoothProfile.STATE_CONNECTED) {
-            Log.i(TAG, "Connection successful, finalize");
-            mConnectionManager.broadcastUpdate(ConnectFragment.GATT_CONNECTED);
-            gatt.discoverServices();
+            if(status == BluetoothGatt.GATT_SUCCESS) {
+                Log.i(TAG, "Connection successful, finalize");
+                mConnectionManager.broadcastUpdate(ConnectFragment.GATT_CONNECTED);
+                gatt.discoverServices();
+                Log.i(TAG, "Bond = " + gatt.getDevice().getBondState());
+            }
 
         } else if(newState == BluetoothProfile.STATE_DISCONNECTED){
             mConnectionManager.broadcastUpdate(ConnectFragment.GATT_DISCONNECTED);
         }
-
     }
 
     @Override
     public void onDescriptorWrite(BluetoothGatt gatt, BluetoothGattDescriptor descriptor, int status) {
         if(status == 0){
             Log.i(TAG, "Notification actually active!");
+            mConnectionManager.broadcastUpdate(ConnectFragment.CONNECTION_COMPLETE);
         }
         descriptor.setValue(BluetoothGattDescriptor.ENABLE_NOTIFICATION_VALUE);
         gatt.writeDescriptor(descriptor);
@@ -63,13 +69,8 @@ public class BluetoothLeGattCallback extends BluetoothGattCallback {
 
     @Override
     public void onServicesDiscovered(BluetoothGatt gatt, int status) {
-        if (status == BluetoothGatt.GATT_SUCCESS){
-            mConnectionManager.broadcastUpdate(ConnectFragment.GATT_SERVICES_DISCOVERED);
-            CommunicationManager.enableNotification(gatt);
-            CommunicationManager.enableIndication(gatt);
-        } else {
-            Log.i(TAG, " onServicesDiscovered received: " + status);
-        }
-
+        mConnectionManager.broadcastUpdate(ConnectFragment.GATT_SERVICES_DISCOVERED);
+        CommunicationManager.enableNotification(gatt);
+        CommunicationManager.enableIndication(gatt);
     }
 }

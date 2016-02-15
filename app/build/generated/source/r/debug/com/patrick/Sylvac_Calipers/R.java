@@ -2230,7 +2230,7 @@ containing a value of this type.
     }
     public static final class id {
         public static final int action0=0x7f0c0079;
-        public static final int action_about=0x7f0c008d;
+        public static final int action_about=0x7f0c0091;
         public static final int action_bar=0x7f0c005a;
         public static final int action_bar_activity_content=0x7f0c0000;
         public static final int action_bar_container=0x7f0c0059;
@@ -2238,22 +2238,22 @@ containing a value of this type.
         public static final int action_bar_spinner=0x7f0c0001;
         public static final int action_bar_subtitle=0x7f0c003b;
         public static final int action_bar_title=0x7f0c003a;
-        public static final int action_bluetooth=0x7f0c0088;
-        public static final int action_bluetooth_settings=0x7f0c008a;
+        public static final int action_bluetooth=0x7f0c008c;
+        public static final int action_bluetooth_settings=0x7f0c008e;
         public static final int action_context_bar=0x7f0c005b;
         public static final int action_divider=0x7f0c007d;
-        public static final int action_help=0x7f0c008c;
+        public static final int action_help=0x7f0c0090;
         public static final int action_menu_divider=0x7f0c0002;
         public static final int action_menu_presenter=0x7f0c0003;
         public static final int action_mode_bar=0x7f0c0057;
         public static final int action_mode_bar_stub=0x7f0c0056;
         public static final int action_mode_close_button=0x7f0c003c;
-        public static final int action_save=0x7f0c0089;
-        public static final int action_settings=0x7f0c008b;
+        public static final int action_save=0x7f0c008d;
+        public static final int action_settings=0x7f0c008f;
         public static final int activity_chooser_view_content=0x7f0c003d;
         public static final int alertTitle=0x7f0c0049;
         public static final int always=0x7f0c0032;
-        public static final int app_menu=0x7f0c0087;
+        public static final int app_menu=0x7f0c008b;
         public static final int beginning=0x7f0c0030;
         public static final int bondedDevice=0x7f0c006c;
         public static final int bottom=0x7f0c001c;
@@ -2277,7 +2277,7 @@ containing a value of this type.
         public static final int design_menu_item_text=0x7f0c0072;
         public static final int design_navigation_view=0x7f0c0071;
         public static final int disableHome=0x7f0c000e;
-        public static final int discoveredDeviceName=0x7f0c006b;
+        public static final int editCurrentID=0x7f0c008a;
         public static final int edit_query=0x7f0c005c;
         public static final int end=0x7f0c0020;
         public static final int end_padder=0x7f0c0085;
@@ -2295,14 +2295,15 @@ containing a value of this type.
         public static final int icon=0x7f0c0042;
         public static final int ifRoom=0x7f0c0034;
         public static final int image=0x7f0c003f;
-        public static final int imageView=0x7f0c006a;
         public static final int info=0x7f0c0084;
         public static final int item_touch_helper_previous_elevation=0x7f0c0005;
+        public static final int layoutRecordIDSection=0x7f0c0088;
         public static final int left=0x7f0c0022;
         public static final int line1=0x7f0c007e;
         public static final int line3=0x7f0c0082;
         public static final int listDicoveredDevices=0x7f0c006d;
         public static final int listMode=0x7f0c000b;
+        public static final int listRecordEntries=0x7f0c0087;
         public static final int list_item=0x7f0c0041;
         public static final int media_actions=0x7f0c007c;
         public static final int middle=0x7f0c0031;
@@ -2358,6 +2359,9 @@ containing a value of this type.
         public static final int tab_layout=0x7f0c0076;
         public static final int text=0x7f0c0083;
         public static final int text2=0x7f0c0081;
+        public static final int textCurrentIDLabel=0x7f0c0089;
+        public static final int textRecordData=0x7f0c006b;
+        public static final int textRecordID=0x7f0c006a;
         public static final int textSpacerNoButtons=0x7f0c004d;
         public static final int time=0x7f0c007f;
         public static final int title=0x7f0c0043;
@@ -2436,7 +2440,8 @@ containing a value of this type.
         public static final int select_dialog_item_material=0x7f030034;
         public static final int select_dialog_multichoice_material=0x7f030035;
         public static final int select_dialog_singlechoice_material=0x7f030036;
-        public static final int support_simple_spinner_dropdown_item=0x7f030037;
+        public static final int single_record=0x7f030037;
+        public static final int support_simple_spinner_dropdown_item=0x7f030038;
     }
     public static final class menu {
         public static final int menu=0x7f0d0000;

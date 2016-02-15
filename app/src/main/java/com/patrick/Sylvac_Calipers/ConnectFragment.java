@@ -12,8 +12,10 @@ import android.bluetooth.le.BluetoothLeScanner;
 import android.bluetooth.le.ScanCallback;
 import android.bluetooth.le.ScanResult;
 import android.bluetooth.le.ScanSettings;
+import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.content.IntentFilter;
 import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
@@ -48,6 +50,7 @@ public class ConnectFragment extends Fragment {
     public static final String EXTRA_DATA = "EXTRA_DATA";
     public static final String DATA_AVAILABLE = "DATA_AVAILABLE";
     public static final String CHARACTERISTIC_ID = "CHARACTERISTIC_ID";
+    public static final String CONNECTION_COMPLETE = "CONNECTION_COMPLETE";
     public static String TAG = ConnectFragment.class.getName();
     private static final int PERMISSION_REQUEST_COARSE_LOCATION = 1;
     private ArrayList<DiscoveredDevice> mDiscoveredDevices = new ArrayList<>();
@@ -81,6 +84,7 @@ public class ConnectFragment extends Fragment {
         // Set up the class to handle data from the calipers
         mBtReciever = new BluetoothReceiver();
         LocalBroadcastManager.getInstance(getActivity()).registerReceiver(mBtReciever, makeGattUpdateIntentFilter());
+        LocalBroadcastManager.getInstance(getActivity()).registerReceiver(btReceiver, new IntentFilter(BluetoothAdapter.ACTION_STATE_CHANGED));
 
         // Set up the custom ArrayAdapter for the ListView
         mDeviceAdapter = new DeviceAdapter(getActivity(), mDiscoveredDevices);
@@ -88,7 +92,7 @@ public class ConnectFragment extends Fragment {
         // Getting the Bluetooth Adapter
         mBtManager = (BluetoothManager) getActivity().getSystemService(Context.BLUETOOTH_SERVICE);
         mBtAdapter = mBtManager.getAdapter();
-
+        mConnectionManager = new ConnectionManager(mParentActivity, null);
         mCallback = new BluetoothLeGattCallback(mConnectionManager);
 
         prefs = PreferenceManager.getDefaultSharedPreferences(mParentActivity);
@@ -110,8 +114,6 @@ public class ConnectFragment extends Fragment {
                 locationPermRequested = true;
             }
         }
-
-        mConnectionManager = new ConnectionManager(mParentActivity, null);
     }
 
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState){
@@ -282,6 +284,7 @@ public class ConnectFragment extends Fragment {
         localIntentFilter.addAction(GATT_CONNECTED);
         localIntentFilter.addAction(GATT_DISCONNECTED);
         localIntentFilter.addAction(GATT_SERVICES_DISCOVERED);
+        localIntentFilter.addAction(CONNECTION_COMPLETE);
         return localIntentFilter;
     }
 
@@ -323,6 +326,30 @@ public class ConnectFragment extends Fragment {
         @Override
         public void onScanFailed(int errorCode) {
             Log.e(TAG, "Scan failed with error code: " + errorCode);
+        }
+    };
+
+    private final BroadcastReceiver btReceiver = new BroadcastReceiver() {
+        @Override
+        public void onReceive(Context context, Intent intent) {
+            final String action = intent.getAction();
+            if(action.equals(BluetoothAdapter.ACTION_STATE_CHANGED)){
+                final int state = intent.getIntExtra(BluetoothAdapter.EXTRA_STATE, BluetoothAdapter.ERROR);
+
+                switch (state){
+                    case BluetoothAdapter.STATE_ON:
+                        Log.i(TAG, "BLUETOOTH ON");
+                        scanForDevices(true);
+                        break;
+                    case BluetoothAdapter.STATE_OFF:
+                        Log.i(TAG, "BLUETOOTH OFF");
+                        scanForDevices(false);
+                        break;
+                    default:
+                        break;
+                }
+            }
+
         }
     };
 }

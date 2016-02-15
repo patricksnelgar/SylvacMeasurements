@@ -26,7 +26,7 @@ public class DeviceAdapter extends ArrayAdapter<DiscoveredDevice> {
             convertView = LayoutInflater.from(getContext()).inflate(R.layout.bluetooth_device, parent, false);
         }
 
-        TextView mName = (TextView) convertView.findViewById(R.id.discoveredDeviceName);
+        TextView mName = (TextView) convertView.findViewById(R.id.textRecordData);
         CheckBox mBonded = (CheckBox) convertView.findViewById(R.id.bondedDevice);
 
         mName.setText(mDevice.name);
