@@ -2230,7 +2230,7 @@ containing a value of this type.
     }
     public static final class id {
         public static final int action0=0x7f0c0079;
-        public static final int action_about=0x7f0c0091;
+        public static final int action_about=0x7f0c0092;
         public static final int action_bar=0x7f0c005a;
         public static final int action_bar_activity_content=0x7f0c0000;
         public static final int action_bar_container=0x7f0c0059;
@@ -2238,22 +2238,22 @@ containing a value of this type.
         public static final int action_bar_spinner=0x7f0c0001;
         public static final int action_bar_subtitle=0x7f0c003b;
         public static final int action_bar_title=0x7f0c003a;
-        public static final int action_bluetooth=0x7f0c008c;
-        public static final int action_bluetooth_settings=0x7f0c008e;
+        public static final int action_bluetooth=0x7f0c008d;
+        public static final int action_bluetooth_settings=0x7f0c008f;
         public static final int action_context_bar=0x7f0c005b;
         public static final int action_divider=0x7f0c007d;
-        public static final int action_help=0x7f0c0090;
+        public static final int action_help=0x7f0c0091;
         public static final int action_menu_divider=0x7f0c0002;
         public static final int action_menu_presenter=0x7f0c0003;
         public static final int action_mode_bar=0x7f0c0057;
         public static final int action_mode_bar_stub=0x7f0c0056;
         public static final int action_mode_close_button=0x7f0c003c;
-        public static final int action_save=0x7f0c008d;
-        public static final int action_settings=0x7f0c008f;
+        public static final int action_save=0x7f0c008e;
+        public static final int action_settings=0x7f0c0090;
         public static final int activity_chooser_view_content=0x7f0c003d;
         public static final int alertTitle=0x7f0c0049;
         public static final int always=0x7f0c0032;
-        public static final int app_menu=0x7f0c008b;
+        public static final int app_menu=0x7f0c008c;
         public static final int beginning=0x7f0c0030;
         public static final int bondedDevice=0x7f0c006c;
         public static final int bottom=0x7f0c001c;
@@ -2360,6 +2360,7 @@ containing a value of this type.
         public static final int text=0x7f0c0083;
         public static final int text2=0x7f0c0081;
         public static final int textCurrentIDLabel=0x7f0c0089;
+        public static final int textCurrentRecordData=0x7f0c008b;
         public static final int textRecordData=0x7f0c006b;
         public static final int textRecordID=0x7f0c006a;
         public static final int textSpacerNoButtons=0x7f0c004d;

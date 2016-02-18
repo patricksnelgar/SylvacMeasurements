@@ -3,7 +3,7 @@
     <!-- ################ Design heights (materil design spec) ################ -->
     <dimen name="material_action_bar_height">56dp</dimen>
     <dimen name="material_tab_strip_height">48dp</dimen>
-    <!-- ################ Design heights (materil design spec) ################ -->
+    <!-- ################ Design heights (material design spec) ################ -->
 
     <!-- ################ Elevation defaults (material design spec) ################ -->
     <dimen name="material_elevation_dialog">24dp</dimen>

@@ -24,10 +24,10 @@
             android:key="sylvac_devices"
             android:summary="Show only Sylvac devices in the connect screen"
             android:defaultValue="true" />
-        <SwitchPreference
+        <!--<SwitchPreference
             android:title="Auto Connect"
             android:key="auto_connect"
             android:summary="Connect to previously paired devices automatically"
-            android:defaultValue="false" />
+            android:defaultValue="false" /> -->
     </PreferenceCategory>
 </PreferenceScreen>

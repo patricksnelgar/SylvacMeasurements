@@ -1,6 +1,7 @@
 package com.patrick.Sylvac_Calipers;
 
 import android.content.Context;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -14,12 +15,17 @@ import java.util.List;
  */
 public class RecordAdapter extends ArrayAdapter<Record> {
 
-    public RecordAdapter(Context context, int resourceID, List<Record> records){
+    private static final String TAG = RecordAdapter.class.getSimpleName();
+    private DataReceiver mDataReceiver;
+
+    public RecordAdapter(Context context, int resourceID, List<Record> records, DataReceiver mDataReceiver){
         super(context, resourceID, records);
+        this.mDataReceiver = mDataReceiver;
     }
 
     public View getView(int position, View convertView, ViewGroup parent){
         Record _single = getItem(position);
+        //Log.i(TAG, "building view for position:"+position);
 
         if(convertView == null) convertView = LayoutInflater.from(getContext()).inflate(R.layout.single_record, parent, false);
 
@@ -27,7 +33,7 @@ public class RecordAdapter extends ArrayAdapter<Record> {
         TextView textViewData = (TextView) convertView.findViewById(R.id.textRecordData);
 
         textViewID.setText(_single.getEntryID().trim());
-        textViewData.setText(_single.getMeasurementsString());
+        textViewData.setText(_single.getMeasurementsString(mDataReceiver.numDataPoints));
 
         return convertView;
     }

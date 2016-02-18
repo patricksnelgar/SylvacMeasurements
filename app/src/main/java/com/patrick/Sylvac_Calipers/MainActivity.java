@@ -19,7 +19,10 @@ import java.util.logging.Handler;
 public class MainActivity extends AppCompatActivity {
 
 
-    Handler mHandler;
+    public static final String PREFERENCE_VALUES_PER_ENTRY = "values_per_entry";
+    public static final String PREFERENCE_EDITING_ENABLED = "editing_enabled";
+    public static final String PREFERENCE_BEEP_ON_RECEIVE = "beep_on_receive";
+    public static final String PREFERENCE_ONLY_SYLVAC = "sylvac_devices";
 
     private static final int REQUEST_ENABLE_BT = 1;
     private PageFragmentAdapter mAdapter;
@@ -42,8 +45,10 @@ public class MainActivity extends AppCompatActivity {
         mAdapter = new PageFragmentAdapter(getSupportFragmentManager());
         ConnectFragment _connect = new ConnectFragment();
         _connect.setParent(this);
+        RecordFragment _record = new RecordFragment();
+        _record.setParent(this);
         mAdapter.addFragment(_connect, "Connect");
-        mAdapter.addFragment(new RecordFragment(), "Record");
+        mAdapter.addFragment(_record, "Record");
         mAdapter.addFragment(new BluetoothFragment(), "Status");
 
         mPager = (ViewPager) findViewById(R.id.view_pager);

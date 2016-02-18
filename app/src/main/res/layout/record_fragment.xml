@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical"
     android:layout_width="fill_parent"
-    android:layout_height="match_parent"
+    android:layout_height="fill_parent"
     android:weightSum="100">
     <ListView
         android:layout_width="match_parent"
@@ -22,13 +22,19 @@
         android:contextClickable="false"
         android:focusable="true"
         android:focusableInTouchMode="true"
-        android:layout_weight="87" />
+        android:layout_weight="85"
+        android:choiceMode="singleChoice"
+        android:stackFromBottom="true"
+        android:longClickable="true" />
+
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_weight="1"
         android:layout_gravity="bottom"
-        android:id="@+id/layoutRecordIDSection">
+        android:id="@+id/layoutRecordIDSection"
+        android:layout_weight="1"
+        android:layout_margin="0dp"
+        android:padding="0dp">
 
         <TextView
             android:layout_width="wrap_content"
@@ -42,7 +48,8 @@
             android:textAppearance="@style/Base.TextAppearance.AppCompat.Display1"
             android:paddingRight="7dp"
             android:clickable="false"
-            android:editable="false" />
+            android:editable="false"
+            android:focusable="false" />
 
         <EditText
             android:layout_width="wrap_content"
@@ -60,5 +67,16 @@
             android:enabled="true" />
 
     </RelativeLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:id="@+id/textCurrentRecordData"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:password="false"
+        android:editable="false"
+        android:clickable="false" />
 
 </LinearLayout>

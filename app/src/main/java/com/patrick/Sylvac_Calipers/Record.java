@@ -42,7 +42,7 @@ public class Record {
 
     public List<String> getMeasurementsArray(){ return this.measurementsArray; }
 
-    public String getMeasurementsString(){
+    public String getMeasurementsString(int numDdataPoints){
         String _output = "";
         for(String i : this.measurementsArray) _output += i + "   ";
 
@@ -57,4 +57,3 @@ public class Record {
         this.measurementsArray = inputMeasurementArray;
     }
 }
-
