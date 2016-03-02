@@ -5,8 +5,10 @@ import android.bluetooth.BluetoothGattCallback;
 import android.bluetooth.BluetoothGattCharacteristic;
 import android.bluetooth.BluetoothGattDescriptor;
 import android.bluetooth.BluetoothProfile;
+import android.content.Intent;
 import android.os.Handler;
 import android.os.Looper;
+import android.support.v4.content.LocalBroadcastManager;
 import android.util.Log;
 import android.widget.Toast;
 
@@ -29,14 +31,16 @@ public class BluetoothLeGattCallback extends BluetoothGattCallback {
 
     @Override
     public void onCharacteristicChanged(BluetoothGatt gatt, BluetoothGattCharacteristic bluetoothCharacteristic) {
-        mConnectionManager.broadcastUpdate(ConnectFragment.DATA_AVAILABLE, bluetoothCharacteristic);
+        final byte[] data = bluetoothCharacteristic.getValue();
+        Intent _i = new Intent(RecordFragment.MEASUREMENT_RECEIVED);
+        _i.putExtra("NUM_VALUE", data);
+        LocalBroadcastManager.getInstance(mConnectionManager.getMainActivity()).sendBroadcast(_i);
     }
 
     @Override
     public void onCharacteristicRead(BluetoothGatt gatt, BluetoothGattCharacteristic bluetoothCharacteristic, int status) {
-       /*if(status == BluetoothGatt.GATT_SUCCESS)
-            mConnectionManager.broadcastUpdate(ConnectFragment.DATA_AVAILABLE, bluetoothCharacteristic);
-            */
+       if(status == BluetoothGatt.GATT_SUCCESS)
+            mConnectionManager.broadcastUpdate("Donnees transmises", bluetoothCharacteristic);
         Log.i(TAG, "Characteristic read: " + bluetoothCharacteristic.getUuid());
     }
 
@@ -70,7 +74,7 @@ public class BluetoothLeGattCallback extends BluetoothGattCallback {
     @Override
     public void onServicesDiscovered(BluetoothGatt gatt, int status) {
         mConnectionManager.broadcastUpdate(ConnectFragment.GATT_SERVICES_DISCOVERED);
-        CommunicationManager.enableNotification(gatt);
-        CommunicationManager.enableIndication(gatt);
+        mConnectionManager.enableNotification(gatt);
+        mConnectionManager.enableIndication(gatt);
     }
 }

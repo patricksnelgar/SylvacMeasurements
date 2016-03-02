@@ -1,11 +1,17 @@
 package com.patrick.Sylvac_Calipers;
 
+import android.Manifest;
+import android.app.AlertDialog;
 import android.bluetooth.BluetoothAdapter;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.provider.Settings;
 import android.support.design.widget.TabLayout;
+import android.support.v4.content.ContextCompat;
+import android.support.v4.content.LocalBroadcastManager;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
@@ -14,8 +20,6 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.widget.Toast;
 
-import java.util.logging.Handler;
-
 public class MainActivity extends AppCompatActivity {
 
 
@@ -23,6 +27,7 @@ public class MainActivity extends AppCompatActivity {
     public static final String PREFERENCE_EDITING_ENABLED = "editing_enabled";
     public static final String PREFERENCE_BEEP_ON_RECEIVE = "beep_on_receive";
     public static final String PREFERENCE_ONLY_SYLVAC = "sylvac_devices";
+    public static final int DEFAULT_PREF_VALUES_PER_ENTRY = 3;
 
     private static final int REQUEST_ENABLE_BT = 1;
     private PageFragmentAdapter mAdapter;
@@ -38,6 +43,8 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.framework);
 
+        PreferenceManager.setDefaultValues(this, R.xml.preferences, false);
+
         mToolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(mToolbar);
         getSupportActionBar().setTitle(getString(R.string.app_title));
@@ -49,7 +56,7 @@ public class MainActivity extends AppCompatActivity {
         _record.setParent(this);
         mAdapter.addFragment(_connect, "Connect");
         mAdapter.addFragment(_record, "Record");
-        mAdapter.addFragment(new BluetoothFragment(), "Status");
+        mAdapter.addFragment(new StatusFragment(), "Status");
 
         mPager = (ViewPager) findViewById(R.id.view_pager);
         mPager.setAdapter(mAdapter);
@@ -59,6 +66,20 @@ public class MainActivity extends AppCompatActivity {
 
         if (!getPackageManager().hasSystemFeature(PackageManager.FEATURE_BLUETOOTH_LE)) {
             Toast.makeText(this, "BLE not supported", Toast.LENGTH_SHORT).show();
+        }
+
+        if(ContextCompat.checkSelfPermission(this, Manifest.permission.WRITE_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED){
+            AlertDialog.Builder builder = new AlertDialog.Builder(this);
+            builder.setTitle("File Access");
+            builder.setMessage("Please enable the app to write external storage");
+            builder.setPositiveButton(android.R.string.ok, null);
+            builder.setOnDismissListener(new DialogInterface.OnDismissListener() {
+                @Override
+                public void onDismiss(DialogInterface dialog) {
+                    requestPermissions(new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE}, 1);
+                }
+            });
+            builder.show();
         }
     }
 
@@ -82,6 +103,8 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(new Intent().setAction(Settings.ACTION_BLUETOOTH_SETTINGS));
             case R.id.action_bluetooth:
                 startActivityForResult(new Intent(BluetoothAdapter.ACTION_REQUEST_ENABLE), REQUEST_ENABLE_BT);
+            case R.id.action_save:
+                LocalBroadcastManager.getInstance(this).sendBroadcast(new Intent("SAVE_DATA"));
             default:
                 return super.onOptionsItemSelected(mItem);
         }

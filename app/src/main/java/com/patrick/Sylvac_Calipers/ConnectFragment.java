@@ -279,14 +279,22 @@ public class ConnectFragment extends Fragment {
     }
 
     private static IntentFilter makeGattUpdateIntentFilter() {
-        IntentFilter localIntentFilter = new IntentFilter();
+        /*IntentFilter localIntentFilter = new IntentFilter();
         localIntentFilter.addAction(DATA_AVAILABLE);
         localIntentFilter.addAction(GATT_CONNECTED);
         localIntentFilter.addAction(GATT_DISCONNECTED);
         localIntentFilter.addAction(GATT_SERVICES_DISCOVERED);
         localIntentFilter.addAction(CONNECTION_COMPLETE);
+        return localIntentFilter;*/
+        IntentFilter localIntentFilter = new IntentFilter();
+        localIntentFilter.addAction("Connexion reussi");
+        localIntentFilter.addAction("Deconnexion reussi ou inattendue");
+        localIntentFilter.addAction("Services decouverts");
+        localIntentFilter.addAction("Donnees transmises");
         return localIntentFilter;
     }
+
+
 
     public void setParent(MainActivity parent){
         this.mParentActivity = parent;

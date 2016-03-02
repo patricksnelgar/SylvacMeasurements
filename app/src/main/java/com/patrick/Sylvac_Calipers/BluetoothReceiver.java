@@ -18,6 +18,17 @@ public class BluetoothReceiver extends BroadcastReceiver {
         String extra = (String)intent.getCharSequenceExtra("DEVICE_ADDRESS");
         Log.i(TAG, "Action received: " + action + " from: " + extra);
         switch (action){
+            case "Donnees transmises":
+                String extraData = new String(intent.getByteArrayExtra("EXTRA_DATA"));
+                String canal = (String)intent.getCharSequenceExtra("NUM_CANAL");
+                Log.i(TAG, "Extra data: " + extraData + " Canal: " + canal);
+                break;
+            default:
+                break;
+        }
+
+        /*
+        switch (action){
             case ConnectFragment.DATA_AVAILABLE:
                 String extraData = new String(intent.getByteArrayExtra("EXTRA_DATA"));
                 String canal = (String)intent.getCharSequenceExtra("NUM_CANAL");
@@ -31,11 +42,14 @@ public class BluetoothReceiver extends BroadcastReceiver {
                 break;
             case ConnectFragment.GATT_SERVICES_DISCOVERED:
                 Log.i(TAG, "Services discovered!");
+                break;
             case ConnectFragment.CONNECTION_COMPLETE:
                 Log.i(TAG, "CONNECTION_COMPLETE");
+                break;
             default:
                 Log.w(TAG, "Action not handled: " + action);
                 break;
         }
+        */
     }
 }

@@ -1,7 +1,11 @@
 package com.patrick.Sylvac_Calipers;
 
+import android.content.Context;
+import android.content.Intent;
 import android.content.IntentFilter;
+import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.support.v4.app.Fragment;
 import android.support.v4.content.LocalBroadcastManager;
 import android.util.Log;
@@ -11,6 +15,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.view.inputmethod.EditorInfo;
 import android.widget.AdapterView;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.TextView;
@@ -26,22 +31,26 @@ public class RecordFragment extends Fragment {
     public static final String MEASUREMENT_RECEIVED = "MEASUREMENT_RECEIVED";
 
     private static final String TAG = RecordFragment.class.getSimpleName();
-    private int currentRecordID = 0;
-    private int previousRecordID = -1;
     private EditText mRecordId;
     private ListView mRecordsList;
+    private Button mAddRecord;
     private RecordAdapter mRecordAdapter;
     private List<Record> mListRecords;
     private DataReceiver mDataReceiver;
     private MainActivity mParentActivity;
+    private SharedPreferences mPrefs;
+    private int previousRecordID;
+    private int currentRecordID;
+    private int valuesPerRecord;
 
-    public static RecordFragment newInstance(){
-        RecordFragment mf = new RecordFragment();
-        Bundle args = new Bundle();
-        args.putString("Name", "RecordFragment");
-        mf.setArguments(args);
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        PreferenceManager.setDefaultValues(getContext(), R.xml.preferences, false);
+        mPrefs = PreferenceManager.getDefaultSharedPreferences(mParentActivity);
+        valuesPerRecord = Integer.parseInt(mPrefs.getString(MainActivity.PREFERENCE_VALUES_PER_ENTRY, "-1"));
+        if(valuesPerRecord == -1) valuesPerRecord = MainActivity.DEFAULT_PREF_VALUES_PER_ENTRY;
 
-        return mf;
     }
 
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState){
@@ -58,6 +67,7 @@ public class RecordFragment extends Fragment {
                     try {
                         currentRecordID = Integer.parseInt(mRecordId.getText().toString());
                         Log.i(TAG, "User changed ID to: " + currentRecordID);
+                        //mDataReceiver.setCurrentRecordID(currentRecordID);
                     } catch (Exception e){
                         currentRecordID = previousRecordID;
                         Log.e(TAG, "Error setting current record id with: " + mRecordId.getText().toString() + "resetting current ID to: " + currentRecordID);
@@ -68,8 +78,15 @@ public class RecordFragment extends Fragment {
             }
         });
 
-        mRecordsList = (ListView) v.findViewById(R.id.listRecordEntries);
-        mRecordsList.setOnItemClickListener(mOnRecordClickListener);
+        mAddRecord = (Button) v.findViewById(R.id.buttonAdd);
+        mAddRecord.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent _i = new Intent(MEASUREMENT_RECEIVED);
+                _i.putExtra("NUM_VALUE", "+0001.1");
+                LocalBroadcastManager.getInstance(mParentActivity).sendBroadcast(_i);
+            }
+        });
 
         return v;
     }
@@ -77,25 +94,19 @@ public class RecordFragment extends Fragment {
     @Override
     public void onStart() {
         super.onStart();
-        mListRecords = new ArrayList<>();
-        mRecordAdapter = new RecordAdapter(getContext(), R.layout.single_record, mListRecords);
-        mRecordsList.setAdapter(mRecordAdapter);
-        for(int i = 0; i < 10; i++) {
-            previousRecordID = currentRecordID;
-            mListRecords.add(new Record(String.valueOf(currentRecordID++), "0001.1 - 0001.2 - 0001.3 - 0001.4"));
-        }
-        mRecordAdapter.notifyDataSetChanged();
         mRecordId.setText(String.valueOf(currentRecordID));
 
-        // TODO: initialize Datareceiver. pass DR to RecordAddapter
-        //mDataReceiver = new DataReceiver(mParentActivity);
-        //LocalBroadcastManager.getInstance(mParentActivity).registerReceiver(mDataReceiver, makeDataReceiverFilter());
-
+        if(mDataReceiver == null){
+            mDataReceiver = new DataReceiver(mParentActivity);
+            LocalBroadcastManager.getInstance(mParentActivity).registerReceiver(mDataReceiver, makeDataReceiverFilter());
+            Log.i(TAG, "Register data receiver");
+        }
     }
 
     private IntentFilter makeDataReceiverFilter(){
         IntentFilter mIfilter = new IntentFilter();
         mIfilter.addAction(MEASUREMENT_RECEIVED);
+        mIfilter.addAction("SAVE_DATA");
         return mIfilter;
     }
 
@@ -109,5 +120,4 @@ public class RecordFragment extends Fragment {
 
         }
     };
-
 }

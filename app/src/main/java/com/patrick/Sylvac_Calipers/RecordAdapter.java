@@ -1,6 +1,8 @@
 package com.patrick.Sylvac_Calipers;
 
 import android.content.Context;
+import android.content.SharedPreferences;
+import android.preference.PreferenceManager;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -16,11 +18,12 @@ import java.util.List;
 public class RecordAdapter extends ArrayAdapter<Record> {
 
     private static final String TAG = RecordAdapter.class.getSimpleName();
-    private DataReceiver mDataReceiver;
+    private int numDataPoints = -1;
+    private SharedPreferences mPrefs;
 
-    public RecordAdapter(Context context, int resourceID, List<Record> records, DataReceiver mDataReceiver){
+    public RecordAdapter(Context context, int resourceID, List<Record> records){
         super(context, resourceID, records);
-        this.mDataReceiver = mDataReceiver;
+        mPrefs = PreferenceManager.getDefaultSharedPreferences(context);
     }
 
     public View getView(int position, View convertView, ViewGroup parent){
@@ -33,7 +36,7 @@ public class RecordAdapter extends ArrayAdapter<Record> {
         TextView textViewData = (TextView) convertView.findViewById(R.id.textRecordData);
 
         textViewID.setText(_single.getEntryID().trim());
-        textViewData.setText(_single.getMeasurementsString(mDataReceiver.numDataPoints));
+        textViewData.setText(_single.getMeasurementsString());
 
         return convertView;
     }

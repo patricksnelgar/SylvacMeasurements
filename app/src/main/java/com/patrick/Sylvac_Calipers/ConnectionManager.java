@@ -4,6 +4,8 @@ import android.bluetooth.BluetoothAdapter;
 import android.bluetooth.BluetoothDevice;
 import android.bluetooth.BluetoothGatt;
 import android.bluetooth.BluetoothGattCharacteristic;
+import android.bluetooth.BluetoothGattDescriptor;
+import android.bluetooth.BluetoothGattService;
 import android.bluetooth.BluetoothManager;
 import android.content.Context;
 import android.content.Intent;
@@ -11,10 +13,18 @@ import android.os.*;
 import android.support.v4.content.LocalBroadcastManager;
 import android.util.Log;
 
+import java.util.UUID;
+
 /**
  * Created by Patrick on 27/01/2016.
  */
 public class ConnectionManager implements CommunicationCharacteristics{
+
+    final UUID CCCD_UUID = UUID.fromString("00002902-0000-1000-8000-00805f9b34fb");
+    final UUID SERVICE_UUID = UUID.fromString("C1B25000-CAAF-6D0E-4C33-7DAE30052840");
+    final UUID RX_CMD_TO_INSTRUMENT_UUID = UUID.fromString("C1B25012-CAAF-6D0E-4C33-7DAE30052840");
+    final UUID TX_ANSWER_FROM_INSTRUMENT_UUID = UUID.fromString("C1B25013-CAAF-6D0E-4C33-7DAE30052840");
+    final UUID TX_RECEIVED_DATA_UUID = UUID.fromString("C1B25010-CAAF-6D0E-4C33-7DAE30052840");
 
     private static final String TAG = ConnectionManager.class.getSimpleName();
     private static final Object lock = new Object();
@@ -214,5 +224,27 @@ public class ConnectionManager implements CommunicationCharacteristics{
     public void removeBluetoothGatt(){
         mBluetoothGatt.close();
         mBluetoothGatt = null;
+    }
+
+    public void enableIndication(BluetoothGatt mBluetoothGatt){
+        BluetoothGattService btService = mBluetoothGatt.getService(SERVICE_UUID);
+        BluetoothGattCharacteristic btChar = btService.getCharacteristic(TX_RECEIVED_DATA_UUID);
+        mBluetoothGatt.setCharacteristicNotification(btChar, true);
+
+        BluetoothGattDescriptor btDes = btChar.getDescriptor(CCCD_UUID);
+        btDes.setValue(BluetoothGattDescriptor.ENABLE_INDICATION_VALUE);
+
+        if(mBluetoothGatt.writeDescriptor(btDes)) Log.i(TAG, "Indication set!");
+    }
+
+    public void enableNotification(BluetoothGatt mBtGatt){
+        BluetoothGattService btService = mBtGatt.getService(SERVICE_UUID);
+        BluetoothGattCharacteristic btChar = btService.getCharacteristic(TX_ANSWER_FROM_INSTRUMENT_UUID);
+        mBtGatt.setCharacteristicNotification(btChar, true);
+
+        BluetoothGattDescriptor btDes = btChar.getDescriptor(CCCD_UUID);
+        btDes.setValue(BluetoothGattDescriptor.ENABLE_NOTIFICATION_VALUE);
+
+        if(mBtGatt.writeDescriptor(btDes)) Log.i(TAG, "Notification set!");
     }
 }
