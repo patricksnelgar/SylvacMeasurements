@@ -15,6 +15,8 @@ public class Record {
     final private String TAG = Record.class.getSimpleName();
     private String entryID;
     private List<String> measurementsArray;
+    private static final int numValuesPerLine = 3;
+    private static final String recordSeparator = "         "; //10 spaces with 7chars per record pushes the third value onto line 2
 
     public Record(){
         this.entryID = null;
@@ -33,7 +35,7 @@ public class Record {
     }
 
     private void formatMeasurements(String inputMeasurement){
-        String[] _split = inputMeasurement.split(" - ");
+        String[] _split = inputMeasurement.split("   ");
         //Log.i(TAG, "Split count: " + _split.length);
         for(String i : _split){
             measurementsArray.add(i);
@@ -45,15 +47,27 @@ public class Record {
     public List<String> getMeasurementsArray(){ return this.measurementsArray; }
 
     public String getMeasurementsString(){
-        if(this.measurementsArray.size() <= 4) {
+
+        if(this.measurementsArray.size() <= numValuesPerLine) {
             String _output = "";
             for (int i = 0; i < (measurementsArray.size() -1); i++)
-                _output += measurementsArray.get(i) + " - ";
+                _output += measurementsArray.get(i) + recordSeparator;
             _output += measurementsArray.get(measurementsArray.size() - 1);
             return _output.trim();
         } else {
-            Log.i(TAG, "need to loop: " + this.measurementsArray.size() / 4);
-            return "Multiple lines";
+            int numLoops = ((this.measurementsArray.size()+ numValuesPerLine) - 1) / numValuesPerLine;
+            String output = "";
+            int index = 0;
+            for(int i = 0; i < numLoops; i++){
+                for(int j = 0; j < numValuesPerLine; j++){
+                    if(index < measurementsArray.size()) {
+                        output += measurementsArray.get(index) + recordSeparator;
+                        index++;
+                    }
+                }
+                output+="\n";
+            }
+            return output;
         }
     }
 

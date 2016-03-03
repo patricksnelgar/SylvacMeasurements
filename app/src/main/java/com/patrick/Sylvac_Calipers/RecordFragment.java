@@ -29,6 +29,8 @@ import java.util.List;
 public class RecordFragment extends Fragment {
 
     public static final String MEASUREMENT_RECEIVED = "MEASUREMENT_RECEIVED";
+    public static final String SAVE_DATA = "SAVE_DATA";
+    public static final String CLEAR_DATA = "CLEAR_DATA";
 
     private static final String TAG = RecordFragment.class.getSimpleName();
     private EditText mRecordId;
@@ -59,19 +61,20 @@ public class RecordFragment extends Fragment {
         mRecordId.setOnEditorActionListener(new TextView.OnEditorActionListener() {
             @Override
             public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
-                previousRecordID = currentRecordID;
+                previousRecordID = mPrefs.getInt(MainActivity.PREFERENCE_CURRENT_ID, 0);
                 if(actionId == EditorInfo.IME_ACTION_SEARCH ||
                         actionId == EditorInfo.IME_ACTION_DONE ||
                         event.getAction() == KeyEvent.ACTION_DOWN &&
                                 event.getKeyCode() == KeyEvent.KEYCODE_ENTER) {
                     try {
                         currentRecordID = Integer.parseInt(mRecordId.getText().toString());
+                        mPrefs.edit().putInt(MainActivity.PREFERENCE_CURRENT_ID, currentRecordID).commit();
                         Log.i(TAG, "User changed ID to: " + currentRecordID);
                         //mDataReceiver.setCurrentRecordID(currentRecordID);
                     } catch (Exception e){
                         currentRecordID = previousRecordID;
                         Log.e(TAG, "Error setting current record id with: " + mRecordId.getText().toString() + "resetting current ID to: " + currentRecordID);
-                        mRecordId.setText(String.format("%n"+currentRecordID).trim());
+                        mRecordId.setText(String.format("%n"+mPrefs.getInt(MainActivity.PREFERENCE_CURRENT_ID, 0)).trim());
                     }
                 }
                return false;
@@ -94,7 +97,6 @@ public class RecordFragment extends Fragment {
     @Override
     public void onStart() {
         super.onStart();
-        mRecordId.setText(String.valueOf(currentRecordID));
 
         if(mDataReceiver == null){
             mDataReceiver = new DataReceiver(mParentActivity);
@@ -103,10 +105,17 @@ public class RecordFragment extends Fragment {
         }
     }
 
+    @Override
+    public void onResume() {
+        super.onResume();
+        mRecordId.setText(String.valueOf(mPrefs.getInt(MainActivity.PREFERENCE_CURRENT_ID, 0)));
+    }
+
     private IntentFilter makeDataReceiverFilter(){
         IntentFilter mIfilter = new IntentFilter();
         mIfilter.addAction(MEASUREMENT_RECEIVED);
-        mIfilter.addAction("SAVE_DATA");
+        mIfilter.addAction(SAVE_DATA);
+        mIfilter.addAction(CLEAR_DATA);
         return mIfilter;
     }
 

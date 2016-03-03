@@ -18,6 +18,7 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.io.File;
 import java.io.FileOutputStream;
@@ -35,12 +36,10 @@ public class DataReceiver extends BroadcastReceiver {
 
     private final String TAG = DataReceiver.class.getSimpleName();
     private final MainActivity mParentActivity;
-    private final String tab = "    ";
-    private TextView mCurrentRecord;
+    private String mCurrentRecord = "";
     private EditText mCurrentEntryID;
     private ListView mHistory;
     private Handler mHandler = new Handler(Looper.getMainLooper());
-    private int mIdCount = 0;
     private int mMeasurementCount = 0;
     public int valuesPerRecord;
     private List<Record> listRecords;
@@ -53,7 +52,6 @@ public class DataReceiver extends BroadcastReceiver {
 
         mPrefs = PreferenceManager.getDefaultSharedPreferences(mParentActivity);
 
-        mCurrentRecord = (TextView) mParentActivity.findViewById(R.id.textCurrentRecordData);
         mCurrentEntryID = (EditText) mParentActivity.findViewById(R.id.editCurrentID);
         listRecords = new ArrayList<>();
         listRecordsAdapter = new RecordAdapter(mParentActivity, R.layout.single_record, listRecords);
@@ -66,35 +64,36 @@ public class DataReceiver extends BroadcastReceiver {
     public void onReceive(Context context, Intent intent) {
         valuesPerRecord = Integer.parseInt(mPrefs.getString(MainActivity.PREFERENCE_VALUES_PER_ENTRY, "-1"));
         if(valuesPerRecord == -1) valuesPerRecord = MainActivity.DEFAULT_PREF_VALUES_PER_ENTRY;
-        Log.i(TAG, "ValuesPer: " + valuesPerRecord);
         String action = intent.getAction();
         String data = "NULL";
         if(intent.hasExtra("NUM_VALUE"))
             data = new String(intent.getStringExtra("NUM_VALUE")).trim();
         switch (action){
             case RecordFragment.MEASUREMENT_RECEIVED:{
+                mMeasurementCount++;
+                mCurrentRecord += data + "   ";
+                //Log.i(TAG, mMeasurementCount + ":" + valuesPerRecord + " = " + mCurrentRecord);
                 if(mMeasurementCount >= valuesPerRecord){
+                    int currentID = mPrefs.getInt(MainActivity.PREFERENCE_CURRENT_ID, 0);
+                    int nextID = currentID + 1;
+                    mCurrentEntryID.setText(String.valueOf(nextID));
+                    mPrefs.edit().putInt(MainActivity.PREFERENCE_CURRENT_ID, nextID).commit();
 
-                    Record newEntry = new Record(mCurrentEntryID.getText().toString(), mCurrentRecord.getText().toString());
+                    Record newEntry = new Record(String.valueOf(currentID), mCurrentRecord);
                     listRecords.add(newEntry);
                     listRecordsAdapter.notifyDataSetChanged();
                     scrollList();
-
-                    // TODO: Need to push current record ID value into prefs for persistent storage
-                    Log.i(TAG, mCurrentEntryID.getText().toString() + " '" + mCurrentRecord.getText().toString() + "'");
                     mMeasurementCount = 0;
-                    int currentID = Integer.parseInt(mCurrentEntryID.getText().toString());
-                    int nextID = currentID + 1;
-                    Log.i(TAG, "Updating ID: " + currentID + " -> " + nextID);
-                    mCurrentEntryID.setText(String.valueOf(nextID));
-                    mCurrentRecord.setText("");
+                    mCurrentRecord="";
                 }
-                mCurrentRecord.append(data+" - ");
-                mMeasurementCount++;
                 break;
             }
-            case "SAVE_DATA":
+            case RecordFragment.SAVE_DATA:
                 saveAllRecords();
+                break;
+            case RecordFragment.CLEAR_DATA:
+                listRecords.clear();
+                listRecordsAdapter.notifyDataSetChanged();
                 break;
             default:
                 Log.i(TAG, "Action received: " + action);
@@ -118,33 +117,55 @@ public class DataReceiver extends BroadcastReceiver {
         final View alertView = factory.inflate(R.layout.save_data_layout, null);
         builder.setView(alertView);
         final EditText filenameView = (EditText) alertView.findViewById(R.id.filenameText);
+        builder.setNegativeButton("Cancel", null);
         builder.setPositiveButton("Save Data", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {
+                boolean saveSuccessful = false;
 
                 String mDir = Environment.getExternalStorageDirectory().toString();
-                File path = new File(mDir+"/SavedData");
+                File path = new File(mDir + "/SavedData");
                 path.mkdirs();
                 String name = filenameView.getText().toString();
-                Log.i(TAG, path + " : " + name);
-                File output = new File(path, name);
-                //TODO: Fix storage
+                Log.i(TAG, path + name);
+                final File output = new File(path, name);
+                /*
+                    TODO:   Currently saves to emulated/0/SavedData
+                            update to check for external storage and possibly a directory selector
+                 */
                 try {
                     FileOutputStream fs = new FileOutputStream(output);
+                    PrintWriter pr = new PrintWriter(fs);
                     for (Record x : listRecords) {
-                        fs.write(x.getRecordForOutput().getBytes());
+                        pr.println(x.getRecordForOutput());
                     }
-                    fs.flush();
+                    pr.flush();
+                    pr.close();
                     fs.close();
+
+                    saveSuccessful = true;
                 } catch (Exception e) {
+                    saveSuccessful = false;
                     e.printStackTrace();
+                }
+
+                if (saveSuccessful) {
+                    mHandler.post(new Runnable() {
+                        @Override
+                        public void run() {
+                            Toast.makeText(mParentActivity, "Saved data to file: " + output.toString(), Toast.LENGTH_SHORT).show();
+                        }
+                    });
+                } else {
+                    mHandler.post(new Runnable() {
+                        @Override
+                        public void run() {
+                            Toast.makeText(mParentActivity, "Failed to save data", Toast.LENGTH_SHORT).show();
+                        }
+                    });
                 }
             }
         });
         builder.show();
-    }
-
-    private void writeToFile(){
-
     }
 }

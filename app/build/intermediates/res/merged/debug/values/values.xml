@@ -301,6 +301,7 @@
         App requires you to grant location permissions in order to scan for Bluetooth devices.
         Tap a device on the \'Connect\' screen to establish a connection.</string>
     <string name="null_value">.....</string>
+    <string name="save_data_message">Please set the filename you wish to save the data to</string>
     <string name="status_bar_notification_info_overflow">999+</string>
     <string name="stringHeaderText">Record Data</string>
     <string name="stringStatus">Status:</string>

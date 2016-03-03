@@ -5,6 +5,7 @@ import android.app.AlertDialog;
 import android.bluetooth.BluetoothAdapter;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
@@ -27,6 +28,7 @@ public class MainActivity extends AppCompatActivity {
     public static final String PREFERENCE_EDITING_ENABLED = "editing_enabled";
     public static final String PREFERENCE_BEEP_ON_RECEIVE = "beep_on_receive";
     public static final String PREFERENCE_ONLY_SYLVAC = "sylvac_devices";
+    public static final String PREFERENCE_CURRENT_ID = "current_ID";
     public static final int DEFAULT_PREF_VALUES_PER_ENTRY = 3;
 
     private static final int REQUEST_ENABLE_BT = 1;
@@ -34,6 +36,7 @@ public class MainActivity extends AppCompatActivity {
     private ViewPager mPager;
     private Toolbar mToolbar;
     private TabLayout mTabLayout;
+    private SharedPreferences mPrefs;
 
     /**
      * Called when the activity is first created.
@@ -44,6 +47,9 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.framework);
 
         PreferenceManager.setDefaultValues(this, R.xml.preferences, false);
+        mPrefs = PreferenceManager.getDefaultSharedPreferences(this);
+        mPrefs.edit().putInt(PREFERENCE_CURRENT_ID, 0).commit();
+
 
         mToolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(mToolbar);
@@ -101,10 +107,16 @@ public class MainActivity extends AppCompatActivity {
                 return true;
             case R.id.action_bluetooth_settings:
                 startActivity(new Intent().setAction(Settings.ACTION_BLUETOOTH_SETTINGS));
+                return true;
             case R.id.action_bluetooth:
                 startActivityForResult(new Intent(BluetoothAdapter.ACTION_REQUEST_ENABLE), REQUEST_ENABLE_BT);
+                return true;
             case R.id.action_save:
-                LocalBroadcastManager.getInstance(this).sendBroadcast(new Intent("SAVE_DATA"));
+                LocalBroadcastManager.getInstance(this).sendBroadcast(new Intent(RecordFragment.SAVE_DATA));
+                return true;
+            case R.id.action_clear_data:
+                LocalBroadcastManager.getInstance(this).sendBroadcast(new Intent(RecordFragment.CLEAR_DATA));
+                return true;
             default:
                 return super.onOptionsItemSelected(mItem);
         }

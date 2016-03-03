@@ -18,17 +18,13 @@ import java.util.List;
 public class RecordAdapter extends ArrayAdapter<Record> {
 
     private static final String TAG = RecordAdapter.class.getSimpleName();
-    private int numDataPoints = -1;
-    private SharedPreferences mPrefs;
 
     public RecordAdapter(Context context, int resourceID, List<Record> records){
         super(context, resourceID, records);
-        mPrefs = PreferenceManager.getDefaultSharedPreferences(context);
     }
 
     public View getView(int position, View convertView, ViewGroup parent){
         Record _single = getItem(position);
-        //Log.i(TAG, "building view for position:"+position);
 
         if(convertView == null) convertView = LayoutInflater.from(getContext()).inflate(R.layout.single_record, parent, false);
 
