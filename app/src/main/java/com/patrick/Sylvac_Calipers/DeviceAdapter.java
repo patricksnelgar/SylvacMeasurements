@@ -11,7 +11,9 @@ import android.widget.TextView;
 import java.util.ArrayList;
 
 /**
- * Created by Patrick on 27/01/2016.
+ * Author: Patrick Snelgar
+ * Date: 21/04/2016
+ * Description: Adapter for each bluetooth device to be shown in the ConnectFragment
  */
 public class DeviceAdapter extends ArrayAdapter<DiscoveredDevice> {
 
@@ -26,10 +28,12 @@ public class DeviceAdapter extends ArrayAdapter<DiscoveredDevice> {
             convertView = LayoutInflater.from(getContext()).inflate(R.layout.bluetooth_device, parent, false);
         }
 
-        TextView mName = (TextView) convertView.findViewById(R.id.textRecordData);
+        TextView mName = (TextView) convertView.findViewById(R.id.textDeviceName);
+        TextView mAddress = (TextView) convertView.findViewById(R.id.textDeviceAddress);
         CheckBox mBonded = (CheckBox) convertView.findViewById(R.id.bondedDevice);
 
         mName.setText(mDevice.name);
+        mAddress.setText(mDevice.address);
         mBonded.setChecked(mDevice.bondedDevice);
 
         // TODO: add in configuration for using custom icons in list display based off device id

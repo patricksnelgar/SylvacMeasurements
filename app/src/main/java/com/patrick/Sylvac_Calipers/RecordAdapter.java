@@ -1,9 +1,6 @@
 package com.patrick.Sylvac_Calipers;
 
 import android.content.Context;
-import android.content.SharedPreferences;
-import android.preference.PreferenceManager;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -13,7 +10,9 @@ import android.widget.TextView;
 import java.util.List;
 
 /**
- * Created by Patrick on 12/02/2016.
+ * Author: Patrick Snelgar
+ * Date: 21/04/2016
+ * Description: Adapter for custom row view of each record
  */
 public class RecordAdapter extends ArrayAdapter<Record> {
 

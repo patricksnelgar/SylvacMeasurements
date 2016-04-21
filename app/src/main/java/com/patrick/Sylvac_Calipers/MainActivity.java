@@ -2,11 +2,13 @@ package com.patrick.Sylvac_Calipers;
 
 import android.Manifest;
 import android.app.AlertDialog;
+import android.app.ListActivity;
 import android.bluetooth.BluetoothAdapter;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.provider.Settings;
@@ -37,6 +39,11 @@ public class MainActivity extends AppCompatActivity {
     private Toolbar mToolbar;
     private TabLayout mTabLayout;
     private SharedPreferences mPrefs;
+    private MediaPlayer mPlayer;
+
+    private ConnectFragment fConnect;
+    private RecordFragment fRecord;
+    private StatusFragment fStatus;
 
     /**
      * Called when the activity is first created.
@@ -56,13 +63,13 @@ public class MainActivity extends AppCompatActivity {
         getSupportActionBar().setTitle(getString(R.string.app_title));
 
         mAdapter = new PageFragmentAdapter(getSupportFragmentManager());
-        ConnectFragment _connect = new ConnectFragment();
-        _connect.setParent(this);
-        RecordFragment _record = new RecordFragment();
-        _record.setParent(this);
-        mAdapter.addFragment(_connect, "Connect");
-        mAdapter.addFragment(_record, "Record");
-        mAdapter.addFragment(new StatusFragment(), "Status");
+        fConnect = new ConnectFragment();
+        fConnect.setParent(this);
+        fRecord = new RecordFragment();
+        fRecord.setParent(this);
+        mAdapter.addFragment(fConnect, "Connect");
+        mAdapter.addFragment(fRecord, "Record");
+        //mAdapter.addFragment(new StatusFragment(), "Status");
 
         mPager = (ViewPager) findViewById(R.id.view_pager);
         mPager.setAdapter(mAdapter);
@@ -72,6 +79,7 @@ public class MainActivity extends AppCompatActivity {
 
         if (!getPackageManager().hasSystemFeature(PackageManager.FEATURE_BLUETOOTH_LE)) {
             Toast.makeText(this, "BLE not supported", Toast.LENGTH_SHORT).show();
+            finish();
         }
 
         if(ContextCompat.checkSelfPermission(this, Manifest.permission.WRITE_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED){
@@ -87,6 +95,8 @@ public class MainActivity extends AppCompatActivity {
             });
             builder.show();
         }
+
+        mPlayer = MediaPlayer.create(this, R.raw.received);
     }
 
     @Override
@@ -117,9 +127,21 @@ public class MainActivity extends AppCompatActivity {
             case R.id.action_clear_data:
                 LocalBroadcastManager.getInstance(this).sendBroadcast(new Intent(RecordFragment.CLEAR_DATA));
                 return true;
+            case R.id.action_rescan:
+                fConnect.scanForDevices(true);
+                return true;
             default:
                 return super.onOptionsItemSelected(mItem);
         }
     }
 
+    public void playOnReceiveSound(){
+        mPlayer.start();
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        mPlayer.release();
+    }
 }

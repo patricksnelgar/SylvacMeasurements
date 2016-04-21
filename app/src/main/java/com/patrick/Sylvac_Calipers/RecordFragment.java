@@ -24,7 +24,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Created by Patrick on 11/01/2016.
+ * Author: Patrick Snelgar
+ * Date: 21/04/2016
+ * Description: UI for recording and discplaying current record data + history
  */
 public class RecordFragment extends Fragment {
 
@@ -69,11 +71,11 @@ public class RecordFragment extends Fragment {
                     try {
                         currentRecordID = Integer.parseInt(mRecordId.getText().toString());
                         mPrefs.edit().putInt(MainActivity.PREFERENCE_CURRENT_ID, currentRecordID).commit();
-                        Log.i(TAG, "User changed ID to: " + currentRecordID);
+                        //Log.i(TAG, "User changed ID to: " + currentRecordID);
                         //mDataReceiver.setCurrentRecordID(currentRecordID);
                     } catch (Exception e){
                         currentRecordID = previousRecordID;
-                        Log.e(TAG, "Error setting current record id with: " + mRecordId.getText().toString() + "resetting current ID to: " + currentRecordID);
+                        //Log.e(TAG, "Error setting current record id with: " + mRecordId.getText().toString() + "resetting current ID to: " + currentRecordID);
                         mRecordId.setText(String.format("%n"+mPrefs.getInt(MainActivity.PREFERENCE_CURRENT_ID, 0)).trim());
                     }
                 }
@@ -101,7 +103,7 @@ public class RecordFragment extends Fragment {
         if(mDataReceiver == null){
             mDataReceiver = new DataReceiver(mParentActivity);
             LocalBroadcastManager.getInstance(mParentActivity).registerReceiver(mDataReceiver, makeDataReceiverFilter());
-            Log.i(TAG, "Register data receiver");
+            //Log.i(TAG, "Register data receiver");
         }
     }
 

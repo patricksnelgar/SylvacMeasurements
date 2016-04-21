@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/Sylvac Measurements.iml" filepath="$PROJECT_DIR$/Sylvac Measurements.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SylvacMeasurements.iml" filepath="$PROJECT_DIR$/SylvacMeasurements.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>
   </component>

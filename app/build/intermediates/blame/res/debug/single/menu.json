@@ -1,10 +1,6 @@
 [
     {
-        "merged": "C:\\Users\\Patrick\\Documents\\Android Studio\\Sylvac Measurements\\app\\build\\intermediates\\res\\merged\\debug\\menu\\menu.xml",
-        "source": "C:\\Users\\Patrick\\Documents\\Android Studio\\Sylvac Measurements\\app\\src\\main\\res\\menu\\menu.xml"
-    },
-    {
-        "merged": "C:\\Users\\Patrick\\Documents\\Android Projects\\Sylvac Measurements\\app\\build\\intermediates\\res\\merged\\debug\\menu\\menu.xml",
-        "source": "C:\\Users\\Patrick\\Documents\\Android Projects\\Sylvac Measurements\\app\\src\\main\\res\\menu\\menu.xml"
+        "merged": "C:\\Android Projects\\SylvacMeasurements\\app\\build\\intermediates\\res\\merged\\debug\\menu\\menu.xml",
+        "source": "C:\\Android Projects\\SylvacMeasurements\\app\\src\\main\\res\\menu\\menu.xml"
     }
 ]

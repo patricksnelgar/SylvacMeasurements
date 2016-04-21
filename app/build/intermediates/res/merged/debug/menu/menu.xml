@@ -3,6 +3,12 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/app_menu">
     <item
+        android:id="@+id/action_rescan"
+        android:icon="@drawable/ic_autorenew_black_48dp"
+        android:title="Scan"
+        app:showAsAction="ifRoom"
+        />
+    <item
         android:id="@+id/action_bluetooth"
         android:icon="@drawable/ic_bluetooth_black_48dp"
         android:title="Enable Bluetooth"

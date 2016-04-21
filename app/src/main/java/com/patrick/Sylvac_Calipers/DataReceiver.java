@@ -8,6 +8,7 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.media.MediaPlayer;
 import android.os.Environment;
 import android.os.Handler;
 import android.os.Looper;
@@ -24,6 +25,7 @@ import java.io.File;
 import java.io.FileOutputStream;
 import java.io.PrintWriter;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 /**
@@ -33,6 +35,7 @@ import java.util.List;
  * Notes:
  */
 public class DataReceiver extends BroadcastReceiver {
+
 
     private final String TAG = DataReceiver.class.getSimpleName();
     private final MainActivity mParentActivity;
@@ -66,10 +69,15 @@ public class DataReceiver extends BroadcastReceiver {
         if(valuesPerRecord == -1) valuesPerRecord = MainActivity.DEFAULT_PREF_VALUES_PER_ENTRY;
         String action = intent.getAction();
         String data = "NULL";
-        if(intent.hasExtra("NUM_VALUE"))
-            data = new String(intent.getStringExtra("NUM_VALUE")).trim();
+
+        if(intent.hasExtra(CommunicationCharacteristics.DATA_VALUE))
+            data = new String(intent.getStringExtra(CommunicationCharacteristics.DATA_VALUE)).trim();
         switch (action){
             case RecordFragment.MEASUREMENT_RECEIVED:{
+                if(mPrefs.getBoolean(MainActivity.PREFERENCE_BEEP_ON_RECEIVE, false)){
+                    Log.i(TAG, "Beep");
+                    mParentActivity.playOnReceiveSound();
+                }
                 mMeasurementCount++;
                 mCurrentRecord += data + "   ";
                 //Log.i(TAG, mMeasurementCount + ":" + valuesPerRecord + " = " + mCurrentRecord);
