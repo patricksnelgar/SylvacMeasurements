@@ -2,9 +2,16 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent">
-    <TextView
+
+    <ListView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-
-        android:text="@string/help_info"/>
+        android:id="@+id/listHelpTopics"
+        android:layout_gravity="center_horizontal"
+        android:divider="@color/PrimaryColour"
+        android:dividerHeight="1dp"
+        android:footerDividersEnabled="false"
+        android:fastScrollEnabled="false"
+        android:headerDividersEnabled="false"
+        android:longClickable="false" />
 </LinearLayout>

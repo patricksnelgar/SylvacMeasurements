@@ -36,10 +36,6 @@ public class RecordFragment extends Fragment {
 
     private static final String TAG = RecordFragment.class.getSimpleName();
     private EditText mRecordId;
-    private ListView mRecordsList;
-    private Button mAddRecord;
-    private RecordAdapter mRecordAdapter;
-    private List<Record> mListRecords;
     private DataReceiver mDataReceiver;
     private MainActivity mParentActivity;
     private SharedPreferences mPrefs;
@@ -83,16 +79,6 @@ public class RecordFragment extends Fragment {
             }
         });
 
-        mAddRecord = (Button) v.findViewById(R.id.buttonAdd);
-        mAddRecord.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent _i = new Intent(MEASUREMENT_RECEIVED);
-                _i.putExtra("NUM_VALUE", "+0001.1");
-                LocalBroadcastManager.getInstance(mParentActivity).sendBroadcast(_i);
-            }
-        });
-
         return v;
     }
 
@@ -124,11 +110,4 @@ public class RecordFragment extends Fragment {
     public void setParent(MainActivity parent){
         this.mParentActivity = parent;
     }
-
-    final AdapterView.OnItemClickListener mOnRecordClickListener = new AdapterView.OnItemClickListener() {
-        @Override
-        public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-
-        }
-    };
 }

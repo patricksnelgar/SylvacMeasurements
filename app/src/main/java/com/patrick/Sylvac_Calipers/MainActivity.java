@@ -39,7 +39,6 @@ public class MainActivity extends AppCompatActivity {
     private Toolbar mToolbar;
     private TabLayout mTabLayout;
     private SharedPreferences mPrefs;
-    private MediaPlayer mPlayer;
 
     private ConnectFragment fConnect;
     private RecordFragment fRecord;
@@ -96,7 +95,7 @@ public class MainActivity extends AppCompatActivity {
             builder.show();
         }
 
-        mPlayer = MediaPlayer.create(this, R.raw.received);
+        //mPlayer = MediaPlayer.create(this, R.raw.received);
     }
 
     @Override
@@ -136,12 +135,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void playOnReceiveSound(){
+        MediaPlayer mPlayer = MediaPlayer.create(this, R.raw.received);
         mPlayer.start();
-    }
-
-    @Override
-    protected void onDestroy() {
-        super.onDestroy();
-        mPlayer.release();
     }
 }

@@ -47,6 +47,7 @@ public class DataReceiver extends BroadcastReceiver {
     public int valuesPerRecord;
     private List<Record> listRecords;
     private RecordAdapter listRecordsAdapter;
+    private char space = (int) 32;
 
     SharedPreferences mPrefs;
 
@@ -79,7 +80,7 @@ public class DataReceiver extends BroadcastReceiver {
                     mParentActivity.playOnReceiveSound();
                 }
                 mMeasurementCount++;
-                mCurrentRecord += data + "   ";
+                mCurrentRecord += data + space +space +space;
                 //Log.i(TAG, mMeasurementCount + ":" + valuesPerRecord + " = " + mCurrentRecord);
                 if(mMeasurementCount >= valuesPerRecord){
                     int currentID = mPrefs.getInt(MainActivity.PREFERENCE_CURRENT_ID, 0);
@@ -134,7 +135,7 @@ public class DataReceiver extends BroadcastReceiver {
                 String mDir = Environment.getExternalStorageDirectory().toString();
                 File path = new File(mDir + "/SavedData");
                 path.mkdirs();
-                String name = filenameView.getText().toString();
+                String name = filenameView.getText().toString() + ".csv";
                 Log.i(TAG, path + name);
                 final File output = new File(path, name);
                 /*

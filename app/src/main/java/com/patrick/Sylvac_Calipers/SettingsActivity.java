@@ -1,10 +1,15 @@
 package com.patrick.Sylvac_Calipers;
 
 import android.app.ActionBar;
+import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.preference.EditTextPreference;
+import android.preference.Preference;
 import android.preference.PreferenceFragment;
+import android.preference.PreferenceManager;
 import android.support.v7.app.ActionBarActivity;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.MenuItem;
 
 /**
@@ -12,7 +17,7 @@ import android.view.MenuItem;
  */
 public class SettingsActivity extends AppCompatActivity {
 
-    ActionBar mActionBar;
+    private SettingsFragment _settings;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,6 +26,8 @@ public class SettingsActivity extends AppCompatActivity {
         getSupportActionBar().setTitle("Preferences");
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setDisplayShowHomeEnabled(true);
+
+        _settings = new SettingsFragment();
     }
 
     public boolean onOptionsItemSelected(MenuItem mItem){
@@ -33,15 +40,30 @@ public class SettingsActivity extends AppCompatActivity {
     @Override
     protected void onPostCreate(Bundle savedInstanceState){
         super.onPostCreate(savedInstanceState);
-        getFragmentManager().beginTransaction().replace(android.R.id.content, new SettingsFragment()).commit();
+        getFragmentManager().beginTransaction().replace(android.R.id.content, _settings).commit();
     }
 
-    public static class SettingsFragment extends PreferenceFragment {
+    public static class SettingsFragment extends PreferenceFragment implements SharedPreferences.OnSharedPreferenceChangeListener {
 
         @Override
         public void onCreate(final Bundle savedInstanceState){
             super.onCreate(savedInstanceState);
             addPreferencesFromResource(R.xml.preferences);
+            getPreferenceScreen().getSharedPreferences().registerOnSharedPreferenceChangeListener(this);
+
+            Preference _p = getPreferenceManager().findPreference(MainActivity.PREFERENCE_VALUES_PER_ENTRY);
+            _p.setSummary("Number of measurements per entry: " + getPreferenceManager().getSharedPreferences().getString(MainActivity.PREFERENCE_VALUES_PER_ENTRY, "Error"));
+        }
+
+
+        @Override
+        public void onSharedPreferenceChanged(SharedPreferences sharedPreferences, String key) {
+            Log.i("Settings", "Key changed: " + key );
+            if(key.equals(MainActivity.PREFERENCE_VALUES_PER_ENTRY)){
+                Preference _p = findPreference(key);
+                SharedPreferences prefs = getPreferenceManager().getSharedPreferences();
+                _p.setSummary("Number of measurements per entry: " + prefs.getString(key, "Error"));
+            }
         }
     }
 }

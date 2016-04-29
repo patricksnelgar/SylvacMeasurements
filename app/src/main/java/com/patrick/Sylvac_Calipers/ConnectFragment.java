@@ -7,7 +7,6 @@ import android.app.AlertDialog;
 import android.bluetooth.BluetoothAdapter;
 import android.bluetooth.BluetoothDevice;
 import android.bluetooth.BluetoothGatt;
-import android.bluetooth.BluetoothGattService;
 import android.bluetooth.BluetoothManager;
 import android.bluetooth.le.BluetoothLeScanner;
 import android.bluetooth.le.ScanCallback;
@@ -22,7 +21,6 @@ import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.os.Handler;
-import android.os.Looper;
 import android.preference.PreferenceManager;
 import android.support.v4.app.Fragment;
 import android.support.v4.content.ContextCompat;
@@ -38,7 +36,6 @@ import android.widget.Toast;
 import java.lang.reflect.Method;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.regex.Pattern;
 
 /**
  * Author: Patrick Snelgar
@@ -64,7 +61,6 @@ public class ConnectFragment extends Fragment {
     private BluetoothManager mBtManager;
     private BluetoothAdapter mBtAdapter;
     private BluetoothReceiver mBtReciever;
-    private BluetoothGatt mGattDevice;
     private MainActivity mParentActivity;
     private BluetoothLeGattCallback mCallback;
     private Handler mHandler;
@@ -77,6 +73,8 @@ public class ConnectFragment extends Fragment {
     private String mBluetoothDeviceAddress = null;
     private boolean isScanning = false;
     private BluetoothGatt mBluetoothGatt;
+    private boolean receiversRegistered = false;
+    private boolean refreshAfterConnect = true;
 
     class Toaster implements Runnable{
 
@@ -97,13 +95,17 @@ public class ConnectFragment extends Fragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        Log.d(TAG, "onCreate");
         mHandler = new Handler();
         mConnectionManager = new ConnectionManager(mParentActivity, null);
         // Set up the class to handle data from the calipers
         mBtReciever = new BluetoothReceiver();
         mBtReciever.setmManager(mConnectionManager);
-        LocalBroadcastManager.getInstance(getActivity()).registerReceiver(mBtReciever, makeGattUpdateIntentFilter());
-        LocalBroadcastManager.getInstance(getActivity()).registerReceiver(btReceiver, new IntentFilter(CommunicationCharacteristics.DEVICE_BONDED));
+        if(!receiversRegistered) {
+            LocalBroadcastManager.getInstance(getActivity()).registerReceiver(mBtReciever, makeGattUpdateIntentFilter());
+            LocalBroadcastManager.getInstance(getActivity()).registerReceiver(btReceiver, makeBondFilter());
+            receiversRegistered = true;
+        }
 
         // Set up the custom ArrayAdapter for the ListView
         mDeviceAdapter = new DeviceAdapter(getActivity(), mDiscoveredDevices);
@@ -139,10 +141,14 @@ public class ConnectFragment extends Fragment {
                 locationPermRequested = true;
             }
         }
+
+        getBondedDevices();
+        mDeviceAdapter.notifyDataSetChanged();
     }
 
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState){
         View connectFragView = inflater.inflate(R.layout.connect_fragment, container, false);
+        Log.d(TAG, "onCreateView");
         mListDevices = (ListView) connectFragView.findViewById(R.id.listDicoveredDevices);
 
         mListDevices.setOnItemClickListener(new AdapterView.OnItemClickListener() {
@@ -173,6 +179,7 @@ public class ConnectFragment extends Fragment {
                             mHandler.post(new Toaster("Device unpaired", Toast.LENGTH_SHORT));
                             mDiscoveredDevices.get(position).bondedDevice = false;
                             mDeviceAdapter.notifyDataSetChanged();
+                            mConnectionManager.closeGatt();
                         } catch (Exception e) {
                             e.printStackTrace();
                         }
@@ -188,33 +195,52 @@ public class ConnectFragment extends Fragment {
     }
 
     @Override
+    public void onStart() {
+        super.onStart();
+        Log.d(TAG, "onStart");
+    }
+
+    @Override
     public void onResume() {
         super.onResume();
+        Log.d(TAG, "onResume");
         if(!mBtAdapter.isEnabled()){
             if(!mBtAdapter.isEnabled()){
                 Intent enableBt = new Intent(mBtAdapter.ACTION_REQUEST_ENABLE);
                 startActivityForResult(enableBt, 1);
             }
         }
-        mDiscoveredDevices.clear();
-        getBondedDevices();
+
         mDeviceAdapter = new DeviceAdapter(getActivity(), mDiscoveredDevices);
         mListDevices.setAdapter(mDeviceAdapter);
         mBluetoothScanner = mBtAdapter.getBluetoothLeScanner();
-        scanForDevices(true);
+    }
 
+    @Override
+    public void onStop() {
+        super.onStop();
+        Log.d(TAG, "onStop");
     }
 
     @Override
     public void onPause() {
         super.onPause();
+        Log.d(TAG, "onPause");
         scanForDevices(false);
     }
 
-    public void scanForDevices(final boolean scan){
+    @Override
+    public void onDestroyView() {
+        super.onDestroyView();
+        Log.d(TAG, "onDestroy");
+    }
 
+    public void scanForDevices(final boolean scan){
         if(mBtAdapter.isEnabled()){
             if(scan && !isScanning){
+                mDiscoveredDevices.clear();
+                Log.d(TAG, "Clear devices: scanForDevices");
+                mDeviceAdapter.notifyDataSetChanged();
                 Log.i(TAG, "Scanning for devices");
                 mHandler.post(new Toaster("Scanning...", Toast.LENGTH_SHORT));
                 mHandler.postDelayed(new Runnable() {
@@ -222,6 +248,7 @@ public class ConnectFragment extends Fragment {
                     public void run() {
                         isScanning = false;
                         Log.i(TAG, "Scan timeout");
+                        mHandler.post(new Toaster("Scanning stopped", Toast.LENGTH_SHORT));
                         mBluetoothScanner.stopScan(scanCallback);
                         mBluetoothScanner.flushPendingScanResults(scanCallback);
                     }
@@ -246,6 +273,7 @@ public class ConnectFragment extends Fragment {
         for(BluetoothDevice bDevice : mBtAdapter.getBondedDevices()){
             if(prefs.getBoolean(MainActivity.PREFERENCE_ONLY_SYLVAC, false)){
                 if(bDevice.getName().startsWith("SY")){
+                    Log.d(TAG, "Adding bonded device: " + bDevice.getName());
                     mDiscoveredDevices.add(new DiscoveredDevice(bDevice.getName(), true, "", bDevice.getAddress(), bDevice));
                 }
             } else {
@@ -255,41 +283,46 @@ public class ConnectFragment extends Fragment {
         mDeviceAdapter.notifyDataSetChanged();
     }
 
-    public boolean connectToDevice(BluetoothDevice mDevice){
+    public boolean connectToDevice(final BluetoothDevice mDevice){
         scanForDevices(false);
         isConnecting = true;
+        refreshAfterConnect = true;
+        mConnectionManager.closeGatt();
 
-        if(this.mBluetoothDeviceAddress == null || this.mBluetoothGatt == null){
-            Log.i(TAG, "New connection");
-            mBluetoothDeviceAddress = mDevice.getAddress();
-            mConnectionManager.setDeviceAddress(mBluetoothDeviceAddress);
-            mCallback = new BluetoothLeGattCallback(mConnectionManager);
-            mBluetoothGatt = mDevice.connectGatt(mParentActivity, false, mCallback);
+        Log.i(TAG, "Connecting");
+        mBluetoothDeviceAddress = mDevice.getAddress();
+        mConnectionManager.setDeviceAddress(mBluetoothDeviceAddress);
+        mCallback = new BluetoothLeGattCallback(mConnectionManager);
+        mBluetoothGatt = mDevice.connectGatt(mParentActivity, false, mCallback);
 
-            if(mBluetoothGatt == null) return false;
-            return true;
+        mHandler.postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                if(!deviceConnected && isConnecting) {
+                    new Toaster("Connect timeout: " + mDevice.getName(), Toast.LENGTH_SHORT).run();
+                    mConnectionManager.closeGatt();
+                }
+            }
+        }, 10000L);
+
+        if(mBluetoothGatt == null) {
+            return false;
         }
-        Log.i(TAG, "Old connection: " + mBluetoothDeviceAddress);
-        return mBluetoothGatt.connect();
+        return true;
     }
 
-    public void disconnect(){
-        if(mBtAdapter == null || mBluetoothGatt == null) {
-            Log.i(TAG, "BluetoothAdapter not initialized");
-            return;
+    private void updateDeviceToBonded(BluetoothDevice _device){
+        Log.i(TAG, "Searching for device: " + _device.getName());
+        if(!mDiscoveredDevices.isEmpty()){
+            for(int i = 0; i < mDiscoveredDevices.size(); i++){
+                if(mDiscoveredDevices.get(i).address == _device.getAddress()){
+                    Log.i(TAG, "Found device: " + _device.getName() + " updating bond status");
+                    mDiscoveredDevices.get(i).bondedDevice = true;
+                    mDeviceAdapter.notifyDataSetChanged();
+                }
+            }
         }
-
-        mBluetoothGatt.disconnect();
     }
-
-    public void close(){
-        if(mBluetoothGatt == null) return;
-
-        mBluetoothGatt.close();
-        mBluetoothGatt = null;
-    }
-
-
 
     private static IntentFilter makeGattUpdateIntentFilter() {
         IntentFilter localIntentFilter = new IntentFilter();
@@ -301,7 +334,12 @@ public class ConnectFragment extends Fragment {
         return localIntentFilter;
     }
 
-
+    private static  IntentFilter makeBondFilter(){
+        IntentFilter _filter = new IntentFilter();
+        _filter.addAction(CommunicationCharacteristics.DEVICE_BONDED);
+        _filter.addAction(GATT_DISCONNECTED);
+        return _filter;
+    }
 
     public void setParent(MainActivity parent){
         this.mParentActivity = parent;
@@ -313,7 +351,6 @@ public class ConnectFragment extends Fragment {
             mParentActivity.runOnUiThread(new Runnable(){
                 @Override
                 public void run() {
-                    Log.i(TAG, "ScanResult: " + result.toString());
                     BluetoothDevice _device = result.getDevice();
                     if(prefs.getBoolean("sylvac_devices", false)) {
                         if (_device.getName().startsWith("SY")) {
@@ -351,15 +388,20 @@ public class ConnectFragment extends Fragment {
     private final BroadcastReceiver btReceiver = new BroadcastReceiver() {
         @Override
         public void onReceive(Context context, Intent intent) {
+            Log.i(TAG, "btReceiver: action="+intent.getAction());
             final String action = intent.getAction();
             if(action.equals(CommunicationCharacteristics.DEVICE_BONDED)){
                 BluetoothDevice bDevice = intent.getExtras().getParcelable(CommunicationCharacteristics.BT_DEVICE);
                 Log.i(TAG, "Bonding complete: " + bDevice.getName());
                 mHandler.post(new Toaster("Bonded with: " + bDevice.getName(), Toast.LENGTH_SHORT));
-                //mDiscoveredDevices.add(new DiscoveredDevice(bDevice.getName(), true, "", bDevice.getAddress(), bDevice));
-                mDeviceAdapter.clear();
-                getBondedDevices();
-                mDeviceAdapter.notifyDataSetChanged();
+                isConnecting = false;
+                deviceConnected = true;
+                updateDeviceToBonded(bDevice);
+            }
+            if(action.equals(GATT_DISCONNECTED)){
+                deviceConnected = false;
+                mHandler.post(new Toaster("Device disconnected", Toast.LENGTH_SHORT));
+                mConnectionManager.closeGatt();
             }
 
         }

@@ -304,17 +304,4 @@ public class ConnectionManager implements CommunicationCharacteristics{
             }
         }
     }
-
-    public boolean writeCharacterisic(BluetoothGatt mBluetoothGatt, byte[] value){
-        BluetoothGattCharacteristic rxChar = getCharacteristic(mBluetoothGatt, CommunicationCharacteristics.RX_CMD_TO_INSTRUMENT_UUID);
-        if(rxChar == null){
-            return false;
-        }
-
-        rxChar.setValue(value);
-        if(mBluetoothGatt.writeCharacteristic(rxChar)){
-            Log.i(TAG, "Value written: " + value);
-        }
-        return true;
-    }
 }

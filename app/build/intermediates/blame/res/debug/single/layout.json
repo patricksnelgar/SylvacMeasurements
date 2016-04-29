@@ -144,6 +144,10 @@
         "source": "C:\\Android Projects\\SylvacMeasurements\\app\\src\\main\\res\\layout\\main.xml"
     },
     {
+        "merged": "C:\\Android Projects\\SylvacMeasurements\\app\\build\\intermediates\\res\\merged\\debug\\layout\\help_topic.xml",
+        "source": "C:\\Android Projects\\SylvacMeasurements\\app\\src\\main\\res\\layout\\help_topic.xml"
+    },
+    {
         "merged": "C:\\Android Projects\\SylvacMeasurements\\app\\build\\intermediates\\res\\merged\\debug\\layout\\status_fragment.xml",
         "source": "C:\\Android Projects\\SylvacMeasurements\\app\\src\\main\\res\\layout\\status_fragment.xml"
     },

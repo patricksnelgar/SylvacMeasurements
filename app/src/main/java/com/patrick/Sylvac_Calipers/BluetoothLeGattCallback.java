@@ -53,6 +53,7 @@ public class BluetoothLeGattCallback extends BluetoothGattCallback {
 
     @Override
     public void onConnectionStateChange(BluetoothGatt gatt, int status, int newState) {
+        Log.i(TAG, "State change: " + newState + " Status: " + status);
         if(newState == BluetoothProfile.STATE_CONNECTED) {
             if(status == BluetoothGatt.GATT_SUCCESS) {
                 Log.i(TAG, "Connection successful, finalize");
@@ -73,7 +74,6 @@ public class BluetoothLeGattCallback extends BluetoothGattCallback {
             Intent _i = new Intent(CommunicationCharacteristics.DEVICE_BONDED);
             _i.putExtra(CommunicationCharacteristics.BT_DEVICE, gatt.getDevice());
             LocalBroadcastManager.getInstance(mConnectionManager.getMainActivity()).sendBroadcast(_i);
-            //Log.i(TAG, "Bonding complete: " + gatt.getDevice().getName());
             return;
         }
         descriptor.setValue(BluetoothGattDescriptor.ENABLE_NOTIFICATION_VALUE);
@@ -84,7 +84,6 @@ public class BluetoothLeGattCallback extends BluetoothGattCallback {
     @Override
     public void onServicesDiscovered(BluetoothGatt gatt, int status) {
         boolean z = true;
-        //Log.i(TAG, "Service discovered: " + status);
         ConnectionManager conn = mConnectionManager;
         conn.setBluetoothGatt(gatt);
         if(status!=0) {

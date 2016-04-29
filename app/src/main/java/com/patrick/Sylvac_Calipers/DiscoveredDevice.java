@@ -29,7 +29,8 @@ public class DiscoveredDevice {
         if(o instanceof DiscoveredDevice){
             DiscoveredDevice a = (DiscoveredDevice) o;
             if(this.address.equals(a.address)) {
-                Log.i(TAG, "Address match");
+                //Log.i(TAG, "Address match");
+                //MAC addresses are unique (unless spoofed) so able to be used as identifier.
                 return true;
             }
         }
