@@ -2,46 +2,60 @@
 <items version="2" >
 
     <item
-        jar="C:\Android Projects\SylvacMeasurements\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.1.1\jars\libs\internal_impl-23.1.1.jar"
-        jumboMode="false"
+        jar="C:\Android Projects\SylvacMeasurements\app\build\intermediates\exploded-aar\com.android.support\design\23.1.1\jars\classes.jar"
+        jumboMode="true"
         revision="23.0.3"
-        sha1="a4de9c81ae239414e1ed0f86441b02abaf29bca9">
-        <dex dex="C:\Android Projects\SylvacMeasurements\app\build\intermediates\pre-dexed\debug\internal_impl-23.1.1_f6ea78a95f04bb106cfe9bd3b8c1c763802baab1.jar" />
+        sha1="379471b2bd17d9737c050345c08e8c7d16589784">
+        <dex dex="C:\Android Projects\SylvacMeasurements\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-design-23.1.1_33671b98ff8ef561f180105acb12b66379c93af0\classes.dex" />
     </item>
     <item
         jar="C:\Users\HRTWPS\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\23.1.1\support-annotations-23.1.1.jar"
-        jumboMode="false"
+        jumboMode="true"
         revision="23.0.3"
         sha1="8d680ba5a623724d1fb0e81c36a790f023a6cede">
-        <dex dex="C:\Android Projects\SylvacMeasurements\app\build\intermediates\pre-dexed\debug\support-annotations-23.1.1_e031026ca70fc6ec8f76f43e821a3f4608667749.jar" />
+        <dex dex="C:\Android Projects\SylvacMeasurements\app\build\intermediates\transforms\dex\debug\folders\1000\10\support-annotations-23.1.1_e031026ca70fc6ec8f76f43e821a3f4608667749\classes.dex" />
     </item>
     <item
-        jar="C:\Android Projects\SylvacMeasurements\app\build\intermediates\exploded-aar\com.android.support\design\23.1.1\jars\classes.jar"
-        jumboMode="false"
+        jar="C:\Android Projects\SylvacMeasurements\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.1.1\jars\libs\internal_impl-23.1.1.jar"
+        jumboMode="true"
         revision="23.0.3"
-        sha1="379471b2bd17d9737c050345c08e8c7d16589784">
-        <dex dex="C:\Android Projects\SylvacMeasurements\app\build\intermediates\pre-dexed\debug\com.android.support-design-23.1.1_33671b98ff8ef561f180105acb12b66379c93af0.jar" />
+        sha1="a4de9c81ae239414e1ed0f86441b02abaf29bca9">
+        <dex dex="C:\Android Projects\SylvacMeasurements\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-23.1.1_f6ea78a95f04bb106cfe9bd3b8c1c763802baab1\classes.dex" />
     </item>
     <item
         jar="C:\Android Projects\SylvacMeasurements\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.1.1\jars\classes.jar"
-        jumboMode="false"
+        jumboMode="true"
         revision="23.0.3"
         sha1="6cbc7773921fcfedbe55657578f0cbfe614778dc">
-        <dex dex="C:\Android Projects\SylvacMeasurements\app\build\intermediates\pre-dexed\debug\com.android.support-support-v4-23.1.1_b2d8cace376d0385e29cdbfff03933923b9ec38f.jar" />
+        <dex dex="C:\Android Projects\SylvacMeasurements\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-v4-23.1.1_b2d8cace376d0385e29cdbfff03933923b9ec38f\classes.dex" />
+    </item>
+    <item
+        jar="C:\Android Projects\SylvacMeasurements\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="4529196c5d3fd96bc3ebd5e936f70c233d4a7150">
+        <dex dex="C:\Android Projects\SylvacMeasurements\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run-bootstrap_6d9af3741f64bd4c51218e02971d52ad1d6023a8\classes.dex" />
     </item>
     <item
         jar="C:\Android Projects\SylvacMeasurements\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.1.1\jars\classes.jar"
-        jumboMode="false"
+        jumboMode="true"
         revision="23.0.3"
         sha1="5c5699834e9722f1c288fea2de82725d078ba127">
-        <dex dex="C:\Android Projects\SylvacMeasurements\app\build\intermediates\pre-dexed\debug\com.android.support-appcompat-v7-23.1.1_11d6ec3c1843970ec778d691b3508ffb90a763d9.jar" />
+        <dex dex="C:\Android Projects\SylvacMeasurements\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-appcompat-v7-23.1.1_11d6ec3c1843970ec778d691b3508ffb90a763d9\classes.dex" />
+    </item>
+    <item
+        jar="C:\Android Projects\SylvacMeasurements\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="e4929298f008e0446f6cb78712da5c516d557b73">
+        <dex dex="C:\Android Projects\SylvacMeasurements\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run_fcb503097b1cd4174a14c5402fbb0ab02a680998\classes.dex" />
     </item>
     <item
         jar="C:\Android Projects\SylvacMeasurements\app\build\intermediates\exploded-aar\com.android.support\recyclerview-v7\23.1.1\jars\classes.jar"
-        jumboMode="false"
+        jumboMode="true"
         revision="23.0.3"
         sha1="09c5e804bc67fc0580360043dff067df574a60d4">
-        <dex dex="C:\Android Projects\SylvacMeasurements\app\build\intermediates\pre-dexed\debug\com.android.support-recyclerview-v7-23.1.1_93c122930cdd75516df45493c5c26d4bbc2ce455.jar" />
+        <dex dex="C:\Android Projects\SylvacMeasurements\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-recyclerview-v7-23.1.1_93c122930cdd75516df45493c5c26d4bbc2ce455\classes.dex" />
     </item>
 
 </items>

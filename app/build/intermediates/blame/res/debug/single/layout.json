@@ -28,16 +28,16 @@
         "source": "C:\\Android Projects\\SylvacMeasurements\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\layout\\abc_action_menu_layout.xml"
     },
     {
-        "merged": "C:\\Android Projects\\SylvacMeasurements\\app\\build\\intermediates\\res\\merged\\debug\\layout\\save_data_layout.xml",
-        "source": "C:\\Android Projects\\SylvacMeasurements\\app\\src\\main\\res\\layout\\save_data_layout.xml"
+        "merged": "C:\\Android Projects\\SylvacMeasurements\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_alert_dialog_material.xml",
+        "source": "C:\\Android Projects\\SylvacMeasurements\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\layout\\abc_alert_dialog_material.xml"
     },
     {
         "merged": "C:\\Android Projects\\SylvacMeasurements\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_list_menu_item_icon.xml",
         "source": "C:\\Android Projects\\SylvacMeasurements\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\layout\\abc_list_menu_item_icon.xml"
     },
     {
-        "merged": "C:\\Android Projects\\SylvacMeasurements\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_alert_dialog_material.xml",
-        "source": "C:\\Android Projects\\SylvacMeasurements\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\layout\\abc_alert_dialog_material.xml"
+        "merged": "C:\\Android Projects\\SylvacMeasurements\\app\\build\\intermediates\\res\\merged\\debug\\layout\\save_data_layout.xml",
+        "source": "C:\\Android Projects\\SylvacMeasurements\\app\\src\\main\\res\\layout\\save_data_layout.xml"
     },
     {
         "merged": "C:\\Android Projects\\SylvacMeasurements\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_lines.xml",
@@ -168,12 +168,12 @@
         "source": "C:\\Android Projects\\SylvacMeasurements\\app\\src\\main\\res\\layout\\connect_fragment.xml"
     },
     {
-        "merged": "C:\\Android Projects\\SylvacMeasurements\\app\\build\\intermediates\\res\\merged\\debug\\layout\\design_navigation_item.xml",
-        "source": "C:\\Android Projects\\SylvacMeasurements\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\23.1.1\\res\\layout\\design_navigation_item.xml"
-    },
-    {
         "merged": "C:\\Android Projects\\SylvacMeasurements\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_alert_dialog_button_bar_material.xml",
         "source": "C:\\Android Projects\\SylvacMeasurements\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\layout\\abc_alert_dialog_button_bar_material.xml"
+    },
+    {
+        "merged": "C:\\Android Projects\\SylvacMeasurements\\app\\build\\intermediates\\res\\merged\\debug\\layout\\design_navigation_item.xml",
+        "source": "C:\\Android Projects\\SylvacMeasurements\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\23.1.1\\res\\layout\\design_navigation_item.xml"
     },
     {
         "merged": "C:\\Android Projects\\SylvacMeasurements\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_search_view.xml",
