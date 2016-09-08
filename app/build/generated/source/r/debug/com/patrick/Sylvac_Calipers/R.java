@@ -2247,6 +2247,7 @@ containing a value of this type.
         public static final int action_clear_data=0x7f0e009f;
         public static final int action_context_bar=0x7f0e005b;
         public static final int action_divider=0x7f0e0082;
+        public static final int action_dummy_data=0x7f0e00a2;
         public static final int action_help=0x7f0e00a1;
         public static final int action_menu_divider=0x7f0e0002;
         public static final int action_menu_presenter=0x7f0e0003;

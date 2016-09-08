@@ -9,6 +9,7 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.media.MediaPlayer;
+import android.os.Build;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.provider.Settings;
@@ -80,19 +81,20 @@ public class MainActivity extends AppCompatActivity {
             Toast.makeText(this, "BLE not supported", Toast.LENGTH_SHORT).show();
             finish();
         }
-
-        if(ContextCompat.checkSelfPermission(this, Manifest.permission.WRITE_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED){
-            AlertDialog.Builder builder = new AlertDialog.Builder(this);
-            builder.setTitle("File Access");
-            builder.setMessage("Please enable the app to write external storage");
-            builder.setPositiveButton(android.R.string.ok, null);
-            builder.setOnDismissListener(new DialogInterface.OnDismissListener() {
-                @Override
-                public void onDismiss(DialogInterface dialog) {
-                    requestPermissions(new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE}, 1);
-                }
-            });
-            builder.show();
+        if(Build.VERSION.SDK_INT == 23) {
+            if (ContextCompat.checkSelfPermission(this, Manifest.permission.WRITE_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED) {
+                AlertDialog.Builder builder = new AlertDialog.Builder(this);
+                builder.setTitle("File Access");
+                builder.setMessage("Please enable the app to write external storage");
+                builder.setPositiveButton(android.R.string.ok, null);
+                builder.setOnDismissListener(new DialogInterface.OnDismissListener() {
+                    @Override
+                    public void onDismiss(DialogInterface dialog) {
+                        requestPermissions(new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE}, 1);
+                    }
+                });
+                builder.show();
+            }
         }
 
         //mPlayer = MediaPlayer.create(this, R.raw.received);
@@ -128,6 +130,11 @@ public class MainActivity extends AppCompatActivity {
                 return true;
             case R.id.action_rescan:
                 fConnect.scanForDevices(true);
+                return true;
+            case R.id.action_dummy_data:
+                Intent mIntent = new Intent(RecordFragment.MEASUREMENT_RECEIVED);
+                mIntent.putExtra(CommunicationCharacteristics.DATA_VALUE, "+0.001");
+                LocalBroadcastManager.getInstance(this).sendBroadcast(mIntent);
                 return true;
             default:
                 return super.onOptionsItemSelected(mItem);

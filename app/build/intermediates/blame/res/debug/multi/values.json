@@ -920,14 +920,7 @@
                     "endOffset": 7183
                 },
                 "from": {
-                    "file": "C:\\Android Projects\\SylvacMeasurements\\app\\src\\main\\res\\values\\colors.xml",
-                    "position": {
-                        "startLine": 8,
-                        "startColumn": 4,
-                        "startOffset": 385,
-                        "endColumn": 63,
-                        "endOffset": 444
-                    }
+                    "file": "C:\\Android Projects\\SylvacMeasurements\\app\\src\\main\\res\\values\\colors.xml"
                 }
             },
             {
@@ -1011,14 +1004,7 @@
                     "endOffset": 7658
                 },
                 "from": {
-                    "file": "C:\\Android Projects\\SylvacMeasurements\\app\\src\\main\\res\\values\\colors.xml",
-                    "position": {
-                        "startLine": 9,
-                        "startColumn": 4,
-                        "startOffset": 450,
-                        "endColumn": 63,
-                        "endOffset": 509
-                    }
+                    "file": "C:\\Android Projects\\SylvacMeasurements\\app\\src\\main\\res\\values\\colors.xml"
                 }
             },
             {

@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_height="fill_parent"
     android:layout_width="fill_parent"
-    android:orientation="vertical">
+    xmlns:android.support.design="http://schemas.android.com/tools">
                 <android.support.v4.view.ViewPager
                         xmlns:android="http://schemas.android.com/apk/res/android"
                         android:layout_height="fill_parent"

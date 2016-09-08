@@ -34,6 +34,10 @@
         android:id="@+id/action_help"
         android:title="Help"
         app:showAsAction="never" />
+    <item
+        android:id="@+id/action_dummy_data"
+        android:title="Dummy Send"
+        app:showAsAction="never" />
     <!--<item
         android:id="@+id/action_about"
         android:title="About"
