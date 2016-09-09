@@ -19,6 +19,7 @@ import android.support.v4.content.LocalBroadcastManager;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
@@ -32,6 +33,8 @@ public class MainActivity extends AppCompatActivity {
     public static final String PREFERENCE_BEEP_ON_RECEIVE = "beep_on_receive";
     public static final String PREFERENCE_ONLY_SYLVAC = "sylvac_devices";
     public static final String PREFERENCE_CURRENT_ID = "current_ID";
+    public static final String PREFERENCE_AUTO_SAVE_FILENAME = "auto_save_filename";
+    public static final String PREFERNCE_AUTO_SAVE = "auto_save";
     public static final int DEFAULT_PREF_VALUES_PER_ENTRY = 3;
 
     private static final int REQUEST_ENABLE_BT = 1;
@@ -40,6 +43,7 @@ public class MainActivity extends AppCompatActivity {
     private Toolbar mToolbar;
     private TabLayout mTabLayout;
     private SharedPreferences mPrefs;
+    private static MediaPlayer mPlayer;
 
     private ConnectFragment fConnect;
     private RecordFragment fRecord;
@@ -52,6 +56,9 @@ public class MainActivity extends AppCompatActivity {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.framework);
+
+        mPlayer = MediaPlayer.create(this, R.raw.received);
+        mPlayer.setOnErrorListener(mPlayerErrorListener);
 
         PreferenceManager.setDefaultValues(this, R.xml.preferences, false);
         mPrefs = PreferenceManager.getDefaultSharedPreferences(this);
@@ -142,7 +149,16 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void playOnReceiveSound(){
-        MediaPlayer mPlayer = MediaPlayer.create(this, R.raw.received);
+        //MediaPlayer mPlayer = MediaPlayer.create(this, R.raw.received);
+        //mPlayer.start();
         mPlayer.start();
     }
+
+    final MediaPlayer.OnErrorListener mPlayerErrorListener = new MediaPlayer.OnErrorListener() {
+        @Override
+        public boolean onError(MediaPlayer mp, int what, int extra) {
+            Log.e("MainActivity", "mPlayer error: " + what + " - " + extra);
+            return true;
+        }
+    };
 }

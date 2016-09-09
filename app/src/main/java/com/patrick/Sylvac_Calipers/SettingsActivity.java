@@ -53,16 +53,23 @@ public class SettingsActivity extends AppCompatActivity {
 
             Preference _p = getPreferenceManager().findPreference(MainActivity.PREFERENCE_VALUES_PER_ENTRY);
             _p.setSummary("Number of measurements per entry: " + getPreferenceManager().getSharedPreferences().getString(MainActivity.PREFERENCE_VALUES_PER_ENTRY, "Error"));
+            _p = getPreferenceManager().findPreference(MainActivity.PREFERENCE_AUTO_SAVE_FILENAME);
+            boolean enablefilename = PreferenceManager.getDefaultSharedPreferences(getContext()).getBoolean(MainActivity.PREFERNCE_AUTO_SAVE,false);
+            _p.setSummary("Autosave file: " + getPreferenceManager().getDefaultSharedPreferences(getContext()).getString(MainActivity.PREFERENCE_AUTO_SAVE_FILENAME, "----"));
+            _p.setEnabled(enablefilename);
         }
 
 
         @Override
         public void onSharedPreferenceChanged(SharedPreferences sharedPreferences, String key) {
             Log.i("Settings", "Key changed: " + key );
-            if(key.equals(MainActivity.PREFERENCE_VALUES_PER_ENTRY)){
-                Preference _p = findPreference(key);
-                SharedPreferences prefs = getPreferenceManager().getSharedPreferences();
-                _p.setSummary("Number of measurements per entry: " + prefs.getString(key, "Error"));
+            SharedPreferences prefs = getPreferenceManager().getSharedPreferences();
+            switch (key) {
+                case MainActivity.PREFERENCE_VALUES_PER_ENTRY:
+                    Preference _p = findPreference(key);
+                    _p.setSummary("Number of measurements per entry: " + prefs.getString(key, "Error"));
+                default:
+                    Log.e("Settings", "Preference " + key + " not handled");
             }
         }
     }

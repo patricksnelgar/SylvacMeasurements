@@ -24,10 +24,24 @@
             android:key="sylvac_devices"
             android:summary="Show only Sylvac devices in the connect screen"
             android:defaultValue="true" />
-        <!--<SwitchPreference
+        <SwitchPreference
             android:title="Auto Connect"
             android:key="auto_connect"
             android:summary="Connect to previously paired devices automatically"
-            android:defaultValue="false" /> -->
+            android:defaultValue="false"
+            android:enabled="false"
+            android:editable="false"/>
+    </PreferenceCategory>
+    <PreferenceCategory android:title="Data Preferences">
+        <CheckBoxPreference
+            android:title="Auto Save"
+            android:key="auto_save"
+            android:summary="Save new rows automatically when complete"
+            android:defaultValue="true" />
+        <EditTextPreference
+            android:title="Filename"
+            android:key="auto_save_filename"
+            android:defaultValue="SylvacMeasurements.csv"
+            android:summary="Autosave file: SylvacMeasurements.csv" />
     </PreferenceCategory>
 </PreferenceScreen>
