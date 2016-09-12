@@ -1,13 +1,10 @@
 package com.patrick.Sylvac_Calipers;
 
-import android.app.ActionBar;
 import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.preference.EditTextPreference;
 import android.preference.Preference;
 import android.preference.PreferenceFragment;
 import android.preference.PreferenceManager;
-import android.support.v7.app.ActionBarActivity;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.MenuItem;
@@ -68,6 +65,16 @@ public class SettingsActivity extends AppCompatActivity {
                 case MainActivity.PREFERENCE_VALUES_PER_ENTRY:
                     Preference _p = findPreference(key);
                     _p.setSummary("Number of measurements per entry: " + prefs.getString(key, "Error"));
+                    break;
+                case MainActivity.PREFERNCE_AUTO_SAVE:
+                    boolean enable = getPreferenceManager().getSharedPreferences().getBoolean(key, false);
+                    Preference mPrefFile = findPreference(MainActivity.PREFERENCE_AUTO_SAVE_FILENAME);
+                    mPrefFile.setEnabled(enable);
+                    break;
+                case MainActivity.PREFERENCE_AUTO_SAVE_FILENAME:
+                    Preference mPrefFileName = findPreference(key);
+                    mPrefFileName.setSummary("Autosave file: " + getPreferenceManager().getSharedPreferences().getString(key, "----"));
+                    break;
                 default:
                     Log.e("Settings", "Preference " + key + " not handled");
             }

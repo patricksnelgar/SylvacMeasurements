@@ -1,14 +1,11 @@
 package com.patrick.Sylvac_Calipers;
 
-import android.Manifest;
 import android.app.AlertDialog;
-import android.app.Dialog;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
-import android.media.MediaPlayer;
 import android.os.Environment;
 import android.os.Handler;
 import android.os.Looper;
@@ -18,14 +15,14 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.ListView;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import java.io.File;
+import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
+import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 /**
@@ -47,6 +44,7 @@ public class DataReceiver extends BroadcastReceiver {
     public int valuesPerRecord;
     private List<Record> listRecords;
     private RecordAdapter listRecordsAdapter;
+    private FileOutputStream mFileStream;
     private char space = (int) 32;
 
     SharedPreferences mPrefs;
@@ -80,7 +78,7 @@ public class DataReceiver extends BroadcastReceiver {
                     mParentActivity.playOnReceiveSound();
                 }
                 mMeasurementCount++;
-                mCurrentRecord += data + space +space +space;
+                mCurrentRecord += data +space +space+space;
                 //Log.i(TAG, mMeasurementCount + ":" + valuesPerRecord + " = " + mCurrentRecord);
                 if(mMeasurementCount >= valuesPerRecord){
                     int currentID = mPrefs.getInt(MainActivity.PREFERENCE_CURRENT_ID, 0);
@@ -94,6 +92,26 @@ public class DataReceiver extends BroadcastReceiver {
                     scrollList();
                     mMeasurementCount = 0;
                     mCurrentRecord="";
+
+                    if(mPrefs.getBoolean(MainActivity.PREFERNCE_AUTO_SAVE, false)){
+                        String mDir = Environment.getExternalStorageDirectory().toString();
+                        File mFolderPath = new File(mDir + "/SavedData");
+                        if(!mFolderPath.exists()) mFolderPath.mkdirs();
+                        final File mOutput = new File(mFolderPath,mPrefs.getString(MainActivity.PREFERENCE_AUTO_SAVE_FILENAME, "----"));
+                        try {
+                            mFileStream = new FileOutputStream(mOutput,true);
+                            PrintWriter mPw = new PrintWriter(mFileStream);
+                            mPw.println(newEntry.getRecordForOutput());
+                            mPw.flush();
+                            mPw.close();
+                            mFileStream.close();
+                        } catch (FileNotFoundException e) {
+                            e.printStackTrace();
+                        } catch (IOException e) {
+                            e.printStackTrace();
+                        }
+
+                    }
                 }
                 break;
             }

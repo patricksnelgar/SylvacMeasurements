@@ -35,12 +35,6 @@ public class BluetoothLeGattCallback extends BluetoothGattCallback {
 
     @Override
     public void onCharacteristicChanged(BluetoothGatt gatt, BluetoothGattCharacteristic bluetoothCharacteristic) {
-        /*
-        final byte[] data = bluetoothCharacteristic.getValue();
-        Intent _i = new Intent(RecordFragment.MEASUREMENT_RECEIVED);
-        _i.putExtra("NUM_VALUE", data);
-        LocalBroadcastManager.getInstance(mConnectionManager.getMainActivity()).sendBroadcast(_i);
-        */
         mConnectionManager.broadcastUpdate("Donnees transmises", bluetoothCharacteristic);
     }
 
