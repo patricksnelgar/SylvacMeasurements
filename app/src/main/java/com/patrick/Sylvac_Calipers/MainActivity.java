@@ -138,11 +138,11 @@ public class MainActivity extends AppCompatActivity {
             case R.id.action_rescan:
                 fConnect.scanForDevices(true);
                 return true;
-            case R.id.action_dummy_data:
+            /*case R.id.action_dummy_data:
                 Intent mIntent = new Intent(RecordFragment.MEASUREMENT_RECEIVED);
                 mIntent.putExtra(CommunicationCharacteristics.DATA_VALUE, "+0.001");
                 LocalBroadcastManager.getInstance(this).sendBroadcast(mIntent);
-                return true;
+                return true;*/
             default:
                 return super.onOptionsItemSelected(mItem);
         }

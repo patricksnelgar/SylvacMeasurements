@@ -352,21 +352,23 @@ public class ConnectFragment extends Fragment {
                 @Override
                 public void run() {
                     BluetoothDevice _device = result.getDevice();
-                    if(prefs.getBoolean("sylvac_devices", false)) {
-                        if (_device.getName().startsWith("SY")) {
+                    if( _device != null) {
+                        if (prefs.getBoolean("sylvac_devices", false)) {
+                            if (_device.getName().startsWith("SY")) {
+                                DiscoveredDevice _mDevice = new DiscoveredDevice(_device.getName(), false, "", _device.getAddress(), _device);
+                                if (!mDiscoveredDevices.contains(_mDevice) || mDiscoveredDevices.size() == 0) {
+                                    mDiscoveredDevices.add(_mDevice);
+                                    Log.i(TAG, "New device discovered! " + _device.getName());
+                                    mDeviceAdapter.notifyDataSetChanged();
+                                }
+                            }
+                        } else {
                             DiscoveredDevice _mDevice = new DiscoveredDevice(_device.getName(), false, "", _device.getAddress(), _device);
                             if (!mDiscoveredDevices.contains(_mDevice) || mDiscoveredDevices.size() == 0) {
                                 mDiscoveredDevices.add(_mDevice);
                                 Log.i(TAG, "New device discovered! " + _device.getName());
                                 mDeviceAdapter.notifyDataSetChanged();
                             }
-                        }
-                    } else {
-                        DiscoveredDevice _mDevice = new DiscoveredDevice(_device.getName(), false, "", _device.getAddress(), _device);
-                        if (!mDiscoveredDevices.contains(_mDevice) || mDiscoveredDevices.size() == 0) {
-                            mDiscoveredDevices.add(_mDevice);
-                            Log.i(TAG, "New device discovered! " + _device.getName());
-                            mDeviceAdapter.notifyDataSetChanged();
                         }
                     }
                 }

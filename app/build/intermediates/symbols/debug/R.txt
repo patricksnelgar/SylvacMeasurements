@@ -599,7 +599,6 @@ int id action_bluetooth_settings 0x7f0e009e
 int id action_clear_data 0x7f0e009f
 int id action_context_bar 0x7f0e005b
 int id action_divider 0x7f0e0082
-int id action_dummy_data 0x7f0e00a2
 int id action_help 0x7f0e00a1
 int id action_menu_divider 0x7f0e0002
 int id action_menu_presenter 0x7f0e0003

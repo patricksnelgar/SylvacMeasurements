@@ -164,7 +164,7 @@ public class ConnectionManager implements CommunicationCharacteristics{
             return false;
         }
 
-        this.mBluetoothGatt = lBluetoothDevice.connectGatt(this.parent, false, this.callback);
+        this.mBluetoothGatt = lBluetoothDevice.connectGatt(this.parent, true, this.callback);
         return true;
     }
 
@@ -178,7 +178,7 @@ public class ConnectionManager implements CommunicationCharacteristics{
         }
         Log.i(TAG, "No Valid address");
         callback = new BluetoothLeGattCallback(this);
-        mBluetoothGatt = lBluetoothDevice.connectGatt(this.parent, false, this.callback);
+        mBluetoothGatt = lBluetoothDevice.connectGatt(this.parent, true, this.callback);
     }
 
     public void closeGatt(){
