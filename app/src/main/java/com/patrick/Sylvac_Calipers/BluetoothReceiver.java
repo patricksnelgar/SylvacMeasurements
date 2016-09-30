@@ -29,31 +29,6 @@ public class BluetoothReceiver extends BroadcastReceiver {
             _i.putExtra(CommunicationCharacteristics.DATA_VALUE, s);
             LocalBroadcastManager.getInstance(mManager.getMainActivity()).sendBroadcast(_i);
         }
-
-        /*
-        switch (action){
-            case ConnectFragment.DATA_AVAILABLE:
-                String extraData = new String(intent.getByteArrayExtra("EXTRA_DATA"));
-                String canal = (String)intent.getCharSequenceExtra("NUM_CANAL");
-                Log.i(TAG, "Extra data: " + extraData + " Canal: " + canal);
-                break;
-            case ConnectFragment.GATT_CONNECTED:
-                Log.i(TAG, "Device Connected!");
-                break;
-            case ConnectFragment.GATT_DISCONNECTED:
-                Log.i(TAG, "Instrument disconnected");
-                break;
-            case ConnectFragment.GATT_SERVICES_DISCOVERED:
-                Log.i(TAG, "Services discovered!");
-                break;
-            case ConnectFragment.CONNECTION_COMPLETE:
-                Log.i(TAG, "CONNECTION_COMPLETE");
-                break;
-            default:
-                Log.w(TAG, "Action not handled: " + action);
-                break;
-        }
-        */
     }
 
     public void setmManager(ConnectionManager m){

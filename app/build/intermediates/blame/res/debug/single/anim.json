@@ -44,12 +44,12 @@
         "source": "C:\\Android Projects\\SylvacMeasurements\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\anim\\abc_fade_out.xml"
     },
     {
-        "merged": "C:\\Android Projects\\SylvacMeasurements\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_fade_in.xml",
-        "source": "C:\\Android Projects\\SylvacMeasurements\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\anim\\abc_fade_in.xml"
-    },
-    {
         "merged": "C:\\Android Projects\\SylvacMeasurements\\app\\build\\intermediates\\res\\merged\\debug\\anim\\design_snackbar_out.xml",
         "source": "C:\\Android Projects\\SylvacMeasurements\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\23.1.1\\res\\anim\\design_snackbar_out.xml"
+    },
+    {
+        "merged": "C:\\Android Projects\\SylvacMeasurements\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_fade_in.xml",
+        "source": "C:\\Android Projects\\SylvacMeasurements\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\anim\\abc_fade_in.xml"
     },
     {
         "merged": "C:\\Android Projects\\SylvacMeasurements\\app\\build\\intermediates\\res\\merged\\debug\\anim\\design_snackbar_in.xml",

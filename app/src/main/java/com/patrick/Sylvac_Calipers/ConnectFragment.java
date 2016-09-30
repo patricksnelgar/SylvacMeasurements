@@ -19,9 +19,11 @@ import android.content.Intent;
 import android.content.IntentFilter;
 import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
+import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
 import android.preference.PreferenceManager;
+import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.Fragment;
 import android.support.v4.content.ContextCompat;
 import android.support.v4.content.LocalBroadcastManager;
@@ -36,6 +38,12 @@ import android.widget.Toast;
 import java.lang.reflect.Method;
 import java.util.ArrayList;
 import java.util.List;
+
+import static com.patrick.Sylvac_Calipers.CommunicationCharacteristics.ACTION_DATA_AVAILABLE;
+import static com.patrick.Sylvac_Calipers.CommunicationCharacteristics.ACTION_GATT_CONNECTED;
+import static com.patrick.Sylvac_Calipers.CommunicationCharacteristics.ACTION_GATT_DISCONNECTED;
+import static com.patrick.Sylvac_Calipers.CommunicationCharacteristics.ACTION_GATT_SERVICES_DISCOVERED;
+import static com.patrick.Sylvac_Calipers.CommunicationCharacteristics.EXTRA_DATA;
 
 /**
  * Author: Patrick Snelgar
@@ -60,9 +68,9 @@ public class ConnectFragment extends Fragment {
     private DeviceAdapter mDeviceAdapter;
     private BluetoothManager mBtManager;
     private BluetoothAdapter mBtAdapter;
-    private BluetoothReceiver mBtReciever;
+    //private BluetoothReceiver mBtReciever;
     private MainActivity mParentActivity;
-    private BluetoothLeGattCallback mCallback;
+    //private BluetoothLeGattCallback mCallback;
     private Handler mHandler;
     private ConnectionManager mConnectionManager;
     private  ListView mListDevices;
@@ -97,15 +105,18 @@ public class ConnectFragment extends Fragment {
         super.onCreate(savedInstanceState);
         Log.d(TAG, "onCreate");
         mHandler = new Handler();
-        mConnectionManager = new ConnectionManager(mParentActivity, null);
+        mConnectionManager = new ConnectionManager(mParentActivity);
         // Set up the class to handle data from the calipers
+        /*
         mBtReciever = new BluetoothReceiver();
+
         mBtReciever.setmManager(mConnectionManager);
         if(!receiversRegistered) {
             LocalBroadcastManager.getInstance(getActivity()).registerReceiver(mBtReciever, makeGattUpdateIntentFilter());
-            LocalBroadcastManager.getInstance(getActivity()).registerReceiver(btReceiver, makeBondFilter());
+            /LocalBroadcastManager.getInstance(getActivity()).registerReceiver(btReceiver, makeBondFilter());
             receiversRegistered = true;
         }
+        */
 
         // Set up the custom ArrayAdapter for the ListView
         mDeviceAdapter = new DeviceAdapter(getActivity(), mDiscoveredDevices);
@@ -119,31 +130,18 @@ public class ConnectFragment extends Fragment {
             mParentActivity.finish();
         }
 
-        mCallback = new BluetoothLeGattCallback(mConnectionManager);
+        //mCallback = new BluetoothLeGattCallback(mConnectionManager);
         mBluetoothScanner = mBtAdapter.getBluetoothLeScanner();
 
         prefs = PreferenceManager.getDefaultSharedPreferences(mParentActivity);
 
-        if (ContextCompat.checkSelfPermission(mParentActivity, android.Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
+        if (ContextCompat.checkSelfPermission(mParentActivity, android.Manifest.permission.ACCESS_COARSE_LOCATION)
+                != PackageManager.PERMISSION_GRANTED
+                && Build.VERSION.SDK_INT >= 23) {
             Log.e(TAG, "Permissions failed");
-            if(!locationPermRequested) {
-                AlertDialog.Builder builder = new AlertDialog.Builder(mParentActivity);
-                builder.setTitle("This app needs location access");
-                builder.setMessage("Please enable location access in order to receive Bluetooth scan results.");
-                builder.setPositiveButton(android.R.string.ok, null);
-                builder.setOnDismissListener(new DialogInterface.OnDismissListener() {
-                    @Override
-                    public void onDismiss(DialogInterface dialog) {
-                        requestPermissions(new String[]{Manifest.permission.ACCESS_COARSE_LOCATION}, PERMISSION_REQUEST_COARSE_LOCATION);
-                    }
-                });
-                builder.show();
-                locationPermRequested = true;
-            }
+            ActivityCompat.requestPermissions(this.mParentActivity, new String[]{Manifest.permission.ACCESS_FINE_LOCATION, Manifest.permission.ACCESS_COARSE_LOCATION}, 100);
         }
-
         getBondedDevices();
-        mDeviceAdapter.notifyDataSetChanged();
     }
 
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState){
@@ -157,7 +155,7 @@ public class ConnectFragment extends Fragment {
                 Log.i(TAG, "Device at index: " + position + " selected");
                 final BluetoothDevice _device = mDiscoveredDevices.get(position).btDevice;
                 mHandler.post(new Toaster("Connecting to: " + _device.getName(), Toast.LENGTH_SHORT));
-                connectToDevice(_device);
+                mConnectionManager.connect(_device.getAddress());
 
                 // TODO: why does device get removed from list after pairing?
             }
@@ -179,7 +177,7 @@ public class ConnectFragment extends Fragment {
                             mHandler.post(new Toaster("Device unpaired", Toast.LENGTH_SHORT));
                             mDiscoveredDevices.get(position).bondedDevice = false;
                             mDeviceAdapter.notifyDataSetChanged();
-                            mConnectionManager.closeGatt();
+                            mConnectionManager.close();
                         } catch (Exception e) {
                             e.printStackTrace();
                         }
@@ -210,6 +208,7 @@ public class ConnectFragment extends Fragment {
                 startActivityForResult(enableBt, 1);
             }
         }
+        mParentActivity.registerReceiver(mGattUpdateReceiver, makeGattUpdateIntentFilter());
 
         mDeviceAdapter = new DeviceAdapter(getActivity(), mDiscoveredDevices);
         mListDevices.setAdapter(mDeviceAdapter);
@@ -283,33 +282,6 @@ public class ConnectFragment extends Fragment {
         mDeviceAdapter.notifyDataSetChanged();
     }
 
-    public boolean connectToDevice(final BluetoothDevice mDevice){
-        scanForDevices(false);
-        isConnecting = true;
-        refreshAfterConnect = true;
-        mConnectionManager.closeGatt();
-
-        Log.i(TAG, "Connecting");
-        mBluetoothDeviceAddress = mDevice.getAddress();
-        mConnectionManager.setDeviceAddress(mBluetoothDeviceAddress);
-        mCallback = new BluetoothLeGattCallback(mConnectionManager);
-        mBluetoothGatt = mDevice.connectGatt(mParentActivity, false, mCallback);
-
-        mHandler.postDelayed(new Runnable() {
-            @Override
-            public void run() {
-                if(!deviceConnected && isConnecting) {
-                    new Toaster("Connect timeout: " + mDevice.getName(), Toast.LENGTH_SHORT).run();
-                    mConnectionManager.closeGatt();
-                }
-            }
-        }, 10000L);
-
-        if(mBluetoothGatt == null) {
-            return false;
-        }
-        return true;
-    }
 
     private void updateDeviceToBonded(BluetoothDevice _device){
         Log.i(TAG, "Searching for device: " + _device.getName());
@@ -322,16 +294,6 @@ public class ConnectFragment extends Fragment {
                 }
             }
         }
-    }
-
-    private static IntentFilter makeGattUpdateIntentFilter() {
-        IntentFilter localIntentFilter = new IntentFilter();
-        localIntentFilter.addAction(CommunicationCharacteristics.ACTION_DATA_AVAILABLE);
-        localIntentFilter.addAction(CommunicationCharacteristics.ACTION_DEVICE_NOT_FOUND);
-        localIntentFilter.addAction(CommunicationCharacteristics.ACTION_GATT_CONNECTED);
-        localIntentFilter.addAction(CommunicationCharacteristics.ACTION_GATT_DISCONNECTED);
-        localIntentFilter.addAction(CommunicationCharacteristics.ACTION_GATT_SERVICES_DISCOVERED);
-        return localIntentFilter;
     }
 
     private static  IntentFilter makeBondFilter(){
@@ -387,25 +349,34 @@ public class ConnectFragment extends Fragment {
         }
     };
 
-    private final BroadcastReceiver btReceiver = new BroadcastReceiver() {
+    private static IntentFilter makeGattUpdateIntentFilter() {
+        final IntentFilter intentFilter = new IntentFilter();
+        intentFilter.addAction(ACTION_GATT_CONNECTED);
+        intentFilter.addAction(ACTION_GATT_DISCONNECTED);
+        intentFilter.addAction(ACTION_GATT_SERVICES_DISCOVERED);
+        intentFilter.addAction(ACTION_DATA_AVAILABLE);
+        return intentFilter;
+    }
+
+    private final BroadcastReceiver mGattUpdateReceiver = new BroadcastReceiver() {
         @Override
         public void onReceive(Context context, Intent intent) {
-            Log.i(TAG, "btReceiver: action="+intent.getAction());
             final String action = intent.getAction();
-            if(action.equals(CommunicationCharacteristics.DEVICE_BONDED)){
-                BluetoothDevice bDevice = intent.getExtras().getParcelable(CommunicationCharacteristics.BT_DEVICE);
-                Log.i(TAG, "Bonding complete: " + bDevice.getName());
-                mHandler.post(new Toaster("Bonded with: " + bDevice.getName(), Toast.LENGTH_SHORT));
-                isConnecting = false;
-                deviceConnected = true;
-                updateDeviceToBonded(bDevice);
+            if (ACTION_GATT_CONNECTED.equals(action)) {
+                Log.d(TAG, "Connection successful.");
+            } else if (ACTION_GATT_DISCONNECTED.equals(action)) {
+                Log.d(TAG, "Connection dropped or lost.");
+            } else if (ACTION_GATT_SERVICES_DISCOVERED.equals(action)) {
+                //
+                Log.d(TAG, "Service discovery complete.");
+                Log.d(TAG, "Try enable indication.");
+                mConnectionManager.enableIndication(mBluetoothGatt);
+                Log.d(TAG, "Try enable notification.");
+                mConnectionManager.enableNotification(mBluetoothGatt);
+            } else if (ACTION_DATA_AVAILABLE.equals(action)) {
+                //displayData(intent.getStringExtra(BluetoothLeService.EXTRA_DATA));
+                Log.d(TAG, "Data received: " + intent.getStringExtra(EXTRA_DATA));
             }
-            if(action.equals(GATT_DISCONNECTED)){
-                deviceConnected = false;
-                mHandler.post(new Toaster("Device disconnected", Toast.LENGTH_SHORT));
-                mConnectionManager.closeGatt();
-            }
-
         }
     };
 }

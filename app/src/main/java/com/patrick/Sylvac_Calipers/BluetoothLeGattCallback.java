@@ -23,14 +23,28 @@ public class BluetoothLeGattCallback extends BluetoothGattCallback {
 
     private static final String TAG = BluetoothLeGattCallback.class.getSimpleName();
     private static ConnectionManager mConnectionManager;
-    private Handler mHandler = new Handler(Looper.getMainLooper());
-
-    private static final int STATE_DISCONNECTED = 0;
-    private static final int STATE_CONNECTING = 1;
-    private static final int STATE_CONNECTED = 2;
 
     public BluetoothLeGattCallback(ConnectionManager pConMan){
         this.mConnectionManager = pConMan;
+    }
+
+    @Override
+    public void onConnectionStateChange(BluetoothGatt gatt, int status, int newState) {
+        Log.i(TAG, "State change: " + newState + " Status: " + status);
+        String intentAction;
+        if(newState == BluetoothProfile.STATE_CONNECTED) {
+            intentAction = CommunicationCharacteristics.ACTION_GATT_CONNECTED;
+
+            if(status == BluetoothGatt.GATT_SUCCESS) {
+                Log.i(TAG, "Connection successful, finalize");
+                mConnectionManager.broadcastUpdate(ConnectFragment.GATT_CONNECTED);
+                gatt.discoverServices();
+
+            }
+
+        } else if(newState == BluetoothProfile.STATE_DISCONNECTED){
+            mConnectionManager.broadcastUpdate(ConnectFragment.GATT_DISCONNECTED);
+        }
     }
 
     @Override
@@ -45,21 +59,7 @@ public class BluetoothLeGattCallback extends BluetoothGattCallback {
         Log.i(TAG, "Characteristic read: " + bluetoothCharacteristic.getUuid());
     }
 
-    @Override
-    public void onConnectionStateChange(BluetoothGatt gatt, int status, int newState) {
-        Log.i(TAG, "State change: " + newState + " Status: " + status);
-        if(newState == BluetoothProfile.STATE_CONNECTED) {
-            if(status == BluetoothGatt.GATT_SUCCESS) {
-                Log.i(TAG, "Connection successful, finalize");
-                mConnectionManager.broadcastUpdate(ConnectFragment.GATT_CONNECTED);
-                gatt.discoverServices();
 
-            }
-
-        } else if(newState == BluetoothProfile.STATE_DISCONNECTED){
-            mConnectionManager.broadcastUpdate(ConnectFragment.GATT_DISCONNECTED);
-        }
-    }
 
     @Override
     public void onDescriptorWrite(BluetoothGatt gatt, BluetoothGattDescriptor descriptor, int status) {
@@ -73,16 +73,5 @@ public class BluetoothLeGattCallback extends BluetoothGattCallback {
         descriptor.setValue(BluetoothGattDescriptor.ENABLE_NOTIFICATION_VALUE);
         gatt.writeDescriptor(descriptor);
 
-    }
-
-    @Override
-    public void onServicesDiscovered(BluetoothGatt gatt, int status) {
-        boolean z = true;
-        ConnectionManager conn = mConnectionManager;
-        conn.setBluetoothGatt(gatt);
-        if(status!=0) {
-            z = false;
-        }
-        conn.servicesDiscovered(z);
     }
 }

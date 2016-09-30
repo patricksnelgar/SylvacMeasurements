@@ -14,16 +14,15 @@ public interface CommunicationCharacteristics {
     UUID TX_ANSWER_FROM_INSTRUMENT_UUID = UUID.fromString("C1B25013-CAAF-6D0E-4C33-7DAE30052840");
     UUID TX_RECEIVED_DATA_UUID = UUID.fromString("C1B25010-CAAF-6D0E-4C33-7DAE30052840");
 
-    String ACTION_DATA_AVAILABLE = "Donnees transmises";
-    String ACTION_DEVICE_NOT_FOUND = "Instrument non-trouve";
-    String ACTION_GATT_CONNECTED = "Connexion reussi";
-    String ACTION_GATT_DISCONNECTED = "Deconnexion reussi ou inattendue";
-    String ACTION_GATT_SERVICES_DISCOVERED = "Services decouverts";
+    String ACTION_DATA_AVAILABLE = "Data received";
+    String ACTION_DEVICE_NOT_FOUND = "Device not found";
+    String ACTION_GATT_CONNECTED = "Connection successful";
+    String ACTION_GATT_DISCONNECTED = "Disconnected";
+    String ACTION_GATT_SERVICES_DISCOVERED = "Service discovery complete";
 
     String DEVICE_ADDRESS = "DEVICE_ADDRESS";
     String EXTRA_DATA = "EXTRA_DATA";
     String NUM_CANAL = "NUM_CANAL";
-    String SENDER = "SENDER";
 
     String DATA_VALUE = "DATA_VALUE";
 

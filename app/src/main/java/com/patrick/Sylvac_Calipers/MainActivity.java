@@ -4,8 +4,11 @@ import android.Manifest;
 import android.app.AlertDialog;
 import android.app.ListActivity;
 import android.bluetooth.BluetoothAdapter;
+import android.content.BroadcastReceiver;
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.IntentFilter;
 import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.media.MediaPlayer;
@@ -14,6 +17,7 @@ import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.provider.Settings;
 import android.support.design.widget.TabLayout;
+import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.ContextCompat;
 import android.support.v4.content.LocalBroadcastManager;
 import android.support.v4.view.ViewPager;
@@ -24,6 +28,12 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.widget.Toast;
+
+import static com.patrick.Sylvac_Calipers.CommunicationCharacteristics.ACTION_DATA_AVAILABLE;
+import static com.patrick.Sylvac_Calipers.CommunicationCharacteristics.ACTION_GATT_CONNECTED;
+import static com.patrick.Sylvac_Calipers.CommunicationCharacteristics.ACTION_GATT_DISCONNECTED;
+import static com.patrick.Sylvac_Calipers.CommunicationCharacteristics.ACTION_GATT_SERVICES_DISCOVERED;
+import static com.patrick.Sylvac_Calipers.CommunicationCharacteristics.EXTRA_DATA;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -37,13 +47,15 @@ public class MainActivity extends AppCompatActivity {
     public static final String PREFERNCE_AUTO_SAVE = "auto_save";
     public static final int DEFAULT_PREF_VALUES_PER_ENTRY = 3;
 
+    private String TAG = "MainActivity";
+
     private static final int REQUEST_ENABLE_BT = 1;
     private PageFragmentAdapter mAdapter;
     private ViewPager mPager;
     private Toolbar mToolbar;
     private TabLayout mTabLayout;
     private SharedPreferences mPrefs;
-    private static MediaPlayer mPlayer;
+    private MediaPlayer mPlayer;
 
     private ConnectFragment fConnect;
     private RecordFragment fRecord;
@@ -62,7 +74,7 @@ public class MainActivity extends AppCompatActivity {
 
         PreferenceManager.setDefaultValues(this, R.xml.preferences, false);
         mPrefs = PreferenceManager.getDefaultSharedPreferences(this);
-        mPrefs.edit().putInt(PREFERENCE_CURRENT_ID, 0).commit();
+        mPrefs.edit().putInt(PREFERENCE_CURRENT_ID, 0).apply();
 
 
         mToolbar = (Toolbar) findViewById(R.id.toolbar);
@@ -88,23 +100,12 @@ public class MainActivity extends AppCompatActivity {
             Toast.makeText(this, "BLE not supported", Toast.LENGTH_SHORT).show();
             finish();
         }
-        if(Build.VERSION.SDK_INT == 23) {
+        if(Build.VERSION.SDK_INT >= 23) {
             if (ContextCompat.checkSelfPermission(this, Manifest.permission.WRITE_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED) {
-                AlertDialog.Builder builder = new AlertDialog.Builder(this);
-                builder.setTitle("File Access");
-                builder.setMessage("Please enable the app to write external storage");
-                builder.setPositiveButton(android.R.string.ok, null);
-                builder.setOnDismissListener(new DialogInterface.OnDismissListener() {
-                    @Override
-                    public void onDismiss(DialogInterface dialog) {
-                        requestPermissions(new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE}, 1);
-                    }
-                });
-                builder.show();
+                ActivityCompat.requestPermissions(this,
+                        new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE}, 100); //Any number
             }
         }
-
-        //mPlayer = MediaPlayer.create(this, R.raw.received);
     }
 
     @Override
