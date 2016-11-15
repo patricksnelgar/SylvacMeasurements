@@ -47,7 +47,7 @@ public class MainActivity extends AppCompatActivity {
     public static final String PREFERNCE_AUTO_SAVE = "auto_save";
     public static final int DEFAULT_PREF_VALUES_PER_ENTRY = 3;
 
-    private String TAG = "MainActivity";
+    private String TAG = MainActivity.class.getSimpleName();
 
     private static final int REQUEST_ENABLE_BT = 1;
     private PageFragmentAdapter mAdapter;
@@ -57,8 +57,8 @@ public class MainActivity extends AppCompatActivity {
     private SharedPreferences mPrefs;
     private MediaPlayer mPlayer;
 
-    private ConnectFragment fConnect;
     private RecordFragment fRecord;
+    private DeviceScanFragment fScan;
     private StatusFragment fStatus;
 
     /**
@@ -76,19 +76,23 @@ public class MainActivity extends AppCompatActivity {
         mPrefs = PreferenceManager.getDefaultSharedPreferences(this);
         mPrefs.edit().putInt(PREFERENCE_CURRENT_ID, 0).apply();
 
+        final ConnectionManager mConn = new ConnectionManager(this);
 
         mToolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(mToolbar);
         getSupportActionBar().setTitle(getString(R.string.app_title));
 
         mAdapter = new PageFragmentAdapter(getSupportFragmentManager());
-        fConnect = new ConnectFragment();
-        fConnect.setParent(this);
+        //fConnect = new ConnectFragment();
+        //fConnect.setParent(this);
+        fScan = new DeviceScanFragment();
+        fScan.setParent(this);
+        fScan.setConnectionMan(mConn);
         fRecord = new RecordFragment();
         fRecord.setParent(this);
-        mAdapter.addFragment(fConnect, "Connect");
+        fRecord.setConnectionMan(mConn);
+        mAdapter.addFragment(fScan, "Scan");
         mAdapter.addFragment(fRecord, "Record");
-        //mAdapter.addFragment(new StatusFragment(), "Status");
 
         mPager = (ViewPager) findViewById(R.id.view_pager);
         mPager.setAdapter(mAdapter);
@@ -104,6 +108,10 @@ public class MainActivity extends AppCompatActivity {
             if (ContextCompat.checkSelfPermission(this, Manifest.permission.WRITE_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED) {
                 ActivityCompat.requestPermissions(this,
                         new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE}, 100); //Any number
+            }
+
+            if(ContextCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED){
+                ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.ACCESS_COARSE_LOCATION}, 100);
             }
         }
     }
@@ -137,7 +145,7 @@ public class MainActivity extends AppCompatActivity {
                 LocalBroadcastManager.getInstance(this).sendBroadcast(new Intent(RecordFragment.CLEAR_DATA));
                 return true;
             case R.id.action_rescan:
-                fConnect.scanForDevices(true);
+                fScan.scanForDevices(true);
                 return true;
             /*case R.id.action_dummy_data:
                 Intent mIntent = new Intent(RecordFragment.MEASUREMENT_RECEIVED);

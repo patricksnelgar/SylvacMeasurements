@@ -48,7 +48,7 @@ import static com.patrick.Sylvac_Calipers.CommunicationCharacteristics.EXTRA_DAT
 /**
  * Author: Patrick Snelgar
  * Date: 21/04/2016
- * Description: UI for displaying and handling discovery of bluetooth devices
+ * Description: UI for displaying and handling discovery of bluetooth mDiscoveredDevices
  */
 public class ConnectFragment extends Fragment {
 
@@ -238,9 +238,9 @@ public class ConnectFragment extends Fragment {
         if(mBtAdapter.isEnabled()){
             if(scan && !isScanning){
                 mDiscoveredDevices.clear();
-                Log.d(TAG, "Clear devices: scanForDevices");
+                Log.d(TAG, "Clear mDiscoveredDevices: scanForDevices");
                 mDeviceAdapter.notifyDataSetChanged();
-                Log.i(TAG, "Scanning for devices");
+                Log.i(TAG, "Scanning for mDiscoveredDevices");
                 mHandler.post(new Toaster("Scanning...", Toast.LENGTH_SHORT));
                 mHandler.postDelayed(new Runnable() {
                     @Override

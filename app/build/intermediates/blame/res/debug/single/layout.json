@@ -208,6 +208,10 @@
         "source": "C:\\Android Projects\\SylvacMeasurements\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\layout\\abc_action_bar_up_container.xml"
     },
     {
+        "merged": "C:\\Android Projects\\SylvacMeasurements\\app\\build\\intermediates\\res\\merged\\debug\\layout\\devicescan_fragment.xml",
+        "source": "C:\\Android Projects\\SylvacMeasurements\\app\\src\\main\\res\\layout\\devicescan_fragment.xml"
+    },
+    {
         "merged": "C:\\Android Projects\\SylvacMeasurements\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_screen_simple.xml",
         "source": "C:\\Android Projects\\SylvacMeasurements\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\layout\\abc_screen_simple.xml"
     },

@@ -17,7 +17,7 @@ import android.widget.Toast;
 /**
  * Author: Patrick Snelgar
  * Date: 21/04/2016
- * Description: Manages the change in communication and state of bluetooth devices
+ * Description: Manages the change in communication and state of bluetooth mDiscoveredDevices
  */
 public class BluetoothLeGattCallback extends BluetoothGattCallback {
 

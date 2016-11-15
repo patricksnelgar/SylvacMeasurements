@@ -23,7 +23,7 @@ import java.util.UUID;
 /**
  * Author: Patrick Snelgar
  * Date: 21/04/2016
- * Description: Manages connections between bluetooth devices. Also handles custom broadcast events
+ * Description: Manages connections between bluetooth mDiscoveredDevices. Also handles custom broadcast events
  */
 public class ConnectionManager implements CommunicationCharacteristics{
 
@@ -35,7 +35,7 @@ public class ConnectionManager implements CommunicationCharacteristics{
     private BluetoothManager mBluetoothManager;
     private BluetoothGatt mBluetoothGatt;
 
-    // not null when a previous connection has been made
+    // Not null when a previous connection has been made
     private String mBluetoothDeviceAddress;
 
     private int mConnectionState = STATE_DISCONNECTED;
