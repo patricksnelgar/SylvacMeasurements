@@ -23,15 +23,10 @@ public class BluetoothReceiver extends BroadcastReceiver {
         Log.i(TAG, "Action received: " + action + " from: " + address);
         if(action.equals(CommunicationCharacteristics.ACTION_DATA_AVAILABLE)){
             String s = new String(intent.getByteArrayExtra(CommunicationCharacteristics.EXTRA_DATA));
-            String canal = (String) intent.getCharSequenceExtra(CommunicationCharacteristics.NUM_CANAL);
             Log.i(TAG, "Data: " + s);
             Intent _i = new Intent(RecordFragment.MEASUREMENT_RECEIVED);
-            _i.putExtra(CommunicationCharacteristics.DATA_VALUE, s);
+            _i.putExtra(CommunicationCharacteristics.MEASUREMENT_DATA, s);
             LocalBroadcastManager.getInstance(mManager.getMainActivity()).sendBroadcast(_i);
         }
-    }
-
-    public void setmManager(ConnectionManager m){
-        this.mManager = m;
     }
 }

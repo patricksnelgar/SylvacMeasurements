@@ -111,7 +111,7 @@ public class DeviceScanFragment extends ListFragment {
 
     public void scanForDevices(boolean scan) {
         mDeviceListAdapter.clear();
-        checkBondedDevices();
+        //checkBondedDevices();
         if(mBluetoothLeScanner != null) {
             if (scan) {
                 mHandler.postDelayed(new Runnable() {
@@ -146,10 +146,11 @@ public class DeviceScanFragment extends ListFragment {
     @Override
     public void onListItemClick(ListView l, View v, int position, long id) {
         BluetoothDevice mTargetDevice = mDeviceListAdapter.getDevice(position);
-        String mTargetDeviceAddress = mTargetDevice.getAddress();
+        final String mTargetDeviceAddress = mTargetDevice.getAddress();
         mConn.connect(mTargetDeviceAddress);
-        //Log.d(TAG, "Clicked device: " + d.getName());
     }
+
+
 
     public void setParent(MainActivity m) { mParent = m; }
 
@@ -170,6 +171,7 @@ public class DeviceScanFragment extends ListFragment {
 
         public void addDevice(BluetoothDevice d){
             boolean deviceExists = false;
+            if (d.getName() == null) return;
             for (BluetoothDevice mDevice : mDevices){
                 if(mDevice.getAddress().equals(d.getAddress()))
                     deviceExists = true;

@@ -15,6 +15,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.ListView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import java.io.File;
@@ -37,6 +38,7 @@ public class DataReceiver extends BroadcastReceiver {
     private final String TAG = DataReceiver.class.getSimpleName();
     private final MainActivity mParentActivity;
     private String mCurrentRecord = "";
+    private TextView mCurrentRecordView;
     private EditText mCurrentEntryID;
     private ListView mHistory;
     private Handler mHandler = new Handler(Looper.getMainLooper());
@@ -60,6 +62,8 @@ public class DataReceiver extends BroadcastReceiver {
         mHistory = (ListView) mParentActivity.findViewById(R.id.listRecordEntries);
         mHistory.setAdapter(listRecordsAdapter);
         listRecordsAdapter.notifyDataSetChanged();
+
+        mCurrentRecordView = (TextView) mParentActivity.findViewById(R.id.currentRecordView);
     }
 
     @Override
@@ -69,8 +73,8 @@ public class DataReceiver extends BroadcastReceiver {
         String action = intent.getAction();
         String data = "NULL";
 
-        if(intent.hasExtra(CommunicationCharacteristics.DATA_VALUE))
-            data = new String(intent.getStringExtra(CommunicationCharacteristics.DATA_VALUE)).trim();
+        if(intent.hasExtra(CommunicationCharacteristics.MEASUREMENT_DATA))
+            data = new String(intent.getStringExtra(CommunicationCharacteristics.MEASUREMENT_DATA)).trim();
         switch (action){
             case RecordFragment.MEASUREMENT_RECEIVED:{
                 if(mPrefs.getBoolean(MainActivity.PREFERENCE_BEEP_ON_RECEIVE, false)){
@@ -78,7 +82,8 @@ public class DataReceiver extends BroadcastReceiver {
                     mParentActivity.playOnReceiveSound();
                 }
                 mMeasurementCount++;
-                mCurrentRecord += data +space +space+space;
+                mCurrentRecord += data +space+space+space;
+                mCurrentRecordView.setText(mCurrentRecord);
                 //Log.i(TAG, mMeasurementCount + ":" + valuesPerRecord + " = " + mCurrentRecord);
                 if(mMeasurementCount >= valuesPerRecord){
                     int currentID = mPrefs.getInt(MainActivity.PREFERENCE_CURRENT_ID, 0);
@@ -121,6 +126,9 @@ public class DataReceiver extends BroadcastReceiver {
             case RecordFragment.CLEAR_DATA:
                 listRecords.clear();
                 listRecordsAdapter.notifyDataSetChanged();
+                mCurrentRecord = "";
+                mCurrentRecordView.setText(mCurrentRecord);
+                mMeasurementCount = 0;
                 break;
             default:
                 Log.i(TAG, "Action received: " + action);
@@ -194,5 +202,11 @@ public class DataReceiver extends BroadcastReceiver {
             }
         });
         builder.show();
+    }
+
+    public void resetCurrentRecord(){
+        mCurrentRecord = "";
+        mCurrentRecordView.setText("");
+        mMeasurementCount = 0;
     }
 }

@@ -100,16 +100,16 @@
         "source": "C:\\Android Projects\\SylvacMeasurements\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\layout\\abc_dialog_title_material.xml"
     },
     {
+        "merged": "C:\\Android Projects\\SylvacMeasurements\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_main.xml",
+        "source": "C:\\Android Projects\\SylvacMeasurements\\app\\src\\main\\res\\layout\\activity_main.xml"
+    },
+    {
         "merged": "C:\\Android Projects\\SylvacMeasurements\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_bar_view_list_nav_layout.xml",
         "source": "C:\\Android Projects\\SylvacMeasurements\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\layout\\abc_action_bar_view_list_nav_layout.xml"
     },
     {
         "merged": "C:\\Android Projects\\SylvacMeasurements\\app\\build\\intermediates\\res\\merged\\debug\\layout\\help_fragment.xml",
         "source": "C:\\Android Projects\\SylvacMeasurements\\app\\src\\main\\res\\layout\\help_fragment.xml"
-    },
-    {
-        "merged": "C:\\Android Projects\\SylvacMeasurements\\app\\build\\intermediates\\res\\merged\\debug\\layout\\framework.xml",
-        "source": "C:\\Android Projects\\SylvacMeasurements\\app\\src\\main\\res\\layout\\framework.xml"
     },
     {
         "merged": "C:\\Android Projects\\SylvacMeasurements\\app\\build\\intermediates\\res\\merged\\debug\\layout\\select_dialog_singlechoice_material.xml",
@@ -162,10 +162,6 @@
     {
         "merged": "C:\\Android Projects\\SylvacMeasurements\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_menu_item_layout.xml",
         "source": "C:\\Android Projects\\SylvacMeasurements\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\layout\\abc_action_menu_item_layout.xml"
-    },
-    {
-        "merged": "C:\\Android Projects\\SylvacMeasurements\\app\\build\\intermediates\\res\\merged\\debug\\layout\\connect_fragment.xml",
-        "source": "C:\\Android Projects\\SylvacMeasurements\\app\\src\\main\\res\\layout\\connect_fragment.xml"
     },
     {
         "merged": "C:\\Android Projects\\SylvacMeasurements\\app\\build\\intermediates\\res\\merged\\debug\\layout\\design_navigation_item.xml",

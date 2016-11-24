@@ -1,15 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    android:weightSum="100"
-    android:keepScreenOn="true">
+    android:keepScreenOn="true"
+    tools:context="com.patrick.Sylvac_Calipers.MainActivity">
     <ListView
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:minHeight="56dp"
+        android:layout_width="fill_parent"
+        android:minHeight="57dp"
         android:paddingEnd="8dp"
         android:paddingStart="8dp"
         android:divider="@color/PrimaryColour"
@@ -26,7 +25,8 @@
         android:layout_weight="90"
         android:choiceMode="singleChoice"
         android:stackFromBottom="true"
-        android:longClickable="true" />
+        android:longClickable="true"
+        android:layout_height="355dp" />
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -34,13 +34,17 @@
         android:layout_gravity="bottom"
         android:id="@+id/layoutRecordIDSection"
         android:layout_weight="0"
-        android:layout_margin="0dp"
-        android:padding="0dp">
+        android:padding="0dp"
+        android:layout_marginLeft="0dp"
+        android:layout_marginRight="0dp"
+        android:layout_alignParentTop="false"
+        android:layout_alignParentStart="false"
+        android:layout_below="@+id/listRecordEntries">
 
         <ImageView
             android:layout_width="match_parent"
             android:layout_height="2dp"
-            android:id="@+id/imageView"
+            android:id="@+id/dividerBarTop"
             android:background="@color/PrimaryColour" />
 
         <TextView
@@ -55,7 +59,6 @@
             android:textAppearance="@style/Base.TextAppearance.AppCompat.Display1"
             android:paddingRight="7dp"
             android:clickable="false"
-            android:editable="false"
             android:focusable="false" />
 
         <EditText
@@ -67,14 +70,36 @@
             android:layout_toEndOf="@+id/textCurrentIDLabel"
             android:textAppearance="@style/Base.TextAppearance.AppCompat.Display1"
             android:textColor="@color/PrimaryColour"
-            android:singleLine="true"
             android:text="0"
-            android:editable="true"
             android:enabled="true"
             android:lines="1"
             android:maxLines="1"
             android:minLines="1" />
 
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:id="@+id/dividerBarBottom"
+            android:background="@color/PrimaryColour"
+            android:layout_alignParentEnd="false"
+            android:layout_alignParentBottom="false"
+            android:layout_alignBottom="@+id/editCurrentID" />
+
     </RelativeLayout>
 
-</LinearLayout>
+    <TextView
+        android:text="- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -"
+        android:layout_width="fill_parent"
+        android:id="@+id/currentRecordView"
+        android:maxLines="2"
+        android:minLines="1"
+        android:textSize="18sp"
+        android:paddingLeft="5dp"
+        android:layout_alignWithParentIfMissing="false"
+        android:layout_centerInParent="false"
+        android:layout_below="@+id/layoutRecordIDSection"
+        android:layout_alignParentStart="true"
+        android:layout_height="wrap_content"
+        android:lines="2" />
+
+</RelativeLayout>

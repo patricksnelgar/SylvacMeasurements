@@ -8204,9 +8204,9 @@
                     "startLine": 1425,
                     "startColumn": 4,
                     "startOffset": 113240,
-                    "endLine": 1432,
+                    "endLine": 1428,
                     "endColumn": 12,
-                    "endOffset": 113811
+                    "endOffset": 113406
                 },
                 "from": {
                     "file": "C:\\Android Projects\\SylvacMeasurements\\app\\src\\main\\res\\values\\styles.xml",
@@ -8214,19 +8214,40 @@
                         "startLine": 12,
                         "startColumn": 4,
                         "startOffset": 647,
-                        "endLine": 19,
+                        "endLine": 15,
                         "endColumn": 12,
-                        "endOffset": 1225
+                        "endOffset": 816
                     }
                 }
             },
             {
                 "to": {
-                    "startLine": 1433,
+                    "startLine": 1429,
                     "startColumn": 4,
-                    "startOffset": 113816,
+                    "startOffset": 113411,
+                    "endLine": 1436,
+                    "endColumn": 12,
+                    "endOffset": 113982
+                },
+                "from": {
+                    "file": "C:\\Android Projects\\SylvacMeasurements\\app\\src\\main\\res\\values\\styles.xml",
+                    "position": {
+                        "startLine": 17,
+                        "startColumn": 4,
+                        "startOffset": 824,
+                        "endLine": 24,
+                        "endColumn": 12,
+                        "endOffset": 1402
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 1437,
+                    "startColumn": 4,
+                    "startOffset": 113987,
                     "endColumn": 83,
-                    "endOffset": 113895
+                    "endOffset": 114066
                 },
                 "from": {
                     "file": "C:\\Android Projects\\SylvacMeasurements\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -8241,11 +8262,11 @@
             },
             {
                 "to": {
-                    "startLine": 1434,
+                    "startLine": 1438,
                     "startColumn": 4,
-                    "startOffset": 113900,
+                    "startOffset": 114071,
                     "endColumn": 95,
-                    "endOffset": 113991
+                    "endOffset": 114162
                 },
                 "from": {
                     "file": "C:\\Android Projects\\SylvacMeasurements\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -8260,11 +8281,11 @@
             },
             {
                 "to": {
-                    "startLine": 1435,
+                    "startLine": 1439,
                     "startColumn": 4,
-                    "startOffset": 113996,
+                    "startOffset": 114167,
                     "endColumn": 95,
-                    "endOffset": 114087
+                    "endOffset": 114258
                 },
                 "from": {
                     "file": "C:\\Android Projects\\SylvacMeasurements\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -8279,11 +8300,11 @@
             },
             {
                 "to": {
-                    "startLine": 1436,
+                    "startLine": 1440,
                     "startColumn": 4,
-                    "startOffset": 114092,
+                    "startOffset": 114263,
                     "endColumn": 97,
-                    "endOffset": 114185
+                    "endOffset": 114356
                 },
                 "from": {
                     "file": "C:\\Android Projects\\SylvacMeasurements\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -8298,11 +8319,11 @@
             },
             {
                 "to": {
-                    "startLine": 1437,
+                    "startLine": 1441,
                     "startColumn": 4,
-                    "startOffset": 114190,
+                    "startOffset": 114361,
                     "endColumn": 99,
-                    "endOffset": 114285
+                    "endOffset": 114456
                 },
                 "from": {
                     "file": "C:\\Android Projects\\SylvacMeasurements\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -8317,11 +8338,11 @@
             },
             {
                 "to": {
-                    "startLine": 1438,
+                    "startLine": 1442,
                     "startColumn": 4,
-                    "startOffset": 114290,
+                    "startOffset": 114461,
                     "endColumn": 101,
-                    "endOffset": 114387
+                    "endOffset": 114558
                 },
                 "from": {
                     "file": "C:\\Android Projects\\SylvacMeasurements\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -8336,11 +8357,11 @@
             },
             {
                 "to": {
-                    "startLine": 1439,
+                    "startLine": 1443,
                     "startColumn": 4,
-                    "startOffset": 114392,
+                    "startOffset": 114563,
                     "endColumn": 101,
-                    "endOffset": 114489
+                    "endOffset": 114660
                 },
                 "from": {
                     "file": "C:\\Android Projects\\SylvacMeasurements\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -8355,11 +8376,11 @@
             },
             {
                 "to": {
-                    "startLine": 1440,
+                    "startLine": 1444,
                     "startColumn": 4,
-                    "startOffset": 114494,
+                    "startOffset": 114665,
                     "endColumn": 101,
-                    "endOffset": 114591
+                    "endOffset": 114762
                 },
                 "from": {
                     "file": "C:\\Android Projects\\SylvacMeasurements\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -8374,11 +8395,11 @@
             },
             {
                 "to": {
-                    "startLine": 1441,
+                    "startLine": 1445,
                     "startColumn": 4,
-                    "startOffset": 114596,
+                    "startOffset": 114767,
                     "endColumn": 101,
-                    "endOffset": 114693
+                    "endOffset": 114864
                 },
                 "from": {
                     "file": "C:\\Android Projects\\SylvacMeasurements\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -8393,11 +8414,11 @@
             },
             {
                 "to": {
-                    "startLine": 1442,
+                    "startLine": 1446,
                     "startColumn": 4,
-                    "startOffset": 114698,
+                    "startOffset": 114869,
                     "endColumn": 101,
-                    "endOffset": 114795
+                    "endOffset": 114966
                 },
                 "from": {
                     "file": "C:\\Android Projects\\SylvacMeasurements\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -8412,11 +8433,11 @@
             },
             {
                 "to": {
-                    "startLine": 1443,
+                    "startLine": 1447,
                     "startColumn": 4,
-                    "startOffset": 114800,
+                    "startOffset": 114971,
                     "endColumn": 99,
-                    "endOffset": 114895
+                    "endOffset": 115066
                 },
                 "from": {
                     "file": "C:\\Android Projects\\SylvacMeasurements\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -8431,11 +8452,11 @@
             },
             {
                 "to": {
-                    "startLine": 1444,
+                    "startLine": 1448,
                     "startColumn": 4,
-                    "startOffset": 114900,
+                    "startOffset": 115071,
                     "endColumn": 95,
-                    "endOffset": 114991
+                    "endOffset": 115162
                 },
                 "from": {
                     "file": "C:\\Android Projects\\SylvacMeasurements\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -8450,11 +8471,11 @@
             },
             {
                 "to": {
-                    "startLine": 1445,
+                    "startLine": 1449,
                     "startColumn": 4,
-                    "startOffset": 114996,
+                    "startOffset": 115167,
                     "endColumn": 111,
-                    "endOffset": 115103
+                    "endOffset": 115274
                 },
                 "from": {
                     "file": "C:\\Android Projects\\SylvacMeasurements\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -8469,11 +8490,11 @@
             },
             {
                 "to": {
-                    "startLine": 1446,
+                    "startLine": 1450,
                     "startColumn": 4,
-                    "startOffset": 115108,
+                    "startOffset": 115279,
                     "endColumn": 128,
-                    "endOffset": 115232
+                    "endOffset": 115403
                 },
                 "from": {
                     "file": "C:\\Android Projects\\SylvacMeasurements\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -8488,11 +8509,11 @@
             },
             {
                 "to": {
-                    "startLine": 1447,
+                    "startLine": 1451,
                     "startColumn": 4,
-                    "startOffset": 115237,
+                    "startOffset": 115408,
                     "endColumn": 122,
-                    "endOffset": 115355
+                    "endOffset": 115526
                 },
                 "from": {
                     "file": "C:\\Android Projects\\SylvacMeasurements\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -8507,12 +8528,12 @@
             },
             {
                 "to": {
-                    "startLine": 1448,
+                    "startLine": 1452,
                     "startColumn": 4,
-                    "startOffset": 115360,
-                    "endLine": 1449,
+                    "startOffset": 115531,
+                    "endLine": 1453,
                     "endColumn": 12,
-                    "endOffset": 115509
+                    "endOffset": 115680
                 },
                 "from": {
                     "file": "C:\\Android Projects\\SylvacMeasurements\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -8528,12 +8549,12 @@
             },
             {
                 "to": {
-                    "startLine": 1450,
+                    "startLine": 1454,
                     "startColumn": 4,
-                    "startOffset": 115514,
-                    "endLine": 1451,
+                    "startOffset": 115685,
+                    "endLine": 1455,
                     "endColumn": 12,
-                    "endOffset": 115663
+                    "endOffset": 115834
                 },
                 "from": {
                     "file": "C:\\Android Projects\\SylvacMeasurements\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -8549,11 +8570,11 @@
             },
             {
                 "to": {
-                    "startLine": 1452,
+                    "startLine": 1456,
                     "startColumn": 4,
-                    "startOffset": 115668,
+                    "startOffset": 115839,
                     "endColumn": 97,
-                    "endOffset": 115761
+                    "endOffset": 115932
                 },
                 "from": {
                     "file": "C:\\Android Projects\\SylvacMeasurements\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -8568,11 +8589,11 @@
             },
             {
                 "to": {
-                    "startLine": 1453,
+                    "startLine": 1457,
                     "startColumn": 4,
-                    "startOffset": 115766,
+                    "startOffset": 115937,
                     "endColumn": 113,
-                    "endOffset": 115875
+                    "endOffset": 116046
                 },
                 "from": {
                     "file": "C:\\Android Projects\\SylvacMeasurements\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -8587,11 +8608,11 @@
             },
             {
                 "to": {
-                    "startLine": 1454,
+                    "startLine": 1458,
                     "startColumn": 4,
-                    "startOffset": 115880,
+                    "startOffset": 116051,
                     "endColumn": 93,
-                    "endOffset": 115969
+                    "endOffset": 116140
                 },
                 "from": {
                     "file": "C:\\Android Projects\\SylvacMeasurements\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -8606,12 +8627,12 @@
             },
             {
                 "to": {
-                    "startLine": 1455,
+                    "startLine": 1459,
                     "startColumn": 4,
-                    "startOffset": 115974,
-                    "endLine": 1456,
+                    "startOffset": 116145,
+                    "endLine": 1460,
                     "endColumn": 12,
-                    "endOffset": 116109
+                    "endOffset": 116280
                 },
                 "from": {
                     "file": "C:\\Android Projects\\SylvacMeasurements\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -8627,12 +8648,12 @@
             },
             {
                 "to": {
-                    "startLine": 1457,
+                    "startLine": 1461,
                     "startColumn": 4,
-                    "startOffset": 116114,
-                    "endLine": 1458,
+                    "startOffset": 116285,
+                    "endLine": 1462,
                     "endColumn": 12,
-                    "endOffset": 116243
+                    "endOffset": 116414
                 },
                 "from": {
                     "file": "C:\\Android Projects\\SylvacMeasurements\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -8648,11 +8669,11 @@
             },
             {
                 "to": {
-                    "startLine": 1459,
+                    "startLine": 1463,
                     "startColumn": 4,
-                    "startOffset": 116248,
+                    "startOffset": 116419,
                     "endColumn": 95,
-                    "endOffset": 116339
+                    "endOffset": 116510
                 },
                 "from": {
                     "file": "C:\\Android Projects\\SylvacMeasurements\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -8667,11 +8688,11 @@
             },
             {
                 "to": {
-                    "startLine": 1460,
+                    "startLine": 1464,
                     "startColumn": 4,
-                    "startOffset": 116344,
+                    "startOffset": 116515,
                     "endColumn": 111,
-                    "endOffset": 116451
+                    "endOffset": 116622
                 },
                 "from": {
                     "file": "C:\\Android Projects\\SylvacMeasurements\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -8686,11 +8707,11 @@
             },
             {
                 "to": {
-                    "startLine": 1461,
+                    "startLine": 1465,
                     "startColumn": 4,
-                    "startOffset": 116456,
+                    "startOffset": 116627,
                     "endColumn": 99,
-                    "endOffset": 116551
+                    "endOffset": 116722
                 },
                 "from": {
                     "file": "C:\\Android Projects\\SylvacMeasurements\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -8705,11 +8726,11 @@
             },
             {
                 "to": {
-                    "startLine": 1462,
+                    "startLine": 1466,
                     "startColumn": 4,
-                    "startOffset": 116556,
+                    "startOffset": 116727,
                     "endColumn": 115,
-                    "endOffset": 116667
+                    "endOffset": 116838
                 },
                 "from": {
                     "file": "C:\\Android Projects\\SylvacMeasurements\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -8724,11 +8745,11 @@
             },
             {
                 "to": {
-                    "startLine": 1463,
+                    "startLine": 1467,
                     "startColumn": 4,
-                    "startOffset": 116672,
+                    "startOffset": 116843,
                     "endColumn": 95,
-                    "endOffset": 116763
+                    "endOffset": 116934
                 },
                 "from": {
                     "file": "C:\\Android Projects\\SylvacMeasurements\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -8743,11 +8764,11 @@
             },
             {
                 "to": {
-                    "startLine": 1464,
+                    "startLine": 1468,
                     "startColumn": 4,
-                    "startOffset": 116768,
+                    "startOffset": 116939,
                     "endColumn": 111,
-                    "endOffset": 116875
+                    "endOffset": 117046
                 },
                 "from": {
                     "file": "C:\\Android Projects\\SylvacMeasurements\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -8762,12 +8783,12 @@
             },
             {
                 "to": {
-                    "startLine": 1465,
+                    "startLine": 1469,
                     "startColumn": 4,
-                    "startOffset": 116880,
-                    "endLine": 1466,
+                    "startOffset": 117051,
+                    "endLine": 1470,
                     "endColumn": 12,
-                    "endOffset": 117015
+                    "endOffset": 117186
                 },
                 "from": {
                     "file": "C:\\Android Projects\\SylvacMeasurements\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -8783,11 +8804,11 @@
             },
             {
                 "to": {
-                    "startLine": 1467,
+                    "startLine": 1471,
                     "startColumn": 4,
-                    "startOffset": 117020,
+                    "startOffset": 117191,
                     "endColumn": 135,
-                    "endOffset": 117151
+                    "endOffset": 117322
                 },
                 "from": {
                     "file": "C:\\Android Projects\\SylvacMeasurements\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -8802,12 +8823,12 @@
             },
             {
                 "to": {
-                    "startLine": 1468,
+                    "startLine": 1472,
                     "startColumn": 4,
-                    "startOffset": 117156,
-                    "endLine": 1469,
+                    "startOffset": 117327,
+                    "endLine": 1473,
                     "endColumn": 12,
-                    "endOffset": 117315
+                    "endOffset": 117486
                 },
                 "from": {
                     "file": "C:\\Android Projects\\SylvacMeasurements\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -8823,11 +8844,11 @@
             },
             {
                 "to": {
-                    "startLine": 1470,
+                    "startLine": 1474,
                     "startColumn": 4,
-                    "startOffset": 117320,
+                    "startOffset": 117491,
                     "endColumn": 129,
-                    "endOffset": 117445
+                    "endOffset": 117616
                 },
                 "from": {
                     "file": "C:\\Android Projects\\SylvacMeasurements\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -8842,12 +8863,12 @@
             },
             {
                 "to": {
-                    "startLine": 1471,
+                    "startLine": 1475,
                     "startColumn": 4,
-                    "startOffset": 117450,
-                    "endLine": 1472,
+                    "startOffset": 117621,
+                    "endLine": 1476,
                     "endColumn": 12,
-                    "endOffset": 117603
+                    "endOffset": 117774
                 },
                 "from": {
                     "file": "C:\\Android Projects\\SylvacMeasurements\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -8863,12 +8884,12 @@
             },
             {
                 "to": {
-                    "startLine": 1473,
+                    "startLine": 1477,
                     "startColumn": 4,
-                    "startOffset": 117608,
-                    "endLine": 1474,
+                    "startOffset": 117779,
+                    "endLine": 1478,
                     "endColumn": 12,
-                    "endOffset": 117753
+                    "endOffset": 117924
                 },
                 "from": {
                     "file": "C:\\Android Projects\\SylvacMeasurements\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -8884,11 +8905,11 @@
             },
             {
                 "to": {
-                    "startLine": 1475,
+                    "startLine": 1479,
                     "startColumn": 4,
-                    "startOffset": 117758,
+                    "startOffset": 117929,
                     "endColumn": 140,
-                    "endOffset": 117894
+                    "endOffset": 118065
                 },
                 "from": {
                     "file": "C:\\Android Projects\\SylvacMeasurements\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -8903,12 +8924,12 @@
             },
             {
                 "to": {
-                    "startLine": 1476,
+                    "startLine": 1480,
                     "startColumn": 4,
-                    "startOffset": 117899,
-                    "endLine": 1477,
+                    "startOffset": 118070,
+                    "endLine": 1481,
                     "endColumn": 12,
-                    "endOffset": 118038
+                    "endOffset": 118209
                 },
                 "from": {
                     "file": "C:\\Android Projects\\SylvacMeasurements\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -8924,11 +8945,11 @@
             },
             {
                 "to": {
-                    "startLine": 1478,
+                    "startLine": 1482,
                     "startColumn": 4,
-                    "startOffset": 118043,
+                    "startOffset": 118214,
                     "endColumn": 134,
-                    "endOffset": 118173
+                    "endOffset": 118344
                 },
                 "from": {
                     "file": "C:\\Android Projects\\SylvacMeasurements\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -8943,11 +8964,11 @@
             },
             {
                 "to": {
-                    "startLine": 1479,
+                    "startLine": 1483,
                     "startColumn": 4,
-                    "startOffset": 118178,
+                    "startOffset": 118349,
                     "endColumn": 111,
-                    "endOffset": 118285
+                    "endOffset": 118456
                 },
                 "from": {
                     "file": "C:\\Android Projects\\SylvacMeasurements\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -8962,11 +8983,11 @@
             },
             {
                 "to": {
-                    "startLine": 1480,
+                    "startLine": 1484,
                     "startColumn": 4,
-                    "startOffset": 118290,
+                    "startOffset": 118461,
                     "endColumn": 127,
-                    "endOffset": 118413
+                    "endOffset": 118584
                 },
                 "from": {
                     "file": "C:\\Android Projects\\SylvacMeasurements\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -8981,12 +9002,12 @@
             },
             {
                 "to": {
-                    "startLine": 1481,
+                    "startLine": 1485,
                     "startColumn": 4,
-                    "startOffset": 118418,
-                    "endLine": 1482,
+                    "startOffset": 118589,
+                    "endLine": 1486,
                     "endColumn": 12,
-                    "endOffset": 118549
+                    "endOffset": 118720
                 },
                 "from": {
                     "file": "C:\\Android Projects\\SylvacMeasurements\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -9002,12 +9023,12 @@
             },
             {
                 "to": {
-                    "startLine": 1483,
+                    "startLine": 1487,
                     "startColumn": 4,
-                    "startOffset": 118554,
-                    "endLine": 1484,
+                    "startOffset": 118725,
+                    "endLine": 1488,
                     "endColumn": 12,
-                    "endOffset": 118691
+                    "endOffset": 118862
                 },
                 "from": {
                     "file": "C:\\Android Projects\\SylvacMeasurements\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -9023,12 +9044,12 @@
             },
             {
                 "to": {
-                    "startLine": 1485,
+                    "startLine": 1489,
                     "startColumn": 4,
-                    "startOffset": 118696,
-                    "endLine": 1486,
+                    "startOffset": 118867,
+                    "endLine": 1490,
                     "endColumn": 12,
-                    "endOffset": 118833
+                    "endOffset": 119004
                 },
                 "from": {
                     "file": "C:\\Android Projects\\SylvacMeasurements\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -9044,11 +9065,11 @@
             },
             {
                 "to": {
-                    "startLine": 1487,
+                    "startLine": 1491,
                     "startColumn": 4,
-                    "startOffset": 118838,
+                    "startOffset": 119009,
                     "endColumn": 111,
-                    "endOffset": 118945
+                    "endOffset": 119116
                 },
                 "from": {
                     "file": "C:\\Android Projects\\SylvacMeasurements\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -9063,11 +9084,11 @@
             },
             {
                 "to": {
-                    "startLine": 1488,
+                    "startLine": 1492,
                     "startColumn": 4,
-                    "startOffset": 118950,
+                    "startOffset": 119121,
                     "endColumn": 139,
-                    "endOffset": 119085
+                    "endOffset": 119256
                 },
                 "from": {
                     "file": "C:\\Android Projects\\SylvacMeasurements\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -9082,12 +9103,12 @@
             },
             {
                 "to": {
-                    "startLine": 1489,
+                    "startLine": 1493,
                     "startColumn": 4,
-                    "startOffset": 119090,
-                    "endLine": 1491,
+                    "startOffset": 119261,
+                    "endLine": 1495,
                     "endColumn": 12,
-                    "endOffset": 119286
+                    "endOffset": 119457
                 },
                 "from": {
                     "file": "C:\\Android Projects\\SylvacMeasurements\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\23.1.1\\res\\values\\values.xml",
@@ -9103,11 +9124,11 @@
             },
             {
                 "to": {
-                    "startLine": 1492,
+                    "startLine": 1496,
                     "startColumn": 4,
-                    "startOffset": 119291,
+                    "startOffset": 119462,
                     "endColumn": 91,
-                    "endOffset": 119378
+                    "endOffset": 119549
                 },
                 "from": {
                     "file": "C:\\Android Projects\\SylvacMeasurements\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\23.1.1\\res\\values\\values.xml",
@@ -9122,12 +9143,12 @@
             },
             {
                 "to": {
-                    "startLine": 1493,
+                    "startLine": 1497,
                     "startColumn": 4,
-                    "startOffset": 119383,
-                    "endLine": 1495,
+                    "startOffset": 119554,
+                    "endLine": 1499,
                     "endColumn": 12,
-                    "endOffset": 119573
+                    "endOffset": 119744
                 },
                 "from": {
                     "file": "C:\\Android Projects\\SylvacMeasurements\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\23.1.1\\res\\values\\values.xml",
@@ -9143,12 +9164,12 @@
             },
             {
                 "to": {
-                    "startLine": 1496,
+                    "startLine": 1500,
                     "startColumn": 4,
-                    "startOffset": 119578,
-                    "endLine": 1498,
+                    "startOffset": 119749,
+                    "endLine": 1502,
                     "endColumn": 12,
-                    "endOffset": 119757
+                    "endOffset": 119928
                 },
                 "from": {
                     "file": "C:\\Android Projects\\SylvacMeasurements\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\23.1.1\\res\\values\\values.xml",
@@ -9164,12 +9185,12 @@
             },
             {
                 "to": {
-                    "startLine": 1499,
+                    "startLine": 1503,
                     "startColumn": 4,
-                    "startOffset": 119762,
-                    "endLine": 1501,
+                    "startOffset": 119933,
+                    "endLine": 1505,
                     "endColumn": 12,
-                    "endOffset": 119932
+                    "endOffset": 120103
                 },
                 "from": {
                     "file": "C:\\Android Projects\\SylvacMeasurements\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\23.1.1\\res\\values\\values.xml",
@@ -9185,12 +9206,12 @@
             },
             {
                 "to": {
-                    "startLine": 1502,
+                    "startLine": 1506,
                     "startColumn": 4,
-                    "startOffset": 119937,
-                    "endLine": 1505,
+                    "startOffset": 120108,
+                    "endLine": 1509,
                     "endColumn": 12,
-                    "endOffset": 120185
+                    "endOffset": 120356
                 },
                 "from": {
                     "file": "C:\\Android Projects\\SylvacMeasurements\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\23.1.1\\res\\values\\values.xml",
@@ -9206,12 +9227,12 @@
             },
             {
                 "to": {
-                    "startLine": 1506,
+                    "startLine": 1510,
                     "startColumn": 4,
-                    "startOffset": 120190,
-                    "endLine": 1510,
+                    "startOffset": 120361,
+                    "endLine": 1514,
                     "endColumn": 12,
-                    "endOffset": 120476
+                    "endOffset": 120647
                 },
                 "from": {
                     "file": "C:\\Android Projects\\SylvacMeasurements\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\23.1.1\\res\\values\\values.xml",
@@ -9227,11 +9248,11 @@
             },
             {
                 "to": {
-                    "startLine": 1511,
+                    "startLine": 1515,
                     "startColumn": 4,
-                    "startOffset": 120481,
+                    "startOffset": 120652,
                     "endColumn": 67,
-                    "endOffset": 120544
+                    "endOffset": 120715
                 },
                 "from": {
                     "file": "C:\\Android Projects\\SylvacMeasurements\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -9246,11 +9267,11 @@
             },
             {
                 "to": {
-                    "startLine": 1512,
+                    "startLine": 1516,
                     "startColumn": 4,
-                    "startOffset": 120549,
+                    "startOffset": 120720,
                     "endColumn": 72,
-                    "endOffset": 120617
+                    "endOffset": 120788
                 },
                 "from": {
                     "file": "C:\\Android Projects\\SylvacMeasurements\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -9265,11 +9286,11 @@
             },
             {
                 "to": {
-                    "startLine": 1513,
+                    "startLine": 1517,
                     "startColumn": 4,
-                    "startOffset": 120622,
+                    "startOffset": 120793,
                     "endColumn": 73,
-                    "endOffset": 120691
+                    "endOffset": 120862
                 },
                 "from": {
                     "file": "C:\\Android Projects\\SylvacMeasurements\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -9284,11 +9305,11 @@
             },
             {
                 "to": {
-                    "startLine": 1514,
+                    "startLine": 1518,
                     "startColumn": 4,
-                    "startOffset": 120696,
+                    "startOffset": 120867,
                     "endColumn": 72,
-                    "endOffset": 120764
+                    "endOffset": 120935
                 },
                 "from": {
                     "file": "C:\\Android Projects\\SylvacMeasurements\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -9303,11 +9324,11 @@
             },
             {
                 "to": {
-                    "startLine": 1515,
+                    "startLine": 1519,
                     "startColumn": 4,
-                    "startOffset": 120769,
+                    "startOffset": 120940,
                     "endColumn": 73,
-                    "endOffset": 120838
+                    "endOffset": 121009
                 },
                 "from": {
                     "file": "C:\\Android Projects\\SylvacMeasurements\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -9322,12 +9343,12 @@
             },
             {
                 "to": {
-                    "startLine": 1516,
+                    "startLine": 1520,
                     "startColumn": 4,
-                    "startOffset": 120843,
-                    "endLine": 1517,
+                    "startOffset": 121014,
+                    "endLine": 1521,
                     "endColumn": 12,
-                    "endOffset": 120984
+                    "endOffset": 121155
                 },
                 "from": {
                     "file": "C:\\Android Projects\\SylvacMeasurements\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -9343,12 +9364,12 @@
             },
             {
                 "to": {
-                    "startLine": 1518,
+                    "startLine": 1522,
                     "startColumn": 4,
-                    "startOffset": 120989,
-                    "endLine": 1519,
+                    "startOffset": 121160,
+                    "endLine": 1523,
                     "endColumn": 12,
-                    "endOffset": 121128
+                    "endOffset": 121299
                 },
                 "from": {
                     "file": "C:\\Android Projects\\SylvacMeasurements\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -9364,12 +9385,12 @@
             },
             {
                 "to": {
-                    "startLine": 1520,
+                    "startLine": 1524,
                     "startColumn": 4,
-                    "startOffset": 121133,
-                    "endLine": 1521,
+                    "startOffset": 121304,
+                    "endLine": 1525,
                     "endColumn": 12,
-                    "endOffset": 121266
+                    "endOffset": 121437
                 },
                 "from": {
                     "file": "C:\\Android Projects\\SylvacMeasurements\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -9385,11 +9406,11 @@
             },
             {
                 "to": {
-                    "startLine": 1522,
+                    "startLine": 1526,
                     "startColumn": 4,
-                    "startOffset": 121271,
+                    "startOffset": 121442,
                     "endColumn": 65,
-                    "endOffset": 121332
+                    "endOffset": 121503
                 },
                 "from": {
                     "file": "C:\\Android Projects\\SylvacMeasurements\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -9404,11 +9425,11 @@
             },
             {
                 "to": {
-                    "startLine": 1523,
+                    "startLine": 1527,
                     "startColumn": 4,
-                    "startOffset": 121337,
+                    "startOffset": 121508,
                     "endColumn": 89,
-                    "endOffset": 121422
+                    "endOffset": 121593
                 },
                 "from": {
                     "file": "C:\\Android Projects\\SylvacMeasurements\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -9423,11 +9444,11 @@
             },
             {
                 "to": {
-                    "startLine": 1524,
+                    "startLine": 1528,
                     "startColumn": 4,
-                    "startOffset": 121427,
+                    "startOffset": 121598,
                     "endColumn": 79,
-                    "endOffset": 121502
+                    "endOffset": 121673
                 },
                 "from": {
                     "file": "C:\\Android Projects\\SylvacMeasurements\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -9442,11 +9463,11 @@
             },
             {
                 "to": {
-                    "startLine": 1525,
+                    "startLine": 1529,
                     "startColumn": 4,
-                    "startOffset": 121507,
+                    "startOffset": 121678,
                     "endColumn": 91,
-                    "endOffset": 121594
+                    "endOffset": 121765
                 },
                 "from": {
                     "file": "C:\\Android Projects\\SylvacMeasurements\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -9461,11 +9482,11 @@
             },
             {
                 "to": {
-                    "startLine": 1526,
+                    "startLine": 1530,
                     "startColumn": 4,
-                    "startOffset": 121599,
+                    "startOffset": 121770,
                     "endColumn": 97,
-                    "endOffset": 121692
+                    "endOffset": 121863
                 },
                 "from": {
                     "file": "C:\\Android Projects\\SylvacMeasurements\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -9480,12 +9501,12 @@
             },
             {
                 "to": {
-                    "startLine": 1527,
+                    "startLine": 1531,
                     "startColumn": 4,
-                    "startOffset": 121697,
-                    "endLine": 1528,
+                    "startOffset": 121868,
+                    "endLine": 1532,
                     "endColumn": 12,
-                    "endOffset": 121802
+                    "endOffset": 121973
                 },
                 "from": {
                     "file": "C:\\Android Projects\\SylvacMeasurements\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -9501,11 +9522,11 @@
             },
             {
                 "to": {
-                    "startLine": 1529,
+                    "startLine": 1533,
                     "startColumn": 4,
-                    "startOffset": 121807,
+                    "startOffset": 121978,
                     "endColumn": 77,
-                    "endOffset": 121880
+                    "endOffset": 122051
                 },
                 "from": {
                     "file": "C:\\Android Projects\\SylvacMeasurements\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -9520,11 +9541,11 @@
             },
             {
                 "to": {
-                    "startLine": 1530,
+                    "startLine": 1534,
                     "startColumn": 4,
-                    "startOffset": 121885,
+                    "startOffset": 122056,
                     "endColumn": 105,
-                    "endOffset": 121986
+                    "endOffset": 122157
                 },
                 "from": {
                     "file": "C:\\Android Projects\\SylvacMeasurements\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -9539,11 +9560,11 @@
             },
             {
                 "to": {
-                    "startLine": 1531,
+                    "startLine": 1535,
                     "startColumn": 4,
-                    "startOffset": 121991,
+                    "startOffset": 122162,
                     "endColumn": 91,
-                    "endOffset": 122078
+                    "endOffset": 122249
                 },
                 "from": {
                     "file": "C:\\Android Projects\\SylvacMeasurements\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -9558,11 +9579,11 @@
             },
             {
                 "to": {
-                    "startLine": 1532,
+                    "startLine": 1536,
                     "startColumn": 4,
-                    "startOffset": 122083,
+                    "startOffset": 122254,
                     "endColumn": 103,
-                    "endOffset": 122182
+                    "endOffset": 122353
                 },
                 "from": {
                     "file": "C:\\Android Projects\\SylvacMeasurements\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -9577,11 +9598,11 @@
             },
             {
                 "to": {
-                    "startLine": 1533,
+                    "startLine": 1537,
                     "startColumn": 4,
-                    "startOffset": 122187,
+                    "startOffset": 122358,
                     "endColumn": 109,
-                    "endOffset": 122292
+                    "endOffset": 122463
                 },
                 "from": {
                     "file": "C:\\Android Projects\\SylvacMeasurements\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -9596,12 +9617,12 @@
             },
             {
                 "to": {
-                    "startLine": 1534,
+                    "startLine": 1538,
                     "startColumn": 4,
-                    "startOffset": 122297,
-                    "endLine": 1535,
+                    "startOffset": 122468,
+                    "endLine": 1539,
                     "endColumn": 12,
-                    "endOffset": 122414
+                    "endOffset": 122585
                 },
                 "from": {
                     "file": "C:\\Android Projects\\SylvacMeasurements\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -9617,12 +9638,12 @@
             },
             {
                 "to": {
-                    "startLine": 1536,
+                    "startLine": 1540,
                     "startColumn": 4,
-                    "startOffset": 122419,
-                    "endLine": 1539,
+                    "startOffset": 122590,
+                    "endLine": 1543,
                     "endColumn": 12,
-                    "endOffset": 122577
+                    "endOffset": 122748
                 },
                 "from": {
                     "file": "C:\\Android Projects\\SylvacMeasurements\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -9638,12 +9659,12 @@
             },
             {
                 "to": {
-                    "startLine": 1540,
+                    "startLine": 1544,
                     "startColumn": 4,
-                    "startOffset": 122582,
-                    "endLine": 1543,
+                    "startOffset": 122753,
+                    "endLine": 1547,
                     "endColumn": 12,
-                    "endOffset": 122734
+                    "endOffset": 122905
                 },
                 "from": {
                     "file": "C:\\Android Projects\\SylvacMeasurements\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -9659,11 +9680,11 @@
             },
             {
                 "to": {
-                    "startLine": 1544,
+                    "startLine": 1548,
                     "startColumn": 4,
-                    "startOffset": 122739,
+                    "startOffset": 122910,
                     "endColumn": 79,
-                    "endOffset": 122814
+                    "endOffset": 122985
                 },
                 "from": {
                     "file": "C:\\Android Projects\\SylvacMeasurements\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -9678,11 +9699,11 @@
             },
             {
                 "to": {
-                    "startLine": 1545,
+                    "startLine": 1549,
                     "startColumn": 4,
-                    "startOffset": 122819,
+                    "startOffset": 122990,
                     "endColumn": 99,
-                    "endOffset": 122914
+                    "endOffset": 123085
                 },
                 "from": {
                     "file": "C:\\Android Projects\\SylvacMeasurements\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -9697,11 +9718,11 @@
             },
             {
                 "to": {
-                    "startLine": 1546,
+                    "startLine": 1550,
                     "startColumn": 4,
-                    "startOffset": 122919,
+                    "startOffset": 123090,
                     "endColumn": 89,
-                    "endOffset": 123004
+                    "endOffset": 123175
                 },
                 "from": {
                     "file": "C:\\Android Projects\\SylvacMeasurements\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -9716,11 +9737,11 @@
             },
             {
                 "to": {
-                    "startLine": 1547,
+                    "startLine": 1551,
                     "startColumn": 4,
-                    "startOffset": 123009,
+                    "startOffset": 123180,
                     "endColumn": 109,
-                    "endOffset": 123114
+                    "endOffset": 123285
                 },
                 "from": {
                     "file": "C:\\Android Projects\\SylvacMeasurements\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -9735,11 +9756,11 @@
             },
             {
                 "to": {
-                    "startLine": 1548,
+                    "startLine": 1552,
                     "startColumn": 4,
-                    "startOffset": 123119,
+                    "startOffset": 123290,
                     "endColumn": 91,
-                    "endOffset": 123206
+                    "endOffset": 123377
                 },
                 "from": {
                     "file": "C:\\Android Projects\\SylvacMeasurements\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -9754,12 +9775,12 @@
             },
             {
                 "to": {
-                    "startLine": 1549,
+                    "startLine": 1553,
                     "startColumn": 4,
-                    "startOffset": 123211,
-                    "endLine": 1550,
+                    "startOffset": 123382,
+                    "endLine": 1554,
                     "endColumn": 12,
-                    "endOffset": 123306
+                    "endOffset": 123477
                 },
                 "from": {
                     "file": "C:\\Android Projects\\SylvacMeasurements\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -9775,12 +9796,12 @@
             },
             {
                 "to": {
-                    "startLine": 1551,
+                    "startLine": 1555,
                     "startColumn": 4,
-                    "startOffset": 123311,
-                    "endLine": 1552,
+                    "startOffset": 123482,
+                    "endLine": 1556,
                     "endColumn": 12,
-                    "endOffset": 123418
+                    "endOffset": 123589
                 },
                 "from": {
                     "file": "C:\\Android Projects\\SylvacMeasurements\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -9796,12 +9817,12 @@
             },
             {
                 "to": {
-                    "startLine": 1553,
+                    "startLine": 1557,
                     "startColumn": 4,
-                    "startOffset": 123423,
-                    "endLine": 1554,
+                    "startOffset": 123594,
+                    "endLine": 1558,
                     "endColumn": 12,
-                    "endOffset": 123532
+                    "endOffset": 123703
                 },
                 "from": {
                     "file": "C:\\Android Projects\\SylvacMeasurements\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -9817,12 +9838,12 @@
             },
             {
                 "to": {
-                    "startLine": 1555,
+                    "startLine": 1559,
                     "startColumn": 4,
-                    "startOffset": 123537,
-                    "endLine": 1556,
+                    "startOffset": 123708,
+                    "endLine": 1560,
                     "endColumn": 12,
-                    "endOffset": 123648
+                    "endOffset": 123819
                 },
                 "from": {
                     "file": "C:\\Android Projects\\SylvacMeasurements\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -9838,12 +9859,12 @@
             },
             {
                 "to": {
-                    "startLine": 1557,
+                    "startLine": 1561,
                     "startColumn": 4,
-                    "startOffset": 123653,
-                    "endLine": 1558,
+                    "startOffset": 123824,
+                    "endLine": 1562,
                     "endColumn": 12,
-                    "endOffset": 123764
+                    "endOffset": 123935
                 },
                 "from": {
                     "file": "C:\\Android Projects\\SylvacMeasurements\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -9859,11 +9880,11 @@
             },
             {
                 "to": {
-                    "startLine": 1559,
+                    "startLine": 1563,
                     "startColumn": 4,
-                    "startOffset": 123769,
+                    "startOffset": 123940,
                     "endColumn": 93,
-                    "endOffset": 123858
+                    "endOffset": 124029
                 },
                 "from": {
                     "file": "C:\\Android Projects\\SylvacMeasurements\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -9878,11 +9899,11 @@
             },
             {
                 "to": {
-                    "startLine": 1560,
+                    "startLine": 1564,
                     "startColumn": 4,
-                    "startOffset": 123863,
+                    "startOffset": 124034,
                     "endColumn": 113,
-                    "endOffset": 123972
+                    "endOffset": 124143
                 },
                 "from": {
                     "file": "C:\\Android Projects\\SylvacMeasurements\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -9897,11 +9918,11 @@
             },
             {
                 "to": {
-                    "startLine": 1561,
+                    "startLine": 1565,
                     "startColumn": 4,
-                    "startOffset": 123977,
+                    "startOffset": 124148,
                     "endColumn": 111,
-                    "endOffset": 124084
+                    "endOffset": 124255
                 },
                 "from": {
                     "file": "C:\\Android Projects\\SylvacMeasurements\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -9916,12 +9937,12 @@
             },
             {
                 "to": {
-                    "startLine": 1562,
+                    "startLine": 1566,
                     "startColumn": 4,
-                    "startOffset": 124089,
-                    "endLine": 1563,
+                    "startOffset": 124260,
+                    "endLine": 1567,
                     "endColumn": 12,
-                    "endOffset": 124186
+                    "endOffset": 124357
                 },
                 "from": {
                     "file": "C:\\Android Projects\\SylvacMeasurements\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -9937,12 +9958,12 @@
             },
             {
                 "to": {
-                    "startLine": 1564,
+                    "startLine": 1568,
                     "startColumn": 4,
-                    "startOffset": 124191,
-                    "endLine": 1565,
+                    "startOffset": 124362,
+                    "endLine": 1569,
                     "endColumn": 12,
-                    "endOffset": 124306
+                    "endOffset": 124477
                 },
                 "from": {
                     "file": "C:\\Android Projects\\SylvacMeasurements\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -9958,12 +9979,12 @@
             },
             {
                 "to": {
-                    "startLine": 1566,
+                    "startLine": 1570,
                     "startColumn": 4,
-                    "startOffset": 124311,
-                    "endLine": 1567,
+                    "startOffset": 124482,
+                    "endLine": 1571,
                     "endColumn": 12,
-                    "endOffset": 124428
+                    "endOffset": 124599
                 },
                 "from": {
                     "file": "C:\\Android Projects\\SylvacMeasurements\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -9979,11 +10000,11 @@
             },
             {
                 "to": {
-                    "startLine": 1568,
+                    "startLine": 1572,
                     "startColumn": 4,
-                    "startOffset": 124433,
+                    "startOffset": 124604,
                     "endColumn": 81,
-                    "endOffset": 124510
+                    "endOffset": 124681
                 },
                 "from": {
                     "file": "C:\\Android Projects\\SylvacMeasurements\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -9998,11 +10019,11 @@
             },
             {
                 "to": {
-                    "startLine": 1569,
+                    "startLine": 1573,
                     "startColumn": 4,
-                    "startOffset": 124515,
+                    "startOffset": 124686,
                     "endColumn": 103,
-                    "endOffset": 124614
+                    "endOffset": 124785
                 },
                 "from": {
                     "file": "C:\\Android Projects\\SylvacMeasurements\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -10017,11 +10038,11 @@
             },
             {
                 "to": {
-                    "startLine": 1570,
+                    "startLine": 1574,
                     "startColumn": 4,
-                    "startOffset": 124619,
+                    "startOffset": 124790,
                     "endColumn": 119,
-                    "endOffset": 124734
+                    "endOffset": 124905
                 },
                 "from": {
                     "file": "C:\\Android Projects\\SylvacMeasurements\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -10036,11 +10057,11 @@
             },
             {
                 "to": {
-                    "startLine": 1571,
+                    "startLine": 1575,
                     "startColumn": 4,
-                    "startOffset": 124739,
+                    "startOffset": 124910,
                     "endColumn": 125,
-                    "endOffset": 124860
+                    "endOffset": 125031
                 },
                 "from": {
                     "file": "C:\\Android Projects\\SylvacMeasurements\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -10055,11 +10076,11 @@
             },
             {
                 "to": {
-                    "startLine": 1572,
+                    "startLine": 1576,
                     "startColumn": 4,
-                    "startOffset": 124865,
+                    "startOffset": 125036,
                     "endColumn": 97,
-                    "endOffset": 124958
+                    "endOffset": 125129
                 },
                 "from": {
                     "file": "C:\\Android Projects\\SylvacMeasurements\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -10074,11 +10095,11 @@
             },
             {
                 "to": {
-                    "startLine": 1573,
+                    "startLine": 1577,
                     "startColumn": 4,
-                    "startOffset": 124963,
+                    "startOffset": 125134,
                     "endColumn": 93,
-                    "endOffset": 125052
+                    "endOffset": 125223
                 },
                 "from": {
                     "file": "C:\\Android Projects\\SylvacMeasurements\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -10093,11 +10114,11 @@
             },
             {
                 "to": {
-                    "startLine": 1574,
+                    "startLine": 1578,
                     "startColumn": 4,
-                    "startOffset": 125057,
+                    "startOffset": 125228,
                     "endColumn": 87,
-                    "endOffset": 125140
+                    "endOffset": 125311
                 },
                 "from": {
                     "file": "C:\\Android Projects\\SylvacMeasurements\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -10112,11 +10133,11 @@
             },
             {
                 "to": {
-                    "startLine": 1575,
+                    "startLine": 1579,
                     "startColumn": 4,
-                    "startOffset": 125145,
+                    "startOffset": 125316,
                     "endColumn": 111,
-                    "endOffset": 125252
+                    "endOffset": 125423
                 },
                 "from": {
                     "file": "C:\\Android Projects\\SylvacMeasurements\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -10131,11 +10152,11 @@
             },
             {
                 "to": {
-                    "startLine": 1576,
+                    "startLine": 1580,
                     "startColumn": 4,
-                    "startOffset": 125257,
+                    "startOffset": 125428,
                     "endColumn": 115,
-                    "endOffset": 125368
+                    "endOffset": 125539
                 },
                 "from": {
                     "file": "C:\\Android Projects\\SylvacMeasurements\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -10150,11 +10171,11 @@
             },
             {
                 "to": {
-                    "startLine": 1577,
+                    "startLine": 1581,
                     "startColumn": 4,
-                    "startOffset": 125373,
+                    "startOffset": 125544,
                     "endColumn": 121,
-                    "endOffset": 125490
+                    "endOffset": 125661
                 },
                 "from": {
                     "file": "C:\\Android Projects\\SylvacMeasurements\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -10169,11 +10190,11 @@
             },
             {
                 "to": {
-                    "startLine": 1578,
+                    "startLine": 1582,
                     "startColumn": 4,
-                    "startOffset": 125495,
+                    "startOffset": 125666,
                     "endColumn": 111,
-                    "endOffset": 125602
+                    "endOffset": 125773
                 },
                 "from": {
                     "file": "C:\\Android Projects\\SylvacMeasurements\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -10188,12 +10209,12 @@
             },
             {
                 "to": {
-                    "startLine": 1579,
+                    "startLine": 1583,
                     "startColumn": 4,
-                    "startOffset": 125607,
-                    "endLine": 1581,
+                    "startOffset": 125778,
+                    "endLine": 1585,
                     "endColumn": 12,
-                    "endOffset": 125777
+                    "endOffset": 125948
                 },
                 "from": {
                     "file": "C:\\Android Projects\\SylvacMeasurements\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -10209,11 +10230,11 @@
             },
             {
                 "to": {
-                    "startLine": 1582,
+                    "startLine": 1586,
                     "startColumn": 4,
-                    "startOffset": 125782,
+                    "startOffset": 125953,
                     "endColumn": 115,
-                    "endOffset": 125893
+                    "endOffset": 126064
                 },
                 "from": {
                     "file": "C:\\Android Projects\\SylvacMeasurements\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -10228,11 +10249,11 @@
             },
             {
                 "to": {
-                    "startLine": 1583,
+                    "startLine": 1587,
                     "startColumn": 4,
-                    "startOffset": 125898,
+                    "startOffset": 126069,
                     "endColumn": 85,
-                    "endOffset": 125979
+                    "endOffset": 126150
                 },
                 "from": {
                     "file": "C:\\Android Projects\\SylvacMeasurements\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -10247,11 +10268,11 @@
             },
             {
                 "to": {
-                    "startLine": 1584,
+                    "startLine": 1588,
                     "startColumn": 4,
-                    "startOffset": 125984,
+                    "startOffset": 126155,
                     "endColumn": 91,
-                    "endOffset": 126071
+                    "endOffset": 126242
                 },
                 "from": {
                     "file": "C:\\Android Projects\\SylvacMeasurements\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -10266,12 +10287,12 @@
             },
             {
                 "to": {
-                    "startLine": 1585,
+                    "startLine": 1589,
                     "startColumn": 4,
-                    "startOffset": 126076,
-                    "endLine": 1586,
+                    "startOffset": 126247,
+                    "endLine": 1590,
                     "endColumn": 12,
-                    "endOffset": 126183
+                    "endOffset": 126354
                 },
                 "from": {
                     "file": "C:\\Android Projects\\SylvacMeasurements\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -10287,12 +10308,12 @@
             },
             {
                 "to": {
-                    "startLine": 1587,
+                    "startLine": 1591,
                     "startColumn": 4,
-                    "startOffset": 126188,
-                    "endLine": 1588,
+                    "startOffset": 126359,
+                    "endLine": 1592,
                     "endColumn": 12,
-                    "endOffset": 126307
+                    "endOffset": 126478
                 },
                 "from": {
                     "file": "C:\\Android Projects\\SylvacMeasurements\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -10308,11 +10329,11 @@
             },
             {
                 "to": {
-                    "startLine": 1589,
+                    "startLine": 1593,
                     "startColumn": 4,
-                    "startOffset": 126312,
+                    "startOffset": 126483,
                     "endColumn": 66,
-                    "endOffset": 126374
+                    "endOffset": 126545
                 },
                 "from": {
                     "file": "C:\\Android Projects\\SylvacMeasurements\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -10327,12 +10348,12 @@
             },
             {
                 "to": {
-                    "startLine": 1590,
+                    "startLine": 1594,
                     "startColumn": 4,
-                    "startOffset": 126379,
-                    "endLine": 1591,
+                    "startOffset": 126550,
+                    "endLine": 1595,
                     "endColumn": 12,
-                    "endOffset": 126500
+                    "endOffset": 126671
                 },
                 "from": {
                     "file": "C:\\Android Projects\\SylvacMeasurements\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -10348,11 +10369,11 @@
             },
             {
                 "to": {
-                    "startLine": 1592,
+                    "startLine": 1596,
                     "startColumn": 4,
-                    "startOffset": 126505,
+                    "startOffset": 126676,
                     "endColumn": 67,
-                    "endOffset": 126568
+                    "endOffset": 126739
                 },
                 "from": {
                     "file": "C:\\Android Projects\\SylvacMeasurements\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -10367,12 +10388,12 @@
             },
             {
                 "to": {
-                    "startLine": 1593,
+                    "startLine": 1597,
                     "startColumn": 4,
-                    "startOffset": 126573,
-                    "endLine": 1594,
+                    "startOffset": 126744,
+                    "endLine": 1598,
                     "endColumn": 12,
-                    "endOffset": 126696
+                    "endOffset": 126867
                 },
                 "from": {
                     "file": "C:\\Android Projects\\SylvacMeasurements\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -10388,12 +10409,12 @@
             },
             {
                 "to": {
-                    "startLine": 1595,
+                    "startLine": 1599,
                     "startColumn": 4,
-                    "startOffset": 126701,
-                    "endLine": 1596,
+                    "startOffset": 126872,
+                    "endLine": 1600,
                     "endColumn": 12,
-                    "endOffset": 126840
+                    "endOffset": 127011
                 },
                 "from": {
                     "file": "C:\\Android Projects\\SylvacMeasurements\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -10409,12 +10430,12 @@
             },
             {
                 "to": {
-                    "startLine": 1597,
+                    "startLine": 1601,
                     "startColumn": 4,
-                    "startOffset": 126845,
-                    "endLine": 1598,
+                    "startOffset": 127016,
+                    "endLine": 1602,
                     "endColumn": 12,
-                    "endOffset": 126968
+                    "endOffset": 127139
                 },
                 "from": {
                     "file": "C:\\Android Projects\\SylvacMeasurements\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -10430,11 +10451,11 @@
             },
             {
                 "to": {
-                    "startLine": 1599,
+                    "startLine": 1603,
                     "startColumn": 4,
-                    "startOffset": 126973,
+                    "startOffset": 127144,
                     "endColumn": 68,
-                    "endOffset": 127037
+                    "endOffset": 127208
                 },
                 "from": {
                     "file": "C:\\Android Projects\\SylvacMeasurements\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -10449,11 +10470,11 @@
             },
             {
                 "to": {
-                    "startLine": 1600,
+                    "startLine": 1604,
                     "startColumn": 4,
-                    "startOffset": 127042,
+                    "startOffset": 127213,
                     "endColumn": 94,
-                    "endOffset": 127132
+                    "endOffset": 127303
                 },
                 "from": {
                     "file": "C:\\Android Projects\\SylvacMeasurements\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -10468,11 +10489,11 @@
             },
             {
                 "to": {
-                    "startLine": 1601,
+                    "startLine": 1605,
                     "startColumn": 4,
-                    "startOffset": 127137,
+                    "startOffset": 127308,
                     "endColumn": 114,
-                    "endOffset": 127247
+                    "endOffset": 127418
                 },
                 "from": {
                     "file": "C:\\Android Projects\\SylvacMeasurements\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -10487,11 +10508,11 @@
             },
             {
                 "to": {
-                    "startLine": 1602,
+                    "startLine": 1606,
                     "startColumn": 4,
-                    "startOffset": 127252,
+                    "startOffset": 127423,
                     "endColumn": 112,
-                    "endOffset": 127360
+                    "endOffset": 127531
                 },
                 "from": {
                     "file": "C:\\Android Projects\\SylvacMeasurements\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -10506,11 +10527,11 @@
             },
             {
                 "to": {
-                    "startLine": 1603,
+                    "startLine": 1607,
                     "startColumn": 4,
-                    "startOffset": 127365,
+                    "startOffset": 127536,
                     "endColumn": 98,
-                    "endOffset": 127459
+                    "endOffset": 127630
                 },
                 "from": {
                     "file": "C:\\Android Projects\\SylvacMeasurements\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -10525,11 +10546,11 @@
             },
             {
                 "to": {
-                    "startLine": 1604,
+                    "startLine": 1608,
                     "startColumn": 4,
-                    "startOffset": 127464,
+                    "startOffset": 127635,
                     "endColumn": 108,
-                    "endOffset": 127568
+                    "endOffset": 127739
                 },
                 "from": {
                     "file": "C:\\Android Projects\\SylvacMeasurements\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -10544,11 +10565,11 @@
             },
             {
                 "to": {
-                    "startLine": 1605,
+                    "startLine": 1609,
                     "startColumn": 4,
-                    "startOffset": 127573,
+                    "startOffset": 127744,
                     "endColumn": 110,
-                    "endOffset": 127679
+                    "endOffset": 127850
                 },
                 "from": {
                     "file": "C:\\Android Projects\\SylvacMeasurements\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -10563,11 +10584,11 @@
             },
             {
                 "to": {
-                    "startLine": 1606,
+                    "startLine": 1610,
                     "startColumn": 4,
-                    "startOffset": 127684,
+                    "startOffset": 127855,
                     "endColumn": 110,
-                    "endOffset": 127790
+                    "endOffset": 127961
                 },
                 "from": {
                     "file": "C:\\Android Projects\\SylvacMeasurements\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -10582,11 +10603,11 @@
             },
             {
                 "to": {
-                    "startLine": 1607,
+                    "startLine": 1611,
                     "startColumn": 4,
-                    "startOffset": 127795,
+                    "startOffset": 127966,
                     "endColumn": 100,
-                    "endOffset": 127891
+                    "endOffset": 128062
                 },
                 "from": {
                     "file": "C:\\Android Projects\\SylvacMeasurements\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -10601,11 +10622,11 @@
             },
             {
                 "to": {
-                    "startLine": 1608,
+                    "startLine": 1612,
                     "startColumn": 4,
-                    "startOffset": 127896,
+                    "startOffset": 128067,
                     "endColumn": 104,
-                    "endOffset": 127996
+                    "endOffset": 128167
                 },
                 "from": {
                     "file": "C:\\Android Projects\\SylvacMeasurements\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -10620,12 +10641,12 @@
             },
             {
                 "to": {
-                    "startLine": 1609,
+                    "startLine": 1613,
                     "startColumn": 4,
-                    "startOffset": 128001,
-                    "endLine": 1610,
+                    "startOffset": 128172,
+                    "endLine": 1614,
                     "endColumn": 12,
-                    "endOffset": 128108
+                    "endOffset": 128279
                 },
                 "from": {
                     "file": "C:\\Android Projects\\SylvacMeasurements\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -10641,12 +10662,12 @@
             },
             {
                 "to": {
-                    "startLine": 1611,
+                    "startLine": 1615,
                     "startColumn": 4,
-                    "startOffset": 128113,
-                    "endLine": 1612,
+                    "startOffset": 128284,
+                    "endLine": 1616,
                     "endColumn": 12,
-                    "endOffset": 128238
+                    "endOffset": 128409
                 },
                 "from": {
                     "file": "C:\\Android Projects\\SylvacMeasurements\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -10662,11 +10683,11 @@
             },
             {
                 "to": {
-                    "startLine": 1613,
+                    "startLine": 1617,
                     "startColumn": 4,
-                    "startOffset": 128243,
+                    "startOffset": 128414,
                     "endColumn": 90,
-                    "endOffset": 128329
+                    "endOffset": 128500
                 },
                 "from": {
                     "file": "C:\\Android Projects\\SylvacMeasurements\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -10681,11 +10702,11 @@
             },
             {
                 "to": {
-                    "startLine": 1614,
+                    "startLine": 1618,
                     "startColumn": 4,
-                    "startOffset": 128334,
+                    "startOffset": 128505,
                     "endColumn": 122,
-                    "endOffset": 128452
+                    "endOffset": 128623
                 },
                 "from": {
                     "file": "C:\\Android Projects\\SylvacMeasurements\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -10700,12 +10721,12 @@
             },
             {
                 "to": {
-                    "startLine": 1615,
+                    "startLine": 1619,
                     "startColumn": 4,
-                    "startOffset": 128457,
-                    "endLine": 1616,
+                    "startOffset": 128628,
+                    "endLine": 1620,
                     "endColumn": 12,
-                    "endOffset": 128564
+                    "endOffset": 128735
                 },
                 "from": {
                     "file": "C:\\Android Projects\\SylvacMeasurements\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -10721,11 +10742,11 @@
             },
             {
                 "to": {
-                    "startLine": 1617,
+                    "startLine": 1621,
                     "startColumn": 4,
-                    "startOffset": 128569,
+                    "startOffset": 128740,
                     "endColumn": 85,
-                    "endOffset": 128650
+                    "endOffset": 128821
                 },
                 "from": {
                     "file": "C:\\Android Projects\\SylvacMeasurements\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -10740,11 +10761,11 @@
             },
             {
                 "to": {
-                    "startLine": 1618,
+                    "startLine": 1622,
                     "startColumn": 4,
-                    "startOffset": 128655,
+                    "startOffset": 128826,
                     "endColumn": 103,
-                    "endOffset": 128754
+                    "endOffset": 128925
                 },
                 "from": {
                     "file": "C:\\Android Projects\\SylvacMeasurements\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -10759,12 +10780,12 @@
             },
             {
                 "to": {
-                    "startLine": 1619,
+                    "startLine": 1623,
                     "startColumn": 4,
-                    "startOffset": 128759,
-                    "endLine": 1620,
+                    "startOffset": 128930,
+                    "endLine": 1624,
                     "endColumn": 12,
-                    "endOffset": 128862
+                    "endOffset": 129033
                 },
                 "from": {
                     "file": "C:\\Android Projects\\SylvacMeasurements\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -10780,12 +10801,12 @@
             },
             {
                 "to": {
-                    "startLine": 1621,
+                    "startLine": 1625,
                     "startColumn": 4,
-                    "startOffset": 128867,
-                    "endLine": 1622,
+                    "startOffset": 129038,
+                    "endLine": 1626,
                     "endColumn": 12,
-                    "endOffset": 128962
+                    "endOffset": 129133
                 },
                 "from": {
                     "file": "C:\\Android Projects\\SylvacMeasurements\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -10801,12 +10822,12 @@
             },
             {
                 "to": {
-                    "startLine": 1623,
+                    "startLine": 1627,
                     "startColumn": 4,
-                    "startOffset": 128967,
-                    "endLine": 1624,
+                    "startOffset": 129138,
+                    "endLine": 1628,
                     "endColumn": 12,
-                    "endOffset": 129080
+                    "endOffset": 129251
                 },
                 "from": {
                     "file": "C:\\Android Projects\\SylvacMeasurements\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -10822,12 +10843,12 @@
             },
             {
                 "to": {
-                    "startLine": 1625,
+                    "startLine": 1629,
                     "startColumn": 4,
-                    "startOffset": 129085,
-                    "endLine": 1626,
+                    "startOffset": 129256,
+                    "endLine": 1630,
                     "endColumn": 12,
-                    "endOffset": 129184
+                    "endOffset": 129355
                 },
                 "from": {
                     "file": "C:\\Android Projects\\SylvacMeasurements\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -10843,12 +10864,12 @@
             },
             {
                 "to": {
-                    "startLine": 1627,
+                    "startLine": 1631,
                     "startColumn": 4,
-                    "startOffset": 129189,
-                    "endLine": 1628,
+                    "startOffset": 129360,
+                    "endLine": 1632,
                     "endColumn": 12,
-                    "endOffset": 129288
+                    "endOffset": 129459
                 },
                 "from": {
                     "file": "C:\\Android Projects\\SylvacMeasurements\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -10864,12 +10885,12 @@
             },
             {
                 "to": {
-                    "startLine": 1629,
+                    "startLine": 1633,
                     "startColumn": 4,
-                    "startOffset": 129293,
-                    "endLine": 1630,
+                    "startOffset": 129464,
+                    "endLine": 1634,
                     "endColumn": 12,
-                    "endOffset": 129414
+                    "endOffset": 129585
                 },
                 "from": {
                     "file": "C:\\Android Projects\\SylvacMeasurements\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -10885,11 +10906,11 @@
             },
             {
                 "to": {
-                    "startLine": 1631,
+                    "startLine": 1635,
                     "startColumn": 4,
-                    "startOffset": 129419,
+                    "startOffset": 129590,
                     "endColumn": 87,
-                    "endOffset": 129502
+                    "endOffset": 129673
                 },
                 "from": {
                     "file": "C:\\Android Projects\\SylvacMeasurements\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -10904,11 +10925,11 @@
             },
             {
                 "to": {
-                    "startLine": 1632,
+                    "startLine": 1636,
                     "startColumn": 4,
-                    "startOffset": 129507,
+                    "startOffset": 129678,
                     "endColumn": 89,
-                    "endOffset": 129592
+                    "endOffset": 129763
                 },
                 "from": {
                     "file": "C:\\Android Projects\\SylvacMeasurements\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -10923,11 +10944,11 @@
             },
             {
                 "to": {
-                    "startLine": 1633,
+                    "startLine": 1637,
                     "startColumn": 4,
-                    "startOffset": 129597,
+                    "startOffset": 129768,
                     "endColumn": 109,
-                    "endOffset": 129702
+                    "endOffset": 129873
                 },
                 "from": {
                     "file": "C:\\Android Projects\\SylvacMeasurements\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -10942,11 +10963,11 @@
             },
             {
                 "to": {
-                    "startLine": 1634,
+                    "startLine": 1638,
                     "startColumn": 4,
-                    "startOffset": 129707,
+                    "startOffset": 129878,
                     "endColumn": 83,
-                    "endOffset": 129786
+                    "endOffset": 129957
                 },
                 "from": {
                     "file": "C:\\Android Projects\\SylvacMeasurements\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -10961,11 +10982,11 @@
             },
             {
                 "to": {
-                    "startLine": 1635,
+                    "startLine": 1639,
                     "startColumn": 4,
-                    "startOffset": 129791,
+                    "startOffset": 129962,
                     "endColumn": 83,
-                    "endOffset": 129870
+                    "endOffset": 130041
                 },
                 "from": {
                     "file": "C:\\Android Projects\\SylvacMeasurements\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -10980,11 +11001,11 @@
             },
             {
                 "to": {
-                    "startLine": 1636,
+                    "startLine": 1640,
                     "startColumn": 4,
-                    "startOffset": 129875,
+                    "startOffset": 130046,
                     "endColumn": 53,
-                    "endOffset": 129924
+                    "endOffset": 130095
                 },
                 "from": {
                     "file": "C:\\Android Projects\\SylvacMeasurements\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -10999,11 +11020,11 @@
             },
             {
                 "to": {
-                    "startLine": 1637,
+                    "startLine": 1641,
                     "startColumn": 4,
-                    "startOffset": 129929,
+                    "startOffset": 130100,
                     "endColumn": 63,
-                    "endOffset": 129988
+                    "endOffset": 130159
                 },
                 "from": {
                     "file": "C:\\Android Projects\\SylvacMeasurements\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -11018,11 +11039,11 @@
             },
             {
                 "to": {
-                    "startLine": 1638,
+                    "startLine": 1642,
                     "startColumn": 4,
-                    "startOffset": 129993,
+                    "startOffset": 130164,
                     "endColumn": 105,
-                    "endOffset": 130094
+                    "endOffset": 130265
                 },
                 "from": {
                     "file": "C:\\Android Projects\\SylvacMeasurements\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -11037,11 +11058,11 @@
             },
             {
                 "to": {
-                    "startLine": 1639,
+                    "startLine": 1643,
                     "startColumn": 4,
-                    "startOffset": 130099,
+                    "startOffset": 130270,
                     "endColumn": 109,
-                    "endOffset": 130204
+                    "endOffset": 130375
                 },
                 "from": {
                     "file": "C:\\Android Projects\\SylvacMeasurements\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -11056,11 +11077,11 @@
             },
             {
                 "to": {
-                    "startLine": 1640,
+                    "startLine": 1644,
                     "startColumn": 4,
-                    "startOffset": 130209,
+                    "startOffset": 130380,
                     "endColumn": 83,
-                    "endOffset": 130288
+                    "endOffset": 130459
                 },
                 "from": {
                     "file": "C:\\Android Projects\\SylvacMeasurements\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -11075,11 +11096,11 @@
             },
             {
                 "to": {
-                    "startLine": 1641,
+                    "startLine": 1645,
                     "startColumn": 4,
-                    "startOffset": 130293,
+                    "startOffset": 130464,
                     "endColumn": 119,
-                    "endOffset": 130408
+                    "endOffset": 130579
                 },
                 "from": {
                     "file": "C:\\Android Projects\\SylvacMeasurements\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values\\values.xml",
@@ -11094,12 +11115,12 @@
             },
             {
                 "to": {
-                    "startLine": 1642,
+                    "startLine": 1646,
                     "startColumn": 4,
-                    "startOffset": 130413,
-                    "endLine": 1645,
+                    "startOffset": 130584,
+                    "endLine": 1649,
                     "endColumn": 12,
-                    "endOffset": 130626
+                    "endOffset": 130797
                 },
                 "from": {
                     "file": "C:\\Android Projects\\SylvacMeasurements\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\23.1.1\\res\\values\\values.xml",
@@ -11115,12 +11136,12 @@
             },
             {
                 "to": {
-                    "startLine": 1646,
+                    "startLine": 1650,
                     "startColumn": 4,
-                    "startOffset": 130631,
-                    "endLine": 1649,
+                    "startOffset": 130802,
+                    "endLine": 1653,
                     "endColumn": 12,
-                    "endOffset": 130833
+                    "endOffset": 131004
                 },
                 "from": {
                     "file": "C:\\Android Projects\\SylvacMeasurements\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\23.1.1\\res\\values\\values.xml",
@@ -11136,12 +11157,12 @@
             },
             {
                 "to": {
-                    "startLine": 1650,
+                    "startLine": 1654,
                     "startColumn": 4,
-                    "startOffset": 130838,
-                    "endLine": 1652,
+                    "startOffset": 131009,
+                    "endLine": 1656,
                     "endColumn": 12,
-                    "endOffset": 130992
+                    "endOffset": 131163
                 },
                 "from": {
                     "file": "C:\\Android Projects\\SylvacMeasurements\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\23.1.1\\res\\values\\values.xml",
@@ -11157,12 +11178,12 @@
             },
             {
                 "to": {
-                    "startLine": 1653,
+                    "startLine": 1657,
                     "startColumn": 4,
-                    "startOffset": 130997,
-                    "endLine": 1661,
+                    "startOffset": 131168,
+                    "endLine": 1665,
                     "endColumn": 12,
-                    "endOffset": 131559
+                    "endOffset": 131730
                 },
                 "from": {
                     "file": "C:\\Android Projects\\SylvacMeasurements\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\23.1.1\\res\\values\\values.xml",
@@ -11178,12 +11199,12 @@
             },
             {
                 "to": {
-                    "startLine": 1662,
+                    "startLine": 1666,
                     "startColumn": 4,
-                    "startOffset": 131564,
-                    "endLine": 1667,
+                    "startOffset": 131735,
+                    "endLine": 1671,
                     "endColumn": 12,
-                    "endOffset": 131920
+                    "endOffset": 132091
                 },
                 "from": {
                     "file": "C:\\Android Projects\\SylvacMeasurements\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\23.1.1\\res\\values\\values.xml",
@@ -11199,12 +11220,12 @@
             },
             {
                 "to": {
-                    "startLine": 1668,
+                    "startLine": 1672,
                     "startColumn": 4,
-                    "startOffset": 131925,
-                    "endLine": 1670,
+                    "startOffset": 132096,
+                    "endLine": 1674,
                     "endColumn": 12,
-                    "endOffset": 132049
+                    "endOffset": 132220
                 },
                 "from": {
                     "file": "C:\\Android Projects\\SylvacMeasurements\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\23.1.1\\res\\values\\values.xml",
@@ -11220,12 +11241,12 @@
             },
             {
                 "to": {
-                    "startLine": 1671,
+                    "startLine": 1675,
                     "startColumn": 4,
-                    "startOffset": 132054,
-                    "endLine": 1680,
+                    "startOffset": 132225,
+                    "endLine": 1684,
                     "endColumn": 12,
-                    "endOffset": 132793
+                    "endOffset": 132964
                 },
                 "from": {
                     "file": "C:\\Android Projects\\SylvacMeasurements\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\23.1.1\\res\\values\\values.xml",
@@ -11241,12 +11262,12 @@
             },
             {
                 "to": {
-                    "startLine": 1681,
+                    "startLine": 1685,
                     "startColumn": 4,
-                    "startOffset": 132798,
-                    "endLine": 1684,
+                    "startOffset": 132969,
+                    "endLine": 1688,
                     "endColumn": 12,
-                    "endOffset": 132973
+                    "endOffset": 133144
                 },
                 "from": {
                     "file": "C:\\Android Projects\\SylvacMeasurements\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\23.1.1\\res\\values\\values.xml",
@@ -11262,12 +11283,12 @@
             },
             {
                 "to": {
-                    "startLine": 1685,
+                    "startLine": 1689,
                     "startColumn": 4,
-                    "startOffset": 132978,
-                    "endLine": 1690,
+                    "startOffset": 133149,
+                    "endLine": 1694,
                     "endColumn": 12,
-                    "endOffset": 133414
+                    "endOffset": 133585
                 },
                 "from": {
                     "file": "C:\\Android Projects\\SylvacMeasurements\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\23.1.1\\res\\values\\values.xml",

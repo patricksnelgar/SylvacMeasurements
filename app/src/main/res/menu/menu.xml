@@ -31,6 +31,10 @@
         android:title="@string/action_settings"
         app:showAsAction="never" />
     <item
+        android:id="@+id/action_disconnect"
+        android:title="Disconnect"
+        app:showAsAction="never" />
+    <item
         android:id="@+id/action_help"
         android:title="Help"
         app:showAsAction="never" />

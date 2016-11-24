@@ -5,7 +5,9 @@ import android.content.Intent;
 import android.content.IntentFilter;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.preference.Preference;
 import android.preference.PreferenceManager;
+import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v4.content.LocalBroadcastManager;
 import android.util.Log;
@@ -52,6 +54,7 @@ public class RecordFragment extends Fragment {
         valuesPerRecord = Integer.parseInt(mPrefs.getString(MainActivity.PREFERENCE_VALUES_PER_ENTRY, "-1"));
         if(valuesPerRecord == -1) valuesPerRecord = MainActivity.DEFAULT_PREF_VALUES_PER_ENTRY;
 
+        mPrefs.registerOnSharedPreferenceChangeListener(mPreferenceChange);
     }
 
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState){
@@ -84,14 +87,10 @@ public class RecordFragment extends Fragment {
     }
 
     @Override
-    public void onStart() {
-        super.onStart();
-
-        if(mDataReceiver == null){
-            mDataReceiver = new DataReceiver(mParentActivity);
-            LocalBroadcastManager.getInstance(mParentActivity).registerReceiver(mDataReceiver, makeDataReceiverFilter());
-            //Log.i(TAG, "Register data receiver");
-        }
+    public void onActivityCreated(@Nullable Bundle savedInstanceState) {
+        super.onActivityCreated(savedInstanceState);
+        mDataReceiver = new DataReceiver(mParentActivity);
+        LocalBroadcastManager.getInstance(mParentActivity).registerReceiver(mDataReceiver, makeDataReceiverFilter());
     }
 
     @Override
@@ -113,4 +112,13 @@ public class RecordFragment extends Fragment {
     }
 
     public void setConnectionMan(ConnectionManager man) { mConn = man; }
+
+    final SharedPreferences.OnSharedPreferenceChangeListener mPreferenceChange = new SharedPreferences.OnSharedPreferenceChangeListener() {
+        @Override
+        public void onSharedPreferenceChanged(SharedPreferences sharedPreferences, String key) {
+            if(key.equals(MainActivity.PREFERENCE_VALUES_PER_ENTRY)){
+                mDataReceiver.resetCurrentRecord();
+            }
+        }
+    };
 }

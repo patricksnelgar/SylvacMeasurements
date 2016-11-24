@@ -1423,6 +1423,10 @@
         <item name="android:textColorSecondary">@color/secondary_text_material_light</item>
         <item name="android:fontFamily">sans-serif</item>
     </style>
+    <style name="TealBaseTheme.NoActionBar">
+        <item name="android:windowActionBar">false</item>
+        <item name="android:windowNoTitle">true</item>
+    </style>
     <style name="TealbaseTheme.ActionBar" parent="@style/Theme.AppCompat.Light">
         <item name="android:colorPrimary">@color/primary_material_light</item>
         <item name="android:colorPrimaryDark">@color/primary_dark_material_light</item>

@@ -1,14 +1,8 @@
 package com.patrick.Sylvac_Calipers;
 
 import android.Manifest;
-import android.app.AlertDialog;
-import android.app.ListActivity;
 import android.bluetooth.BluetoothAdapter;
-import android.content.BroadcastReceiver;
-import android.content.Context;
-import android.content.DialogInterface;
 import android.content.Intent;
-import android.content.IntentFilter;
 import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.media.MediaPlayer;
@@ -28,12 +22,6 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.widget.Toast;
-
-import static com.patrick.Sylvac_Calipers.CommunicationCharacteristics.ACTION_DATA_AVAILABLE;
-import static com.patrick.Sylvac_Calipers.CommunicationCharacteristics.ACTION_GATT_CONNECTED;
-import static com.patrick.Sylvac_Calipers.CommunicationCharacteristics.ACTION_GATT_DISCONNECTED;
-import static com.patrick.Sylvac_Calipers.CommunicationCharacteristics.ACTION_GATT_SERVICES_DISCOVERED;
-import static com.patrick.Sylvac_Calipers.CommunicationCharacteristics.EXTRA_DATA;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -56,10 +44,10 @@ public class MainActivity extends AppCompatActivity {
     private TabLayout mTabLayout;
     private SharedPreferences mPrefs;
     private MediaPlayer mPlayer;
+    private ConnectionManager mConn;
 
     private RecordFragment fRecord;
     private DeviceScanFragment fScan;
-    private StatusFragment fStatus;
 
     /**
      * Called when the activity is first created.
@@ -67,7 +55,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.framework);
+        setContentView(R.layout.activity_main);
 
         mPlayer = MediaPlayer.create(this, R.raw.received);
         mPlayer.setOnErrorListener(mPlayerErrorListener);
@@ -76,7 +64,8 @@ public class MainActivity extends AppCompatActivity {
         mPrefs = PreferenceManager.getDefaultSharedPreferences(this);
         mPrefs.edit().putInt(PREFERENCE_CURRENT_ID, 0).apply();
 
-        final ConnectionManager mConn = new ConnectionManager(this);
+        final ConnectionManager mConnMan = new ConnectionManager(this);
+        mConn = mConnMan;
 
         mToolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(mToolbar);
@@ -124,6 +113,16 @@ public class MainActivity extends AppCompatActivity {
     }
 
     @Override
+    protected void onPause() {
+        super.onPause();
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+    }
+
+    @Override
     public boolean onOptionsItemSelected(MenuItem mItem){
         switch (mItem.getItemId()){
             case R.id.action_settings:
@@ -147,9 +146,12 @@ public class MainActivity extends AppCompatActivity {
             case R.id.action_rescan:
                 fScan.scanForDevices(true);
                 return true;
+            case R.id.action_disconnect:
+                mConn.disconnect();
+                return true;
             /*case R.id.action_dummy_data:
                 Intent mIntent = new Intent(RecordFragment.MEASUREMENT_RECEIVED);
-                mIntent.putExtra(CommunicationCharacteristics.DATA_VALUE, "+0.001");
+                mIntent.putExtra(CommunicationCharacteristics.MEASUREMENT_DATA, "+0.001");
                 LocalBroadcastManager.getInstance(this).sendBroadcast(mIntent);
                 return true;*/
             default:

@@ -14,22 +14,14 @@ public interface CommunicationCharacteristics {
     UUID TX_ANSWER_FROM_INSTRUMENT_UUID = UUID.fromString("C1B25013-CAAF-6D0E-4C33-7DAE30052840");
     UUID TX_RECEIVED_DATA_UUID = UUID.fromString("C1B25010-CAAF-6D0E-4C33-7DAE30052840");
 
-    String ACTION_DATA_AVAILABLE = "Data received";
-    String ACTION_DEVICE_NOT_FOUND = "Device not found";
-    String ACTION_GATT_CONNECTED = "Connection successful";
-    String ACTION_GATT_DISCONNECTED = "Disconnected";
-    String ACTION_GATT_SERVICES_DISCOVERED = "Service discovery complete";
+    String ACTION_DATA_AVAILABLE = "com.SylvacCalipers.ACTION_DATA_AVAILABLE";
+    String ACTION_DEVICE_CONNECTED = "com.SylvacCalipers.ACTION_DEVICE_CONNECTED";
+    String ACTION_DEVICE_DISCONNECTED = "com.SylvacCalipers.ACTION_DEVICE_DISCONNECTED";
+    String ACTION_DEVICE_SERVICES_DISCOVERED = "com.SylvacCalipers.ACTION_DEVICE_SERVICES_DISCOVERED";
 
-    String DEVICE_ADDRESS = "DEVICE_ADDRESS";
-    String EXTRA_DATA = "EXTRA_DATA";
-    String NUM_CANAL = "NUM_CANAL";
+    String DEVICE_ADDRESS = "com.SylvacCalipers.DEVICE_ADDRESS";
+    String EXTRA_DATA = "com.SylvacCalipers.EXTRA_DATA";
+    String MEASUREMENT = "com.SylvacCalipers.MEASUREMENT";
 
-    String DATA_VALUE = "DATA_VALUE";
-
-    String DEVICE_BONDED = "DEVICE_BONDED";
-    String BT_DEVICE = "BT_DEVICE";
-
-
-
-
+    String MEASUREMENT_DATA = "com.SylvacCalipers.MEASUREMENT_DATA";
 }

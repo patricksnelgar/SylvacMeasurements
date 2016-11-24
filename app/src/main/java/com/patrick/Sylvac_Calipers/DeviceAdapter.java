@@ -30,11 +30,11 @@ public class DeviceAdapter extends ArrayAdapter<DiscoveredDevice> {
 
         TextView mName = (TextView) convertView.findViewById(R.id.textDeviceName);
         TextView mAddress = (TextView) convertView.findViewById(R.id.textDeviceAddress);
-        CheckBox mBonded = (CheckBox) convertView.findViewById(R.id.bondedDevice);
+        //CheckBox mBonded = (CheckBox) convertView.findViewById(R.id.bondedDevice);
 
         mName.setText(mDevice.name);
         mAddress.setText(mDevice.address);
-        mBonded.setChecked(mDevice.bondedDevice);
+        //mBonded.setChecked(mDevice.bondedDevice);
 
         // TODO: add in configuration for using custom icons in list display based off device id
 
