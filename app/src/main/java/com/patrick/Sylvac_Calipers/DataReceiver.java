@@ -29,14 +29,16 @@ import java.util.List;
 /**
  * Author: Patrick
  * Date: 25-Nov-15.
- * Description: receives the values from BleGattCallback to process inside the RecordActivity
- * Notes:
+ * Description: BroadcastReceiver that handles the measurements coming in from the calipers.
+ * Notes: Uses the values stored in SharedPreferences for actions performed upon receiving a measurement,
+ *        completing a set of measurements and the saving of data.
  */
 public class DataReceiver extends BroadcastReceiver {
 
-
     private final String TAG = DataReceiver.class.getSimpleName();
+
     private final MainActivity mParentActivity;
+
     private String mCurrentRecord = "";
     private TextView mCurrentRecordView;
     private EditText mCurrentEntryID;
@@ -51,8 +53,14 @@ public class DataReceiver extends BroadcastReceiver {
 
     SharedPreferences mPrefs;
 
-    public DataReceiver(MainActivity pRecordActivity){
-        this.mParentActivity = pRecordActivity;
+    /**
+     * Constructor for a new DataReceiver.
+     * SharedPreferences link is made and accessed to set initial record ID.
+     * Builds the ListAdapter for custom Record class.
+     * @param pMainActivity: required for running on the UI thread and accessing SharedPreferences for the application
+     */
+    public DataReceiver(MainActivity pMainActivity){
+        this.mParentActivity = pMainActivity;
 
         mPrefs = PreferenceManager.getDefaultSharedPreferences(mParentActivity);
 
@@ -66,6 +74,14 @@ public class DataReceiver extends BroadcastReceiver {
         mCurrentRecordView = (TextView) mParentActivity.findViewById(R.id.currentRecordView);
     }
 
+    /**
+     * Called when a measurement is received.
+     * Handles the composure of a record based on user preferences.
+     * Also writes out to a file automatically on the completion of a record if the preference is enabled.
+     *
+     * @param context
+     * @param intent: Holds the action to perform; save data, measurement received, or clear all records.
+     */
     @Override
     public void onReceive(Context context, Intent intent) {
         valuesPerRecord = Integer.parseInt(mPrefs.getString(MainActivity.PREFERENCE_VALUES_PER_ENTRY, "-1"));
@@ -84,7 +100,7 @@ public class DataReceiver extends BroadcastReceiver {
                 mMeasurementCount++;
                 mCurrentRecord += data +space+space+space;
                 mCurrentRecordView.setText(mCurrentRecord);
-                //Log.i(TAG, mMeasurementCount + ":" + valuesPerRecord + " = " + mCurrentRecord);
+
                 if(mMeasurementCount >= valuesPerRecord){
                     int currentID = mPrefs.getInt(MainActivity.PREFERENCE_CURRENT_ID, 0);
                     int nextID = currentID + 1;
@@ -159,24 +175,24 @@ public class DataReceiver extends BroadcastReceiver {
                 boolean saveSuccessful = false;
 
                 String mDir = Environment.getExternalStorageDirectory().toString();
-                File path = new File(mDir + "/SavedData");
-                path.mkdirs();
-                String name = filenameView.getText().toString() + ".csv";
-                Log.i(TAG, path + name);
-                final File output = new File(path, name);
+                File mFolderPath = new File(mDir + "/SavedData");
+                if(!mFolderPath.exists()) mFolderPath.mkdirs();
+                final File mOutput = new File(mFolderPath,filenameView.getText().toString() + ".csv");
+                Log.i(TAG, mOutput.getAbsoluteFile().toString());
+
                 /*
                     TODO:   Currently saves to emulated/0/SavedData
                             update to check for external storage and possibly a directory selector
                  */
                 try {
-                    FileOutputStream fs = new FileOutputStream(output);
-                    PrintWriter pr = new PrintWriter(fs);
+                    mFileStream = new FileOutputStream(mOutput,true);
+                    PrintWriter mPw = new PrintWriter(mFileStream);
                     for (Record x : listRecords) {
-                        pr.println(x.getRecordForOutput());
+                        mPw.println(x.getRecordForOutput());
                     }
-                    pr.flush();
-                    pr.close();
-                    fs.close();
+                    mPw.flush();
+                    mPw.close();
+                    mFileStream.close();
 
                     saveSuccessful = true;
                 } catch (Exception e) {
@@ -188,7 +204,7 @@ public class DataReceiver extends BroadcastReceiver {
                     mHandler.post(new Runnable() {
                         @Override
                         public void run() {
-                            Toast.makeText(mParentActivity, "Saved data to file: " + output.toString(), Toast.LENGTH_SHORT).show();
+                            Toast.makeText(mParentActivity, "Saved data to file: " + mOutput.getPath(), Toast.LENGTH_SHORT).show();
                         }
                     });
                 } else {

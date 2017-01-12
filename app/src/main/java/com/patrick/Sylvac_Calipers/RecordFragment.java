@@ -41,7 +41,6 @@ public class RecordFragment extends Fragment {
     private DataReceiver mDataReceiver;
     private MainActivity mParentActivity;
     private SharedPreferences mPrefs;
-    private ConnectionManager mConn;
     private int previousRecordID;
     private int currentRecordID;
     private int valuesPerRecord;
@@ -110,8 +109,6 @@ public class RecordFragment extends Fragment {
     public void setParent(MainActivity parent){
         this.mParentActivity = parent;
     }
-
-    public void setConnectionMan(ConnectionManager man) { mConn = man; }
 
     final SharedPreferences.OnSharedPreferenceChangeListener mPreferenceChange = new SharedPreferences.OnSharedPreferenceChangeListener() {
         @Override

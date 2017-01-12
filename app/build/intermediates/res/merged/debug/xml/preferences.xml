@@ -6,7 +6,10 @@
             android:key="values_per_entry"
             android:summary="Number of measurements per entry: 3"
             android:numeric="integer"
-            android:defaultValue="3" />
+            android:defaultValue="3"
+            android:singleLine="true"
+            android:editable="true"
+            android:selectAllOnFocus="true" />
         <!--<CheckBoxPreference
             android:title="Enable Editing"
             android:key="editing_enabled"
@@ -29,8 +32,8 @@
             android:key="auto_connect"
             android:summary="Connect to previously paired devices automatically"
             android:defaultValue="false"
-            android:enabled="false"
-            android:editable="false"/>
+            android:editable="false"
+            android:enabled="false" />
     </PreferenceCategory>
     <PreferenceCategory android:title="Data Preferences">
         <CheckBoxPreference

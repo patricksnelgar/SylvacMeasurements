@@ -4,7 +4,7 @@ import android.bluetooth.BluetoothDevice;
 import android.util.Log;
 
 /**
- * Created by Patrick on 27/01/2016.
+ * Created on 27/01/2016.
  */
 public class DiscoveredDevice {
 

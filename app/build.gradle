@@ -4,7 +4,7 @@ android {
     buildToolsVersion '23.0.3'
     defaultConfig {
         applicationId "com.patrick.Sylvac_Calipers"
-        minSdkVersion 22
+        minSdkVersion 23
         targetSdkVersion 23
     }
     buildTypes {

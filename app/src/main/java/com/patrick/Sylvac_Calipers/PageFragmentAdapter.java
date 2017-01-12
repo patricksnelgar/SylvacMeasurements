@@ -8,7 +8,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Created by Patrick on 11/01/2016.
+ * Created on 11/01/2016.
  */
 public class PageFragmentAdapter extends FragmentStatePagerAdapter {
 

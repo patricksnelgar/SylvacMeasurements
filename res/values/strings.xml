@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
-    <string name="app_name">Sylvac Measurements</string>
-    <string name="stringHeaderText">Record Data</string>
-    <string name="stringStatus">........</string>
-    <string name="stringStatusIdle">Idle</string>
-</resources>

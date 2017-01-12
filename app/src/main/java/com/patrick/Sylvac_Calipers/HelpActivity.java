@@ -19,7 +19,7 @@ import java.util.Arrays;
 import java.util.List;
 
 /**
- * Created by Patrick on 27/01/2016.
+ * Created on 27/01/2016.
  */
 public class HelpActivity extends AppCompatActivity {
 

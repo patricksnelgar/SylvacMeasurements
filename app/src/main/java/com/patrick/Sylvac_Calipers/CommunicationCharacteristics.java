@@ -8,6 +8,8 @@ import java.util.UUID;
  * Description: interface to hold commonly used keys and UUIDs
  */
 public interface CommunicationCharacteristics {
+
+    // UUID's for the Sylvac services & characteristics
     UUID CCCD_UUID = UUID.fromString("00002902-0000-1000-8000-00805f9b34fb");
     UUID SERVICE_UUID = UUID.fromString("C1B25000-CAAF-6D0E-4C33-7DAE30052840");
     UUID RX_CMD_TO_INSTRUMENT_UUID = UUID.fromString("C1B25012-CAAF-6D0E-4C33-7DAE30052840");
@@ -21,7 +23,5 @@ public interface CommunicationCharacteristics {
 
     String DEVICE_ADDRESS = "com.SylvacCalipers.DEVICE_ADDRESS";
     String EXTRA_DATA = "com.SylvacCalipers.EXTRA_DATA";
-    String MEASUREMENT = "com.SylvacCalipers.MEASUREMENT";
-
     String MEASUREMENT_DATA = "com.SylvacCalipers.MEASUREMENT_DATA";
 }

@@ -10,7 +10,7 @@ import android.util.Log;
 import android.view.MenuItem;
 
 /**
- * Created by Patrick on 21/01/2016.
+ * Created on 21/01/2016.
  */
 public class SettingsActivity extends AppCompatActivity {
 

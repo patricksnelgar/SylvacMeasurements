@@ -27,7 +27,6 @@ public class MainActivity extends AppCompatActivity {
 
 
     public static final String PREFERENCE_VALUES_PER_ENTRY = "values_per_entry";
-    public static final String PREFERENCE_EDITING_ENABLED = "editing_enabled";
     public static final String PREFERENCE_BEEP_ON_RECEIVE = "beep_on_receive";
     public static final String PREFERENCE_ONLY_SYLVAC = "sylvac_devices";
     public static final String PREFERENCE_CURRENT_ID = "current_ID";
@@ -44,7 +43,7 @@ public class MainActivity extends AppCompatActivity {
     private TabLayout mTabLayout;
     private SharedPreferences mPrefs;
     private MediaPlayer mPlayer;
-    private ConnectionManager mConn;
+    //public ConnectionManager mConn;
 
     private RecordFragment fRecord;
     private DeviceScanFragment fScan;
@@ -64,22 +63,18 @@ public class MainActivity extends AppCompatActivity {
         mPrefs = PreferenceManager.getDefaultSharedPreferences(this);
         mPrefs.edit().putInt(PREFERENCE_CURRENT_ID, 0).apply();
 
-        final ConnectionManager mConnMan = new ConnectionManager(this);
-        mConn = mConnMan;
-
         mToolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(mToolbar);
         getSupportActionBar().setTitle(getString(R.string.app_title));
 
         mAdapter = new PageFragmentAdapter(getSupportFragmentManager());
-        //fConnect = new ConnectFragment();
-        //fConnect.setParent(this);
+
         fScan = new DeviceScanFragment();
         fScan.setParent(this);
-        fScan.setConnectionMan(mConn);
+
         fRecord = new RecordFragment();
         fRecord.setParent(this);
-        fRecord.setConnectionMan(mConn);
+
         mAdapter.addFragment(fScan, "Scan");
         mAdapter.addFragment(fRecord, "Record");
 
@@ -100,7 +95,7 @@ public class MainActivity extends AppCompatActivity {
             }
 
             if(ContextCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED){
-                ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.ACCESS_COARSE_LOCATION}, 100);
+                ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.ACCESS_COARSE_LOCATION}, 101);
             }
         }
     }
@@ -147,7 +142,8 @@ public class MainActivity extends AppCompatActivity {
                 fScan.scanForDevices(true);
                 return true;
             case R.id.action_disconnect:
-                mConn.disconnect();
+                setConnectionStatus("Device disconnected.");
+                //mConn.disconnect();
                 return true;
             /*case R.id.action_dummy_data:
                 Intent mIntent = new Intent(RecordFragment.MEASUREMENT_RECEIVED);
@@ -160,9 +156,11 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void playOnReceiveSound(){
-        //MediaPlayer mPlayer = MediaPlayer.create(this, R.raw.received);
-        //mPlayer.start();
         mPlayer.start();
+    }
+
+    public void setConnectionStatus(String mStatus){
+        fScan.setStatus(mStatus);
     }
 
     final MediaPlayer.OnErrorListener mPlayerErrorListener = new MediaPlayer.OnErrorListener() {

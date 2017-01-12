@@ -74,7 +74,9 @@
             android:enabled="true"
             android:lines="1"
             android:maxLines="1"
-            android:minLines="1" />
+            android:minLines="1"
+            android:singleLine="true"
+            android:selectAllOnFocus="true" />
 
         <ImageView
             android:layout_width="match_parent"
@@ -88,7 +90,7 @@
     </RelativeLayout>
 
     <TextView
-        android:text="- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -"
+        android:text="- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -"
         android:layout_width="fill_parent"
         android:id="@+id/currentRecordView"
         android:maxLines="2"
