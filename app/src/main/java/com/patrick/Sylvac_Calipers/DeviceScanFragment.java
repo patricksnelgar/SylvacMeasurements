@@ -7,6 +7,7 @@ import android.bluetooth.BluetoothManager;
 import android.bluetooth.le.BluetoothLeScanner;
 import android.bluetooth.le.ScanCallback;
 import android.bluetooth.le.ScanResult;
+import android.bluetooth.le.ScanSettings;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -70,6 +71,8 @@ public class DeviceScanFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
+        Log.d("Scan Fragment", "SavedBundle: " + (savedInstanceState==null));
+
         View createView = inflater.inflate(R.layout.devicescan_fragment, container, false);;
         mTextViewStatus = (TextView) createView.findViewById(R.id.textViewStatus);
         mListViewDiscoveredDevices = (ListView) createView.findViewById(R.id.listViewDiscoveredDevices);
@@ -84,7 +87,7 @@ public class DeviceScanFragment extends Fragment {
         mDiscoveredDevices = new ArrayList<>();
 
         mSharedPreferences = PreferenceManager.getDefaultSharedPreferences(mMainActivity);
-        mConn = new ConnectionManager(mMainActivity);
+
         initializeBluetooth();
 
         mDeviceListAdapter = new DeviceListAdapter(getActivity(), mDiscoveredDevices);
@@ -92,6 +95,8 @@ public class DeviceScanFragment extends Fragment {
         //setListAdapter(mDeviceListAdapter);
 
         mScanTimeoutRunnable = new ScanTimeout();
+
+        mConn = new ConnectionManager(mMainActivity, null);
     }
 
     @Override
@@ -139,20 +144,17 @@ public class DeviceScanFragment extends Fragment {
 
     public void scanForDevices(boolean scan) {
         mDeviceListAdapter.clear();
-        /*
-        if(!mLocationSettings){
-            Intent mIntentLocation = new Intent(Settings.ACTION_LOCATION_SOURCE_SETTINGS);
-            mMainActivity.startActivityForResult(mIntentLocation, REQUEST_LOCATION);
-            return;
-        }
-        */
+
         if(mBluetoothLeScanner != null) {
             if (scan) {
                 mHandler.postDelayed(mScanTimeoutRunnable, SCAN_TIMEOUT);
                 setStatus("Status: Scanning...");
                 Log.d(TAG, "Scanning...");
                 mScanning = true;
-                mBluetoothLeScanner.startScan(mLeScanCallback);
+                mBluetoothLeScanner.startScan(
+                        new ArrayList(),
+                        new ScanSettings.Builder().setScanMode(ScanSettings.CALLBACK_TYPE_ALL_MATCHES).build(),
+                        mLeScanCallback);
             } else {
                 mScanning = false;
                 mBluetoothLeScanner.stopScan(mLeScanCallback);
@@ -300,8 +302,10 @@ public class DeviceScanFragment extends Fragment {
             final String mTargetDeviceAddress = mTargetDevice.getAddress();
             setStatus("Connecting to: " + mTargetDevice.getName());
             mHandler.removeCallbacks(mScanTimeoutRunnable);
-            boolean connectResult = mConn.connect(mTargetDeviceAddress);
-            Log.d(TAG, "Connect result: " + connectResult);
+            mConn.setDeviceAddress(mTargetDeviceAddress);
+            boolean connectResult = mConn.connect();
+            //mConn = new ConnectionManager(mMainActivity, mTargetDeviceAddress);
+            //Log.d(TAG, "ConnectionManager:: " + mConn.hashCode());
         }
     };
 }

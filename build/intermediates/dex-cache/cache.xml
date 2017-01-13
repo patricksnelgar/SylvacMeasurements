@@ -12,30 +12,12 @@
     </item>
     <item
         is-multidex="true"
-        jar="C:\Android Projects\SylvacMeasurements\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="23.0.3"
-        sha1="5a625c9eaea00ff3bb05fc6c837b113a5a55802f">
-        <dex dex="C:\Android Projects\SylvacMeasurements\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run-bootstrap_6d9af3741f64bd4c51218e02971d52ad1d6023a8\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
         jar="C:\Android Projects\SylvacMeasurements\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.1.1\jars\classes.jar"
         jumboMode="true"
         optimize="true"
         revision="23.0.3"
         sha1="5c5699834e9722f1c288fea2de82725d078ba127">
         <dex dex="C:\Android Projects\SylvacMeasurements\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-appcompat-v7-23.1.1_11d6ec3c1843970ec778d691b3508ffb90a763d9\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Android Projects\SylvacMeasurements\app\build\intermediates\exploded-aar\com.android.support\design\23.1.1\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="23.0.3"
-        sha1="379471b2bd17d9737c050345c08e8c7d16589784">
-        <dex dex="C:\Android Projects\SylvacMeasurements\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-design-23.1.1_33671b98ff8ef561f180105acb12b66379c93af0\classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -48,21 +30,39 @@
     </item>
     <item
         is-multidex="true"
-        jar="C:\Android Projects\SylvacMeasurements\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="23.0.3"
-        sha1="d628511b617ada5aa3a23c1c3fd4f029a300a48d">
-        <dex dex="C:\Android Projects\SylvacMeasurements\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run_fcb503097b1cd4174a14c5402fbb0ab02a680998\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
         jar="C:\Android Projects\SylvacMeasurements\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.1.1\jars\classes.jar"
         jumboMode="true"
         optimize="true"
         revision="23.0.3"
         sha1="6cbc7773921fcfedbe55657578f0cbfe614778dc">
         <dex dex="C:\Android Projects\SylvacMeasurements\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-v4-23.1.1_b2d8cace376d0385e29cdbfff03933923b9ec38f\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Android Projects\SylvacMeasurements\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.3"
+        sha1="81d8677bc3d873890fa006c42ad02832ee19c359">
+        <dex dex="C:\Android Projects\SylvacMeasurements\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run-bootstrap_6d9af3741f64bd4c51218e02971d52ad1d6023a8\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Android Projects\SylvacMeasurements\app\build\intermediates\exploded-aar\com.android.support\design\23.1.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.3"
+        sha1="379471b2bd17d9737c050345c08e8c7d16589784">
+        <dex dex="C:\Android Projects\SylvacMeasurements\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-design-23.1.1_33671b98ff8ef561f180105acb12b66379c93af0\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Android Projects\SylvacMeasurements\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.3"
+        sha1="1666cbad760fe7a3c5beeec4df2bed14ebb0d30e">
+        <dex dex="C:\Android Projects\SylvacMeasurements\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run_fcb503097b1cd4174a14c5402fbb0ab02a680998\classes.dex" />
     </item>
     <item
         is-multidex="true"

@@ -159,8 +159,13 @@ public class MainActivity extends AppCompatActivity {
         mPlayer.start();
     }
 
-    public void setConnectionStatus(String mStatus){
-        fScan.setStatus(mStatus);
+    public void setConnectionStatus(final String mStatus){
+        runOnUiThread(new Runnable() {
+            @Override
+            public void run() {
+                fScan.setStatus(mStatus);
+            }
+        });
     }
 
     final MediaPlayer.OnErrorListener mPlayerErrorListener = new MediaPlayer.OnErrorListener() {

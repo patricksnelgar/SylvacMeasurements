@@ -14,10 +14,10 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.os.Handler;
-import android.os.SystemClock;
 import android.support.v4.content.LocalBroadcastManager;
 import android.util.Log;
 
+import java.lang.reflect.Method;
 import java.util.Set;
 import java.util.UUID;
 import java.util.regex.Pattern;
@@ -40,17 +40,23 @@ public class ConnectionManager implements CommunicationCharacteristics{
     private BluetoothGatt mBluetoothGatt;
     private Handler mHandler;
     private ConnectionTimeout mConnectionTimeoutRunnable;
+    private ServiceTimeout mServiceTimeoutRunnable;
+    private CharacteristicTimeout mCharacteristicTimeoutEnable;
+    private BondStateReceiver mBondStateReceiver;
 
-    private int mGattHash = 0;
+    private CharWrite mCharWrite = CharWrite.CHARACTERISTIC_INDICATE;
 
     // Not null when a previous connection has been made
     private String mBluetoothDeviceAddress;
 
     // Flags for checking stages of connection.
     private boolean mConnected = false;
-    private int mBondState = 10;
     private boolean mServiceDiscoveryStarted = false;
     private boolean mServiceDiscoveryCompleted = false;
+    private boolean hasLock = false;
+    private boolean mConnecting = false;
+    private boolean tryingConnect;
+    private Object lock;
 
     private MainActivity mMainActivity;
 
@@ -62,6 +68,40 @@ public class ConnectionManager implements CommunicationCharacteristics{
         }
     }
 
+    class ServiceTimeout implements Runnable {
+        @Override
+        public void run(){
+            Log.d(TAG,"Service discovery timeout.");
+        }
+    }
+
+    class CharacteristicTimeout implements Runnable {
+        @Override
+        public void run() {
+            switch(mCharWrite){
+                case CHARACTERISTIC_NOTIFY:
+                    startEnableNotificationRunnable();
+                    startCharacteristicTimeoutRunnable();
+                    return;
+                case CHARACTERISTIC_INDICATE:
+                    startEnableIndicationRunnable();
+                    startCharacteristicTimeoutRunnable();
+                    return;
+                default:
+                    return;
+            }
+        }
+    }
+
+    class NotificationRunnable implements Runnable {
+        @Override
+        public void run() {
+            Log.d(TAG, "Enable notify.");
+            startCharacteristicTimeoutRunnable();
+            enableNotification();
+        }
+    }
+
     enum BondState {
         BOND_ONLY_DEVICE,
         BOND_ONLY_INSTRUMENT,
@@ -69,17 +109,32 @@ public class ConnectionManager implements CommunicationCharacteristics{
         NO_BOND
     }
 
+    enum CharWrite {
+        CHARACTERISTIC_NOTIFY,
+        CHARACTERISTIC_INDICATE
+    }
+
     // Sets the MainActivity (for handling UI calls and registering receivers)
     // also registers the BroadcastReceiver.
-    public ConnectionManager(MainActivity pParent){
+    public ConnectionManager(MainActivity pParent, String mTargetDeviceAddress) {
         mMainActivity = pParent;
-        if(mBluetoothAdpater == null || mBluetoothManager == null)
-            Log.d(TAG,"init:"+initializeBluetooth());
+        mBluetoothDeviceAddress = mTargetDeviceAddress;
+        if (mBluetoothAdpater == null || mBluetoothManager == null)
+            Log.d(TAG, "init:" + initializeBluetooth());
 
         LocalBroadcastManager.getInstance(mMainActivity).registerReceiver(mBroadcastReceiver, makeBroadcastReceiverFilter());
+        lock = new Object();
+        tryingConnect = false;
+        Context context = mMainActivity.getBaseContext();
+        mBondStateReceiver = new BondStateReceiver(context, this);
+        context.registerReceiver(mBondStateReceiver, new IntentFilter("android.bluetooth.device.action.BOND_STATE_CHANGED"));
 
         mHandler = new Handler();
         mConnectionTimeoutRunnable = new ConnectionTimeout();
+        mServiceTimeoutRunnable = new ServiceTimeout();
+
+        connect();
+        mConnecting = true;
     }
 
     // Configures the BluetoothManager and Adapter,
@@ -100,21 +155,20 @@ public class ConnectionManager implements CommunicationCharacteristics{
         return true;
     }
 
-
     /**
      * Given a MAC address, try to create a connection to the device,
      * can be of two types; new connection, where the BluetoothGatt object is null, and an
      * existing connection, where the BluetoothGatt object is not null.
      */
-    public boolean connect(final String mDeviceAddress){
+    public boolean connect(){
 
         // Catch Bluetooth not init or invalid address
-        if(mBluetoothAdpater == null ||  mDeviceAddress == null){
+        if(mBluetoothAdpater == null ||  mBluetoothDeviceAddress == null){
             Log.w(TAG, "Adapter or device address not set");
             return false;
         }
 
-        final BluetoothDevice device = mBluetoothAdpater.getRemoteDevice(mDeviceAddress);
+        final BluetoothDevice device = mBluetoothAdpater.getRemoteDevice(mBluetoothDeviceAddress);
 
         if(device == null){
             Log.d(TAG, "Device not found.");
@@ -122,18 +176,31 @@ public class ConnectionManager implements CommunicationCharacteristics{
         }
 
         Log.d(TAG, getBondStatus(device).toString());
-        mHandler.postDelayed(mConnectionTimeoutRunnable, 5000L);
+        mHandler.postDelayed(mConnectionTimeoutRunnable, 2000);
 
         if(mBluetoothDeviceAddress == null || mBluetoothGatt == null){
-            mBluetoothGatt = device.connectGatt(mMainActivity, false, mGattCallback);
+            Log.d(TAG, "Create GATT object");
+
+            // Changed to use >API22 BLE code
+            mBluetoothGatt = device.connectGatt(mMainActivity, false, mGattCallback, BluetoothDevice.TRANSPORT_LE); // TRANSPORT_LE = 2
+            mBluetoothGatt.requestConnectionPriority(BluetoothGatt.CONNECTION_PRIORITY_LOW_POWER); // LOW_POWER = 2
+
+            refreshServicesCache(mBluetoothGatt);
+
             if(mBluetoothGatt == null){
                 return false;
             }
-            mBluetoothDeviceAddress = device.getAddress();
+            Log.d(TAG, "Gatt created.");
             return true;
         }
 
         return mBluetoothGatt.connect();
+
+    }
+
+    private void finishConnection() {
+        mConnecting = false;
+        discoverServices();
     }
 
     // Closes and cleans up the current connection
@@ -157,9 +224,59 @@ public class ConnectionManager implements CommunicationCharacteristics{
             mBluetoothGatt.disconnect();
             mBluetoothGatt.close();
             mBluetoothGatt = null;
+            mMainActivity.setConnectionStatus("Reconnecting...");
         }
 
-        connect(mBluetoothDeviceAddress);
+        connect();
+    }
+
+    public  void connectionComplete(){
+        mMainActivity.setConnectionStatus("Connection complete!");
+    }
+
+    private void discoverServices() {
+        if(mBluetoothGatt == null){
+            Log.d(TAG, "mBluetoothGatt is NULL!!");
+            closeAndOpenConnection();
+        } else if(!mServiceDiscoveryStarted){
+            mServiceDiscoveryStarted = true;
+            mServiceDiscoveryCompleted = false;
+            mHandler.postDelayed(mServiceTimeoutRunnable, 2000);
+            if(mBluetoothGatt.discoverServices()){
+                mMainActivity.setConnectionStatus("Starting service discovery.");
+                Log.d(TAG, "Service discovery started.");
+            }
+        }
+    }
+
+    private void closeAndOpenConnection(){
+        Log.d(TAG, "redo connection.");
+        disconnect();
+        connect();
+    }
+
+    private boolean refreshServicesCache(BluetoothGatt gatt) {
+        // Need to refresh the device services cache
+        try {
+            BluetoothGatt localBluetoothGatt = gatt;
+            Method localMethod = localBluetoothGatt.getClass().getMethod("refresh", new Class[0]);
+
+            if(localMethod != null){
+                return ((Boolean) localMethod.invoke(localBluetoothGatt, new Object[0])).booleanValue();
+            }
+        } catch (Exception e){
+            Log.e("TAG", "refresh cache error: " + e.getLocalizedMessage());
+        }
+
+        return false;
+    }
+
+    private void serviceDiscoveryComplete(){
+        mServiceDiscoveryStarted = false;
+        mServiceDiscoveryCompleted = true;
+        mHandler.removeCallbacks(mServiceTimeoutRunnable);
+
+        startEnableIndicationRunnable();
     }
 
     private BondState getBondStatus(BluetoothDevice mBluetoothDevice){
@@ -222,8 +339,6 @@ public class ConnectionManager implements CommunicationCharacteristics{
                     e.printStackTrace();
                 }
             }
-
-            if(indicationSet) mMainActivity.setConnectionStatus("Connection complete.");
         }
     }
 
@@ -258,6 +373,29 @@ public class ConnectionManager implements CommunicationCharacteristics{
         }
     }
 
+    public void startCharacteristicTimeoutRunnable(){
+        mHandler.postDelayed(mCharacteristicTimeoutEnable, 2000);
+    }
+
+    public void removeCharacteristicTimeoutRunnable(){
+        mHandler.removeCallbacks(mCharacteristicTimeoutEnable);
+    }
+
+    public void startEnableNotificationRunnable(){
+        mHandler.postDelayed(new NotificationRunnable(), 500);
+    }
+
+    public void startEnableIndicationRunnable() {
+        mHandler.postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                Log.d(TAG, "Enable indicate.");
+                startCharacteristicTimeoutRunnable();
+                enableIndication();
+            }
+        }, 500);
+    }
+
     public void broadcastUpdate(String intentAction){
         Log.i(TAG, "Broadcasting update: " + intentAction + " - " + mBluetoothDeviceAddress);
         LocalBroadcastManager.getInstance(mMainActivity).sendBroadcast(new Intent(intentAction).putExtra(DEVICE_ADDRESS, mBluetoothDeviceAddress));
@@ -284,10 +422,15 @@ public class ConnectionManager implements CommunicationCharacteristics{
         mIntentFilter.addAction(ACTION_DEVICE_DISCONNECTED);
         mIntentFilter.addAction(ACTION_DEVICE_SERVICES_DISCOVERED);
         mIntentFilter.addAction(ACTION_DATA_AVAILABLE);
-        mIntentFilter.addAction(BluetoothAdapter.ACTION_CONNECTION_STATE_CHANGED);
 
         return mIntentFilter;
     }
+
+    public void startServiceDiscovery() { discoverServices(); }
+
+    public void setDeviceAddress(String address) { mBluetoothDeviceAddress = address; }
+
+    public String getDeviceAddress() { return mBluetoothDeviceAddress; }
 
     /**
      * Callback that handles changes in communication link between the calipers and app.
@@ -306,10 +449,13 @@ public class ConnectionManager implements CommunicationCharacteristics{
                 mHandler.removeCallbacks(mConnectionTimeoutRunnable);
                 if(status == 0) {
                     broadcastUpdate(ACTION_DEVICE_CONNECTED);
-                    //finishConnection();
+                    finishConnection();
                     Log.i(TAG, "Connected to GATT server.");
+                } else if(mConnecting) {
+                    closeAndOpenConnection();
                 } else {
-                   reconnect();
+                   Log.d(TAG, "Cant connect, retrying.");
+                    reconnect();
                 }
 
             } else if(newState == BluetoothProfile.STATE_DISCONNECTED){
@@ -329,7 +475,8 @@ public class ConnectionManager implements CommunicationCharacteristics{
             // a device can have multiple services.
             // status will only be 0 when all services have been discovered.
             if(status == BluetoothGatt.GATT_SUCCESS) {
-                broadcastUpdate(ACTION_DEVICE_SERVICES_DISCOVERED);
+                //broadcastUpdate(ACTION_DEVICE_SERVICES_DISCOVERED);
+                serviceDiscoveryComplete();
                 Log.d(TAG, "Service discovery complete");
             } else {
                 Log.w(TAG, "onServicesDiscovered received: " + status);
@@ -341,6 +488,30 @@ public class ConnectionManager implements CommunicationCharacteristics{
         @Override
         public void onCharacteristicChanged(BluetoothGatt gatt, BluetoothGattCharacteristic characteristic) {
             broadcastUpdate(ACTION_DATA_AVAILABLE, characteristic);
+        }
+
+        @Override
+        public void onDescriptorWrite(BluetoothGatt gatt, BluetoothGattDescriptor descriptor, int status) {
+            Log.d(TAG, "writing descriptor: " + status);
+            removeCharacteristicTimeoutRunnable();
+            if (status == 0) {// SUCCESS
+                switch(mCharWrite){
+                    case CHARACTERISTIC_NOTIFY:
+                        Log.d(TAG, "Notification active.");
+                        mCharWrite = CharWrite.CHARACTERISTIC_INDICATE;
+                        connectionComplete();
+                        break;
+                    case CHARACTERISTIC_INDICATE:
+                        Log.d(TAG, "Indicate active.");
+                        mCharWrite = CharWrite.CHARACTERISTIC_NOTIFY;
+                        Log.d(TAG, "Enable notify.");
+                        enableNotification();
+                        break;
+                    default:
+                }
+            } else {
+                Log.d(TAG, "Wrong status");
+            }
         }
     };
 
@@ -360,15 +531,15 @@ public class ConnectionManager implements CommunicationCharacteristics{
             switch(mReceivedAction){
                 case ACTION_DEVICE_CONNECTED:
                     mConnected = true;
-                    mHandler.removeCallbacks(mConnectionTimeoutRunnable);
-                    Log.d(TAG, "Connect bond state: " + mBluetoothGatt.getDevice().getBondState());
+                    //mHandler.removeCallbacks(mConnectionTimeoutRunnable);
+                    //Log.d(TAG, "Connect bond state: " + mBluetoothGatt.getDevice().getBondState());
                     /**
                      * Service discovery initiation and check is performed here.
                      * Flag is set when the discovery begins and another set upon completion.
                      * This is necessary due to the service discovery not always completing, a simple 5s timeout runnable to check the flag
                      * states solved the issue.
                      */
-
+                    /*
                     try{
                         Thread.sleep(500L);
                     } catch (Exception e){
@@ -395,11 +566,12 @@ public class ConnectionManager implements CommunicationCharacteristics{
                             }
                         }
                     }, 2000L);
+                    */
                     break;
                 case ACTION_DEVICE_DISCONNECTED:
                     mConnected = false;
                     mMainActivity.setConnectionStatus("Device disconnected.");
-                    disconnect();
+                    //disconnect();
                     break;
                 case ACTION_DEVICE_SERVICES_DISCOVERED:
                     Log.d(TAG, "Service bond state: " + mBluetoothGatt.getDevice().getBondState());
@@ -425,9 +597,9 @@ public class ConnectionManager implements CommunicationCharacteristics{
                     mDataIntent.putExtra(MEASUREMENT_DATA, mData);
                     LocalBroadcastManager.getInstance(mMainActivity).sendBroadcast(mDataIntent);
                     break;
-                case BluetoothAdapter.ACTION_CONNECTION_STATE_CHANGED:
-                    final int state = intent.getIntExtra(BluetoothAdapter.EXTRA_STATE, BluetoothAdapter.ERROR);
-                    Log.d("Bluetooth State Change", "state received: "+state);
+                default:
+                    Log.d(TAG, "Received: " + mReceivedAction);
+                    break;
             }
         }
     };
