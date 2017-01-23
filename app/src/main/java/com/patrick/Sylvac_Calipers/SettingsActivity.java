@@ -10,7 +10,9 @@ import android.util.Log;
 import android.view.MenuItem;
 
 /**
- * Created on 21/01/2016.
+ * Author:      Patrick Snelgar
+ * Name:        SettingsActivity
+ * Description: Activity to show and change the Preferences for the application
  */
 public class SettingsActivity extends AppCompatActivity {
 
@@ -56,7 +58,11 @@ public class SettingsActivity extends AppCompatActivity {
             _p.setEnabled(enablefilename);
         }
 
-
+        /**
+         * Listener to update the summary for some of the preferences when they change
+         * @param sharedPreferences
+         * @param key
+         */
         @Override
         public void onSharedPreferenceChanged(SharedPreferences sharedPreferences, String key) {
             Log.i("Settings", "Key changed: " + key );

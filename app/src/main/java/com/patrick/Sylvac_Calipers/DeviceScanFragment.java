@@ -31,13 +31,14 @@ import android.widget.Toast;
 import java.util.ArrayList;
 
 /**
- * Created on 13/10/2016.
+ * Author:      Patrick Snelgar
+ * Name:        DeviceScanFragment
+ * Description: Uses the BluetoothLeScanner to scan for any Bluetooth devices in proximity to the local device.
  */
 
 public class DeviceScanFragment extends Fragment {
 
     private static final int REQUEST_ENABLE_BT = 15;
-    private static final int REQUEST_LOCATION = 16;
     final String TAG = DeviceScanFragment.class.getSimpleName();
 
     private long SCAN_TIMEOUT = 10000;
@@ -55,9 +56,11 @@ public class DeviceScanFragment extends Fragment {
     private ScanTimeout mScanTimeoutRunnable;
 
     private boolean mScanning = false;
-    private boolean mLocationSettings = false;
     public ArrayList<BluetoothDevice> mDiscoveredDevices;
 
+    /**
+     * A runnable that stops the scan when called.
+     */
     class ScanTimeout implements Runnable {
         @Override
         public void run() {
@@ -68,6 +71,14 @@ public class DeviceScanFragment extends Fragment {
             Log.d(TAG, "Scan timeout");
         }
     }
+
+    /**
+     * Creates the view for the fragment.
+     * @param inflater
+     * @param container
+     * @param savedInstanceState
+     * @return
+     */
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
@@ -80,6 +91,10 @@ public class DeviceScanFragment extends Fragment {
         return  createView;
     }
 
+    /**
+     * Called once the parent activity is created, this is important for the use of some variables and devices.
+     * @param savedInstanceState
+     */
     @Override
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
@@ -90,15 +105,19 @@ public class DeviceScanFragment extends Fragment {
 
         initializeBluetooth();
 
+        // Create and set the custom adapter for displaying the discovered devices.
         mDeviceListAdapter = new DeviceListAdapter(getActivity(), mDiscoveredDevices);
         mListViewDiscoveredDevices.setAdapter(mDeviceListAdapter);
-        //setListAdapter(mDeviceListAdapter);
 
         mScanTimeoutRunnable = new ScanTimeout();
 
         mConn = new ConnectionManager(mMainActivity, null);
     }
 
+    /**
+     * Called when the fragment enters the foreground again, checks the BluetoothAdapter before
+     * starting to scan again.
+     */
     @Override
     public void onResume() {
         super.onResume();
@@ -106,14 +125,6 @@ public class DeviceScanFragment extends Fragment {
             Intent iEnableBluetooth = new Intent(BluetoothAdapter.ACTION_REQUEST_ENABLE);
             startActivityForResult(iEnableBluetooth, REQUEST_ENABLE_BT);
         }
-
-        /*
-        if( ((LocationManager) mMainActivity.getSystemService(Context.LOCATION_SERVICE)).isProviderEnabled(LocationManager.GPS_PROVIDER)){
-            mLocationSettings = true;
-        } else {
-            mLocationSettings = false;
-        }
-        */
 
         if(mBluetoothAdapter == null || mBluetoothLeScanner == null)
             initializeBluetooth();
@@ -123,6 +134,9 @@ public class DeviceScanFragment extends Fragment {
         scanForDevices(true);
     }
 
+    /**
+     * Called when the fragment is removed from the stack, stops the scan and clears the list of discoverd devices.
+     */
     @Override
     public void onPause() {
         super.onPause();
@@ -130,7 +144,9 @@ public class DeviceScanFragment extends Fragment {
         mDeviceListAdapter.clear();
     }
 
-
+    /**
+     * Sets up the required objects to perform a BluetoothLeScan
+     */
     private void initializeBluetooth(){
         final BluetoothManager mManager = (BluetoothManager) getActivity().getSystemService(Context.BLUETOOTH_SERVICE);
         mBluetoothAdapter = mManager.getAdapter();
@@ -142,6 +158,11 @@ public class DeviceScanFragment extends Fragment {
         }
     }
 
+    /**
+     * Starts a BluetoothLeScan for nearby Bluetooth devices.
+     * Also starts the scan timeout runnable.
+     * @param scan
+     */
     public void scanForDevices(boolean scan) {
         mDeviceListAdapter.clear();
 
@@ -164,24 +185,19 @@ public class DeviceScanFragment extends Fragment {
         }
     }
 
+    /**
+     * User may be asked to turn bluetooth on, if they choose not to the
+     * application will exit.
+     * @param requestCode
+     * @param resultCode
+     * @param data
+     */
     @Override
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
         if(requestCode == REQUEST_ENABLE_BT && resultCode == Activity.RESULT_CANCELED){
             mMainActivity.finish();
             return;
         }
-        /*
-        if (requestCode == REQUEST_LOCATION && resultCode == Activity.RESULT_CANCELED){
-            Toast.makeText(mMainActivity, "App requires Location for scan results.", Toast.LENGTH_SHORT).show();
-            mLocationSettings = false;
-            mMainActivity.finish();
-            return;
-        } else if(requestCode == REQUEST_LOCATION && resultCode == Activity.RESULT_OK) {
-            if( ((LocationManager)mMainActivity.getSystemService(Context.LOCATION_SERVICE)).isProviderEnabled(LocationManager.GPS_PROVIDER)) {
-                mLocationSettings = true;
-            }
-        }*/
-
         super.onActivityResult(requestCode, resultCode, data);
     }
 
@@ -191,7 +207,10 @@ public class DeviceScanFragment extends Fragment {
         mTextViewStatus.setText(mStatus);
     }
 
-
+    /**
+     * Custom List Adapter to display the discovered devices in a list view using
+     * custom xml layout.
+     */
     private class DeviceListAdapter extends BaseAdapter {
         private ArrayList<BluetoothDevice> mDevices;
         private Context mContext;
@@ -205,6 +224,10 @@ public class DeviceScanFragment extends Fragment {
             mDevices.clear();
         }
 
+        /**
+         * Adds a device to the list if it has not been seen before
+         * @param d
+         */
         public void addDevice(BluetoothDevice d){
             boolean deviceExists = false;
             if (d.getName() == null) return;
@@ -242,6 +265,13 @@ public class DeviceScanFragment extends Fragment {
             return mDevices.get(position);
         }
 
+        /**
+         * Function to handle setting the fields in the XML layout for the list view.
+         * @param position
+         * @param convertView
+         * @param parent
+         * @return
+         */
         @Override
         public View getView(int position, View convertView, ViewGroup parent) {
             ViewHolder vHolder;
@@ -272,19 +302,23 @@ public class DeviceScanFragment extends Fragment {
         }
     }
 
+    /**
+     * Placeholder class to represent a single discovered bluetooth device.
+     */
     static class ViewHolder {
         TextView textName;
         TextView textAddress;
     }
 
-    // Device scan callback.
-    // Triggered whenever a device is discovered by the BLE Scanner
+    /**
+     * Device scan callback.
+     * Triggered whenever a device is discovered by the BLE Scanner
+     */
     private ScanCallback mLeScanCallback = new ScanCallback() {
 
         @Override
         public void onScanResult(int callbackType, ScanResult result) {
             final BluetoothDevice device = result.getDevice();
-            //Log.d(TAG, "Device found!");
             mMainActivity.runOnUiThread(new Runnable() {
                 @Override
                 public void run() {
@@ -295,6 +329,9 @@ public class DeviceScanFragment extends Fragment {
         }
     };
 
+    /**
+     * Initiates a connection with the selected device
+     */
     final AdapterView.OnItemClickListener mOnItemClickListener = new AdapterView.OnItemClickListener() {
         @Override
         public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
@@ -303,9 +340,8 @@ public class DeviceScanFragment extends Fragment {
             setStatus("Connecting to: " + mTargetDevice.getName());
             mHandler.removeCallbacks(mScanTimeoutRunnable);
             mConn.setDeviceAddress(mTargetDeviceAddress);
+            mConn.registerBondStateReceiver();
             boolean connectResult = mConn.connect();
-            //mConn = new ConnectionManager(mMainActivity, mTargetDeviceAddress);
-            //Log.d(TAG, "ConnectionManager:: " + mConn.hashCode());
         }
     };
 }

@@ -11,7 +11,7 @@
     <item
         android:id="@+id/action_bluetooth"
         android:icon="@drawable/ic_bluetooth_black_48dp"
-        android:title="Enable Bluetooth"
+        android:title="Enable bluetooth"
         app:showAsAction="never" />
     <item
         android:id="@+id/action_save"
@@ -20,11 +20,11 @@
         app:showAsAction="ifRoom" />
     <item
         android:id="@+id/action_bluetooth_settings"
-        android:title="Bluetooth Devices"
+        android:title="Bluetooth devices"
         app:showAsAction="never"/>
     <item
         android:id="@+id/action_clear_data"
-        android:title="Clear records"
+        android:title="Clear data"
         app:showAsAction="never"/>
     <item
         android:id="@+id/action_settings"
@@ -32,7 +32,7 @@
         app:showAsAction="never" />
     <item
         android:id="@+id/action_disconnect"
-        android:title="Disconnect"
+        android:title="Disconnect device"
         app:showAsAction="never" />
     <item
         android:id="@+id/action_help"

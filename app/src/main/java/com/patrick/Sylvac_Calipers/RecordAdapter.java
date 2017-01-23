@@ -14,16 +14,16 @@ import java.util.List;
  * Date: 21/04/2016
  * Description: Adapter for custom row view of each record
  */
-public class RecordAdapter extends ArrayAdapter<Record> {
+public class RecordAdapter extends ArrayAdapter<DataRecord> {
 
     private static final String TAG = RecordAdapter.class.getSimpleName();
 
-    public RecordAdapter(Context context, int resourceID, List<Record> records){
-        super(context, resourceID, records);
+    public RecordAdapter(Context context, int resourceID, List<DataRecord> dataRecords){
+        super(context, resourceID, dataRecords);
     }
 
     public View getView(int position, View convertView, ViewGroup parent){
-        Record _single = getItem(position);
+        DataRecord _single = getItem(position);
 
         if(convertView == null) convertView = LayoutInflater.from(getContext()).inflate(R.layout.single_record, parent, false);
 

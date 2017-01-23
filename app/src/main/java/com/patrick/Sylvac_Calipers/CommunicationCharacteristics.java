@@ -3,9 +3,9 @@ package com.patrick.Sylvac_Calipers;
 import java.util.UUID;
 
 /**
- * Author: Patrick Snelgar
- * Date: 21/04/2016
- * Description: interface to hold commonly used keys and UUIDs
+ * Author:      Patrick Snelgar
+ * Name:        CommunicationCharacteristics
+ * Description: Interface to hold commonly used Intent actions and the service UUIDs
  */
 public interface CommunicationCharacteristics {
 
@@ -20,6 +20,7 @@ public interface CommunicationCharacteristics {
     String ACTION_DEVICE_CONNECTED = "com.SylvacCalipers.ACTION_DEVICE_CONNECTED";
     String ACTION_DEVICE_DISCONNECTED = "com.SylvacCalipers.ACTION_DEVICE_DISCONNECTED";
     String ACTION_DEVICE_SERVICES_DISCOVERED = "com.SylvacCalipers.ACTION_DEVICE_SERVICES_DISCOVERED";
+    String ACTION_DISCONNECT_DEVICE = "com.SylvacCalipers.ACTION_DISCONNECT_DEVICE";
 
     String DEVICE_ADDRESS = "com.SylvacCalipers.DEVICE_ADDRESS";
     String EXTRA_DATA = "com.SylvacCalipers.EXTRA_DATA";

@@ -27,8 +27,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Author: Patrick
- * Date: 25-Nov-15.
+ * Author: Patrick Snelgar
+ * Name:   DataReceiver
  * Description: BroadcastReceiver that handles the measurements coming in from the calipers.
  * Notes: Uses the values stored in SharedPreferences for actions performed upon receiving a measurement,
  *        completing a set of measurements and the saving of data.
@@ -46,7 +46,7 @@ public class DataReceiver extends BroadcastReceiver {
     private Handler mHandler = new Handler(Looper.getMainLooper());
     private int mMeasurementCount = 0;
     public int valuesPerRecord;
-    private List<Record> listRecords;
+    private List<DataRecord> listDataRecords;
     private RecordAdapter listRecordsAdapter;
     private FileOutputStream mFileStream;
     private char space = (int) 32;
@@ -56,7 +56,7 @@ public class DataReceiver extends BroadcastReceiver {
     /**
      * Constructor for a new DataReceiver.
      * SharedPreferences link is made and accessed to set initial record ID.
-     * Builds the ListAdapter for custom Record class.
+     * Builds the ListAdapter for custom DataRecord class.
      * @param pMainActivity: required for running on the UI thread and accessing SharedPreferences for the application
      */
     public DataReceiver(MainActivity pMainActivity){
@@ -65,8 +65,8 @@ public class DataReceiver extends BroadcastReceiver {
         mPrefs = PreferenceManager.getDefaultSharedPreferences(mParentActivity);
 
         mCurrentEntryID = (EditText) mParentActivity.findViewById(R.id.editCurrentID);
-        listRecords = new ArrayList<>();
-        listRecordsAdapter = new RecordAdapter(mParentActivity, R.layout.single_record, listRecords);
+        listDataRecords = new ArrayList<>();
+        listRecordsAdapter = new RecordAdapter(mParentActivity, R.layout.single_record, listDataRecords);
         mHistory = (ListView) mParentActivity.findViewById(R.id.listRecordEntries);
         mHistory.setAdapter(listRecordsAdapter);
         listRecordsAdapter.notifyDataSetChanged();
@@ -77,13 +77,14 @@ public class DataReceiver extends BroadcastReceiver {
     /**
      * Called when a measurement is received.
      * Handles the composure of a record based on user preferences.
-     * Also writes out to a file automatically on the completion of a record if the preference is enabled.
+     * Writes out to a file automatically on the completion of a record if the preference is enabled.
      *
      * @param context
      * @param intent: Holds the action to perform; save data, measurement received, or clear all records.
      */
     @Override
     public void onReceive(Context context, Intent intent) {
+        // Get the values from Preferences
         valuesPerRecord = Integer.parseInt(mPrefs.getString(MainActivity.PREFERENCE_VALUES_PER_ENTRY, "-1"));
         if(valuesPerRecord == -1) valuesPerRecord = MainActivity.DEFAULT_PREF_VALUES_PER_ENTRY;
         String action = intent.getAction();
@@ -93,30 +94,40 @@ public class DataReceiver extends BroadcastReceiver {
             data = new String(intent.getStringExtra(CommunicationCharacteristics.MEASUREMENT_DATA)).trim();
         switch (action){
             case RecordFragment.MEASUREMENT_RECEIVED:{
+                // User can set the device to not beep on receive.
                 if(mPrefs.getBoolean(MainActivity.PREFERENCE_BEEP_ON_RECEIVE, false)){
                     Log.i(TAG, "Beep");
                     mParentActivity.playOnReceiveSound();
                 }
+
                 mMeasurementCount++;
+                // using "   " resulted in the whitespace being removed
                 mCurrentRecord += data +space+space+space;
                 mCurrentRecordView.setText(mCurrentRecord);
 
+                // All value for a record have been received
                 if(mMeasurementCount >= valuesPerRecord){
                     int currentID = mPrefs.getInt(MainActivity.PREFERENCE_CURRENT_ID, 0);
                     int nextID = currentID + 1;
+                    // Set the next recordID text field
                     mCurrentEntryID.setText(String.valueOf(nextID));
+                    // Update the preferences to relect the incremented ID
                     mPrefs.edit().putInt(MainActivity.PREFERENCE_CURRENT_ID, nextID).commit();
 
-                    Record newEntry = new Record(String.valueOf(currentID), mCurrentRecord);
-                    listRecords.add(newEntry);
+                    // Create a new record from the measurements
+                    DataRecord newEntry = new DataRecord(String.valueOf(currentID), mCurrentRecord);
+                    listDataRecords.add(newEntry);
                     listRecordsAdapter.notifyDataSetChanged();
+                    // make sure the most recent record is always visible
                     scrollList();
                     mMeasurementCount = 0;
                     mCurrentRecord="";
 
+                    // Handles the auto-saving of data to a file.
                     if(mPrefs.getBoolean(MainActivity.PREFERNCE_AUTO_SAVE, false)){
                         String mDir = Environment.getExternalStorageDirectory().toString();
                         File mFolderPath = new File(mDir + "/SavedData");
+                        // Create the folder structure if not found
                         if(!mFolderPath.exists()) mFolderPath.mkdirs();
                         final File mOutput = new File(mFolderPath,mPrefs.getString(MainActivity.PREFERENCE_AUTO_SAVE_FILENAME, "----"));
                         try {
@@ -140,7 +151,7 @@ public class DataReceiver extends BroadcastReceiver {
                 saveAllRecords();
                 break;
             case RecordFragment.CLEAR_DATA:
-                listRecords.clear();
+                listDataRecords.clear();
                 listRecordsAdapter.notifyDataSetChanged();
                 mCurrentRecord = "";
                 mCurrentRecordView.setText(mCurrentRecord);
@@ -151,24 +162,33 @@ public class DataReceiver extends BroadcastReceiver {
         }
     }
 
+    /**
+     * Sets the 'active' entry in the list view to the most recent
+     * therefore bringing it into focus so the latest records are always visible.
+     */
     private void scrollList(){
         mHandler.post(new Runnable() {
             @Override
             public void run() {
-                mHistory.setSelection(listRecords.size() - 1);
+                mHistory.setSelection(listDataRecords.size() - 1);
             }
         });
     }
 
+    /**
+     * Writes all the records in listDataRecords to a user specified file
+     */
     private void saveAllRecords(){
         LayoutInflater factory = LayoutInflater.from(mParentActivity);
 
+        // Create a dialog to ask the user for a filename
         AlertDialog.Builder builder = new AlertDialog.Builder(mParentActivity);
         builder.setTitle("Save Data");
         final View alertView = factory.inflate(R.layout.save_data_layout, null);
         builder.setView(alertView);
         final EditText filenameView = (EditText) alertView.findViewById(R.id.filenameText);
         builder.setNegativeButton("Cancel", null);
+        // Saves all the data when the user confirms the filename
         builder.setPositiveButton("Save Data", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {
@@ -180,14 +200,11 @@ public class DataReceiver extends BroadcastReceiver {
                 final File mOutput = new File(mFolderPath,filenameView.getText().toString() + ".csv");
                 Log.i(TAG, mOutput.getAbsoluteFile().toString());
 
-                /*
-                    TODO:   Currently saves to emulated/0/SavedData
-                            update to check for external storage and possibly a directory selector
-                 */
+
                 try {
                     mFileStream = new FileOutputStream(mOutput,true);
                     PrintWriter mPw = new PrintWriter(mFileStream);
-                    for (Record x : listRecords) {
+                    for (DataRecord x : listDataRecords) {
                         mPw.println(x.getRecordForOutput());
                     }
                     mPw.flush();
@@ -220,6 +237,9 @@ public class DataReceiver extends BroadcastReceiver {
         builder.show();
     }
 
+    /**
+     * Function to clear the measurements in the current record.
+     */
     public void resetCurrentRecord(){
         mCurrentRecord = "";
         mCurrentRecordView.setText("");

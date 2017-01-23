@@ -3,18 +3,33 @@
     <string-array name="help_sections">
         <item>Search for devices</item>
         <item>Connect a Device</item>
-        <item>Unpair a Device</item>
         <item>Reset the Calipers</item>
         <item>Record Data</item>
         <item>Autosave</item>
         <item>Save Data</item>
+        <item>Misc</item>
     </string-array>
     <string-array name="section_info">
-        <item>The app will automatically scan for available devices each time it is opened. After 10 seconds the scanning will stop. If a rescan is required simply tap the \'refresh\' icon in the title bar (next to the \"Sylvac Calipers\" text) . This will start another 10 second scan for Bluetooth devices.</item>
-        <item>For a new device: New devices will appear on the \"Connect\" screen, simply tap the device you wish to connect to. Upon a successful connection the Bluetooth symbol on the calipers should be solid. \n\nFor previous connections: Try the method for a new device, if this does not succeed then try resetting the calipers and unpairing from the \'Bluetooth devices\' menu.</item>
+        <item>The app will automatically scan for available devices each time it is opened. After
+            10 seconds the scanning will stop. \n\nIf a rescan is required simply tap the
+            \'refresh\' icon in the title bar (next to the \"Sylvac Calipers\" text) . This will start another 10 second scan for Bluetooth devices.</item>
+        <item>For a new device: New devices will appear on the \"Scan\" screen, simply tap the device you wish to connect to. Upon a successful connection the Bluetooth symbol on the calipers should be solid. \n\nFor previous connections: Try the method for a new device,
+            if this does not succeed then try resetting the calipers and using the
+            \'Disconnect device\' option from the menu.</item>
         <item>To reset the calipers: Navigate to the \'bt\' menu, then cycle through the options under the \'bt\' menu until \'reset\' is displayed and select it.</item>
-        <item>Press the \'send data\' button on the calipers when you want to record a measurement. A beep will sound when the measurement is received by the app (make sure the volume is turned up). \nUpon receiving X number of measurements (where X is the value; Settings -> Values per Entry) a new entry will be appended to the bottom of the \'Record\' tab.</item>
-        <item>The device automatically saves data to a predetermined file upon the completion of X measurements being received. Settings for enabling autosave and that name of the file can be found under \'Data Preferences\'</item>
-        <item>To save all the entries in the \"Record\" tab, tap the \'save\' icon next to the \'refresh\' icon in the title bar. This will open a dialog popup requesting the name of the file to use. Note that only the file name is required, the file type is automatically set to \".csv\".</item>
+        <item>Press the \'send data\' button on the calipers when you want to record a
+            measurement. A beep will sound when the measurement is received by the app (make sure
+            the media volume is turned up). \n\nUpon receiving X number of measurements (where X is the value; Settings -> Values per Entry) a new entry will be appended to the bottom of the \'Data\' tab. The measurements in the current record will be displayed under the
+            \'Current ID\' section</item>
+        <item>The device automatically saves data to a predetermined file upon the completion of X measurements being received. Settings for enabling the autosave feature and that name of the file can be found under \'Data Preferences\'</item>
+        <item>To save all the entries in the \"Data\" tab, tap the \'save\' icon next to the
+            \'refresh\' icon in the title bar. This will open a dialog popup requesting the name of the file to use. Note that only the file name is required, the file type is automatically set to \".csv\".</item>
+        <item>As of Android version 6.0, there has been changes to the way security works.
+            The app now requires access to the location services in order to receive
+            Bluetooth scan results. \n\n In addition to this, if no devices are shown in
+            the scan results try enabling the \'GPS/Location\' feature of the device
+            and
+            try scanning again.
+        </item>
     </string-array>
 </resources>

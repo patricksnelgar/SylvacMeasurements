@@ -8,7 +8,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Created on 11/01/2016.
+ * Author:      Patrick Snelgar
+ * Name:        PageFragmentAdapter
+ * Description: An adapter that manages fragments.
  */
 public class PageFragmentAdapter extends FragmentStatePagerAdapter {
 

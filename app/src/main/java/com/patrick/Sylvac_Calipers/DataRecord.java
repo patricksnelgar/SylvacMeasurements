@@ -1,42 +1,52 @@
 package com.patrick.Sylvac_Calipers;
 
-import android.util.Log;
-
 import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Author: Patrick
- * Date: 18-Dec-15.
- * Description:
- * Notes:
+ * Author:      Patrick Snelgar
+ * Name:        DataRecord
+ * Description: Class to hold the information on a single 'record' containing an ID and array of measurements
  */
-public class Record {
-    final private String TAG = Record.class.getSimpleName();
+public class DataRecord {
+    final private String TAG = DataRecord.class.getSimpleName();
     private String entryID;
     private List<String> measurementsArray;
     private static final int numValuesPerLine = 3;
     private static final String recordSeparator = "         "; //10 spaces with 7chars per record pushes the third value onto line 2
 
-    public Record(){
+    public DataRecord(){
         this.entryID = null;
         this.measurementsArray = null;
     }
 
-    public Record(String ID, String listMeasurement){
+    /**
+     * Constructor to create a record from a string of measurements
+     * @param ID
+     * @param listMeasurement
+     */
+    public DataRecord(String ID, String listMeasurement){
         this.entryID = ID;
         measurementsArray = new ArrayList<>();
         formatMeasurements(listMeasurement);
     }
 
-    public Record(String ID, List<String> inputMeasurementArray){
+    /**
+     * Construction for creating a record from an array of measurements
+     * @param ID
+     * @param inputMeasurementArray
+     */
+    public DataRecord(String ID, List<String> inputMeasurementArray){
         this.entryID = ID;
         this.measurementsArray = inputMeasurementArray;
     }
 
+    /**
+     * Converts a string of measurements to an array.
+     * @param inputMeasurement
+     */
     private void formatMeasurements(String inputMeasurement){
         String[] _split = inputMeasurement.split("   ");
-        //Log.i(TAG, "Split count: " + _split.length);
         for(String i : _split){
             measurementsArray.add(i);
         }
@@ -44,8 +54,10 @@ public class Record {
 
     public String getEntryID(){ return this.entryID; }
 
-    public List<String> getMeasurementsArray(){ return this.measurementsArray; }
-
+    /**
+     * Returns the measurements array as a single formatted string
+     * @return
+     */
     public String getMeasurementsString(){
 
         if(this.measurementsArray.size() <= numValuesPerLine) {
@@ -71,14 +83,10 @@ public class Record {
         }
     }
 
-    public void setEntryID(String ID){
-        this.entryID = ID;
-    }
-
-    public void setMeasurementsArray(List<String> inputMeasurementArray){
-        this.measurementsArray = inputMeasurementArray;
-    }
-
+    /**
+     * returns the measurement array as a CSV string
+     * @return
+     */
     public String getRecordForOutput(){
         String o = this.entryID;
         for(String a : measurementsArray){

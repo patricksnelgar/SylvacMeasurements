@@ -43,7 +43,7 @@
         jumboMode="true"
         optimize="true"
         revision="23.0.3"
-        sha1="81d8677bc3d873890fa006c42ad02832ee19c359">
+        sha1="d4097513929d289a5cf5f4934ce6f44f0beb6e3a">
         <dex dex="C:\Android Projects\SylvacMeasurements\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run-bootstrap_6d9af3741f64bd4c51218e02971d52ad1d6023a8\classes.dex" />
     </item>
     <item
@@ -61,7 +61,7 @@
         jumboMode="true"
         optimize="true"
         revision="23.0.3"
-        sha1="1666cbad760fe7a3c5beeec4df2bed14ebb0d30e">
+        sha1="bf59d51ffc41ab436fff61ae75f16361b709b8e6">
         <dex dex="C:\Android Projects\SylvacMeasurements\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run_fcb503097b1cd4174a14c5402fbb0ab02a680998\classes.dex" />
     </item>
     <item

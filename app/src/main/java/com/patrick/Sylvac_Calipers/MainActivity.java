@@ -23,8 +23,12 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.widget.Toast;
 
+/**
+ * Author:      Patrick Snelgar
+ * Name:        MainActivity
+ * Description: main entry point of the application, handles the different fragments and provides the context for preferences.
+ */
 public class MainActivity extends AppCompatActivity {
-
 
     public static final String PREFERENCE_VALUES_PER_ENTRY = "values_per_entry";
     public static final String PREFERENCE_BEEP_ON_RECEIVE = "beep_on_receive";
@@ -43,7 +47,6 @@ public class MainActivity extends AppCompatActivity {
     private TabLayout mTabLayout;
     private SharedPreferences mPrefs;
     private MediaPlayer mPlayer;
-    //public ConnectionManager mConn;
 
     private RecordFragment fRecord;
     private DeviceScanFragment fScan;
@@ -76,7 +79,7 @@ public class MainActivity extends AppCompatActivity {
         fRecord.setParent(this);
 
         mAdapter.addFragment(fScan, "Scan");
-        mAdapter.addFragment(fRecord, "Record");
+        mAdapter.addFragment(fRecord, "Data");
 
         mPager = (ViewPager) findViewById(R.id.view_pager);
         mPager.setAdapter(mAdapter);
@@ -84,16 +87,21 @@ public class MainActivity extends AppCompatActivity {
         mTabLayout = (TabLayout) findViewById(R.id.tab_layout);
         mTabLayout.setupWithViewPager(mPager);
 
+        // Check if the local device supports Bluetooth LE
         if (!getPackageManager().hasSystemFeature(PackageManager.FEATURE_BLUETOOTH_LE)) {
             Toast.makeText(this, "BLE not supported", Toast.LENGTH_SHORT).show();
             finish();
         }
+
+        // Need permissions in OS 23+
         if(Build.VERSION.SDK_INT >= 23) {
+            // Request access to storage for saving files
             if (ContextCompat.checkSelfPermission(this, Manifest.permission.WRITE_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED) {
                 ActivityCompat.requestPermissions(this,
                         new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE}, 100); //Any number
             }
 
+            // Request location access for BT scan results
             if(ContextCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED){
                 ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.ACCESS_COARSE_LOCATION}, 101);
             }
@@ -143,13 +151,8 @@ public class MainActivity extends AppCompatActivity {
                 return true;
             case R.id.action_disconnect:
                 setConnectionStatus("Device disconnected.");
-                //mConn.disconnect();
+                LocalBroadcastManager.getInstance(this).sendBroadcast(new Intent(CommunicationCharacteristics.ACTION_DISCONNECT_DEVICE));
                 return true;
-            /*case R.id.action_dummy_data:
-                Intent mIntent = new Intent(RecordFragment.MEASUREMENT_RECEIVED);
-                mIntent.putExtra(CommunicationCharacteristics.MEASUREMENT_DATA, "+0.001");
-                LocalBroadcastManager.getInstance(this).sendBroadcast(mIntent);
-                return true;*/
             default:
                 return super.onOptionsItemSelected(mItem);
         }

@@ -8,9 +8,7 @@ import android.view.LayoutInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
-import android.widget.BaseAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
 
@@ -19,7 +17,9 @@ import java.util.Arrays;
 import java.util.List;
 
 /**
- * Created on 27/01/2016.
+ * Author:      Patrick Snelgar
+ * Name:        HelpActivity
+ * Description: Displays the help topics from help_info.xml in a user friendly list.
  */
 public class HelpActivity extends AppCompatActivity {
 
@@ -44,14 +44,14 @@ public class HelpActivity extends AppCompatActivity {
         buildTopicData();
 
         mHelpList = (ListView) findViewById(R.id.listHelpTopics);
-        mAdapter = new HelpListAdapter(this, mHelpEntries);
+        mAdapter = new HelpListAdapter(getApplicationContext(), mHelpEntries);
         mHelpList.setAdapter(mAdapter);
         mAdapter.notifyDataSetChanged();
 
     }
 
     private void buildTopicData(){
-        mTopics = new ArrayList(Arrays.asList(getResources().getStringArray(R.array.help_sections)));
+        mTopics = new ArrayList<String>(Arrays.asList(getResources().getStringArray(R.array.help_sections)));
         mContent = new ArrayList<>(Arrays.asList(getResources().getStringArray(R.array.section_info)));
         if(mTopics.size() != mContent.size() || mTopics.size() < mContent.size()) return;
 
@@ -101,6 +101,8 @@ public class HelpActivity extends AppCompatActivity {
             if(convertView == null){
                 convertView = LayoutInflater.from(getContext()).inflate(R.layout.help_topic, parent, false);
             }
+
+            Log.d(TAG,"building help topic: " + _topic.getTitle());
 
             TextView title = (TextView) convertView.findViewById(R.id.topicTitle);
             TextView content = (TextView) convertView.findViewById(R.id.topicContent);
