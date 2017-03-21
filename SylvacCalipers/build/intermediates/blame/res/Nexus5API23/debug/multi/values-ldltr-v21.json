@@ -1,0 +1,26 @@
+[
+    {
+        "outputFile": "C:\\Android Projects\\SylvacMeasurements\\SylvacCalipers\\build\\intermediates\\incremental\\mergeNexus5API23DebugResources\\merged.dir\\values-ldltr-v21\\values-ldltr-v21.xml",
+        "map": [
+            {
+                "to": {
+                    "startLine": 2,
+                    "startColumn": 4,
+                    "startOffset": 55,
+                    "endColumn": 112,
+                    "endOffset": 163
+                },
+                "from": {
+                    "file": "C:\\Users\\HRTWPS\\.android\\build-cache\\4e86354ded39737b056abe3ca8f49065d349602d\\output\\res\\values-ldltr-v21\\values-ldltr-v21.xml",
+                    "position": {
+                        "startLine": 4,
+                        "startColumn": 4,
+                        "startOffset": 240,
+                        "endColumn": 112,
+                        "endOffset": 348
+                    }
+                }
+            }
+        ]
+    }
+]

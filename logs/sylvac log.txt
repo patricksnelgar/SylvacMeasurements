@@ -1,0 +1,446 @@
+03-21 14:12:44.125 ? I/ActivityManager: START u0 {act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10200000 cmp=com.sylvac.sylvacbt_smart_demo/.MainActivity bnds=[276,276][540,573] (has extras)} from uid 10027 on display 0
+03-21 14:12:44.170 ? I/ActivityManager: Start proc 24223:com.sylvac.sylvacbt_smart_demo/u0a88 for activity com.sylvac.sylvacbt_smart_demo/.MainActivity
+03-21 14:12:44.236 ? W/System: ClassLoader referenced unknown path: /data/app/com.sylvac.sylvacbt_smart_demo-1/lib/arm
+03-21 14:12:44.292 ? I/MainActivity: File not found: java.io.FileNotFoundException: /data/user/0/com.sylvac.sylvacbt_smart_demo/files/DevicesName.txt: open failed: ENOENT (No such file or directory)
+03-21 14:12:44.297 ? D/BluetoothManagerService: Added callback: android.bluetooth.IBluetoothManagerCallback$Stub$Proxy@76b4434:true
+03-21 14:12:44.300 ? I/MainActivity: Le Bluetooth est actif!
+03-21 14:12:44.308 ? I/MainActivity: IsScanning: false TryingConnect: false NbThreadWaiting: 0
+03-21 14:12:44.450 ? E/bt_btif_dm: ### ASSERT : system/bt/main/../btif/src/btif_dm.c line 1557 unhandled search services event (6) ###
+03-21 14:12:44.458 ? D/BluetoothAdapter: STATE_ON
+03-21 14:12:44.466 ? D/BtGatt.GattService: registerClient() - UUID=e98c2400-a045-41cc-9268-6b6ada1472c1
+03-21 14:12:44.466 ? D/BtGatt.GattService: onClientRegistered() - UUID=e98c2400-a045-41cc-9268-6b6ada1472c1, clientIf=5
+03-21 14:12:44.467 ? D/BluetoothLeScanner: onClientRegistered() - status=0 clientIf=5
+03-21 14:12:44.467 ? D/BtGatt.GattService: start scan with filters
+03-21 14:12:44.468 ? D/BtGatt.ScanManager: handling starting scan
+03-21 14:12:44.470 ? D/BtGatt.ScanManager: configureRegularScanParams() - queue=1
+03-21 14:12:44.470 ? D/BtGatt.ScanManager: configureRegularScanParams() - ScanSetting Scan mode=2 mLastConfiguredScanSetting=-2147483648
+03-21 14:12:44.470 ? D/BtGatt.ScanManager: configureRegularScanParams - scanInterval = 8000configureRegularScanParams - scanWindow = 8000
+03-21 14:12:44.470 ? D/BtGatt.GattService: onScanParamSetupCompleted : 0
+03-21 14:12:44.697 ? D/bt_btif_gattc: btif_gattc_update_properties BLE device name=SY295 len=5 dev_type=2
+03-21 14:12:44.726 ? D/BluetoothAdapter: STATE_ON
+03-21 14:12:44.728 ? D/BtGatt.GattService: stopScan() - queue size =1
+03-21 14:12:44.730 ? D/BtGatt.ScanManager: stop scan
+03-21 14:12:44.730 ? D/BtGatt.ScanManager: configureRegularScanParams() - queue=0
+03-21 14:12:44.730 ? D/BtGatt.GattService: unregisterClient() - clientIf=5
+03-21 14:12:44.730 ? W/bt_l2cap: L2CA_RemoveFixedChnl()  CID: 0x0004  BDA: cf273e12f69f not connected
+03-21 14:12:44.730 ? D/BtGatt.ScanManager: configureRegularScanParams() - ScanSetting Scan mode=-2147483648 mLastConfiguredScanSetting=2
+03-21 14:12:44.730 ? D/BtGatt.ScanManager: configureRegularScanParams() - queue emtpy, scan stopped
+03-21 14:12:44.877 ? I/MainActivity: IsScanning: false TryingConnect: false NbThreadWaiting: 0
+03-21 14:12:44.886 ? I/ConnectionManager: Take Lock (NbThread = 0) on thread: Thread[Thread-361,5,main]
+03-21 14:12:44.890 ? I/MainActivity: IsScanning: false TryingConnect: false NbThreadWaiting: 0
+03-21 14:12:44.898 ? I/ConnectionManager: Creation du GATT bluetooth!
+03-21 14:12:44.900 ? D/BluetoothGatt: connect() - device: CF:27:3E:12:F6:9F, auto: false
+03-21 14:12:44.900 ? D/BluetoothGatt: registerApp()
+03-21 14:12:44.900 ? D/BluetoothGatt: registerApp() - UUID=2b53e874-2b34-40fa-8ef8-e92ca75fec02
+03-21 14:12:44.901 ? D/BtGatt.GattService: registerClient() - UUID=2b53e874-2b34-40fa-8ef8-e92ca75fec02
+03-21 14:12:44.902 ? D/BluetoothGatt: requestConnectionPriority() - params: 2
+03-21 14:12:44.902 ? D/BtGatt.GattService: onClientRegistered() - UUID=2b53e874-2b34-40fa-8ef8-e92ca75fec02, clientIf=5
+03-21 14:12:44.902 ? D/BluetoothGatt: onClientRegistered() - status=0 clientIf=5
+03-21 14:12:44.903 ? D/BtGatt.GattService: clientConnect() - address=CF:27:3E:12:F6:9F, isDirect=true
+03-21 14:12:44.903 ? D/bt_btif_config: btif_get_address_type: Device [cf:27:3e:12:f6:9f] address type 1
+03-21 14:12:44.903 ? D/bt_btif_config: btif_get_device_type: Device [cf:27:3e:12:f6:9f] type 2
+03-21 14:12:44.903 ? D/BluetoothGatt: refresh() - device: CF:27:3E:12:F6:9F
+03-21 14:12:44.904 ? D/BtGatt.GattService: onConnected() - clientIf=5, connId=5, address=CF:27:3E:12:F6:9F
+03-21 14:12:44.904 ? D/BtGatt.GattService: refreshDevice() - address=CF:27:3E:12:F6:9F
+03-21 14:12:44.904 ? D/BluetoothGatt: onClientConnectionState() - status=0 clientIf=5 device=CF:27:3E:12:F6:9F
+03-21 14:12:44.905 ? I/ConnectionManager: GATT bluetooth cree!
+03-21 14:12:44.914 ? D/BluetoothGatt: discoverServices() - device: CF:27:3E:12:F6:9F
+03-21 14:12:44.915 ? D/BtGatt.GattService: discoverServices() - address=CF:27:3E:12:F6:9F, connId=5
+03-21 14:12:49.536 ? I/BluetoothBondStateMachine: bondStateChangeCallback: Status: 1 Address: CF:27:3E:12:F6:9F newState: 0
+03-21 14:12:49.537 ? D/BluetoothAdapterProperties: Failed to remove device: CF:27:3E:12:F6:9F
+03-21 14:12:49.547 ? I/BluetoothBondStateMachine: Bond State Change Intent:CF:27:3E:12:F6:9F OldState: 11 NewState: 10
+03-21 14:12:49.557 ? D/HidService: getHidService(): returning com.android.bluetooth.hid.HidService@e47b2dd
+03-21 14:12:49.581 ? I/BluetoothBondStateMachine: StableState(): Entering Off State
+03-21 14:12:49.606 ? W/BluetoothEventManager: CachedBluetoothDevice for device CF:27:3E:12:F6:9F not found, calling readPairedDevices().
+03-21 14:12:49.618 ? E/BluetoothEventManager: Got bonding state changed for CF:27:3E:12:F6:9F, but we have no record of that device.
+03-21 14:12:49.669 ? W/BluetoothEventManager: showUnbondMessage: Not displaying any message for reason: 9
+03-21 14:12:49.905 ? W/bt_att: gatt_rsp_timeout retry discovery primary service
+03-21 14:12:54.907 ? W/bt_att: gatt_rsp_timeout retry discovery primary service
+03-21 14:12:54.924 ? D/BluetoothGatt: refresh() - device: CF:27:3E:12:F6:9F
+03-21 14:12:54.924 ? D/BtGatt.GattService: refreshDevice() - address=CF:27:3E:12:F6:9F
+03-21 14:12:54.924 ? D/BluetoothGatt: cancelOpen() - device: CF:27:3E:12:F6:9F
+03-21 14:12:54.925 ? D/BtGatt.GattService: clientDisconnect() - address=CF:27:3E:12:F6:9F, connId=5
+03-21 14:12:54.925 ? W/bt_btif: bta_gattc_conn_cback() - cif=3 connected=0 conn_id=3 reason=0x0016
+03-21 14:12:54.925 ? W/bt_btif: bta_gattc_conn_cback() - cif=4 connected=0 conn_id=4 reason=0x0016
+03-21 14:12:54.925 ? W/bt_btif: bta_gattc_conn_cback() - cif=5 connected=0 conn_id=5 reason=0x0016
+03-21 14:12:54.926 ? E/bt_btif: bta_gattc_mark_bg_conn unable to find the bg connection mask for: cf:27:3e:12:f6:9f
+03-21 14:12:54.927 ? D/BtGatt.GattService: onDisconnected() - clientIf=5, connId=5, address=CF:27:3E:12:F6:9F
+03-21 14:12:54.927 ? D/BluetoothGatt: onClientConnectionState() - status=0 clientIf=5 device=CF:27:3E:12:F6:9F
+03-21 14:12:54.935 ? D/BluetoothGatt: cancelOpen() - device: CF:27:3E:12:F6:9F
+03-21 14:12:54.935 ? D/BtGatt.GattService: clientDisconnect() - address=CF:27:3E:12:F6:9F, connId=null
+03-21 14:12:54.935 ? E/bt_btif: No such connection need to be cancelled
+03-21 14:12:54.935 ? E/bt_btif: bta_gattc_mark_bg_conn unable to find the bg connection mask for: cf:27:3e:12:f6:9f
+03-21 14:12:54.936 ? D/BluetoothGatt: close()
+03-21 14:12:54.936 ? D/BluetoothGatt: unregisterApp() - mClientIf=5
+03-21 14:12:54.936 ? D/BtGatt.GattService: unregisterClient() - clientIf=5
+03-21 14:12:54.941 ? I/ConnectionManager: Take Lock (NbThread = 0) on thread: Thread[Binder_2,5,main]
+03-21 14:12:54.968 ? E/bt_btif_dm: ### ASSERT : system/bt/main/../btif/src/btif_dm.c line 1557 unhandled search services event (6) ###
+03-21 14:12:54.980 ? I/MainActivity: IsScanning: true TryingConnect: true NbThreadWaiting: 0
+03-21 14:12:54.981 ? D/BluetoothAdapter: STATE_ON
+03-21 14:12:54.984 ? D/BtGatt.GattService: registerClient() - UUID=930436ef-9ac1-4dc9-afdd-37f8e0ad0ed9
+03-21 14:12:54.984 ? D/BtGatt.GattService: onClientRegistered() - UUID=930436ef-9ac1-4dc9-afdd-37f8e0ad0ed9, clientIf=5
+03-21 14:12:54.984 ? D/BluetoothLeScanner: onClientRegistered() - status=0 clientIf=5
+03-21 14:12:54.985 ? D/BtGatt.GattService: start scan with filters
+03-21 14:12:54.986 ? D/BtGatt.ScanManager: handling starting scan
+03-21 14:12:54.987 ? D/BtGatt.ScanManager: configureRegularScanParams() - queue=1
+03-21 14:12:54.987 ? D/BtGatt.ScanManager: configureRegularScanParams() - ScanSetting Scan mode=2 mLastConfiguredScanSetting=-2147483648
+03-21 14:12:54.987 ? D/BtGatt.ScanManager: configureRegularScanParams - scanInterval = 8000configureRegularScanParams - scanWindow = 8000
+03-21 14:12:54.990 ? D/BtGatt.GattService: onScanParamSetupCompleted : 0
+03-21 14:12:54.995 ? I/MainActivity: IsScanning: true TryingConnect: true NbThreadWaiting: 0
+03-21 14:12:55.075 ? D/bt_btif_gattc: btif_gattc_update_properties BLE device name=SY295 len=5 dev_type=2
+03-21 14:12:55.085 ? D/BluetoothAdapter: STATE_ON
+03-21 14:12:55.085 ? D/BtGatt.GattService: stopScan() - queue size =1
+03-21 14:12:55.085 ? D/BtGatt.ScanManager: stop scan
+03-21 14:12:55.085 ? D/BtGatt.ScanManager: configureRegularScanParams() - queue=0
+03-21 14:12:55.085 ? D/BtGatt.ScanManager: configureRegularScanParams() - ScanSetting Scan mode=-2147483648 mLastConfiguredScanSetting=2
+03-21 14:12:55.086 ? D/BtGatt.ScanManager: configureRegularScanParams() - queue emtpy, scan stopped
+03-21 14:12:55.086 ? D/BtGatt.GattService: unregisterClient() - clientIf=5
+03-21 14:12:57.014 ? D/BluetoothGatt: connect() - device: CF:27:3E:12:F6:9F, auto: false
+03-21 14:12:57.014 ? D/BluetoothGatt: registerApp()
+03-21 14:12:57.014 ? D/BluetoothGatt: registerApp() - UUID=ee6b0773-a9b0-44a5-8777-0c1fd847c81f
+03-21 14:12:57.015 ? D/BtGatt.GattService: registerClient() - UUID=ee6b0773-a9b0-44a5-8777-0c1fd847c81f
+03-21 14:12:57.015 ? D/BtGatt.GattService: onClientRegistered() - UUID=ee6b0773-a9b0-44a5-8777-0c1fd847c81f, clientIf=5
+03-21 14:12:57.017 ? D/BluetoothGatt: onClientRegistered() - status=0 clientIf=5
+03-21 14:12:57.017 ? D/BtGatt.GattService: clientConnect() - address=CF:27:3E:12:F6:9F, isDirect=true
+03-21 14:12:57.020 ? D/bt_btif_config: btif_get_address_type: Device [cf:27:3e:12:f6:9f] address type 1
+03-21 14:12:57.020 ? D/bt_btif_config: btif_get_device_type: Device [cf:27:3e:12:f6:9f] type 2
+03-21 14:12:57.028 ? D/BluetoothGatt: requestConnectionPriority() - params: 2
+03-21 14:12:57.031 ? D/BtGatt.GattService: connectionParameterUpdate() - address=CF:27:3E:12:F6:9Fparams=2 interval=80/100
+03-21 14:12:57.033 ? D/BluetoothGatt: refresh() - device: CF:27:3E:12:F6:9F
+03-21 14:12:57.040 ? D/BtGatt.GattService: refreshDevice() - address=CF:27:3E:12:F6:9F
+03-21 14:12:57.041 ? I/ConnectionManager: Gatt instancie: android.bluetooth.BluetoothGatt@40d3149 with device CF:27:3E:12:F6:9F
+03-21 14:12:57.589 ? I/WindowState: WIN DEATH: Window{c926fa0 u0 com.sylvac.sylvacbt_smart_demo/com.sylvac.sylvacbt_smart_demo.MainActivity}
+03-21 14:12:57.589 ? D/BtGatt.GattService: Binder is dead - unregistering client (5)!
+03-21 14:12:57.590 ? D/BtGatt.AdvertiseManager: message : 1
+03-21 14:12:57.590 ? D/BtGatt.AdvertiseManager: stop advertise for client 5
+03-21 14:12:57.590 ? D/BtGatt.GattService: onAdvertiseInstanceDisabled() - clientIf=5, status=0
+03-21 14:12:57.590 ? D/BtGatt.GattService: Client app is not null!
+03-21 14:12:57.591 ? D/BtGatt.AdvertiseManager: failed onAdvertiseInstanceDisabled
+                                                android.os.DeadObjectException
+                                                    at android.os.BinderProxy.transactNative(Native Method)
+                                                    at android.os.BinderProxy.transact(Binder.java:503)
+                                                    at android.bluetooth.IBluetoothGattCallback$Stub$Proxy.onMultiAdvertiseCallback(IBluetoothGattCallback.java:882)
+                                                    at com.android.bluetooth.gatt.GattService.onAdvertiseInstanceDisabled(GattService.java:1298)
+                                                    at com.android.bluetooth.gatt.AdvertiseManager$AdvertiseNative.stopAdvertising(AdvertiseManager.java:318)
+                                                    at com.android.bluetooth.gatt.AdvertiseManager$ClientHandler.handleStopAdvertising(AdvertiseManager.java:212)
+                                                    at com.android.bluetooth.gatt.AdvertiseManager$ClientHandler.handleMessage(AdvertiseManager.java:175)
+                                                    at android.os.Handler.dispatchMessage(Handler.java:102)
+                                                    at android.os.Looper.loop(Looper.java:148)
+                                                    at android.os.HandlerThread.run(HandlerThread.java:61)
+03-21 14:12:57.591 ? D/BtGatt.AdvertiseManager: app died - unregistering client : 5
+03-21 14:12:57.591 ? D/BtGatt.GattService: unregisterClient() - clientIf=5
+03-21 14:12:57.591 ? W/bt_l2cap: L2CA_CancelBleConnectReq - no connection pending
+03-21 14:12:57.591 ? D/BtGatt.GattService: onDisconnected() - clientIf=5, connId=0, address=CF:27:3E:12:F6:9F
+03-21 14:12:57.591 ? E/BtGatt.ContextMap: Context not found for ID 5
+03-21 14:12:57.592 ? I/WindowState: WIN DEATH: Window{16046a6 u0 com.sylvac.sylvacbt_smart_demo/com.sylvac.sylvacbt_smart_demo.MainActivity}
+03-21 14:12:57.628 ? I/ActivityManager: Process com.sylvac.sylvacbt_smart_demo (pid 24223) has died
+03-21 14:12:57.629 ? W/ActivityManager: Force removing ActivityRecord{4e54879 u0 com.sylvac.sylvacbt_smart_demo/.MainActivity t203}: app died, no saved state
+03-21 14:12:57.812 ? I/ActivityManager: START u0 {act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x14000004 pkg=com.sylvac.sylvacbt_smart_demo cmp=com.sylvac.sylvacbt_smart_demo/.MainActivity (has extras)} from uid 10088 on display 0
+03-21 14:12:57.819 ? W/WindowState: Failed to report 'resized' to the client of Window{16046a6 u0 com.sylvac.sylvacbt_smart_demo/com.sylvac.sylvacbt_smart_demo.MainActivity EXITING}, removing this window.
+03-21 14:12:57.845 ? I/ActivityManager: Start proc 24553:com.sylvac.sylvacbt_smart_demo/u0a88 for activity com.sylvac.sylvacbt_smart_demo/.MainActivity
+03-21 14:12:57.895 ? W/System: ClassLoader referenced unknown path: /data/app/com.sylvac.sylvacbt_smart_demo-1/lib/arm
+03-21 14:12:57.959 ? I/MainActivity: File not found: java.io.FileNotFoundException: /data/user/0/com.sylvac.sylvacbt_smart_demo/files/DevicesName.txt: open failed: ENOENT (No such file or directory)
+03-21 14:12:57.963 ? D/BluetoothManagerService: Added callback: android.bluetooth.IBluetoothManagerCallback$Stub$Proxy@44fc6ab:true
+03-21 14:12:57.973 ? I/MainActivity: Le Bluetooth est actif!
+03-21 14:12:57.981 ? I/MainActivity: IsScanning: false TryingConnect: false NbThreadWaiting: 0
+03-21 14:12:58.099 ? E/bt_btif_dm: ### ASSERT : system/bt/main/../btif/src/btif_dm.c line 1557 unhandled search services event (6) ###
+03-21 14:12:58.104 ? D/BluetoothAdapter: STATE_ON
+03-21 14:12:58.108 ? D/BtGatt.GattService: registerClient() - UUID=b35c1ea2-5893-488f-b04b-aeb6f43c7c4a
+03-21 14:12:58.108 ? D/BtGatt.GattService: onClientRegistered() - UUID=b35c1ea2-5893-488f-b04b-aeb6f43c7c4a, clientIf=5
+03-21 14:12:58.108 ? D/BluetoothLeScanner: onClientRegistered() - status=0 clientIf=5
+03-21 14:12:58.109 ? D/BtGatt.GattService: start scan with filters
+03-21 14:12:58.111 ? D/BtGatt.ScanManager: handling starting scan
+03-21 14:12:58.113 ? D/BtGatt.ScanManager: configureRegularScanParams() - queue=1
+03-21 14:12:58.113 ? D/BtGatt.ScanManager: configureRegularScanParams() - ScanSetting Scan mode=2 mLastConfiguredScanSetting=-2147483648
+03-21 14:12:58.113 ? D/BtGatt.ScanManager: configureRegularScanParams - scanInterval = 8000configureRegularScanParams - scanWindow = 8000
+03-21 14:12:58.114 ? D/BtGatt.GattService: onScanParamSetupCompleted : 0
+03-21 14:12:58.569 ? I/bt_btm_sec: btm_sec_disconnected clearing pending flag handle:64 reason:8
+03-21 14:12:58.569 ? E/bt_btif: bta_gattc_mark_bg_conn unable to find the bg connection mask for: cf:27:3e:12:f6:9f
+03-21 14:12:58.570 ? E/BluetoothRemoteDevices: state12newState1
+03-21 14:12:58.573 ? D/BluetoothMapService: onReceive
+03-21 14:12:58.573 ? D/BluetoothMapService: onReceive: android.bluetooth.device.action.ACL_DISCONNECTED
+03-21 14:12:59.391 ? W/bt_smp: smp_br_connect_callback is called on unexpected transport 2
+03-21 14:12:59.391 ? W/bt_btif: bta_dm_acl_change info: 0x0
+03-21 14:12:59.391 ? D/bt_btif_dm: remote version info [cf:27:3e:12:f6:9f]: 0, 0, 0
+03-21 14:12:59.391 ? E/BluetoothRemoteDevices: state12newState0
+03-21 14:13:00.576 ? W/NotificationService: Object died trying to hide notification android.app.ITransientNotification$Stub$Proxy@f234157 in package com.sylvac.sylvacbt_smart_demo
+03-21 14:13:13.132 ? D/BluetoothAdapter: STATE_ON
+03-21 14:13:13.134 ? D/BtGatt.GattService: stopScan() - queue size =1
+03-21 14:13:13.135 ? D/BtGatt.ScanManager: stop scan
+03-21 14:13:13.136 ? D/BtGatt.ScanManager: configureRegularScanParams() - queue=0
+03-21 14:13:13.136 ? D/BtGatt.ScanManager: configureRegularScanParams() - ScanSetting Scan mode=-2147483648 mLastConfiguredScanSetting=2
+03-21 14:13:13.136 ? D/BtGatt.ScanManager: configureRegularScanParams() - queue emtpy, scan stopped
+03-21 14:13:13.142 ? D/BtGatt.GattService: unregisterClient() - clientIf=5
+03-21 14:13:13.324 ? I/MainActivity: IsScanning: false TryingConnect: false NbThreadWaiting: 0
+03-21 14:13:13.354 ? I/MainActivity: IsScanning: false TryingConnect: false NbThreadWaiting: 0
+03-21 14:13:22.474 ? E/bt_btif_dm: ### ASSERT : system/bt/main/../btif/src/btif_dm.c line 1557 unhandled search services event (6) ###
+03-21 14:13:22.476 ? D/BluetoothAdapter: STATE_ON
+03-21 14:13:22.478 ? D/BtGatt.GattService: registerClient() - UUID=2a8faa66-cd99-4ed5-bdd2-0785c40e7c86
+03-21 14:13:22.478 ? D/BtGatt.GattService: onClientRegistered() - UUID=2a8faa66-cd99-4ed5-bdd2-0785c40e7c86, clientIf=5
+03-21 14:13:22.478 ? D/BluetoothLeScanner: onClientRegistered() - status=0 clientIf=5
+03-21 14:13:22.478 ? D/BtGatt.GattService: start scan with filters
+03-21 14:13:22.479 ? D/BtGatt.ScanManager: handling starting scan
+03-21 14:13:22.482 ? D/BtGatt.ScanManager: configureRegularScanParams() - queue=1
+03-21 14:13:22.482 ? D/BtGatt.ScanManager: configureRegularScanParams() - ScanSetting Scan mode=2 mLastConfiguredScanSetting=-2147483648
+03-21 14:13:22.482 ? D/BtGatt.ScanManager: configureRegularScanParams - scanInterval = 8000configureRegularScanParams - scanWindow = 8000
+03-21 14:13:22.482 ? D/BtGatt.GattService: onScanParamSetupCompleted : 0
+03-21 14:13:22.587 ? D/bt_btif_gattc: btif_gattc_update_properties BLE device name=SY295 len=5 dev_type=2
+03-21 14:13:22.603 ? D/BluetoothAdapter: STATE_ON
+03-21 14:13:22.604 ? D/BtGatt.GattService: stopScan() - queue size =1
+03-21 14:13:22.604 ? D/BtGatt.ScanManager: stop scan
+03-21 14:13:22.604 ? D/BtGatt.ScanManager: configureRegularScanParams() - queue=0
+03-21 14:13:22.605 ? D/BtGatt.ScanManager: configureRegularScanParams() - ScanSetting Scan mode=-2147483648 mLastConfiguredScanSetting=2
+03-21 14:13:22.605 ? D/BtGatt.ScanManager: configureRegularScanParams() - queue emtpy, scan stopped
+03-21 14:13:22.605 ? D/BtGatt.GattService: unregisterClient() - clientIf=5
+03-21 14:13:22.682 ? I/MainActivity: IsScanning: false TryingConnect: false NbThreadWaiting: 0
+03-21 14:13:22.691 ? I/ConnectionManager: Take Lock (NbThread = 0) on thread: Thread[Thread-368,5,main]
+03-21 14:13:22.695 ? I/MainActivity: IsScanning: false TryingConnect: false NbThreadWaiting: 0
+03-21 14:13:22.702 ? I/ConnectionManager: Creation du GATT bluetooth!
+03-21 14:13:22.704 ? D/BluetoothGatt: connect() - device: CF:27:3E:12:F6:9F, auto: false
+03-21 14:13:22.704 ? D/BluetoothGatt: registerApp()
+03-21 14:13:22.704 ? D/BluetoothGatt: registerApp() - UUID=7897280a-4336-41c3-ae3a-f9303e6b5bad
+03-21 14:13:22.704 ? D/BtGatt.GattService: registerClient() - UUID=7897280a-4336-41c3-ae3a-f9303e6b5bad
+03-21 14:13:22.705 ? D/BtGatt.GattService: onClientRegistered() - UUID=7897280a-4336-41c3-ae3a-f9303e6b5bad, clientIf=5
+03-21 14:13:22.705 ? D/BluetoothGatt: requestConnectionPriority() - params: 2
+03-21 14:13:22.705 ? D/BluetoothGatt: onClientRegistered() - status=0 clientIf=5
+03-21 14:13:22.705 ? D/BluetoothGatt: refresh() - device: CF:27:3E:12:F6:9F
+03-21 14:13:22.705 ? D/BtGatt.GattService: refreshDevice() - address=CF:27:3E:12:F6:9F
+03-21 14:13:22.705 ? D/BtGatt.GattService: clientConnect() - address=CF:27:3E:12:F6:9F, isDirect=true
+03-21 14:13:22.706 ? I/ConnectionManager: GATT bluetooth cree!
+03-21 14:13:22.706 ? D/bt_btif_config: btif_get_address_type: Device [cf:27:3e:12:f6:9f] address type 1
+03-21 14:13:22.706 ? D/bt_btif_config: btif_get_device_type: Device [cf:27:3e:12:f6:9f] type 2
+03-21 14:13:22.706 ? E/bt_btif: Connection open failure
+03-21 14:13:22.706 ? D/BtGatt.GattService: onConnected() - clientIf=5, connId=0, address=CF:27:3E:12:F6:9F
+03-21 14:13:22.706 ? D/BluetoothGatt: onClientConnectionState() - status=133 clientIf=5 device=CF:27:3E:12:F6:9F
+03-21 14:13:22.725 ? D/BluetoothGatt: cancelOpen() - device: CF:27:3E:12:F6:9F
+03-21 14:13:22.726 ? D/BtGatt.GattService: clientDisconnect() - address=CF:27:3E:12:F6:9F, connId=null
+03-21 14:13:22.726 ? E/bt_btif: No such connection need to be cancelled
+03-21 14:13:22.726 ? D/BluetoothGatt: close()
+03-21 14:13:22.726 ? D/BluetoothGatt: unregisterApp() - mClientIf=5
+03-21 14:13:22.726 ? E/bt_btif: bta_gattc_mark_bg_conn unable to find the bg connection mask for: cf:27:3e:12:f6:9f
+03-21 14:13:22.727 ? D/BtGatt.GattService: unregisterClient() - clientIf=5
+03-21 14:13:22.729 ? I/ConnectionManager: Take Lock (NbThread = 0) on thread: Thread[Binder_2,5,main]
+03-21 14:13:22.732 ? I/MainActivity: IsScanning: false TryingConnect: true NbThreadWaiting: 0
+03-21 14:13:22.741 ? E/bt_btif_dm: ### ASSERT : system/bt/main/../btif/src/btif_dm.c line 1557 unhandled search services event (6) ###
+03-21 14:13:22.746 ? I/MainActivity: IsScanning: true TryingConnect: true NbThreadWaiting: 0
+03-21 14:13:22.751 ? D/BluetoothAdapter: STATE_ON
+03-21 14:13:22.754 ? D/BtGatt.GattService: registerClient() - UUID=a776c6b1-b6aa-4305-8f66-db7ea6dfda49
+03-21 14:13:22.754 ? D/BtGatt.GattService: onClientRegistered() - UUID=a776c6b1-b6aa-4305-8f66-db7ea6dfda49, clientIf=5
+03-21 14:13:22.754 ? D/BluetoothLeScanner: onClientRegistered() - status=0 clientIf=5
+03-21 14:13:22.754 ? D/BtGatt.GattService: start scan with filters
+03-21 14:13:22.757 ? D/BtGatt.ScanManager: handling starting scan
+03-21 14:13:22.759 ? D/BtGatt.ScanManager: configureRegularScanParams() - queue=1
+03-21 14:13:22.759 ? D/BtGatt.ScanManager: configureRegularScanParams() - ScanSetting Scan mode=2 mLastConfiguredScanSetting=-2147483648
+03-21 14:13:22.759 ? D/BtGatt.ScanManager: configureRegularScanParams - scanInterval = 8000configureRegularScanParams - scanWindow = 8000
+03-21 14:13:22.759 ? D/BtGatt.GattService: onScanParamSetupCompleted : 0
+03-21 14:13:22.891 ? D/bt_btif_gattc: btif_gattc_update_properties BLE device name=SY295 len=5 dev_type=2
+03-21 14:13:22.904 ? D/BluetoothAdapter: STATE_ON
+03-21 14:13:22.904 ? D/BtGatt.GattService: stopScan() - queue size =1
+03-21 14:13:22.904 ? D/BtGatt.ScanManager: stop scan
+03-21 14:13:22.905 ? D/BtGatt.ScanManager: configureRegularScanParams() - queue=0
+03-21 14:13:22.905 ? D/BtGatt.ScanManager: configureRegularScanParams() - ScanSetting Scan mode=-2147483648 mLastConfiguredScanSetting=2
+03-21 14:13:22.905 ? D/BtGatt.ScanManager: configureRegularScanParams() - queue emtpy, scan stopped
+03-21 14:13:22.905 ? D/BtGatt.GattService: unregisterClient() - clientIf=5
+03-21 14:13:24.766 ? D/BluetoothGatt: connect() - device: CF:27:3E:12:F6:9F, auto: false
+03-21 14:13:24.766 ? D/BluetoothGatt: registerApp()
+03-21 14:13:24.767 ? D/BluetoothGatt: registerApp() - UUID=176e69b5-9cf2-449a-8ab7-152c35e8217b
+03-21 14:13:24.767 ? D/BtGatt.GattService: registerClient() - UUID=176e69b5-9cf2-449a-8ab7-152c35e8217b
+03-21 14:13:24.768 ? D/BtGatt.GattService: onClientRegistered() - UUID=176e69b5-9cf2-449a-8ab7-152c35e8217b, clientIf=5
+03-21 14:13:24.768 ? D/BluetoothGatt: requestConnectionPriority() - params: 2
+03-21 14:13:24.768 ? D/BluetoothGatt: refresh() - device: CF:27:3E:12:F6:9F
+03-21 14:13:24.768 ? I/ConnectionManager: Gatt instancie: android.bluetooth.BluetoothGatt@3878276 with device CF:27:3E:12:F6:9F
+03-21 14:13:24.769 ? D/BluetoothGatt: onClientRegistered() - status=0 clientIf=5
+03-21 14:13:24.770 ? D/BtGatt.GattService: clientConnect() - address=CF:27:3E:12:F6:9F, isDirect=true
+03-21 14:13:24.770 ? D/bt_btif_config: btif_get_address_type: Device [cf:27:3e:12:f6:9f] address type 1
+03-21 14:13:24.770 ? D/bt_btif_config: btif_get_device_type: Device [cf:27:3e:12:f6:9f] type 2
+03-21 14:13:24.770 ? E/bt_btif: Connection open failure
+03-21 14:13:24.770 ? D/BtGatt.GattService: onConnected() - clientIf=5, connId=0, address=CF:27:3E:12:F6:9F
+03-21 14:13:24.770 ? D/BluetoothGatt: onClientConnectionState() - status=133 clientIf=5 device=CF:27:3E:12:F6:9F
+03-21 14:13:24.782 ? D/BluetoothGatt: cancelOpen() - device: CF:27:3E:12:F6:9F
+03-21 14:13:24.782 ? D/BtGatt.GattService: clientDisconnect() - address=CF:27:3E:12:F6:9F, connId=null
+03-21 14:13:24.783 ? E/bt_btif: No such connection need to be cancelled
+03-21 14:13:24.783 ? E/bt_btif: bta_gattc_mark_bg_conn unable to find the bg connection mask for: cf:27:3e:12:f6:9f
+03-21 14:13:24.783 ? D/BluetoothGatt: close()
+03-21 14:13:24.783 ? D/BluetoothGatt: unregisterApp() - mClientIf=5
+03-21 14:13:24.784 ? D/BtGatt.GattService: unregisterClient() - clientIf=5
+03-21 14:13:24.798 ? I/ConnectionManager: Take Lock (NbThread = 0) on thread: Thread[Binder_1,5,main]
+03-21 14:13:24.808 ? E/bt_btif_dm: ### ASSERT : system/bt/main/../btif/src/btif_dm.c line 1557 unhandled search services event (6) ###
+03-21 14:13:24.815 ? D/BluetoothAdapter: STATE_ON
+03-21 14:13:24.816 ? D/BtGatt.GattService: registerClient() - UUID=6491b7fa-1eec-4b3f-89f3-340d8e13938f
+03-21 14:13:24.816 ? D/BtGatt.GattService: onClientRegistered() - UUID=6491b7fa-1eec-4b3f-89f3-340d8e13938f, clientIf=5
+03-21 14:13:24.817 ? D/BluetoothLeScanner: onClientRegistered() - status=0 clientIf=5
+03-21 14:13:24.817 ? D/BtGatt.GattService: start scan with filters
+03-21 14:13:24.820 ? D/BtGatt.ScanManager: handling starting scan
+03-21 14:13:24.822 ? D/BtGatt.ScanManager: configureRegularScanParams() - queue=1
+03-21 14:13:24.822 ? D/BtGatt.ScanManager: configureRegularScanParams() - ScanSetting Scan mode=2 mLastConfiguredScanSetting=-2147483648
+03-21 14:13:24.822 ? D/BtGatt.ScanManager: configureRegularScanParams - scanInterval = 8000configureRegularScanParams - scanWindow = 8000
+03-21 14:13:24.823 ? D/BtGatt.GattService: onScanParamSetupCompleted : 0
+03-21 14:13:24.829 ? I/MainActivity: IsScanning: true TryingConnect: true NbThreadWaiting: 0
+03-21 14:13:24.831 ? I/MainActivity: IsScanning: true TryingConnect: true NbThreadWaiting: 0
+03-21 14:13:24.893 ? D/bt_btif_gattc: btif_gattc_update_properties BLE device name=SY295 len=5 dev_type=2
+03-21 14:13:24.905 ? D/BluetoothAdapter: STATE_ON
+03-21 14:13:24.905 ? D/BtGatt.GattService: stopScan() - queue size =1
+03-21 14:13:24.906 ? D/BtGatt.ScanManager: stop scan
+03-21 14:13:24.906 ? D/BtGatt.ScanManager: configureRegularScanParams() - queue=0
+03-21 14:13:24.906 ? D/BtGatt.ScanManager: configureRegularScanParams() - ScanSetting Scan mode=-2147483648 mLastConfiguredScanSetting=2
+03-21 14:13:24.906 ? D/BtGatt.ScanManager: configureRegularScanParams() - queue emtpy, scan stopped
+03-21 14:13:24.906 ? D/BtGatt.GattService: unregisterClient() - clientIf=5
+03-21 14:13:26.885 ? D/BluetoothGatt: connect() - device: CF:27:3E:12:F6:9F, auto: false
+03-21 14:13:26.885 ? D/BluetoothGatt: registerApp()
+03-21 14:13:26.885 ? D/BluetoothGatt: registerApp() - UUID=063daae7-f9d1-4c39-be37-8aa097107dcc
+03-21 14:13:26.886 ? D/BtGatt.GattService: registerClient() - UUID=063daae7-f9d1-4c39-be37-8aa097107dcc
+03-21 14:13:26.886 ? D/BtGatt.GattService: onClientRegistered() - UUID=063daae7-f9d1-4c39-be37-8aa097107dcc, clientIf=5
+03-21 14:13:26.886 ? D/BluetoothGatt: onClientRegistered() - status=0 clientIf=5
+03-21 14:13:26.886 ? D/BtGatt.GattService: clientConnect() - address=CF:27:3E:12:F6:9F, isDirect=true
+03-21 14:13:26.886 ? D/bt_btif_config: btif_get_address_type: Device [cf:27:3e:12:f6:9f] address type 1
+03-21 14:13:26.886 ? D/bt_btif_config: btif_get_device_type: Device [cf:27:3e:12:f6:9f] type 2
+03-21 14:13:26.886 ? E/bt_btif: Connection open failure
+03-21 14:13:26.886 ? D/BtGatt.GattService: onConnected() - clientIf=5, connId=0, address=CF:27:3E:12:F6:9F
+03-21 14:13:26.887 ? D/BluetoothGatt: onClientConnectionState() - status=133 clientIf=5 device=CF:27:3E:12:F6:9F
+03-21 14:13:26.894 ? I/ConnectionManager: Take Lock (NbThread = 0) on thread: Thread[Binder_1,5,main]
+03-21 14:13:26.909 ? I/MainActivity: IsScanning: false TryingConnect: true NbThreadWaiting: 0
+03-21 14:13:26.910 ? D/BluetoothGatt: requestConnectionPriority() - params: 2
+03-21 14:13:26.910 ? D/BtGatt.GattService: connectionParameterUpdate() - address=CF:27:3E:12:F6:9Fparams=2 interval=80/100
+03-21 14:13:26.911 ? D/BluetoothGatt: refresh() - device: CF:27:3E:12:F6:9F
+03-21 14:13:26.911 ? D/BtGatt.GattService: refreshDevice() - address=CF:27:3E:12:F6:9F
+03-21 14:13:26.911 ? I/ConnectionManager: Gatt instancie: android.bluetooth.BluetoothGatt@59794e4 with device CF:27:3E:12:F6:9F
+03-21 14:13:26.914 ? I/MainActivity: IsScanning: false TryingConnect: true NbThreadWaiting: 0
+03-21 14:13:26.922 ? E/bt_btif_dm: ### ASSERT : system/bt/main/../btif/src/btif_dm.c line 1557 unhandled search services event (6) ###
+03-21 14:13:26.930 ? D/BluetoothAdapter: STATE_ON
+03-21 14:13:26.934 ? D/BtGatt.GattService: registerClient() - UUID=b920856b-b46d-4f11-8618-c96ede35748c
+03-21 14:13:26.935 ? D/BtGatt.GattService: onClientRegistered() - UUID=b920856b-b46d-4f11-8618-c96ede35748c, clientIf=6
+03-21 14:13:26.935 ? D/BluetoothLeScanner: onClientRegistered() - status=0 clientIf=6
+03-21 14:13:26.937 ? D/BtGatt.GattService: start scan with filters
+03-21 14:13:26.940 ? D/BtGatt.ScanManager: handling starting scan
+03-21 14:13:26.945 ? D/BtGatt.ScanManager: configureRegularScanParams() - queue=1
+03-21 14:13:26.945 ? D/BtGatt.ScanManager: configureRegularScanParams() - ScanSetting Scan mode=2 mLastConfiguredScanSetting=-2147483648
+03-21 14:13:26.945 ? D/BtGatt.ScanManager: configureRegularScanParams - scanInterval = 8000configureRegularScanParams - scanWindow = 8000
+03-21 14:13:26.946 ? D/BtGatt.GattService: onScanParamSetupCompleted : 0
+03-21 14:13:27.101 ? D/bt_btif_gattc: btif_gattc_update_properties BLE device name=SY295 len=5 dev_type=2
+03-21 14:13:27.112 ? D/BluetoothAdapter: STATE_ON
+03-21 14:13:27.113 ? D/BtGatt.GattService: stopScan() - queue size =1
+03-21 14:13:27.113 ? D/BtGatt.ScanManager: stop scan
+03-21 14:13:27.113 ? D/BtGatt.ScanManager: configureRegularScanParams() - queue=0
+03-21 14:13:27.113 ? D/BtGatt.ScanManager: configureRegularScanParams() - ScanSetting Scan mode=-2147483648 mLastConfiguredScanSetting=2
+03-21 14:13:27.114 ? D/BtGatt.ScanManager: configureRegularScanParams() - queue emtpy, scan stopped
+03-21 14:13:27.114 ? D/BtGatt.GattService: unregisterClient() - clientIf=6
+03-21 14:13:28.981 ? D/BtGatt.GattService: clientConnect() - address=CF:27:3E:12:F6:9F, isDirect=false
+03-21 14:13:28.982 ? D/bt_btif_config: btif_get_address_type: Device [cf:27:3e:12:f6:9f] address type 1
+03-21 14:13:28.982 ? D/bt_btif_config: btif_get_device_type: Device [cf:27:3e:12:f6:9f] type 2
+03-21 14:13:39.603 ? W/bt_btif: bta_gattc_conn_cback() - cif=3 connected=0 conn_id=3 reason=0x0008
+03-21 14:13:39.603 ? W/bt_btif: bta_gattc_conn_cback() - cif=4 connected=0 conn_id=4 reason=0x0008
+03-21 14:13:39.603 ? W/bt_btif: bta_gattc_conn_cback() - cif=5 connected=0 conn_id=5 reason=0x0008
+03-21 14:13:39.603 ? I/bt_btm_sec: btm_sec_disconnected clearing pending flag handle:64 reason:8
+03-21 14:13:39.604 ? E/BluetoothRemoteDevices: state12newState1
+03-21 14:13:39.606 ? D/BluetoothMapService: onReceive
+03-21 14:13:39.606 ? D/BluetoothMapService: onReceive: android.bluetooth.device.action.ACL_DISCONNECTED
+03-21 14:13:42.710 ? D/BluetoothGatt: cancelOpen() - device: CF:27:3E:12:F6:9F
+03-21 14:13:42.710 ? D/BtGatt.GattService: clientDisconnect() - address=CF:27:3E:12:F6:9F, connId=null
+03-21 14:13:42.710 ? E/bt_btif: No such connection need to be cancelled
+03-21 14:13:42.712 ? D/BluetoothGatt: close()
+03-21 14:13:42.712 ? D/BluetoothGatt: unregisterApp() - mClientIf=5
+03-21 14:13:42.713 ? D/BtGatt.GattService: unregisterClient() - clientIf=5
+03-21 14:13:42.716 ? I/ConnectionManager: Take Lock (NbThread = 0) on thread: Thread[main,5,main]
+03-21 14:13:42.719 ? I/MainActivity: IsScanning: false TryingConnect: false NbThreadWaiting: 0
+03-21 14:13:42.723 ? I/MainActivity: IsScanning: false TryingConnect: true NbThreadWaiting: 0
+03-21 14:13:42.735 ? E/bt_btif_dm: ### ASSERT : system/bt/main/../btif/src/btif_dm.c line 1557 unhandled search services event (6) ###
+03-21 14:13:42.761 ? D/BluetoothAdapter: STATE_ON
+03-21 14:13:42.762 ? D/BtGatt.GattService: registerClient() - UUID=5e975143-ac15-40d6-b5e6-3eb300738be2
+03-21 14:13:42.762 ? D/BtGatt.GattService: onClientRegistered() - UUID=5e975143-ac15-40d6-b5e6-3eb300738be2, clientIf=5
+03-21 14:13:42.763 ? D/BluetoothLeScanner: onClientRegistered() - status=0 clientIf=5
+03-21 14:13:42.763 ? D/BtGatt.GattService: start scan with filters
+03-21 14:13:42.764 ? D/BtGatt.ScanManager: handling starting scan
+03-21 14:13:42.765 ? D/BtGatt.ScanManager: configureRegularScanParams() - queue=1
+03-21 14:13:42.765 ? D/BtGatt.ScanManager: configureRegularScanParams() - ScanSetting Scan mode=2 mLastConfiguredScanSetting=-2147483648
+03-21 14:13:42.765 ? D/BtGatt.ScanManager: configureRegularScanParams - scanInterval = 8000configureRegularScanParams - scanWindow = 8000
+03-21 14:13:42.770 ? D/BtGatt.GattService: onScanParamSetupCompleted : 0
+03-21 14:13:42.879 ? D/bt_btif_gattc: btif_gattc_update_properties BLE device name=SY295 len=5 dev_type=2
+03-21 14:13:42.888 ? D/BluetoothAdapter: STATE_ON
+03-21 14:13:42.889 ? D/BtGatt.GattService: stopScan() - queue size =1
+03-21 14:13:42.889 ? D/BtGatt.ScanManager: stop scan
+03-21 14:13:42.889 ? D/BtGatt.ScanManager: configureRegularScanParams() - queue=0
+03-21 14:13:42.889 ? D/BtGatt.GattService: unregisterClient() - clientIf=5
+03-21 14:13:42.889 ? D/BtGatt.ScanManager: configureRegularScanParams() - ScanSetting Scan mode=-2147483648 mLastConfiguredScanSetting=2
+03-21 14:13:42.889 ? D/BtGatt.ScanManager: configureRegularScanParams() - queue emtpy, scan stopped
+03-21 14:13:44.832 ? D/BluetoothGatt: connect() - device: CF:27:3E:12:F6:9F, auto: false
+03-21 14:13:44.832 ? D/BluetoothGatt: registerApp()
+03-21 14:13:44.832 ? D/BluetoothGatt: registerApp() - UUID=14e45590-89a3-4b7f-a894-51fae066fa41
+03-21 14:13:44.832 ? D/BtGatt.GattService: registerClient() - UUID=14e45590-89a3-4b7f-a894-51fae066fa41
+03-21 14:13:44.832 ? D/BtGatt.GattService: onClientRegistered() - UUID=14e45590-89a3-4b7f-a894-51fae066fa41, clientIf=5
+03-21 14:13:44.832 ? D/BluetoothGatt: onClientRegistered() - status=0 clientIf=5
+03-21 14:13:44.833 ? D/BtGatt.GattService: clientConnect() - address=CF:27:3E:12:F6:9F, isDirect=true
+03-21 14:13:44.833 ? D/bt_btif_config: btif_get_address_type: Device [cf:27:3e:12:f6:9f] address type 1
+03-21 14:13:44.833 ? D/bt_btif_config: btif_get_device_type: Device [cf:27:3e:12:f6:9f] type 2
+03-21 14:13:44.833 ? D/BluetoothGatt: requestConnectionPriority() - params: 2
+03-21 14:13:44.834 ? D/BtGatt.GattService: connectionParameterUpdate() - address=CF:27:3E:12:F6:9Fparams=2 interval=80/100
+03-21 14:13:44.834 ? D/BluetoothGatt: refresh() - device: CF:27:3E:12:F6:9F
+03-21 14:13:44.834 ? D/BtGatt.GattService: refreshDevice() - address=CF:27:3E:12:F6:9F
+03-21 14:13:44.835 ? I/ConnectionManager: Gatt instancie: android.bluetooth.BluetoothGatt@40d3149 with device CF:27:3E:12:F6:9F
+03-21 14:13:44.885 ? E/bt_l2cap: upd_ll_conn_params: HANDLE=64 min_conn_int=80 max_conn_int=100 slave_latency=2 supervision_tout=2000
+03-21 14:13:45.922 ? W/bt_smp: smp_br_connect_callback is called on unexpected transport 2
+03-21 14:13:45.922 ? W/bt_btif: bta_dm_acl_change info: 0x0
+03-21 14:13:45.924 ? D/bt_btif_dm: remote version info [cf:27:3e:12:f6:9f]: 0, 0, 0
+03-21 14:13:45.941 ? E/BluetoothRemoteDevices: state12newState0
+03-21 14:13:45.948 ? D/BtGatt.GattService: onConnected() - clientIf=5, connId=5, address=CF:27:3E:12:F6:9F
+03-21 14:13:45.948 ? D/BluetoothGatt: onClientConnectionState() - status=0 clientIf=5 device=CF:27:3E:12:F6:9F
+03-21 14:13:45.960 ? D/BluetoothGatt: discoverServices() - device: CF:27:3E:12:F6:9F
+03-21 14:13:45.968 ? D/BtGatt.GattService: discoverServices() - address=CF:27:3E:12:F6:9F, connId=5
+03-21 14:13:47.207 ? W/bt_bta_gattc: bta_gattc_explore_srvc no more services found
+03-21 14:13:47.207 ? D/BtGatt.GattService: onSearchCompleted() - connId=5, status=0
+03-21 14:13:47.208 ? E/bt_btif_gatt: bta_to_btif_uuid: Unknown UUID length 46809!
+03-21 14:13:47.212 ? D/BluetoothGatt: onSearchComplete() = Device=CF:27:3E:12:F6:9F Status=0
+03-21 14:13:47.301 ? I/MainActivity: IsScanning: false TryingConnect: false NbThreadWaiting: 0
+03-21 14:13:47.773 ? D/BluetoothGatt: setCharacteristicNotification() - uuid: c1b25010-caaf-6d0e-4c33-7dae30052840 enable: true
+03-21 14:13:47.791 ? D/BtGatt.GattService: registerForNotification() - address=CF:27:3E:12:F6:9F enable: true
+03-21 14:13:47.792 ? D/BtGatt.GattService: onRegisterForNotifications() - address=null, status=0, registered=1, charUuid=c1b25010-caaf-6d0e-4c33-7dae30052840
+03-21 14:13:48.204 ? W/bt_smp: io_cap = 4
+03-21 14:13:48.204 ? W/bt_smp: rcvd auth_req: 0x0d, io_cap: 4                         loc_oob_flag: 0 loc_enc_size: 16,local_i_key: 0x0f, local_r_key: 0x0f
+03-21 14:13:48.204 ? W/bt_smp: lmp_version_below LMP version 6 < 8
+03-21 14:13:48.204 ? W/bt_smp: set auth_req: 0x0d, local_i_key: 0x07, local_r_key: 0x07
+03-21 14:13:49.411 ? I/BluetoothBondStateMachine: bondStateChangeCallback: Status: 0 Address: CF:27:3E:12:F6:9F newState: 1
+03-21 14:13:49.414 ? I/BluetoothBondStateMachine: Bond State Change Intent:CF:27:3E:12:F6:9F OldState: 10 NewState: 11
+03-21 14:13:49.414 ? I/BluetoothBondStateMachine: Entering PendingCommandState State
+03-21 14:13:49.416 ? W/BluetoothEventManager: CachedBluetoothDevice for device CF:27:3E:12:F6:9F not found, calling readPairedDevices().
+03-21 14:13:49.417 ? E/BluetoothEventManager: Got bonding state changed for CF:27:3E:12:F6:9F, but we have no record of that device.
+03-21 14:13:49.458 ? W/bt_smp: smp_send_id_info
+03-21 14:13:49.476 ? I/BluetoothBondStateMachine: bondStateChangeCallback: Status: 0 Address: CF:27:3E:12:F6:9F newState: 2
+03-21 14:13:49.476 ? D/BluetoothAdapterProperties: Adding bonded device:CF:27:3E:12:F6:9F
+03-21 14:13:49.478 ? I/BluetoothBondStateMachine: Bond State Change Intent:CF:27:3E:12:F6:9F OldState: 11 NewState: 12
+03-21 14:13:49.478 ? I/BluetoothBondStateMachine: StableState(): Entering Off State
+03-21 14:13:49.483 ? D/BluetoothGatt: discoverServices() - device: CF:27:3E:12:F6:9F
+03-21 14:13:49.483 ? D/BtGatt.GattService: discoverServices() - address=CF:27:3E:12:F6:9F, connId=5
+03-21 14:13:49.486 ? W/BluetoothEventManager: CachedBluetoothDevice for device CF:27:3E:12:F6:9F not found, calling readPairedDevices().
+03-21 14:13:50.749 ? E/bt_att: gatt_disc_cmpl_cback() - Register for service changed indication failure
+03-21 14:13:50.944 ? W/bt_bta_gattc: bta_gattc_explore_srvc no more services found
+03-21 14:13:50.945 ? I/bt_bta_dm: bta_dm_gatt_disc_result service_id_uuid_len=2 
+03-21 14:13:50.945 ? I/bt_bta_dm: bta_dm_gatt_disc_result service_id_uuid_len=2 
+03-21 14:13:50.945 ? I/bt_bta_dm: bta_dm_gatt_disc_result service_id_uuid_len=16 
+03-21 14:13:50.945 ? D/BtGatt.GattService: onSearchCompleted() - connId=5, status=0
+03-21 14:13:50.945 ? E/bt_btif_gatt: bta_to_btif_uuid: Unknown UUID length 46809!
+03-21 14:13:50.947 ? D/BluetoothGatt: onSearchComplete() = Device=CF:27:3E:12:F6:9F Status=0
+03-21 14:13:50.981 ? I/DeviceThreading: Test demande de valeur SVR1 par CF:27:3E:12:F6:9F sur Gatt android.bluetooth.BluetoothGatt@40d3149
+03-21 14:13:50.991 ? I/MainActivity: IsScanning: false TryingConnect: false NbThreadWaiting: 0
+03-21 14:13:51.504 ? D/BluetoothGatt: setCharacteristicNotification() - uuid: c1b25010-caaf-6d0e-4c33-7dae30052840 enable: true
+03-21 14:13:51.506 ? D/BtGatt.GattService: registerForNotification() - address=CF:27:3E:12:F6:9F enable: true
+03-21 14:13:51.507 ? W/bt_btif: notification already registered
+03-21 14:13:51.507 ? D/BtGatt.GattService: onRegisterForNotifications() - address=null, status=0, registered=1, charUuid=c1b25010-caaf-6d0e-4c33-7dae30052840
+03-21 14:13:51.939 ? D/BluetoothGatt: setCharacteristicNotification() - uuid: c1b25013-caaf-6d0e-4c33-7dae30052840 enable: true
+03-21 14:13:51.940 ? D/BtGatt.GattService: registerForNotification() - address=CF:27:3E:12:F6:9F enable: true
+03-21 14:13:51.941 ? D/BtGatt.GattService: onRegisterForNotifications() - address=null, status=0, registered=1, charUuid=c1b25013-caaf-6d0e-4c33-7dae30052840
+03-21 14:13:52.234 ? I/MainActivity: IsScanning: false TryingConnect: false NbThreadWaiting: 0
+03-21 14:13:52.276 ? D/BluetoothGatt: setCharacteristicNotification() - uuid: c1b25010-caaf-6d0e-4c33-7dae30052840 enable: true
+03-21 14:13:52.276 ? D/BtGatt.GattService: registerForNotification() - address=CF:27:3E:12:F6:9F enable: true
+03-21 14:13:52.277 ? W/bt_btif: notification already registered
+03-21 14:13:52.277 ? D/BtGatt.GattService: onRegisterForNotifications() - address=null, status=0, registered=1, charUuid=c1b25010-caaf-6d0e-4c33-7dae30052840
+03-21 14:13:52.427 ? D/BluetoothGatt: setCharacteristicNotification() - uuid: c1b25013-caaf-6d0e-4c33-7dae30052840 enable: true
+03-21 14:13:52.427 ? D/BtGatt.GattService: registerForNotification() - address=CF:27:3E:12:F6:9F enable: true
+03-21 14:13:52.427 ? W/bt_btif: notification already registered
+03-21 14:13:52.427 ? D/BtGatt.GattService: onRegisterForNotifications() - address=null, status=0, registered=1, charUuid=c1b25013-caaf-6d0e-4c33-7dae30052840
+03-21 14:13:52.430 ? I/ConnectionManager: Has ask profil: CFG BTD02
+03-21 14:13:52.740 ? I/MainActivity: IsScanning: false TryingConnect: false NbThreadWaiting: 0
+03-21 14:13:52.918 ? I/ConnectionManager: Has ask profil: CFG BTD02
+03-21 14:13:53.515 ? I/DeviceThreading: Test demande de valeur ? par CF:27:3E:12:F6:9F sur Gatt android.bluetooth.BluetoothGatt@40d3149
+03-21 14:13:53.529 ? I/DeviceThreading: Test demande de valeur SVR1 par CF:27:3E:12:F6:9F sur Gatt android.bluetooth.BluetoothGatt@40d3149
+03-21 14:13:53.917 ? I/DeviceThreading: Test demande de valeur UNI? par CF:27:3E:12:F6:9F sur Gatt android.bluetooth.BluetoothGatt@40d3149
+03-21 14:13:54.018 ? I/DeviceThreading: Test demande de valeur ? par CF:27:3E:12:F6:9F sur Gatt android.bluetooth.BluetoothGatt@40d3149
+03-21 14:13:54.025 ? I/DeviceThreading: Test demande de valeur SVR1 par CF:27:3E:12:F6:9F sur Gatt android.bluetooth.BluetoothGatt@40d3149

@@ -1,0 +1,7 @@
+#Tue Jan 24 09:33:09 NZDT 2017
+base.0=C\:\\Android Projects\\SylvacMeasurements\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\instant-run_fcb503097b1cd4174a14c5402fbb0ab02a680998
+renamed.1=classes.dex
+renamed.0=classes2.dex
+file.1=C\:\\Android Projects\\SylvacMeasurements\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\instant-run-bootstrap_6d9af3741f64bd4c51218e02971d52ad1d6023a8\\classes.dex
+base.1=C\:\\Android Projects\\SylvacMeasurements\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\instant-run-bootstrap_6d9af3741f64bd4c51218e02971d52ad1d6023a8
+file.0=C\:\\Android Projects\\SylvacMeasurements\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\instant-run_fcb503097b1cd4174a14c5402fbb0ab02a680998\\classes.dex

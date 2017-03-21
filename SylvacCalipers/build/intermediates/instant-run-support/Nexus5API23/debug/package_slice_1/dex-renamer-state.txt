@@ -1,0 +1,4 @@
+#Thu Mar 16 15:39:48 NZDT 2017
+base.0=C\:\\Android Projects\\SylvacMeasurements\\SylvacCalipers\\build\\intermediates\\transforms\\dex\\Nexus5API23\\debug\\folders\\1000\\5\\slice_1
+renamed.0=classes.dex
+file.0=C\:\\Android Projects\\SylvacMeasurements\\SylvacCalipers\\build\\intermediates\\transforms\\dex\\Nexus5API23\\debug\\folders\\1000\\5\\slice_1\\classes.dex

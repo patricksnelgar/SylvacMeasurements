@@ -1,0 +1,45 @@
+[
+    {
+        "outputFile": "C:\\Android Projects\\SylvacMeasurements\\SylvacCalipers\\build\\intermediates\\incremental\\mergeNexus5API23DebugResources\\merged.dir\\values-w600dp-v13\\values-w600dp-v13.xml",
+        "map": [
+            {
+                "to": {
+                    "startLine": 2,
+                    "startColumn": 4,
+                    "startOffset": 55,
+                    "endColumn": 63,
+                    "endOffset": 114
+                },
+                "from": {
+                    "file": "C:\\Users\\HRTWPS\\.android\\build-cache\\4e86354ded39737b056abe3ca8f49065d349602d\\output\\res\\values-w600dp\\values-w600dp.xml",
+                    "position": {
+                        "startLine": 4,
+                        "startColumn": 4,
+                        "startOffset": 232,
+                        "endColumn": 63,
+                        "endOffset": 291
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 3,
+                    "startColumn": 4,
+                    "startOffset": 119,
+                    "endColumn": 54,
+                    "endOffset": 169
+                },
+                "from": {
+                    "file": "C:\\Users\\HRTWPS\\.android\\build-cache\\4e86354ded39737b056abe3ca8f49065d349602d\\output\\res\\values-w600dp\\values-w600dp.xml",
+                    "position": {
+                        "startLine": 5,
+                        "startColumn": 4,
+                        "startOffset": 296,
+                        "endColumn": 54,
+                        "endOffset": 346
+                    }
+                }
+            }
+        ]
+    }
+]

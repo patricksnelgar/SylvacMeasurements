@@ -1,0 +1,317 @@
+
+01-13 08:25:17.634 ? I/DevicePanel: Remove panel CF:27:3E:12:F6:9F
+01-13 08:25:17.635 ? D/audio_hw_primary: out_set_parameters: enter: usecase(1: low-latency-playback) kvpairs: routing=2
+01-13 08:25:17.646 ? D/audio_hw_primary: select_devices: out_snd_device(2: speaker) in_snd_device(0: none)
+01-13 08:25:17.646 ? D/msm8974_platform: platform_send_audio_calibration: sending audio calibration for snd_device(2) acdb_id(15)
+01-13 08:25:17.646 ? D/audio_hw_primary: enable_snd_device: snd_device(2: speaker)
+01-13 08:25:17.649 ? D/audio_hw_primary: enable_audio_route: apply and update mixer path: low-latency-playback
+01-13 08:25:18.257 ? I/DevicePanel: IsScanning: false Address:  DeviceAddress: CF:27:3E:12:F6:9F
+01-13 08:25:18.257 ? I/ConnectionManager: State: CONNECTED newState: DESIRED_DISCONNECTION
+01-13 08:25:18.257 ? I/DeviceThreading: Test demande de valeur BT RST par CF:27:3E:12:F6:9F sur Gatt android.bluetooth.BluetoothGatt@e39a4aa
+01-13 08:25:18.257 ? I/CommunicationManager: Ecriture - status=true
+01-13 08:25:18.257 ? I/DeviceThreading: Fin test
+01-13 08:25:18.270 ? D/audio_hw_primary: out_set_parameters: enter: usecase(1: low-latency-playback) kvpairs: routing=2
+01-13 08:25:18.459 ? D/BluetoothGatt: cancelOpen() - device: CF:27:3E:12:F6:9F
+01-13 08:25:18.459 ? I/BluetoothBondStateMachine: Entering PendingCommandState State
+01-13 08:25:18.460 ? E/bt_btif: btif_hh_virtual_unplug: Error, device CF:27:3E:12:F6:9F not opened.
+01-13 08:25:18.461 ? D/BtGatt.GattService: clientDisconnect() - address=CF:27:3E:12:F6:9F, connId=5
+01-13 08:25:18.462 ? D/BluetoothGatt: close()
+01-13 08:25:18.462 ? D/BluetoothGatt: unregisterApp() - mClientIf=5
+01-13 08:25:18.462 ? W/bt_btif: bta_gattc_conn_cback() - cif=3 connected=0 conn_id=3 reason=0x0016
+01-13 08:25:18.462 ? W/bt_btif: bta_gattc_conn_cback() - cif=4 connected=0 conn_id=4 reason=0x0016
+01-13 08:25:18.462 ? W/bt_btif: bta_gattc_conn_cback() - cif=5 connected=0 conn_id=5 reason=0x0016
+01-13 08:25:18.462 ? D/BtGatt.GattService: unregisterClient() - clientIf=5
+01-13 08:25:18.463 ? I/DeviceThreading: Remove handler TimingChange
+01-13 08:25:18.463 ? I/DeviceThreading: Closing the Thread
+01-13 08:25:18.463 ? I/MainActivity: IsScanning: false TryingConnect: false NbThreadWaiting: 0
+01-13 08:25:18.465 ? E/bt_btif: bta_gattc_mark_bg_conn unable to find the bg connection mask for: cf:27:3e:12:f6:9f
+01-13 08:25:18.465 ? D/BtGatt.GattService: onDisconnected() - clientIf=5, connId=5, address=CF:27:3E:12:F6:9F
+01-13 08:25:18.465 ? E/BtGatt.ContextMap: Context not found for ID 5
+01-13 08:25:18.476 ? E/Surface: getSlotFromBufferLocked: unknown buffer: 0xb3650fb0
+                                
+                                --------- beginning of system
+01-13 08:25:18.485 ? W/InputMethodManagerService: Window already focused, ignoring focus gain of: com.android.internal.view.IInputMethodClient$Stub$Proxy@5fc6b50 attribute=null, token = android.os.BinderProxy@b7301c
+01-13 08:25:19.350 ? I/bt_btm_sec: btm_sec_disconnected clearing pending flag handle:64 reason:34
+01-13 08:25:19.351 ? E/BluetoothRemoteDevices: state12newState1
+01-13 08:25:19.353 ? I/bt_btif_hh: btif_hh_remove_device: bda = cf:27:3e:12:f6:9f
+01-13 08:25:19.353 ? W/bt_btif:  Oops, can't find device [cf:27:3e:12:f6:9f]
+01-13 08:25:19.353 ? D/BluetoothMapService: onReceive
+01-13 08:25:19.353 ? D/BluetoothMapService: onReceive: android.bluetooth.device.action.ACL_DISCONNECTED
+01-13 08:25:19.364 ? I/BluetoothBondStateMachine: bondStateChangeCallback: Status: 0 Address: CF:27:3E:12:F6:9F newState: 0
+01-13 08:25:19.364 ? D/BluetoothAdapterProperties: Removing bonded device:CF:27:3E:12:F6:9F
+01-13 08:25:19.366 ? I/BluetoothBondStateMachine: Bond State Change Intent:CF:27:3E:12:F6:9F OldState: 12 NewState: 10
+01-13 08:25:19.367 ? D/HidService: getHidService(): returning com.android.bluetooth.hid.HidService@945a5c1
+01-13 08:25:19.369 ? D/HidService: Saved priority CF:27:3E:12:F6:9F = -1
+01-13 08:25:19.371 ? I/BluetoothBondStateMachine: StableState(): Entering Off State
+01-13 08:25:19.377 ? W/BluetoothEventManager: showUnbondMessage: Not displaying any message for reason: 0
+01-13 08:25:19.395 ? W/BluetoothEventManager: showUnbondMessage: Not displaying any message for reason: 0
+01-13 08:25:21.431 ? D/audio_hw_primary: disable_audio_route: reset and update mixer path: low-latency-playback
+01-13 08:25:21.431 ? D/audio_hw_primary: disable_snd_device: snd_device(2: speaker)
+01-13 08:25:25.341 ? D/PhoneStatusBar: disable: < expand ICONS* alerts SYSTEM_INFO* back home recent clock search quick_settings >
+01-13 08:25:26.896 ? D/audio_hw_primary: out_set_parameters: enter: usecase(1: low-latency-playback) kvpairs: routing=2
+01-13 08:25:26.910 ? D/audio_hw_primary: select_devices: out_snd_device(2: speaker) in_snd_device(0: none)
+01-13 08:25:26.910 ? D/msm8974_platform: platform_send_audio_calibration: sending audio calibration for snd_device(2) acdb_id(15)
+01-13 08:25:26.911 ? D/audio_hw_primary: enable_snd_device: snd_device(2: speaker)
+01-13 08:25:26.912 ? D/audio_hw_primary: enable_audio_route: apply and update mixer path: low-latency-playback
+01-13 08:25:27.037 ? I/AccountManagerService: getTypesVisibleToCaller: isPermitted? true
+01-13 08:25:28.899 ? D/ConnectivityService: updateNetworkScore for NetworkAgentInfo [WIFI () - 102] to 60
+01-13 08:25:28.899 ? D/ConnectivityService: rematching NetworkAgentInfo [WIFI () - 102]
+01-13 08:25:30.127 ? D/audio_hw_primary: disable_audio_route: reset and update mixer path: low-latency-playback
+01-13 08:25:30.128 ? D/audio_hw_primary: disable_snd_device: snd_device(2: speaker)
+01-13 08:25:30.908 ? D/audio_hw_primary: out_set_parameters: enter: usecase(1: low-latency-playback) kvpairs: routing=2
+01-13 08:25:30.911 ? I/ActivityManager: START u0 {act=android.settings.BLUETOOTH_SETTINGS flg=0x14000000 cmp=com.android.settings/.Settings$BluetoothSettingsActivity} from uid 10025 on display 0
+01-13 08:25:30.919 ? D/audio_hw_primary: select_devices: out_snd_device(2: speaker) in_snd_device(0: none)
+01-13 08:25:30.919 ? D/msm8974_platform: platform_send_audio_calibration: sending audio calibration for snd_device(2) acdb_id(15)
+01-13 08:25:30.919 ? D/audio_hw_primary: enable_snd_device: snd_device(2: speaker)
+01-13 08:25:30.924 ? D/audio_hw_primary: enable_audio_route: apply and update mixer path: low-latency-playback
+01-13 08:25:30.933 ? I/MainActivity: New Mode = BACKGROUND
+01-13 08:25:30.945 ? D/AudioFlinger: mixer(0xb4100000) throttle end: throttle time(10)
+01-13 08:25:30.960 ? W/InputMethodManagerService: Focus gain on non-focused client com.android.internal.view.IInputMethodClient$Stub$Proxy@2aa210a (uid=10088 pid=21607)
+01-13 08:25:30.998 ? D/LocalBluetoothManager: setting foreground activity to non-null context
+01-13 08:25:31.007 ? E/bt_btif: bte_scan_filt_param_cfg_evt, 1
+01-13 08:25:31.007 ? E/bt_btif: bte_scan_filt_param_cfg_evt, 1
+01-13 08:25:31.007 ? W/bt_btif: bta_dm_check_av:0
+01-13 08:25:31.012 ? D/BluetoothAdapterProperties: Discoverable Timeout:120
+01-13 08:25:31.013 ? D/BluetoothAdapterProperties: Scan Mode:23
+01-13 08:25:31.057 ? D/Index: Deleting data for locale 'en_US' took 2 millis
+01-13 08:25:31.060 ? D/Index: Indexing locale 'en_US' took 3 millis
+01-13 08:25:31.071 ? V/BluetoothDiscoveryReceiver: Received: android.bluetooth.adapter.action.DISCOVERY_STARTED
+01-13 08:25:31.080 ? I/ActivityManager: Displayed com.android.settings/.Settings$BluetoothSettingsActivity: +134ms
+01-13 08:25:31.089 ? E/Surface: getSlotFromBufferLocked: unknown buffer: 0xaeda5250
+01-13 08:25:31.500 ? D/PhoneStatusBar: disable: < expand icons* alerts system_info* back home recent clock search quick_settings >
+01-13 08:25:31.532 ? E/Surface: getSlotFromBufferLocked: unknown buffer: 0x9baa69f0
+01-13 08:25:31.741 ? D/bt_btif_dm: btif_dm_search_devices_evt cod is 0, set as unclassified
+01-13 08:25:31.741 ? D/bt_btif_config: btif_get_device_type: Device [cf:27:3e:12:f6:9f] type 2
+01-13 08:25:31.755 ? D/BluetoothEventManager: DeviceFoundHandler created new CachedBluetoothDevice: CF:27:3E:12:F6:9F
+01-13 08:25:32.022 ? D/NetlinkSocketObserver: NeighborEvent{elapsedMs=341336095, 172.20.87.253, [001C7F53995A], RTM_NEWNEIGH, NUD_PROBE}
+01-13 08:25:34.129 ? D/audio_hw_primary: disable_audio_route: reset and update mixer path: low-latency-playback
+01-13 08:25:34.129 ? D/audio_hw_primary: disable_snd_device: snd_device(2: speaker)
+01-13 08:25:34.941 ? D/ConnectivityService: updateNetworkScore for NetworkAgentInfo [WIFI () - 102] to 56
+01-13 08:25:34.942 ? D/ConnectivityService: rematching NetworkAgentInfo [WIFI () - 102]
+01-13 08:25:35.209 ? D/audio_hw_primary: out_set_parameters: enter: usecase(1: low-latency-playback) kvpairs: routing=2
+01-13 08:25:35.212 ? I/ActivityManager: START u0 {act=com.android.systemui.recents.SHOW_RECENTS flg=0x10804000 cmp=com.android.systemui/.recents.RecentsActivity} from uid 10025 on display 0
+01-13 08:25:35.220 ? D/audio_hw_primary: select_devices: out_snd_device(2: speaker) in_snd_device(0: none)
+01-13 08:25:35.220 ? D/msm8974_platform: platform_send_audio_calibration: sending audio calibration for snd_device(2) acdb_id(15)
+01-13 08:25:35.221 ? D/audio_hw_primary: enable_snd_device: snd_device(2: speaker)
+01-13 08:25:35.224 ? D/audio_hw_primary: enable_audio_route: apply and update mixer path: low-latency-playback
+01-13 08:25:35.258 ? E/bt_btif: bte_scan_filt_param_cfg_evt, 1
+01-13 08:25:35.259 ? D/LocalBluetoothManager: setting foreground activity to null
+01-13 08:25:35.283 ? D/BluetoothAdapterProperties: Discoverable Timeout:120
+01-13 08:25:35.285 ? D/BluetoothAdapterProperties: Scan Mode:21
+01-13 08:25:35.303 ? E/Surface: getSlotFromBufferLocked: unknown buffer: 0x9d448590
+01-13 08:25:35.309 ? V/BluetoothDiscoveryReceiver: Received: android.bluetooth.adapter.action.DISCOVERY_FINISHED
+01-13 08:25:36.835 ? D/audio_hw_primary: out_set_parameters: enter: usecase(1: low-latency-playback) kvpairs: routing=2
+01-13 08:25:36.849 ? I/MainActivity: Resuming...
+01-13 08:25:36.850 ? I/MainActivity: New Mode = SAVER
+01-13 08:25:36.889 ? I/AbstractScanner: Prepare Scan for only one random device
+01-13 08:25:36.891 ? E/bt_btif: bte_scan_filt_param_cfg_evt, 1
+01-13 08:25:36.891 ? V/BluetoothDiscoveryReceiver: Received: android.bluetooth.adapter.action.DISCOVERY_FINISHED
+01-13 08:25:36.897 ? I/AbstractScanner: New Start scan!
+01-13 08:25:36.901 ? D/BluetoothAdapter: STATE_ON
+01-13 08:25:36.903 ? D/BtGatt.GattService: registerClient() - UUID=4b488f29-739c-4a56-9aaf-a9f08259cacb
+01-13 08:25:36.904 ? D/BtGatt.GattService: onClientRegistered() - UUID=4b488f29-739c-4a56-9aaf-a9f08259cacb, clientIf=5
+01-13 08:25:36.904 ? D/BluetoothLeScanner: onClientRegistered() - status=0 clientIf=5
+01-13 08:25:36.904 ? D/BtGatt.GattService: start scan with filters
+01-13 08:25:36.905 ? I/AbstractScanner: Scan en cours
+01-13 08:25:36.905 ? D/BtGatt.ScanManager: handling starting scan
+01-13 08:25:36.907 ? D/BtGatt.ScanManager: configureRegularScanParams() - queue=1
+01-13 08:25:36.907 ? D/BtGatt.ScanManager: configureRegularScanParams() - ScanSetting Scan mode=2 mLastConfiguredScanSetting=-2147483648
+01-13 08:25:36.907 ? D/BtGatt.ScanManager: configureRegularScanParams - scanInterval = 8000configureRegularScanParams - scanWindow = 8000
+01-13 08:25:36.907 ? D/BtGatt.GattService: onScanParamSetupCompleted : 0
+01-13 08:25:36.946 ? E/Surface: getSlotFromBufferLocked: unknown buffer: 0x9e168960
+01-13 08:25:36.976 ? D/bt_btif_gattc: btif_gattc_update_properties BLE device name=SY295 len=5 dev_type=2
+01-13 08:25:36.978 ? I/AbstractScanner: Found a deviceCF:27:3E:12:F6:9F
+01-13 08:25:36.983 ? I/AbstractScanner: Found a device: SY295 CF:27:3E:12:F6:9F
+01-13 08:25:36.989 ? I/AbstractScanner: Fin du scan!
+01-13 08:25:36.992 ? D/BluetoothAdapter: STATE_ON
+01-13 08:25:36.992 ? D/BtGatt.GattService: stopScan() - queue size =1
+01-13 08:25:36.992 ? D/BtGatt.ScanManager: stop scan
+01-13 08:25:36.992 ? D/BtGatt.ScanManager: configureRegularScanParams() - queue=0
+01-13 08:25:36.992 ? D/BtGatt.GattService: unregisterClient() - clientIf=5
+01-13 08:25:36.992 ? D/BtGatt.ScanManager: configureRegularScanParams() - ScanSetting Scan mode=-2147483648 mLastConfiguredScanSetting=2
+01-13 08:25:36.993 ? D/BtGatt.ScanManager: configureRegularScanParams() - queue emtpy, scan stopped
+01-13 08:25:37.121 ? I/MainActivity: IsScanning: false TryingConnect: false NbThreadWaiting: 0
+01-13 08:25:37.122 ? I/DeviceScanner: Nb device found: 1
+01-13 08:25:37.124 ? I/DeviceScanner: Create Connection Manager
+01-13 08:25:37.126 ? I/ConnectionManager: PreviousState: NON_CONNECTED State: NON_CONNECTED
+01-13 08:25:37.127 ? I/ConnectionManager: Take Lock (NbThread = 0) on thread: Thread[Thread-1220,5,main]
+01-13 08:25:37.133 ? I/ConnectionManager: Finish lock waiting| nbDeviceMax: 1 PanelSize: 0
+01-13 08:25:37.135 ? I/MainActivity: IsScanning: false TryingConnect: false NbThreadWaiting: 0
+01-13 08:25:37.136 ? I/ConnectionManager: Has Lock, start connecting!
+01-13 08:25:37.139 ? I/ConnectionManager: Thread: Thread[Thread-1220,5,main]
+01-13 08:25:37.139 ? I/ConnectionManager: Creation du GATT bluetooth!
+01-13 08:25:37.139 ? D/BluetoothGatt: connect() - device: CF:27:3E:12:F6:9F, auto: false
+01-13 08:25:37.139 ? D/BluetoothGatt: registerApp()
+01-13 08:25:37.139 ? D/BluetoothGatt: registerApp() - UUID=fbd33075-42f9-4b68-87c2-e3efcf3a5522
+01-13 08:25:37.139 ? D/BtGatt.GattService: registerClient() - UUID=fbd33075-42f9-4b68-87c2-e3efcf3a5522
+01-13 08:25:37.140 ? D/BluetoothGatt: requestConnectionPriority() - params: 2
+01-13 08:25:37.140 ? D/BluetoothGatt: refresh() - device: CF:27:3E:12:F6:9F
+01-13 08:25:37.140 ? I/ConnectionManager: GATT bluetooth cree!
+01-13 08:25:37.140 ? I/ConnectionManager: State: NON_CONNECTED newState: CONNECTING
+01-13 08:25:37.140 ? D/BtGatt.GattService: onClientRegistered() - UUID=fbd33075-42f9-4b68-87c2-e3efcf3a5522, clientIf=5
+01-13 08:25:37.140 ? D/BluetoothGatt: onClientRegistered() - status=0 clientIf=5
+01-13 08:25:37.141 ? D/BtGatt.GattService: clientConnect() - address=CF:27:3E:12:F6:9F, isDirect=true
+01-13 08:25:37.141 ? D/bt_btif_config: btif_get_address_type: Device [cf:27:3e:12:f6:9f] address type 1
+01-13 08:25:37.141 ? D/bt_btif_config: btif_get_device_type: Device [cf:27:3e:12:f6:9f] type 2
+01-13 08:25:37.401 ? W/bt_smp: smp_br_connect_callback is called on unexpected transport 2
+01-13 08:25:37.401 ? W/bt_btif: bta_dm_acl_change info: 0x0
+01-13 08:25:37.401 ? D/bt_btif_dm: remote version info [cf:27:3e:12:f6:9f]: 0, 0, 0
+01-13 08:25:37.402 ? E/BluetoothRemoteDevices: state12newState0
+01-13 08:25:37.404 ? D/BtGatt.GattService: onConnected() - clientIf=5, connId=5, address=CF:27:3E:12:F6:9F
+01-13 08:25:37.404 ? D/BluetoothGatt: onClientConnectionState() - status=0 clientIf=5 device=CF:27:3E:12:F6:9F
+01-13 08:25:37.404 ? I/BleCallBack: Changement d'etat de connexion: 2
+01-13 08:25:37.407 ? I/BleCallBack: Connected, now finish the connection
+01-13 08:25:37.411 ? I/BleCallBack: GattAddress: CF:27:3E:12:F6:9F ConnManagerAddress: CF:27:3E:12:F6:9F
+01-13 08:25:37.411 ? I/ConnectionManager: Decouverte des services disponibles.
+01-13 08:25:37.415 ? D/BluetoothGatt: discoverServices() - device: CF:27:3E:12:F6:9F
+01-13 08:25:37.416 ? D/BtGatt.GattService: discoverServices() - address=CF:27:3E:12:F6:9F, connId=5
+01-13 08:25:37.416 ? I/ConnectionManager: Services discovery start successfully
+01-13 08:25:37.416 ? D/BtGatt.GattService: onSearchCompleted() - connId=5, status=0
+01-13 08:25:37.417 ? E/bt_btif_gatt: bta_to_btif_uuid: Unknown UUID length 46800!
+01-13 08:25:37.421 ? D/BluetoothGatt: onSearchComplete() = Device=CF:27:3E:12:F6:9F Status=0
+01-13 08:25:37.421 ? I/BleCallBack: Statut des services decouverts: 0
+01-13 08:25:37.421 ? I/BleReceiver: Action receive: Connexion reussi
+01-13 08:25:37.421 ? I/BleReceiver: Device connected!
+01-13 08:25:37.423 ? I/MainActivity: Adding a Thread
+01-13 08:25:37.426 ? I/DeviceThreading: Init sheet for device: CF:27:3E:12:F6:9F
+01-13 08:25:37.428 ? I/MainActivity: Adding a Panel
+01-13 08:25:37.430 ? I/MainActivity: On cree l'affichage pour CF:27:3E:12:F6:9F
+01-13 08:25:37.431 ? I/DevicePanel: Creation d'un panel!
+01-13 08:25:37.438 ? I/BleReceiver: Action receive: Connexion reussi
+01-13 08:25:37.438 ? I/BleReceiver: Device connected!
+01-13 08:25:37.452 ? I/MainActivity: IsScanning: false TryingConnect: true NbThreadWaiting: 0
+01-13 08:25:37.958 ? I/ConnectionManager: Enable indicate!
+01-13 08:25:37.959 ? D/BluetoothGatt: setCharacteristicNotification() - uuid: c1b25010-caaf-6d0e-4c33-7dae30052840 enable: true
+01-13 08:25:37.960 ? D/BtGatt.GattService: registerForNotification() - address=CF:27:3E:12:F6:9F enable: true
+01-13 08:25:37.960 ? D/BtGatt.GattService: onRegisterForNotifications() - address=null, status=0, registered=1, charUuid=c1b25010-caaf-6d0e-4c33-7dae30052840
+01-13 08:25:37.962 ? I/CommunicationManager: Indication active
+01-13 08:25:38.036 ? W/bt_smp: io_cap = 4
+01-13 08:25:38.036 ? W/bt_smp: rcvd auth_req: 0x0d, io_cap: 4                         loc_oob_flag: 0 loc_enc_size: 16,local_i_key: 0x0f, local_r_key: 0x0f
+01-13 08:25:38.036 ? W/bt_smp: set auth_req: 0x0d, local_i_key: 0x0f, local_r_key: 0x0f
+01-13 08:25:38.468 ? I/BluetoothBondStateMachine: bondStateChangeCallback: Status: 0 Address: CF:27:3E:12:F6:9F newState: 1
+01-13 08:25:38.469 ? I/DeviceReceiver: Bond state changed for: CF:27:3E:12:F6:9F new state: 11 previous: 10
+01-13 08:25:38.470 ? I/BluetoothBondStateMachine: Bond State Change Intent:CF:27:3E:12:F6:9F OldState: 10 NewState: 11
+01-13 08:25:38.470 ? I/BluetoothBondStateMachine: Entering PendingCommandState State
+01-13 08:25:38.513 ? W/bt_smp: smp_send_id_info
+01-13 08:25:38.521 ? I/BluetoothBondStateMachine: bondStateChangeCallback: Status: 0 Address: CF:27:3E:12:F6:9F newState: 2
+01-13 08:25:38.521 ? D/BluetoothAdapterProperties: Adding bonded device:CF:27:3E:12:F6:9F
+01-13 08:25:38.522 ? I/BluetoothBondStateMachine: Bond State Change Intent:CF:27:3E:12:F6:9F OldState: 11 NewState: 12
+01-13 08:25:38.522 ? I/BluetoothBondStateMachine: StableState(): Entering Off State
+01-13 08:25:38.522 ? I/DeviceReceiver: Bond state changed for: CF:27:3E:12:F6:9F new state: 12 previous: 11
+01-13 08:25:38.525 ? I/ConnectionManager: Decouverte des services disponibles.
+01-13 08:25:38.526 ? D/BluetoothGatt: discoverServices() - device: CF:27:3E:12:F6:9F
+01-13 08:25:38.526 ? D/BtGatt.GattService: discoverServices() - address=CF:27:3E:12:F6:9F, connId=5
+01-13 08:25:38.527 ? I/ConnectionManager: Services discovery start successfully
+01-13 08:25:38.612 ? I/PlayCommon: [1025] com.google.android.play.a.g.e(900): Preparing logs for uploading
+01-13 08:25:38.612 ? I/PlayCommon: [1025] com.google.android.play.a.g.e(902): No file ready to send
+01-13 08:25:38.948 ? E/bt_att: gatt_disc_cmpl_cback() - Register for service changed indication failure
+01-13 08:25:39.143 ? W/bt_bta_gattc: bta_gattc_explore_srvc no more services found
+01-13 08:25:39.144 ? I/bt_bta_dm: bta_dm_gatt_disc_result service_id_uuid_len=2 
+01-13 08:25:39.144 ? I/bt_bta_dm: bta_dm_gatt_disc_result service_id_uuid_len=2 
+01-13 08:25:39.144 ? I/bt_bta_dm: bta_dm_gatt_disc_result service_id_uuid_len=16 
+01-13 08:25:39.144 ? D/BtGatt.GattService: onSearchCompleted() - connId=5, status=0
+01-13 08:25:39.145 ? E/bt_btif_gatt: bta_to_btif_uuid: Unknown UUID length 46800!
+01-13 08:25:39.146 ? D/BluetoothGatt: onSearchComplete() = Device=CF:27:3E:12:F6:9F Status=0
+01-13 08:25:39.146 ? I/BleCallBack: Statut des services decouverts: 0
+01-13 08:25:39.148 ? I/MainActivity: Adding a Thread
+01-13 08:25:39.150 ? I/MainActivity: ConnManager attached to Thread N°0
+01-13 08:25:39.152 ? I/DeviceThreading: ModeBefore: SAVER NewMode: SAVER
+01-13 08:25:39.154 ? I/DeviceThreading: Test demande de valeur SVR1 par CF:27:3E:12:F6:9F sur Gatt android.bluetooth.BluetoothGatt@7e3ccb1
+01-13 08:25:39.155 ? I/CommunicationManager: Ecriture - status=true
+01-13 08:25:39.155 ? I/DeviceThreading: Fin test
+01-13 08:25:39.155 ? I/MainActivity: IsScanning: false TryingConnect: true NbThreadWaiting: 0
+01-13 08:25:39.657 ? I/ConnectionManager: Enable indicate!
+01-13 08:25:39.659 ? D/BluetoothGatt: setCharacteristicNotification() - uuid: c1b25010-caaf-6d0e-4c33-7dae30052840 enable: true
+01-13 08:25:39.659 ? D/BtGatt.GattService: registerForNotification() - address=CF:27:3E:12:F6:9F enable: true
+01-13 08:25:39.659 ? W/bt_btif: notification already registered
+01-13 08:25:39.659 ? D/BtGatt.GattService: onRegisterForNotifications() - address=null, status=0, registered=1, charUuid=c1b25010-caaf-6d0e-4c33-7dae30052840
+01-13 08:25:39.661 ? I/CommunicationManager: Indication active
+01-13 08:25:39.745 ? I/BleCallBack: Descriptor Status: 0
+01-13 08:25:39.746 ? I/BleCallBack: Indication réellement active
+01-13 08:25:39.746 ? I/BleCallBack: Enable notify!
+01-13 08:25:39.748 ? D/BluetoothGatt: setCharacteristicNotification() - uuid: c1b25013-caaf-6d0e-4c33-7dae30052840 enable: true
+01-13 08:25:39.750 ? D/BtGatt.GattService: registerForNotification() - address=CF:27:3E:12:F6:9F enable: true
+01-13 08:25:39.750 ? D/BtGatt.GattService: onRegisterForNotifications() - address=null, status=0, registered=1, charUuid=c1b25013-caaf-6d0e-4c33-7dae30052840
+01-13 08:25:39.750 ? I/CommunicationManager: Notification active
+01-13 08:25:39.843 ? I/BleCallBack: Descriptor Status: 0
+01-13 08:25:39.845 ? I/BleCallBack: Notification réellement active
+01-13 08:25:39.845 ? I/ConnectionManager: State: CONNECTING newState: CONNECTED
+01-13 08:25:39.845 ? I/ConnectionManager: Release the thread in class DeviceThreading!
+01-13 08:25:39.846 ? I/ConnectionManager: Release Lock
+01-13 08:25:39.850 ? I/ConnectionManager: Ask profil!
+01-13 08:25:39.852 ? I/BleReceiver: Action receive: Services decouverts
+01-13 08:25:39.852 ? I/BleReceiver: Vous pouvez envoyer des informations
+01-13 08:25:39.896 ? I/BleReceiver: Action receive: Services decouverts
+01-13 08:25:39.896 ? I/BleReceiver: Vous pouvez envoyer des informations
+01-13 08:25:39.898 ? I/CommunicationManager: Ecriture - status=true
+01-13 08:25:39.903 ? I/DeviceThreading: Destroy thread...
+01-13 08:25:39.905 ? I/MainActivity: IsScanning: false TryingConnect: false NbThreadWaiting: 0
+01-13 08:25:39.989 ? I/BleCallBack: Characteristic change
+01-13 08:25:39.989 ? I/ConnectionManager: Has ask profil: CFG BTD02
+01-13 08:25:39.989 ? I/ConnectionManager: Current profil: D02
+01-13 08:25:39.989 ? I/BleReceiver: Action receive: Donnees transmises
+01-13 08:25:39.989 ? I/BleReceiver: Action receive: Donnees transmises
+01-13 08:25:39.993 ? D/audio_hw_primary: disable_audio_route: reset and update mixer path: low-latency-playback
+01-13 08:25:39.993 ? D/audio_hw_primary: disable_snd_device: snd_device(2: speaker)
+01-13 08:25:40.753 ? I/PlayCommon: [1058] com.google.android.play.a.g.e(900): Preparing logs for uploading
+01-13 08:25:40.754 ? I/PlayCommon: [1058] com.google.android.play.a.g.e(902): No file ready to send
+01-13 08:25:41.184 ? I/DeviceThreading: Wait handler TimingChange
+01-13 08:25:41.185 ? I/DeviceThreading: Test demande de valeur ? par CF:27:3E:12:F6:9F sur Gatt android.bluetooth.BluetoothGatt@7e3ccb1
+01-13 08:25:41.186 ? I/DeviceThreading: Wait handler TimingChange
+01-13 08:25:41.186 ? I/DeviceThreading: Test demande de valeur ? par CF:27:3E:12:F6:9F sur Gatt android.bluetooth.BluetoothGatt@7e3ccb1
+01-13 08:25:41.186 ? I/CommunicationManager: Ecriture - status=false
+01-13 08:25:41.186 ? I/CommunicationManager: Ecriture - status=false
+01-13 08:25:41.186 ? I/CommunicationManager: Ecriture - status=false
+01-13 08:25:41.187 ? I/DeviceThreading: Fin test
+01-13 08:25:41.187 ? I/DeviceThreading: ModeBefore: SAVER NewMode: SAVER
+01-13 08:25:41.207 ? I/CommunicationManager: Ecriture - status=true
+01-13 08:25:41.207 ? I/DeviceThreading: Fin test
+01-13 08:25:41.207 ? I/DeviceThreading: ModeBefore: SAVER NewMode: SAVER
+01-13 08:25:41.220 ? I/DeviceThreading: Test demande de valeur SVR1 par CF:27:3E:12:F6:9F sur Gatt android.bluetooth.BluetoothGatt@7e3ccb1
+01-13 08:25:41.231 ? I/CommunicationManager: Ecriture - status=true
+01-13 08:25:41.231 ? I/DeviceThreading: Fin test
+01-13 08:25:41.245 ? I/DeviceThreading: Test demande de valeur SVR1 par CF:27:3E:12:F6:9F sur Gatt android.bluetooth.BluetoothGatt@7e3ccb1
+01-13 08:25:41.247 ? I/CommunicationManager: Ecriture - status=true
+01-13 08:25:41.247 ? I/DeviceThreading: Fin test
+01-13 08:25:41.304 ? I/BleCallBack: Characteristic change
+01-13 08:25:41.305 ? I/ConnectionManager: Donnee recu d'un Thread, Valeur: -000.01 sur canal c1b25013-caaf-6d0e-4c33-7dae30052840
+01-13 08:25:41.305 ? I/BleReceiver: Action receive: Donnees transmises
+01-13 08:25:41.305 ? I/BleReceiver: Donnees recues: -000.01 on receiver CF:27:3E:12:F6:9F
+01-13 08:25:41.305 ? I/DeviceThreading: LastCmd: NULL and Match: false
+01-13 08:25:41.305 ? I/DeviceThreading: Recu: 2 NbDecimal: 0
+01-13 08:25:41.305 ? I/DeviceThreading: Test demande de valeur UNI? par CF:27:3E:12:F6:9F sur Gatt android.bluetooth.BluetoothGatt@7e3ccb1
+01-13 08:25:41.306 ? I/CommunicationManager: Ecriture - status=true
+01-13 08:25:41.306 ? I/DeviceThreading: Fin test
+01-13 08:25:41.306 ? I/DeviceThreading: SavedVal: -0.01 SavedCanal: c1b25013-caaf-6d0e-4c33-7dae30052840
+01-13 08:25:41.306 ? I/BleReceiver: Action receive: Donnees transmises
+01-13 08:25:41.306 ? I/BleReceiver: Donnees recues: -000.01 on receiver CF:27:3E:12:F6:9F
+01-13 08:25:41.306 ? I/DeviceThreading: LastCmd: NULL and Match: false
+01-13 08:25:41.306 ? I/DeviceThreading: Recu: 2 NbDecimal: 2
+01-13 08:25:41.307 ? I/BleCallBack: Characteristic change
+01-13 08:25:41.307 ? I/ConnectionManager: Donnee recu d'un Thread, Valeur: SVR1 sur canal c1b25013-caaf-6d0e-4c33-7dae30052840
+01-13 08:25:41.308 ? I/BleReceiver: Action receive: Donnees transmises
+01-13 08:25:41.308 ? I/BleReceiver: Donnees recues: SVR1 on receiver CF:27:3E:12:F6:9F
+01-13 08:25:41.309 ? I/DeviceThreading: Recu information qui n'est pas une valeur!
+01-13 08:25:41.309 ? I/BleReceiver: Action receive: Donnees transmises
+01-13 08:25:41.309 ? I/BleReceiver: Donnees recues: SVR1 on receiver CF:27:3E:12:F6:9F
+01-13 08:25:41.309 ? I/DeviceThreading: Recu information qui n'est pas une valeur!
+01-13 08:25:41.354 ? I/BleCallBack: Characteristic change
+01-13 08:25:41.354 ? I/ConnectionManager: Donnee recu d'un Thread, Valeur: -000.01 sur canal c1b25013-caaf-6d0e-4c33-7dae30052840
+01-13 08:25:41.354 ? I/BleReceiver: Action receive: Donnees transmises
+01-13 08:25:41.354 ? I/BleReceiver: Donnees recues: -000.01 on receiver CF:27:3E:12:F6:9F
+01-13 08:25:41.354 ? I/DeviceThreading: LastCmd: NULL and Match: false
+01-13 08:25:41.354 ? I/DeviceThreading: Recu: 2 NbDecimal: 2
+01-13 08:25:41.356 ? I/BleReceiver: Action receive: Donnees transmises
+01-13 08:25:41.356 ? I/BleReceiver: Donnees recues: -000.01 on receiver CF:27:3E:12:F6:9F
+01-13 08:25:41.356 ? I/DeviceThreading: LastCmd: NULL and Match: false
+01-13 08:25:41.356 ? I/DeviceThreading: Recu: 2 NbDecimal: 2
+01-13 08:25:41.402 ? I/BleCallBack: Characteristic change
+01-13 08:25:41.402 ? I/ConnectionManager: Donnee recu d'un Thread, Valeur: MM sur canal c1b25013-caaf-6d0e-4c33-7dae30052840
+01-13 08:25:41.402 ? I/BleReceiver: Action receive: Donnees transmises
+01-13 08:25:41.402 ? I/BleReceiver: Donnees recues: MM on receiver CF:27:3E:12:F6:9F
+01-13 08:25:41.403 ? I/DeviceThreading: LastCmd: NULL and Match: false
+01-13 08:25:41.403 ? I/DeviceThreading: Recu: 2 NbDecimal: 2
+01-13 08:25:41.405 ? I/BleReceiver: Action receive: Donnees transmises
+01-13 08:25:41.405 ? I/BleReceiver: Donnees recues: MM on receiver CF:27:3E:12:F6:9F
+01-13 08:25:41.405 ? I/DeviceThreading: LastCmd: NULL and Match: false
+01-13 08:25:41.405 ? I/DeviceThreading: Recu: 2 NbDecimal: 2

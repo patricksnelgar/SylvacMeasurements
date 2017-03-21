@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<instant-run
+    abi="armeabi-v7a,armeabi"
+    api-level="23"
+    density="xxhdpi"
+    format="8"
+    plugin-version="2.2.3"
+    timestamp="90885122417196"
+    token="-3911121758639146447"
+    verifier="COMPATIBLE" >
+
+    <task
+        name="javac"
+        duration="515" />
+    <task
+        name="instant-run-dex"
+        duration="544" />
+    <task
+        name="instant-run-transform"
+        duration="59" />
+    <task
+        name="verifier"
+        duration="10" />
+
+    <artifact
+        location="C:\Android Projects\SylvacMeasurements\app\build\intermediates\instant-run-resources\resources-debug.ir.ap_"
+        type="RESOURCES" />
+    <artifact
+        location="C:\Android Projects\SylvacMeasurements\app\build\intermediates\reload-dex\debug\classes.dex"
+        type="RELOAD_DEX" />
+
+    <build
+        timestamp="90199522601584"
+        verifier="FULL_BUILD_REQUESTED" >
+        <artifact
+            location="C:\Android Projects\SylvacMeasurements\app\build\outputs\apk\app-debug.apk"
+            type="MAIN" />
+    </build>
+    <build
+        timestamp="90256634322313"
+        verifier="COMPATIBLE" >
+        <artifact
+            location="C:\Android Projects\SylvacMeasurements\app\build\intermediates\builds\debug\90256634322313\classes.dex"
+            type="RELOAD_DEX" />
+    </build>
+    <build
+        timestamp="90401938891360"
+        verifier="COMPATIBLE" >
+        <artifact
+            location="C:\Android Projects\SylvacMeasurements\app\build\intermediates\builds\debug\90401938891360\classes.dex"
+            type="RELOAD_DEX" />
+    </build>
+    <build
+        timestamp="90557866352183"
+        verifier="COMPATIBLE" >
+        <artifact
+            location="C:\Android Projects\SylvacMeasurements\app\build\intermediates\builds\debug\90557866352183\classes.dex"
+            type="RELOAD_DEX" />
+    </build>
+    <build
+        timestamp="90602888140934"
+        verifier="COMPATIBLE" >
+        <artifact
+            location="C:\Android Projects\SylvacMeasurements\app\build\intermediates\builds\debug\90602888140934\classes.dex"
+            type="RELOAD_DEX" />
+    </build>
+    <build
+        timestamp="90885122417196"
+        verifier="COMPATIBLE" >
+        <artifact
+            location="C:\Android Projects\SylvacMeasurements\app\build\intermediates\instant-run-resources\resources-debug.ir.ap_"
+            type="RESOURCES" />
+        <artifact
+            location="C:\Android Projects\SylvacMeasurements\app\build\intermediates\reload-dex\debug\classes.dex"
+            type="RELOAD_DEX" />
+    </build>
+
+</instant-run>
