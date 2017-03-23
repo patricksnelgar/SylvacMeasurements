@@ -96,7 +96,7 @@ public class DataReceiver extends BroadcastReceiver {
             case RecordFragment.MEASUREMENT_RECEIVED:{
                 // User can set the device to not beep on receive.
                 if(mPrefs.getBoolean(MainActivity.PREFERENCE_BEEP_ON_RECEIVE, false)){
-                    Log.i(TAG, "Beep");
+                    //Log.i(TAG, "Beep");
                     mParentActivity.playOnReceiveSound();
                 }
 

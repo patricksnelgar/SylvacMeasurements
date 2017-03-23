@@ -12,12 +12,12 @@
         "source": "C:\\Android Projects\\SylvacMeasurements\\SylvacCalipers\\src\\main\\res\\layout\\status_fragment.xml"
     },
     {
-        "merged": "C:\\Android Projects\\SylvacMeasurements\\SylvacCalipers\\build\\intermediates\\res\\merged\\Nexus5API23\\debug\\layout\\record_fragment.xml",
-        "source": "C:\\Android Projects\\SylvacMeasurements\\SylvacCalipers\\src\\main\\res\\layout\\record_fragment.xml"
-    },
-    {
         "merged": "C:\\Android Projects\\SylvacMeasurements\\SylvacCalipers\\build\\intermediates\\res\\merged\\Nexus5API23\\debug\\layout\\bluetooth_device.xml",
         "source": "C:\\Android Projects\\SylvacMeasurements\\SylvacCalipers\\src\\main\\res\\layout\\bluetooth_device.xml"
+    },
+    {
+        "merged": "C:\\Android Projects\\SylvacMeasurements\\SylvacCalipers\\build\\intermediates\\res\\merged\\Nexus5API23\\debug\\layout\\record_fragment.xml",
+        "source": "C:\\Android Projects\\SylvacMeasurements\\SylvacCalipers\\src\\main\\res\\layout\\record_fragment.xml"
     },
     {
         "merged": "C:\\Android Projects\\SylvacMeasurements\\SylvacCalipers\\build\\intermediates\\res\\merged\\Nexus5API23\\debug\\layout\\main.xml",
@@ -40,12 +40,12 @@
         "source": "C:\\Users\\HRTWPS\\.android\\build-cache\\f89232d114c9fea0496f0015fc8f6c0e61c784ce\\output\\res\\layout\\design_navigation_item.xml"
     },
     {
-        "merged": "C:\\Android Projects\\SylvacMeasurements\\SylvacCalipers\\build\\intermediates\\res\\merged\\Nexus5API23\\debug\\layout\\design_navigation_item_subheader.xml",
-        "source": "C:\\Users\\HRTWPS\\.android\\build-cache\\f89232d114c9fea0496f0015fc8f6c0e61c784ce\\output\\res\\layout\\design_navigation_item_subheader.xml"
-    },
-    {
         "merged": "C:\\Android Projects\\SylvacMeasurements\\SylvacCalipers\\build\\intermediates\\res\\merged\\Nexus5API23\\debug\\layout\\abc_action_bar_up_container.xml",
         "source": "C:\\Users\\HRTWPS\\.android\\build-cache\\4e86354ded39737b056abe3ca8f49065d349602d\\output\\res\\layout\\abc_action_bar_up_container.xml"
+    },
+    {
+        "merged": "C:\\Android Projects\\SylvacMeasurements\\SylvacCalipers\\build\\intermediates\\res\\merged\\Nexus5API23\\debug\\layout\\design_navigation_item_subheader.xml",
+        "source": "C:\\Users\\HRTWPS\\.android\\build-cache\\f89232d114c9fea0496f0015fc8f6c0e61c784ce\\output\\res\\layout\\design_navigation_item_subheader.xml"
     },
     {
         "merged": "C:\\Android Projects\\SylvacMeasurements\\SylvacCalipers\\build\\intermediates\\res\\merged\\Nexus5API23\\debug\\layout\\abc_action_mode_bar.xml",
@@ -68,12 +68,12 @@
         "source": "C:\\Users\\HRTWPS\\.android\\build-cache\\4e86354ded39737b056abe3ca8f49065d349602d\\output\\res\\layout\\abc_alert_dialog_material.xml"
     },
     {
-        "merged": "C:\\Android Projects\\SylvacMeasurements\\SylvacCalipers\\build\\intermediates\\res\\merged\\Nexus5API23\\debug\\layout\\notification_media_cancel_action.xml",
-        "source": "C:\\Users\\HRTWPS\\.android\\build-cache\\4e86354ded39737b056abe3ca8f49065d349602d\\output\\res\\layout\\notification_media_cancel_action.xml"
-    },
-    {
         "merged": "C:\\Android Projects\\SylvacMeasurements\\SylvacCalipers\\build\\intermediates\\res\\merged\\Nexus5API23\\debug\\layout\\abc_action_menu_item_layout.xml",
         "source": "C:\\Users\\HRTWPS\\.android\\build-cache\\4e86354ded39737b056abe3ca8f49065d349602d\\output\\res\\layout\\abc_action_menu_item_layout.xml"
+    },
+    {
+        "merged": "C:\\Android Projects\\SylvacMeasurements\\SylvacCalipers\\build\\intermediates\\res\\merged\\Nexus5API23\\debug\\layout\\notification_media_cancel_action.xml",
+        "source": "C:\\Users\\HRTWPS\\.android\\build-cache\\4e86354ded39737b056abe3ca8f49065d349602d\\output\\res\\layout\\notification_media_cancel_action.xml"
     },
     {
         "merged": "C:\\Android Projects\\SylvacMeasurements\\SylvacCalipers\\build\\intermediates\\res\\merged\\Nexus5API23\\debug\\layout\\design_navigation_menu.xml",

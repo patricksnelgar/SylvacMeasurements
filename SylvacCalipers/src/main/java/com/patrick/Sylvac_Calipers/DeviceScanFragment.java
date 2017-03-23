@@ -67,7 +67,7 @@ public class DeviceScanFragment extends Fragment {
             mScanning = false;
             mBluetoothLeScanner.stopScan(mLeScanCallback);
             mBluetoothLeScanner.flushPendingScanResults(mLeScanCallback);
-            setStatus("Status: Scanning timed out.");
+            setStatus("Scanning timed out.");
             Log.d(TAG, "Scan timeout");
         }
     }
@@ -112,6 +112,12 @@ public class DeviceScanFragment extends Fragment {
         mScanTimeoutRunnable = new ScanTimeout();
 
         mConn = new ConnectionManager(mMainActivity, null);
+        scanForDevices(true);
+    }
+
+    public void resetConnectionManager(){
+        //mConn.disconnect();
+        mConn = new ConnectionManager(mMainActivity, null);
     }
 
     /**
@@ -131,7 +137,8 @@ public class DeviceScanFragment extends Fragment {
 
         mDeviceListAdapter = new DeviceListAdapter(getActivity(), mDiscoveredDevices);
         mListViewDiscoveredDevices.setAdapter(mDeviceListAdapter);
-        scanForDevices(true);
+
+        mConn.registerReceivers();
     }
 
     /**
@@ -140,9 +147,15 @@ public class DeviceScanFragment extends Fragment {
     @Override
     public void onPause() {
         super.onPause();
-        scanForDevices(false);
+        //scanForDevices(false);
         mDeviceListAdapter.clear();
+        mConn.unRegisterReceivers();
+    }
 
+    @Override
+    public void onDestroy() {
+        super.onDestroy();
+        mConn.closeGatt();
     }
 
     /**
@@ -165,23 +178,31 @@ public class DeviceScanFragment extends Fragment {
      * @param scan
      */
     public void scanForDevices(boolean scan) {
-        mDeviceListAdapter.clear();
+        mMainActivity.runOnUiThread(new Runnable() {
+            @Override
+            public void run() {
+                mDeviceListAdapter.clear();
+            }
+        });
 
         if(mBluetoothLeScanner != null) {
             if (scan) {
-                mHandler.postDelayed(mScanTimeoutRunnable, SCAN_TIMEOUT);
-                setStatus("Status: Scanning...");
-                Log.d(TAG, "Scanning...");
-                mScanning = true;
-                mBluetoothLeScanner.startScan(
-                        new ArrayList(),
-                        new ScanSettings.Builder().setScanMode(ScanSettings.CALLBACK_TYPE_ALL_MATCHES).build(),
-                        mLeScanCallback);
+                if(!mScanning) {
+                    mHandler.postDelayed(mScanTimeoutRunnable, SCAN_TIMEOUT);
+                    setStatus("Scanning...");
+                    Log.d(TAG, "Scanning...");
+
+                    mScanning = true;
+                    mBluetoothLeScanner.startScan(
+                            new ArrayList(),
+                            new ScanSettings.Builder().setScanMode(ScanSettings.CALLBACK_TYPE_ALL_MATCHES).build(),
+                            mLeScanCallback);
+                }
             } else {
                 mScanning = false;
                 mBluetoothLeScanner.stopScan(mLeScanCallback);
                 mHandler.removeCallbacks(mScanTimeoutRunnable);
-                setStatus("Status: Scanning stopped.");
+                setStatus("Scanning stopped.");
                 Log.d(TAG, "Scan stopped.");
             }
         }
@@ -339,12 +360,15 @@ public class DeviceScanFragment extends Fragment {
         public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
             BluetoothDevice mTargetDevice = mDeviceListAdapter.getDevice(position);
             final String mTargetDeviceAddress = mTargetDevice.getAddress();
-            setStatus("Connecting to: " + mTargetDevice.getName());
             mHandler.removeCallbacks(mScanTimeoutRunnable);
             mScanTimeoutRunnable = new ScanTimeout();
-            mConn.setDeviceAddress(mTargetDeviceAddress);
-            mConn.registerBondStateReceiver();
-            boolean connectResult = mConn.connect();
+            mScanning = false;
+            mBluetoothLeScanner.stopScan(mLeScanCallback);
+
+            if(mConn == null){
+                mConn = new ConnectionManager(mMainActivity, null);
+            }
+            mConn.connect(mTargetDeviceAddress);
         }
     };
 }

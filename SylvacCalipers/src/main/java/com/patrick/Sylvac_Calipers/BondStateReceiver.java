@@ -35,12 +35,12 @@ public class BondStateReceiver extends BroadcastReceiver {
         /**
          * Check to see if the bond state change occurs on the relevant device,
          * then check if the bond state is equal to BOND_BONDED (12)
-         */
+         *
         if(device.getAddress().equals(mConn.getDeviceAddress()) && bondState == BluetoothDevice.BOND_BONDED) {
             // Don't need to listen to the bond state changes for this device anymore
             context.unregisterReceiver(this);
             // Connection is established, can now discover services.
             mConn.startServiceDiscovery();
-        }
+        }*/
     }
 }

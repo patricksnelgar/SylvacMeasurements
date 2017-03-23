@@ -101,6 +101,7 @@ public class MainActivity extends AppCompatActivity {
                         new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE}, 100); //Any number
             }
 
+
             // Request location access for BT scan results
             if(ContextCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED){
                 ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.ACCESS_COARSE_LOCATION}, 101);
@@ -113,16 +114,6 @@ public class MainActivity extends AppCompatActivity {
         MenuInflater inflater = getMenuInflater();
         inflater.inflate(R.menu.menu, menu);
         return true;
-    }
-
-    @Override
-    protected void onPause() {
-        super.onPause();
-    }
-
-    @Override
-    protected void onResume() {
-        super.onResume();
     }
 
     @Override
@@ -151,7 +142,8 @@ public class MainActivity extends AppCompatActivity {
                 return true;
             case R.id.action_disconnect:
                 setConnectionStatus("Device disconnected.");
-                LocalBroadcastManager.getInstance(this).sendBroadcast(new Intent(CommunicationCharacteristics.ACTION_DISCONNECT_DEVICE));
+                LocalBroadcastManager.getInstance(getApplicationContext()).sendBroadcast(new Intent(CommunicationCharacteristics.ACTION_DISCONNECT_DEVICE));
+                //fScan.resetConnectionManager();
                 return true;
             default:
                 return super.onOptionsItemSelected(mItem);
@@ -169,6 +161,10 @@ public class MainActivity extends AppCompatActivity {
                 fScan.setStatus(mStatus);
             }
         });
+    }
+
+    public void stopScan(){
+        fScan.scanForDevices(false);
     }
 
     final MediaPlayer.OnErrorListener mPlayerErrorListener = new MediaPlayer.OnErrorListener() {
