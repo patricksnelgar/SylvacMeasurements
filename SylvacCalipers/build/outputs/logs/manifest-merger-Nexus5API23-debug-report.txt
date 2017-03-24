@@ -6,17 +6,13 @@ ADDED from C:\Android Projects\SylvacMeasurements\SylvacCalipers\src\main\Androi
 		INJECTED from C:\Android Projects\SylvacMeasurements\SylvacCalipers\src\main\AndroidManifest.xml
 		INJECTED from C:\Android Projects\SylvacMeasurements\SylvacCalipers\src\main\AndroidManifest.xml
 	android:versionName
-		ADDED from C:\Android Projects\SylvacMeasurements\SylvacCalipers\src\main\AndroidManifest.xml:5:11-36
-		INJECTED from C:\Android Projects\SylvacMeasurements\SylvacCalipers\src\main\AndroidManifest.xml
-		INJECTED from C:\Android Projects\SylvacMeasurements\SylvacCalipers\src\main\AndroidManifest.xml
-	android:versionCode
-		ADDED from C:\Android Projects\SylvacMeasurements\SylvacCalipers\src\main\AndroidManifest.xml:4:11-34
+		ADDED from C:\Android Projects\SylvacMeasurements\SylvacCalipers\src\main\AndroidManifest.xml:4:11-36
 		INJECTED from C:\Android Projects\SylvacMeasurements\SylvacCalipers\src\main\AndroidManifest.xml
 		INJECTED from C:\Android Projects\SylvacMeasurements\SylvacCalipers\src\main\AndroidManifest.xml
 	xmlns:android
 		ADDED from C:\Android Projects\SylvacMeasurements\SylvacCalipers\src\main\AndroidManifest.xml:2:11-69
 uses-sdk
-ADDED from C:\Android Projects\SylvacMeasurements\SylvacCalipers\src\main\AndroidManifest.xml:6:5-43
+ADDED from C:\Android Projects\SylvacMeasurements\SylvacCalipers\src\main\AndroidManifest.xml:5:5-43
 MERGED from [com.android.support:design:23.1.1] C:\Users\HRTWPS\.android\build-cache\f89232d114c9fea0496f0015fc8f6c0e61c784ce\output\AndroidManifest.xml:20:5-43
 MERGED from [com.android.support:appcompat-v7:23.1.1] C:\Users\HRTWPS\.android\build-cache\4e86354ded39737b056abe3ca8f49065d349602d\output\AndroidManifest.xml:20:5-43
 MERGED from [com.android.support:recyclerview-v7:23.1.1] C:\Users\HRTWPS\.android\build-cache\c292d97c84f892d2f1819b6a7112352859d4c13b\output\AndroidManifest.xml:20:5-43
@@ -25,25 +21,29 @@ MERGED from [com.android.support:support-v4:23.1.1] C:\Users\HRTWPS\.android\bui
 		INJECTED from C:\Android Projects\SylvacMeasurements\SylvacCalipers\src\main\AndroidManifest.xml
 		INJECTED from C:\Android Projects\SylvacMeasurements\SylvacCalipers\src\main\AndroidManifest.xml
 	android:minSdkVersion
-		ADDED from C:\Android Projects\SylvacMeasurements\SylvacCalipers\src\main\AndroidManifest.xml:6:15-41
+		ADDED from C:\Android Projects\SylvacMeasurements\SylvacCalipers\src\main\AndroidManifest.xml:5:15-41
 		INJECTED from C:\Android Projects\SylvacMeasurements\SylvacCalipers\src\main\AndroidManifest.xml
 		INJECTED from C:\Android Projects\SylvacMeasurements\SylvacCalipers\src\main\AndroidManifest.xml
 uses-permission#android.permission.BLUETOOTH
-ADDED from C:\Android Projects\SylvacMeasurements\SylvacCalipers\src\main\AndroidManifest.xml:7:5-67
+ADDED from C:\Android Projects\SylvacMeasurements\SylvacCalipers\src\main\AndroidManifest.xml:6:5-67
 	android:name
-		ADDED from C:\Android Projects\SylvacMeasurements\SylvacCalipers\src\main\AndroidManifest.xml:7:22-65
+		ADDED from C:\Android Projects\SylvacMeasurements\SylvacCalipers\src\main\AndroidManifest.xml:6:22-65
 uses-permission#android.permission.BLUETOOTH_ADMIN
-ADDED from C:\Android Projects\SylvacMeasurements\SylvacCalipers\src\main\AndroidManifest.xml:8:5-73
+ADDED from C:\Android Projects\SylvacMeasurements\SylvacCalipers\src\main\AndroidManifest.xml:7:5-73
 	android:name
-		ADDED from C:\Android Projects\SylvacMeasurements\SylvacCalipers\src\main\AndroidManifest.xml:8:22-71
+		ADDED from C:\Android Projects\SylvacMeasurements\SylvacCalipers\src\main\AndroidManifest.xml:7:22-71
 uses-permission#android.permission.ACCESS_COARSE_LOCATION
+ADDED from C:\Android Projects\SylvacMeasurements\SylvacCalipers\src\main\AndroidManifest.xml:8:5-81
+	android:name
+		ADDED from C:\Android Projects\SylvacMeasurements\SylvacCalipers\src\main\AndroidManifest.xml:8:22-78
+uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
 ADDED from C:\Android Projects\SylvacMeasurements\SylvacCalipers\src\main\AndroidManifest.xml:9:5-81
 	android:name
 		ADDED from C:\Android Projects\SylvacMeasurements\SylvacCalipers\src\main\AndroidManifest.xml:9:22-78
-uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
-ADDED from C:\Android Projects\SylvacMeasurements\SylvacCalipers\src\main\AndroidManifest.xml:10:5-81
+uses-permission#android.permission.READ_EXTERNAL_STORAGE
+ADDED from C:\Android Projects\SylvacMeasurements\SylvacCalipers\src\main\AndroidManifest.xml:10:5-80
 	android:name
-		ADDED from C:\Android Projects\SylvacMeasurements\SylvacCalipers\src\main\AndroidManifest.xml:10:22-78
+		ADDED from C:\Android Projects\SylvacMeasurements\SylvacCalipers\src\main\AndroidManifest.xml:10:22-77
 uses-feature#android.hardware.bluetooth_le
 ADDED from C:\Android Projects\SylvacMeasurements\SylvacCalipers\src\main\AndroidManifest.xml:11:5-90
 	android:required

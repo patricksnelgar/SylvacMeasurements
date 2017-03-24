@@ -219,8 +219,10 @@ public class ConnectionManager implements CommunicationCharacteristics{
     public void closeGatt(){
         Log.d(TAG, "Closing connection");
         mMainActivity.setConnectionStatus("Connection closed.");
-        mBluetoothGatt.close();
-        mBluetoothGatt = null;
+        if(mBluetoothGatt!= null) {
+            mBluetoothGatt.close();
+            mBluetoothGatt = null;
+        }
     }
 
     private void setTitle(final String title){

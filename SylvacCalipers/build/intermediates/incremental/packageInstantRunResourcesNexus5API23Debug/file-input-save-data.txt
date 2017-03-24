@@ -1,5 +1,5 @@
 #Internal package file, do not edit.
-#Fri Mar 24 10:39:00 NZDT 2017
+#Fri Mar 24 14:44:13 NZDT 2017
 122.file=C\:\\Android Projects\\SylvacMeasurements\\SylvacCalipers\\build\\intermediates\\res\\resources-Nexus5API23-debug.ap_\\res\\layout\\abc_activity_chooser_view_list_item.xml
 60.set=ANDROID_RESOURCE
 129.file=C\:\\Android Projects\\SylvacMeasurements\\SylvacCalipers\\build\\intermediates\\res\\resources-Nexus5API23-debug.ap_\\res\\drawable-xxhdpi-v4\\abc_btn_check_to_on_mtrl_000.png

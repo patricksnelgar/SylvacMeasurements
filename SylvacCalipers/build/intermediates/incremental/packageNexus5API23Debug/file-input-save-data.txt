@@ -1,5 +1,5 @@
 #Internal package file, do not edit.
-#Fri Mar 24 10:39:33 NZDT 2017
+#Fri Mar 24 14:44:19 NZDT 2017
 175.set=ANDROID_RESOURCE
 122.file=C\:\\Android Projects\\SylvacMeasurements\\SylvacCalipers\\build\\intermediates\\res\\resources-Nexus5API23-debug.ap_\\res\\layout\\abc_activity_chooser_view_list_item.xml
 60.set=ANDROID_RESOURCE

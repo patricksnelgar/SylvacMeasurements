@@ -6,6 +6,7 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.media.MediaScannerConnection;
 import android.os.Environment;
 import android.os.Handler;
 import android.os.Looper;
@@ -140,13 +141,15 @@ public class DataReceiver extends BroadcastReceiver {
                             mPw.println(newEntry.getRecordForOutput());
                             mPw.flush();
                             mPw.close();
+                            mFileStream.flush();
                             mFileStream.close();
+
                         } catch (FileNotFoundException e) {
                             e.printStackTrace();
                         } catch (IOException e) {
                             e.printStackTrace();
                         }
-
+                        MediaScannerConnection.scanFile(mParentActivity,new String[] {mOutput.getAbsolutePath()}, null, null);
                     }
                 }
                 break;
@@ -213,6 +216,7 @@ public class DataReceiver extends BroadcastReceiver {
                     }
                     mPw.flush();
                     mPw.close();
+                    mFileStream.flush();
                     mFileStream.close();
 
                     saveSuccessful = true;
@@ -225,9 +229,10 @@ public class DataReceiver extends BroadcastReceiver {
                     mHandler.post(new Runnable() {
                         @Override
                         public void run() {
-                            Toast.makeText(mParentActivity, "Saved data to file: " + mOutput.getPath(), Toast.LENGTH_SHORT).show();
+                            Toast.makeText(mParentActivity, "Saved data to file: " + mOutput.getPath(), Toast.LENGTH_LONG).show();
                         }
                     });
+                    MediaScannerConnection.scanFile(mParentActivity,new String[] {mOutput.getAbsolutePath()}, null, null);
                 } else {
                     mHandler.post(new Runnable() {
                         @Override
