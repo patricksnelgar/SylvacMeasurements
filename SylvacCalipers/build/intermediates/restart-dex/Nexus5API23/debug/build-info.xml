@@ -2,59 +2,29 @@
 <instant-run
     abi="armeabi-v7a,armeabi"
     api-level="23"
-    build-mode="FULL"
+    build-mode="COLD"
     density="xxhdpi"
     format="10"
     plugin-version="2.3.0"
-    timestamp="1490319851940"
+    timestamp="1490580239155"
     token="-2298209144545700276"
-    verifier="FULL_BUILD_REQUESTED" >
+    verifier="COLD_SWAP_REQUESTED" >
 
     <task
         name="javac"
-        duration="517" />
+        duration="1416" />
     <task
         name="instant-run-dex"
         duration="0" />
     <task
         name="instant-run-transform"
-        duration="7" />
+        duration="22" />
     <task
         name="verifier"
-        duration="3" />
+        duration="8" />
 
     <artifact
-        location="C:\Android Projects\SylvacMeasurements\SylvacCalipers\build\intermediates\split-apk\Nexus5API23\debug\dep\dependencies.apk"
-        type="SPLIT" />
-    <artifact
-        location="C:\Android Projects\SylvacMeasurements\SylvacCalipers\build\intermediates\split-apk\Nexus5API23\debug\slices\slice_0.apk"
-        type="SPLIT" />
-    <artifact
-        location="C:\Android Projects\SylvacMeasurements\SylvacCalipers\build\intermediates\split-apk\Nexus5API23\debug\slices\slice_1.apk"
-        type="SPLIT" />
-    <artifact
-        location="C:\Android Projects\SylvacMeasurements\SylvacCalipers\build\intermediates\split-apk\Nexus5API23\debug\slices\slice_4.apk"
-        type="SPLIT" />
-    <artifact
-        location="C:\Android Projects\SylvacMeasurements\SylvacCalipers\build\intermediates\split-apk\Nexus5API23\debug\slices\slice_5.apk"
-        type="SPLIT" />
-    <artifact
         location="C:\Android Projects\SylvacMeasurements\SylvacCalipers\build\intermediates\split-apk\Nexus5API23\debug\slices\slice_7.apk"
-        type="SPLIT" />
-    <artifact
-        location="C:\Android Projects\SylvacMeasurements\SylvacCalipers\build\intermediates\split-apk\Nexus5API23\debug\slices\slice_2.apk"
-        type="SPLIT" />
-    <artifact
-        location="C:\Android Projects\SylvacMeasurements\SylvacCalipers\build\intermediates\split-apk\Nexus5API23\debug\slices\slice_8.apk"
-        type="SPLIT" />
-    <artifact
-        location="C:\Android Projects\SylvacMeasurements\SylvacCalipers\build\intermediates\split-apk\Nexus5API23\debug\slices\slice_6.apk"
-        type="SPLIT" />
-    <artifact
-        location="C:\Android Projects\SylvacMeasurements\SylvacCalipers\build\intermediates\split-apk\Nexus5API23\debug\slices\slice_3.apk"
-        type="SPLIT" />
-    <artifact
-        location="C:\Android Projects\SylvacMeasurements\SylvacCalipers\build\intermediates\split-apk\Nexus5API23\debug\slices\slice_9.apk"
         type="SPLIT" />
     <artifact
         location="C:\Android Projects\SylvacMeasurements\SylvacCalipers\build\outputs\apk\SylvacCalipers-Nexus5API23-debug.apk"
@@ -62,7 +32,7 @@
 
     <build
         build-mode="FULL"
-        timestamp="1490319851940"
+        timestamp="1490579972224"
         verifier="FULL_BUILD_REQUESTED" >
         <artifact
             location="C:\Android Projects\SylvacMeasurements\SylvacCalipers\build\intermediates\split-apk\Nexus5API23\debug\dep\dependencies.apk"
@@ -71,31 +41,50 @@
             location="C:\Android Projects\SylvacMeasurements\SylvacCalipers\build\intermediates\split-apk\Nexus5API23\debug\slices\slice_0.apk"
             type="SPLIT" />
         <artifact
-            location="C:\Android Projects\SylvacMeasurements\SylvacCalipers\build\intermediates\split-apk\Nexus5API23\debug\slices\slice_1.apk"
-            type="SPLIT" />
-        <artifact
-            location="C:\Android Projects\SylvacMeasurements\SylvacCalipers\build\intermediates\split-apk\Nexus5API23\debug\slices\slice_4.apk"
+            location="C:\Android Projects\SylvacMeasurements\SylvacCalipers\build\intermediates\split-apk\Nexus5API23\debug\slices\slice_6.apk"
             type="SPLIT" />
         <artifact
             location="C:\Android Projects\SylvacMeasurements\SylvacCalipers\build\intermediates\split-apk\Nexus5API23\debug\slices\slice_5.apk"
             type="SPLIT" />
         <artifact
-            location="C:\Android Projects\SylvacMeasurements\SylvacCalipers\build\intermediates\split-apk\Nexus5API23\debug\slices\slice_7.apk"
-            type="SPLIT" />
-        <artifact
             location="C:\Android Projects\SylvacMeasurements\SylvacCalipers\build\intermediates\split-apk\Nexus5API23\debug\slices\slice_2.apk"
             type="SPLIT" />
         <artifact
-            location="C:\Android Projects\SylvacMeasurements\SylvacCalipers\build\intermediates\split-apk\Nexus5API23\debug\slices\slice_8.apk"
-            type="SPLIT" />
-        <artifact
-            location="C:\Android Projects\SylvacMeasurements\SylvacCalipers\build\intermediates\split-apk\Nexus5API23\debug\slices\slice_6.apk"
+            location="C:\Android Projects\SylvacMeasurements\SylvacCalipers\build\intermediates\split-apk\Nexus5API23\debug\slices\slice_1.apk"
             type="SPLIT" />
         <artifact
             location="C:\Android Projects\SylvacMeasurements\SylvacCalipers\build\intermediates\split-apk\Nexus5API23\debug\slices\slice_3.apk"
             type="SPLIT" />
         <artifact
+            location="C:\Android Projects\SylvacMeasurements\SylvacCalipers\build\intermediates\split-apk\Nexus5API23\debug\slices\slice_4.apk"
+            type="SPLIT" />
+        <artifact
+            location="C:\Android Projects\SylvacMeasurements\SylvacCalipers\build\intermediates\split-apk\Nexus5API23\debug\slices\slice_7.apk"
+            type="SPLIT" />
+        <artifact
             location="C:\Android Projects\SylvacMeasurements\SylvacCalipers\build\intermediates\split-apk\Nexus5API23\debug\slices\slice_9.apk"
+            type="SPLIT" />
+        <artifact
+            location="C:\Android Projects\SylvacMeasurements\SylvacCalipers\build\intermediates\split-apk\Nexus5API23\debug\slices\slice_8.apk"
+            type="SPLIT" />
+        <artifact
+            location="C:\Android Projects\SylvacMeasurements\SylvacCalipers\build\outputs\apk\SylvacCalipers-Nexus5API23-debug.apk"
+            type="SPLIT_MAIN" />
+    </build>
+    <build
+        build-mode="COLD"
+        timestamp="1490580198541"
+        verifier="COLD_SWAP_REQUESTED" >
+        <artifact
+            location="C:\Android Projects\SylvacMeasurements\SylvacCalipers\build\outputs\apk\SylvacCalipers-Nexus5API23-debug.apk"
+            type="SPLIT_MAIN" />
+    </build>
+    <build
+        build-mode="COLD"
+        timestamp="1490580239155"
+        verifier="COLD_SWAP_REQUESTED" >
+        <artifact
+            location="C:\Android Projects\SylvacMeasurements\SylvacCalipers\build\intermediates\split-apk\Nexus5API23\debug\slices\slice_7.apk"
             type="SPLIT" />
         <artifact
             location="C:\Android Projects\SylvacMeasurements\SylvacCalipers\build\outputs\apk\SylvacCalipers-Nexus5API23-debug.apk"

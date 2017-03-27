@@ -108,6 +108,15 @@ public class DataReceiver extends BroadcastReceiver {
 
                 // All value for a record have been received
                 if(mMeasurementCount >= valuesPerRecord){
+                    if(mPrefs.getBoolean(MainActivity.PREFERENCE_BEEP_ON_RECEIVE, false)){
+                        try {
+                            Thread.sleep(200);
+                        } catch (Exception e){
+
+                        }
+                        mParentActivity.playRecordSound();
+                    }
+
                     int currentID = mPrefs.getInt(MainActivity.PREFERENCE_CURRENT_ID, 0);
                     int nextID = currentID + 1;
                     // Set the next recordID text field

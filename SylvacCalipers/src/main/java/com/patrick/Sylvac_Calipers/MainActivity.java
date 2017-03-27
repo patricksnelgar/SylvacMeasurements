@@ -47,6 +47,7 @@ public class MainActivity extends AppCompatActivity {
     private TabLayout mTabLayout;
     private SharedPreferences mPrefs;
     private MediaPlayer mPlayer;
+    private MediaPlayer mRecordPlayer;
 
     private RecordFragment fRecord;
     private DeviceScanFragment fScan;
@@ -61,6 +62,8 @@ public class MainActivity extends AppCompatActivity {
 
         mPlayer = MediaPlayer.create(this, R.raw.received);
         mPlayer.setOnErrorListener(mPlayerErrorListener);
+
+        mRecordPlayer = MediaPlayer.create(this, R.raw.who);
 
         PreferenceManager.setDefaultValues(this, R.xml.preferences, false);
         mPrefs = PreferenceManager.getDefaultSharedPreferences(this);
@@ -154,6 +157,8 @@ public class MainActivity extends AppCompatActivity {
     public void playOnReceiveSound(){
         mPlayer.start();
     }
+
+    public void playRecordSound() { mRecordPlayer.start(); }
 
     public void setConnectionStatus(final String mStatus){
         runOnUiThread(new Runnable() {

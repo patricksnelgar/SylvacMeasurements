@@ -6,17 +6,17 @@ ADDED from C:\Android Projects\SylvacMeasurements\SylvacCalipers\src\main\Androi
 		INJECTED from C:\Android Projects\SylvacMeasurements\SylvacCalipers\src\main\AndroidManifest.xml
 		INJECTED from C:\Android Projects\SylvacMeasurements\SylvacCalipers\src\main\AndroidManifest.xml
 	android:versionName
-		ADDED from C:\Android Projects\SylvacMeasurements\SylvacCalipers\src\main\AndroidManifest.xml:4:11-36
+		ADDED from C:\Android Projects\SylvacMeasurements\SylvacCalipers\src\main\AndroidManifest.xml:4:11-37
 		INJECTED from C:\Android Projects\SylvacMeasurements\SylvacCalipers\src\main\AndroidManifest.xml
 		INJECTED from C:\Android Projects\SylvacMeasurements\SylvacCalipers\src\main\AndroidManifest.xml
 	xmlns:android
 		ADDED from C:\Android Projects\SylvacMeasurements\SylvacCalipers\src\main\AndroidManifest.xml:2:11-69
 uses-sdk
 ADDED from C:\Android Projects\SylvacMeasurements\SylvacCalipers\src\main\AndroidManifest.xml:5:5-43
-MERGED from [com.android.support:design:23.1.1] C:\Users\HRTWPS\.android\build-cache\f89232d114c9fea0496f0015fc8f6c0e61c784ce\output\AndroidManifest.xml:20:5-43
-MERGED from [com.android.support:appcompat-v7:23.1.1] C:\Users\HRTWPS\.android\build-cache\4e86354ded39737b056abe3ca8f49065d349602d\output\AndroidManifest.xml:20:5-43
-MERGED from [com.android.support:recyclerview-v7:23.1.1] C:\Users\HRTWPS\.android\build-cache\c292d97c84f892d2f1819b6a7112352859d4c13b\output\AndroidManifest.xml:20:5-43
-MERGED from [com.android.support:support-v4:23.1.1] C:\Users\HRTWPS\.android\build-cache\58de40af149636fed0e5ae94ee0b6f305a1d9d91\output\AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:design:23.1.1] C:\Users\HRTWPS\.android\build-cache\485afc823879c28fad145e92671b2297d4b290e1\output\AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:appcompat-v7:23.1.1] C:\Users\HRTWPS\.android\build-cache\ac94a0e8dd67f0fa89592cffc67f40cd4ca44787\output\AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:recyclerview-v7:23.1.1] C:\Users\HRTWPS\.android\build-cache\6a832d04cdfddaf9bb1977f417eff9c79e7d478c\output\AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:support-v4:23.1.1] C:\Users\HRTWPS\.android\build-cache\43702771b0068462912fe5c3403421a85e146692\output\AndroidManifest.xml:20:5-43
 	android:targetSdkVersion
 		INJECTED from C:\Android Projects\SylvacMeasurements\SylvacCalipers\src\main\AndroidManifest.xml
 		INJECTED from C:\Android Projects\SylvacMeasurements\SylvacCalipers\src\main\AndroidManifest.xml
@@ -52,9 +52,9 @@ ADDED from C:\Android Projects\SylvacMeasurements\SylvacCalipers\src\main\Androi
 		ADDED from C:\Android Projects\SylvacMeasurements\SylvacCalipers\src\main\AndroidManifest.xml:11:19-63
 application
 ADDED from C:\Android Projects\SylvacMeasurements\SylvacCalipers\src\main\AndroidManifest.xml:12:5-34:19
-MERGED from [com.android.support:design:23.1.1] C:\Users\HRTWPS\.android\build-cache\f89232d114c9fea0496f0015fc8f6c0e61c784ce\output\AndroidManifest.xml:22:5-20
-MERGED from [com.android.support:appcompat-v7:23.1.1] C:\Users\HRTWPS\.android\build-cache\4e86354ded39737b056abe3ca8f49065d349602d\output\AndroidManifest.xml:22:5-20
-MERGED from [com.android.support:support-v4:23.1.1] C:\Users\HRTWPS\.android\build-cache\58de40af149636fed0e5ae94ee0b6f305a1d9d91\output\AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:design:23.1.1] C:\Users\HRTWPS\.android\build-cache\485afc823879c28fad145e92671b2297d4b290e1\output\AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:appcompat-v7:23.1.1] C:\Users\HRTWPS\.android\build-cache\ac94a0e8dd67f0fa89592cffc67f40cd4ca44787\output\AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:support-v4:23.1.1] C:\Users\HRTWPS\.android\build-cache\43702771b0068462912fe5c3403421a85e146692\output\AndroidManifest.xml:22:5-20
 	android:label
 		ADDED from C:\Android Projects\SylvacMeasurements\SylvacCalipers\src\main\AndroidManifest.xml:13:9-41
 	android:icon

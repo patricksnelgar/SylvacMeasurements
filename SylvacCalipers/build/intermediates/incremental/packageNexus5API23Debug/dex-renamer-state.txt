@@ -1,4 +1,4 @@
-#Fri Mar 24 14:44:19 NZDT 2017
+#Mon Mar 27 14:57:42 NZDT 2017
 base.0=C\:\\Android Projects\\SylvacMeasurements\\SylvacCalipers\\build\\intermediates\\transforms\\dex\\Nexus5API23\\debug\\folders\\1000\\10000\\instant-run-bootstrap_4c1ebb93431ac492dee4768a00fa6f442d28f7a9
 renamed.1=classes.dex
 renamed.0=classes2.dex

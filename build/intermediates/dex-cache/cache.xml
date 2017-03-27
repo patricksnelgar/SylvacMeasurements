@@ -12,12 +12,12 @@
     </item>
     <item
         is-multidex="true"
-        jar="C:\Users\HRTWPS\.android\build-cache\c292d97c84f892d2f1819b6a7112352859d4c13b\output\jars\classes.jar"
+        jar="C:\Users\HRTWPS\.android\build-cache\485afc823879c28fad145e92671b2297d4b290e1\output\jars\classes.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.0"
-        sha1="09c5e804bc67fc0580360043dff067df574a60d4">
-        <dex dex="C:\Android Projects\SylvacMeasurements\SylvacCalipers\build\intermediates\transforms\dex\Nexus5API23\debug\folders\1000\10\classes_f44c7a7e55324c08f5369bc59b96ff73d1756569\classes.dex" />
+        sha1="379471b2bd17d9737c050345c08e8c7d16589784">
+        <dex dex="C:\Android Projects\SylvacMeasurements\SylvacCalipers\build\intermediates\transforms\dex\Nexus5API23\debug\folders\1000\10\classes_8b44ff345b8a0c281a8bfaa122ae52da17965406\classes.dex" />
     </item>
     <item
         is-multidex="false"
@@ -36,6 +36,15 @@
         revision="25.0.0"
         sha1="6cbc7773921fcfedbe55657578f0cbfe614778dc">
         <dex dex="C:\Android Projects\SylvacMeasurements\SylvacCalipers\build\intermediates\pre-dexed\Nexus5API23\release\classes_be0a3fd69c077512619d5de02fb6597dd0f27f26.jar" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\HRTWPS\.android\build-cache\43702771b0068462912fe5c3403421a85e146692\output\jars\libs\internal_impl-23.1.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="a4de9c81ae239414e1ed0f86441b02abaf29bca9">
+        <dex dex="C:\Android Projects\SylvacMeasurements\SylvacCalipers\build\intermediates\transforms\dex\Nexus5API23\debug\folders\1000\10\internal_impl-23.1.1_56ef90ae098cd52078ee28f2d65a1a6481cbea6a\classes.dex" />
     </item>
     <item
         is-multidex="false"
@@ -61,26 +70,8 @@
         jumboMode="true"
         optimize="true"
         revision="25.0.0"
-        sha1="16dc57f653ecc2548aa8fb03c203783fe1f8b8a0">
+        sha1="d04ba3902baecae50990e02885c1c2bb010af48c">
         <dex dex="C:\Android Projects\SylvacMeasurements\SylvacCalipers\build\intermediates\transforms\dex\Nexus5API23\debug\folders\1000\10000\instant-run-bootstrap_4c1ebb93431ac492dee4768a00fa6f442d28f7a9\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\HRTWPS\.android\build-cache\f89232d114c9fea0496f0015fc8f6c0e61c784ce\output\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.0"
-        sha1="379471b2bd17d9737c050345c08e8c7d16589784">
-        <dex dex="C:\Android Projects\SylvacMeasurements\SylvacCalipers\build\intermediates\transforms\dex\Nexus5API23\debug\folders\1000\10\classes_b152024ab93bc2aebb0bbd5546f9244ce7566426\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\HRTWPS\.android\build-cache\4e86354ded39737b056abe3ca8f49065d349602d\output\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.0"
-        sha1="5c5699834e9722f1c288fea2de82725d078ba127">
-        <dex dex="C:\Android Projects\SylvacMeasurements\SylvacCalipers\build\intermediates\transforms\dex\Nexus5API23\debug\folders\1000\10\classes_da843194805cb8e2e1fa409b23395c4c972c9392\classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -93,30 +84,30 @@
     </item>
     <item
         is-multidex="true"
-        jar="C:\Users\HRTWPS\.android\build-cache\58de40af149636fed0e5ae94ee0b6f305a1d9d91\output\jars\classes.jar"
+        jar="C:\Users\HRTWPS\.android\build-cache\43702771b0068462912fe5c3403421a85e146692\output\jars\classes.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.0"
         sha1="6cbc7773921fcfedbe55657578f0cbfe614778dc">
-        <dex dex="C:\Android Projects\SylvacMeasurements\SylvacCalipers\build\intermediates\transforms\dex\Nexus5API23\debug\folders\1000\10\classes_be0a3fd69c077512619d5de02fb6597dd0f27f26\classes.dex" />
+        <dex dex="C:\Android Projects\SylvacMeasurements\SylvacCalipers\build\intermediates\transforms\dex\Nexus5API23\debug\folders\1000\10\classes_ee020e4106ccbab269c9bf2808730dbd42475c48\classes.dex" />
     </item>
     <item
         is-multidex="true"
-        jar="C:\Users\HRTWPS\.android\build-cache\58de40af149636fed0e5ae94ee0b6f305a1d9d91\output\jars\libs\internal_impl-23.1.1.jar"
+        jar="C:\Users\HRTWPS\.android\build-cache\6a832d04cdfddaf9bb1977f417eff9c79e7d478c\output\jars\classes.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.0"
-        sha1="a4de9c81ae239414e1ed0f86441b02abaf29bca9">
-        <dex dex="C:\Android Projects\SylvacMeasurements\SylvacCalipers\build\intermediates\transforms\dex\Nexus5API23\debug\folders\1000\10\internal_impl-23.1.1_2ae647465a6484a199e053af6b911da29f821f95\classes.dex" />
+        sha1="09c5e804bc67fc0580360043dff067df574a60d4">
+        <dex dex="C:\Android Projects\SylvacMeasurements\SylvacCalipers\build\intermediates\transforms\dex\Nexus5API23\debug\folders\1000\10\classes_3eac80a13109af0ca865a2a612688a9846dc4601\classes.dex" />
     </item>
     <item
-        is-multidex="false"
-        jar="C:\Users\HRTWPS\.android\build-cache\58de40af149636fed0e5ae94ee0b6f305a1d9d91\output\jars\libs\internal_impl-23.1.1.jar"
-        jumboMode="false"
+        is-multidex="true"
+        jar="C:\Users\HRTWPS\.android\build-cache\ac94a0e8dd67f0fa89592cffc67f40cd4ca44787\output\jars\classes.jar"
+        jumboMode="true"
         optimize="true"
         revision="25.0.0"
-        sha1="a4de9c81ae239414e1ed0f86441b02abaf29bca9">
-        <dex dex="C:\Android Projects\SylvacMeasurements\SylvacCalipers\build\intermediates\pre-dexed\Nexus5API23\release\internal_impl-23.1.1_2ae647465a6484a199e053af6b911da29f821f95.jar" />
+        sha1="5c5699834e9722f1c288fea2de82725d078ba127">
+        <dex dex="C:\Android Projects\SylvacMeasurements\SylvacCalipers\build\intermediates\transforms\dex\Nexus5API23\debug\folders\1000\10\classes_c77a7bcbc2fd03d9ea006b532973f8abdd417bdd\classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -126,6 +117,15 @@
         revision="25.0.0"
         sha1="c82741bc129dd5f99f11a4ab8666ae24262053b6">
         <dex dex="C:\Android Projects\SylvacMeasurements\SylvacCalipers\build\intermediates\transforms\dex\Nexus5API23\debug\folders\1000\10000\instant-run_49bbef27a40006c2aacfb18cfcbf5a573f8b7730\classes.dex" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\HRTWPS\.android\build-cache\58de40af149636fed0e5ae94ee0b6f305a1d9d91\output\jars\libs\internal_impl-23.1.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="a4de9c81ae239414e1ed0f86441b02abaf29bca9">
+        <dex dex="C:\Android Projects\SylvacMeasurements\SylvacCalipers\build\intermediates\pre-dexed\Nexus5API23\release\internal_impl-23.1.1_2ae647465a6484a199e053af6b911da29f821f95.jar" />
     </item>
 
 </items>

@@ -4,8 +4,8 @@
       <root url="jar://$PROJECT_DIR$/SylvacCalipers/build/intermediates/exploded-aar/com.android.support/design/23.1.1/annotations.zip!/" />
     </ANNOTATIONS>
     <CLASSES>
-      <root url="jar://$USER_HOME$/.android/build-cache/f89232d114c9fea0496f0015fc8f6c0e61c784ce/output/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/.android/build-cache/f89232d114c9fea0496f0015fc8f6c0e61c784ce/output/res" />
+      <root url="jar://$USER_HOME$/.android/build-cache/485afc823879c28fad145e92671b2297d4b290e1/output/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.android/build-cache/485afc823879c28fad145e92671b2297d4b290e1/output/res" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>
