@@ -46,186 +46,324 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="284b0099-2e74-4125-b413-4860cd650fa8" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/incremental/mergeNexus5API23DebugResources/merged.dir/values-af/values-af.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/incremental/mergeNexus5API23DebugResources/merged.dir/values-am/values-am.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/incremental/mergeNexus5API23DebugResources/merged.dir/values-ar/values-ar.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/incremental/mergeNexus5API23DebugResources/merged.dir/values-az-rAZ/values-az-rAZ.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/incremental/mergeNexus5API23DebugResources/merged.dir/values-bg/values-bg.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/incremental/mergeNexus5API23DebugResources/merged.dir/values-bn-rBD/values-bn-rBD.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/incremental/mergeNexus5API23DebugResources/merged.dir/values-ca/values-ca.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/incremental/mergeNexus5API23DebugResources/merged.dir/values-cs/values-cs.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/incremental/mergeNexus5API23DebugResources/merged.dir/values-da/values-da.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/incremental/mergeNexus5API23DebugResources/merged.dir/values-de/values-de.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/incremental/mergeNexus5API23DebugResources/merged.dir/values-el/values-el.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/incremental/mergeNexus5API23DebugResources/merged.dir/values-en-rAU/values-en-rAU.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/incremental/mergeNexus5API23DebugResources/merged.dir/values-en-rGB/values-en-rGB.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/incremental/mergeNexus5API23DebugResources/merged.dir/values-en-rIN/values-en-rIN.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/incremental/mergeNexus5API23DebugResources/merged.dir/values-es-rUS/values-es-rUS.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/incremental/mergeNexus5API23DebugResources/merged.dir/values-es/values-es.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/incremental/mergeNexus5API23DebugResources/merged.dir/values-et-rEE/values-et-rEE.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/incremental/mergeNexus5API23DebugResources/merged.dir/values-eu-rES/values-eu-rES.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/incremental/mergeNexus5API23DebugResources/merged.dir/values-fa/values-fa.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/incremental/mergeNexus5API23DebugResources/merged.dir/values-fi/values-fi.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/incremental/mergeNexus5API23DebugResources/merged.dir/values-fr-rCA/values-fr-rCA.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/incremental/mergeNexus5API23DebugResources/merged.dir/values-fr/values-fr.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/incremental/mergeNexus5API23DebugResources/merged.dir/values-gl-rES/values-gl-rES.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/incremental/mergeNexus5API23DebugResources/merged.dir/values-gu-rIN/values-gu-rIN.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/incremental/mergeNexus5API23DebugResources/merged.dir/values-h320dp-v13/values-h320dp-v13.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/incremental/mergeNexus5API23DebugResources/merged.dir/values-h720dp-v13/values-h720dp-v13.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/incremental/mergeNexus5API23DebugResources/merged.dir/values-hdpi-v4/values-hdpi-v4.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/incremental/mergeNexus5API23DebugResources/merged.dir/values-hi/values-hi.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/incremental/mergeNexus5API23DebugResources/merged.dir/values-hr/values-hr.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/incremental/mergeNexus5API23DebugResources/merged.dir/values-hu/values-hu.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/incremental/mergeNexus5API23DebugResources/merged.dir/values-hy-rAM/values-hy-rAM.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/incremental/mergeNexus5API23DebugResources/merged.dir/values-in/values-in.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/incremental/mergeNexus5API23DebugResources/merged.dir/values-is-rIS/values-is-rIS.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/incremental/mergeNexus5API23DebugResources/merged.dir/values-it/values-it.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/incremental/mergeNexus5API23DebugResources/merged.dir/values-iw/values-iw.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/incremental/mergeNexus5API23DebugResources/merged.dir/values-ja/values-ja.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/incremental/mergeNexus5API23DebugResources/merged.dir/values-ka-rGE/values-ka-rGE.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/incremental/mergeNexus5API23DebugResources/merged.dir/values-kk-rKZ/values-kk-rKZ.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/incremental/mergeNexus5API23DebugResources/merged.dir/values-km-rKH/values-km-rKH.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/incremental/mergeNexus5API23DebugResources/merged.dir/values-kn-rIN/values-kn-rIN.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/incremental/mergeNexus5API23DebugResources/merged.dir/values-ko/values-ko.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/incremental/mergeNexus5API23DebugResources/merged.dir/values-ky-rKG/values-ky-rKG.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/incremental/mergeNexus5API23DebugResources/merged.dir/values-land/values-land.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/incremental/mergeNexus5API23DebugResources/merged.dir/values-large-v4/values-large-v4.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/incremental/mergeNexus5API23DebugResources/merged.dir/values-ldltr-v21/values-ldltr-v21.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/incremental/mergeNexus5API23DebugResources/merged.dir/values-ldrtl-v23/values-ldrtl-v23.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/incremental/mergeNexus5API23DebugResources/merged.dir/values-lo-rLA/values-lo-rLA.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/incremental/mergeNexus5API23DebugResources/merged.dir/values-lt/values-lt.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/incremental/mergeNexus5API23DebugResources/merged.dir/values-lv/values-lv.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/incremental/mergeNexus5API23DebugResources/merged.dir/values-mk-rMK/values-mk-rMK.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/incremental/mergeNexus5API23DebugResources/merged.dir/values-ml-rIN/values-ml-rIN.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/incremental/mergeNexus5API23DebugResources/merged.dir/values-mn-rMN/values-mn-rMN.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/incremental/mergeNexus5API23DebugResources/merged.dir/values-mr-rIN/values-mr-rIN.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/incremental/mergeNexus5API23DebugResources/merged.dir/values-ms-rMY/values-ms-rMY.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/incremental/mergeNexus5API23DebugResources/merged.dir/values-my-rMM/values-my-rMM.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/incremental/mergeNexus5API23DebugResources/merged.dir/values-nb/values-nb.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/incremental/mergeNexus5API23DebugResources/merged.dir/values-ne-rNP/values-ne-rNP.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/incremental/mergeNexus5API23DebugResources/merged.dir/values-nl/values-nl.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/incremental/mergeNexus5API23DebugResources/merged.dir/values-pa-rIN/values-pa-rIN.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/incremental/mergeNexus5API23DebugResources/merged.dir/values-pl/values-pl.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/incremental/mergeNexus5API23DebugResources/merged.dir/values-port/values-port.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/incremental/mergeNexus5API23DebugResources/merged.dir/values-pt-rBR/values-pt-rBR.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/incremental/mergeNexus5API23DebugResources/merged.dir/values-pt-rPT/values-pt-rPT.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/incremental/mergeNexus5API23DebugResources/merged.dir/values-pt/values-pt.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/incremental/mergeNexus5API23DebugResources/merged.dir/values-ro/values-ro.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/incremental/mergeNexus5API23DebugResources/merged.dir/values-ru/values-ru.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/incremental/mergeNexus5API23DebugResources/merged.dir/values-si-rLK/values-si-rLK.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/incremental/mergeNexus5API23DebugResources/merged.dir/values-sk/values-sk.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/incremental/mergeNexus5API23DebugResources/merged.dir/values-sl/values-sl.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/incremental/mergeNexus5API23DebugResources/merged.dir/values-sq-rAL/values-sq-rAL.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/incremental/mergeNexus5API23DebugResources/merged.dir/values-sr/values-sr.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/incremental/mergeNexus5API23DebugResources/merged.dir/values-sv/values-sv.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/incremental/mergeNexus5API23DebugResources/merged.dir/values-sw/values-sw.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/incremental/mergeNexus5API23DebugResources/merged.dir/values-sw600dp-v13/values-sw600dp-v13.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/incremental/mergeNexus5API23DebugResources/merged.dir/values-ta-rIN/values-ta-rIN.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/incremental/mergeNexus5API23DebugResources/merged.dir/values-te-rIN/values-te-rIN.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/incremental/mergeNexus5API23DebugResources/merged.dir/values-th/values-th.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/incremental/mergeNexus5API23DebugResources/merged.dir/values-tl/values-tl.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/incremental/mergeNexus5API23DebugResources/merged.dir/values-tr/values-tr.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/incremental/mergeNexus5API23DebugResources/merged.dir/values-uk/values-uk.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/incremental/mergeNexus5API23DebugResources/merged.dir/values-ur-rPK/values-ur-rPK.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/incremental/mergeNexus5API23DebugResources/merged.dir/values-uz-rUZ/values-uz-rUZ.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/incremental/mergeNexus5API23DebugResources/merged.dir/values-v11/values-v11.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/incremental/mergeNexus5API23DebugResources/merged.dir/values-v12/values-v12.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/incremental/mergeNexus5API23DebugResources/merged.dir/values-v14/values-v14.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/incremental/mergeNexus5API23DebugResources/merged.dir/values-v17/values-v17.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/incremental/mergeNexus5API23DebugResources/merged.dir/values-v18/values-v18.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/incremental/mergeNexus5API23DebugResources/merged.dir/values-v21/values-v21.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/incremental/mergeNexus5API23DebugResources/merged.dir/values-v22/values-v22.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/incremental/mergeNexus5API23DebugResources/merged.dir/values-v23/values-v23.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/incremental/mergeNexus5API23DebugResources/merged.dir/values-vi/values-vi.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/incremental/mergeNexus5API23DebugResources/merged.dir/values-w360dp-v13/values-w360dp-v13.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/incremental/mergeNexus5API23DebugResources/merged.dir/values-w480dp-v13/values-w480dp-v13.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/incremental/mergeNexus5API23DebugResources/merged.dir/values-w500dp-v13/values-w500dp-v13.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/incremental/mergeNexus5API23DebugResources/merged.dir/values-w600dp-v13/values-w600dp-v13.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/incremental/mergeNexus5API23DebugResources/merged.dir/values-w720dp-v13/values-w720dp-v13.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/incremental/mergeNexus5API23DebugResources/merged.dir/values-xlarge-land-v4/values-xlarge-land-v4.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/incremental/mergeNexus5API23DebugResources/merged.dir/values-xlarge-v4/values-xlarge-v4.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/incremental/mergeNexus5API23DebugResources/merged.dir/values-zh-rCN/values-zh-rCN.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/incremental/mergeNexus5API23DebugResources/merged.dir/values-zh-rHK/values-zh-rHK.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/incremental/mergeNexus5API23DebugResources/merged.dir/values-zh-rTW/values-zh-rTW.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/incremental/mergeNexus5API23DebugResources/merged.dir/values-zu/values-zu.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/incremental/mergeNexus5API23DebugResources/merged.dir/values/values.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/transforms/dex/Nexus5API23/debug/folders/1000/10/classes_b152024ab93bc2aebb0bbd5546f9244ce7566426/classes.dex" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/transforms/dex/Nexus5API23/debug/folders/1000/10/classes_be0a3fd69c077512619d5de02fb6597dd0f27f26/classes.dex" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/transforms/dex/Nexus5API23/debug/folders/1000/10/classes_da843194805cb8e2e1fa409b23395c4c972c9392/classes.dex" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/transforms/dex/Nexus5API23/debug/folders/1000/10/classes_f44c7a7e55324c08f5369bc59b96ff73d1756569/classes.dex" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/transforms/dex/Nexus5API23/debug/folders/1000/10/internal_impl-23.1.1_2ae647465a6484a199e053af6b911da29f821f95/classes.dex" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/incremental-classes/Nexus5API23/debug/instant-run-bootstrap.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/incremental-runtime-classes/Nexus5API23/debug/instant-run.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/incremental-verifier/Nexus5API23/debug/android/support/design/R$anim.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/incremental-verifier/Nexus5API23/debug/android/support/design/R$attr.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/incremental-verifier/Nexus5API23/debug/android/support/design/R$bool.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/incremental-verifier/Nexus5API23/debug/android/support/design/R$color.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/incremental-verifier/Nexus5API23/debug/android/support/design/R$dimen.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/incremental-verifier/Nexus5API23/debug/android/support/design/R$drawable.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/incremental-verifier/Nexus5API23/debug/android/support/design/R$id.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/incremental-verifier/Nexus5API23/debug/android/support/design/R$integer.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/incremental-verifier/Nexus5API23/debug/android/support/design/R$layout.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/incremental-verifier/Nexus5API23/debug/android/support/design/R$string.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/incremental-verifier/Nexus5API23/debug/android/support/design/R$style.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/incremental-verifier/Nexus5API23/debug/android/support/design/R$styleable.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/incremental-verifier/Nexus5API23/debug/android/support/design/R.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/incremental-verifier/Nexus5API23/debug/android/support/v4/R.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/incremental-verifier/Nexus5API23/debug/android/support/v7/appcompat/R$anim.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/incremental-verifier/Nexus5API23/debug/android/support/v7/appcompat/R$attr.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/incremental-verifier/Nexus5API23/debug/android/support/v7/appcompat/R$bool.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/incremental-verifier/Nexus5API23/debug/android/support/v7/appcompat/R$color.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/incremental-verifier/Nexus5API23/debug/android/support/v7/appcompat/R$dimen.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/incremental-verifier/Nexus5API23/debug/android/support/v7/appcompat/R$drawable.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/incremental-verifier/Nexus5API23/debug/android/support/v7/appcompat/R$id.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/incremental-verifier/Nexus5API23/debug/android/support/v7/appcompat/R$integer.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/incremental-verifier/Nexus5API23/debug/android/support/v7/appcompat/R$layout.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/incremental-verifier/Nexus5API23/debug/android/support/v7/appcompat/R$string.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/incremental-verifier/Nexus5API23/debug/android/support/v7/appcompat/R$style.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/incremental-verifier/Nexus5API23/debug/android/support/v7/appcompat/R$styleable.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/incremental-verifier/Nexus5API23/debug/android/support/v7/appcompat/R.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/incremental-verifier/Nexus5API23/debug/android/support/v7/recyclerview/R$attr.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/incremental-verifier/Nexus5API23/debug/android/support/v7/recyclerview/R$dimen.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/incremental-verifier/Nexus5API23/debug/android/support/v7/recyclerview/R$id.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/incremental-verifier/Nexus5API23/debug/android/support/v7/recyclerview/R$styleable.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/incremental-verifier/Nexus5API23/debug/android/support/v7/recyclerview/R.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/incremental-verifier/Nexus5API23/debug/com/patrick/Sylvac_Calipers/BondStateReceiver.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/incremental-verifier/Nexus5API23/debug/com/patrick/Sylvac_Calipers/BuildConfig.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/incremental-verifier/Nexus5API23/debug/com/patrick/Sylvac_Calipers/CommunicationCharacteristics.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/incremental-verifier/Nexus5API23/debug/com/patrick/Sylvac_Calipers/ConnectionManager$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/incremental-verifier/Nexus5API23/debug/com/patrick/Sylvac_Calipers/ConnectionManager$2.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/incremental-verifier/Nexus5API23/debug/com/patrick/Sylvac_Calipers/ConnectionManager$3.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/incremental-verifier/Nexus5API23/debug/com/patrick/Sylvac_Calipers/ConnectionManager$4.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/incremental-verifier/Nexus5API23/debug/com/patrick/Sylvac_Calipers/ConnectionManager.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/incremental-verifier/Nexus5API23/debug/com/patrick/Sylvac_Calipers/DataReceiver$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/incremental-verifier/Nexus5API23/debug/com/patrick/Sylvac_Calipers/DataReceiver$2$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/incremental-verifier/Nexus5API23/debug/com/patrick/Sylvac_Calipers/DataReceiver$2$2.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/incremental-verifier/Nexus5API23/debug/com/patrick/Sylvac_Calipers/DataReceiver$2.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/incremental-verifier/Nexus5API23/debug/com/patrick/Sylvac_Calipers/DataReceiver.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/incremental-verifier/Nexus5API23/debug/com/patrick/Sylvac_Calipers/DataRecord.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/incremental-verifier/Nexus5API23/debug/com/patrick/Sylvac_Calipers/DeviceScanFragment$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/incremental-verifier/Nexus5API23/debug/com/patrick/Sylvac_Calipers/DeviceScanFragment$2.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/incremental-verifier/Nexus5API23/debug/com/patrick/Sylvac_Calipers/DeviceScanFragment$DeviceListAdapter.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/incremental-verifier/Nexus5API23/debug/com/patrick/Sylvac_Calipers/DeviceScanFragment$ScanTimeout.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/incremental-verifier/Nexus5API23/debug/com/patrick/Sylvac_Calipers/DeviceScanFragment$ViewHolder.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/incremental-verifier/Nexus5API23/debug/com/patrick/Sylvac_Calipers/DeviceScanFragment.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/incremental-verifier/Nexus5API23/debug/com/patrick/Sylvac_Calipers/HelpActivity$HelpListAdapter.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/incremental-verifier/Nexus5API23/debug/com/patrick/Sylvac_Calipers/HelpActivity$HelpTopic.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/incremental-verifier/Nexus5API23/debug/com/patrick/Sylvac_Calipers/HelpActivity.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/incremental-verifier/Nexus5API23/debug/com/patrick/Sylvac_Calipers/MainActivity$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/incremental-verifier/Nexus5API23/debug/com/patrick/Sylvac_Calipers/MainActivity$2.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/incremental-verifier/Nexus5API23/debug/com/patrick/Sylvac_Calipers/MainActivity.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/incremental-verifier/Nexus5API23/debug/com/patrick/Sylvac_Calipers/PageFragmentAdapter.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/incremental-verifier/Nexus5API23/debug/com/patrick/Sylvac_Calipers/R$anim.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/incremental-verifier/Nexus5API23/debug/com/patrick/Sylvac_Calipers/R$array.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/incremental-verifier/Nexus5API23/debug/com/patrick/Sylvac_Calipers/R$attr.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/incremental-verifier/Nexus5API23/debug/com/patrick/Sylvac_Calipers/R$bool.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/incremental-verifier/Nexus5API23/debug/com/patrick/Sylvac_Calipers/R$color.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/incremental-verifier/Nexus5API23/debug/com/patrick/Sylvac_Calipers/R$dimen.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/incremental-verifier/Nexus5API23/debug/com/patrick/Sylvac_Calipers/R$drawable.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/incremental-verifier/Nexus5API23/debug/com/patrick/Sylvac_Calipers/R$id.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/incremental-verifier/Nexus5API23/debug/com/patrick/Sylvac_Calipers/R$integer.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/incremental-verifier/Nexus5API23/debug/com/patrick/Sylvac_Calipers/R$layout.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/incremental-verifier/Nexus5API23/debug/com/patrick/Sylvac_Calipers/R$menu.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/incremental-verifier/Nexus5API23/debug/com/patrick/Sylvac_Calipers/R$raw.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/incremental-verifier/Nexus5API23/debug/com/patrick/Sylvac_Calipers/R$string.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/incremental-verifier/Nexus5API23/debug/com/patrick/Sylvac_Calipers/R$style.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/incremental-verifier/Nexus5API23/debug/com/patrick/Sylvac_Calipers/R$styleable.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/incremental-verifier/Nexus5API23/debug/com/patrick/Sylvac_Calipers/R$xml.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/incremental-verifier/Nexus5API23/debug/com/patrick/Sylvac_Calipers/R.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/incremental-verifier/Nexus5API23/debug/com/patrick/Sylvac_Calipers/RecordAdapter.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/incremental-verifier/Nexus5API23/debug/com/patrick/Sylvac_Calipers/RecordFragment$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/incremental-verifier/Nexus5API23/debug/com/patrick/Sylvac_Calipers/RecordFragment$2.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/incremental-verifier/Nexus5API23/debug/com/patrick/Sylvac_Calipers/RecordFragment.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/incremental-verifier/Nexus5API23/debug/com/patrick/Sylvac_Calipers/SettingsActivity$SettingsFragment.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/incremental-verifier/Nexus5API23/debug/com/patrick/Sylvac_Calipers/SettingsActivity.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/incremental/packageInstantRunResourcesNexus5API23Debug/dex-renamer-state.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/incremental/packageInstantRunResourcesNexus5API23Debug/file-input-save-data.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/incremental/packageInstantRunResourcesNexus5API23Debug/zip-cache/eZKZqJtdKghNShvxor+wHvYpnls=" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/instant-run-resources/resources-Nexus5API23/debug.ir.ap_" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/instant-run-support/Nexus5API23/debug/dependencies/AndroidManifest.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/instant-run-support/Nexus5API23/debug/manifest.crc" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/instant-run-support/Nexus5API23/debug/manifest.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/instant-run-support/Nexus5API23/debug/package_dependencies/dex-renamer-state.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/instant-run-support/Nexus5API23/debug/package_slice_0/dex-renamer-state.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/instant-run-support/Nexus5API23/debug/package_slice_1/dex-renamer-state.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/instant-run-support/Nexus5API23/debug/package_slice_2/dex-renamer-state.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/instant-run-support/Nexus5API23/debug/package_slice_3/dex-renamer-state.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/instant-run-support/Nexus5API23/debug/package_slice_4/dex-renamer-state.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/instant-run-support/Nexus5API23/debug/package_slice_5/dex-renamer-state.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/instant-run-support/Nexus5API23/debug/package_slice_6/dex-renamer-state.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/instant-run-support/Nexus5API23/debug/package_slice_7/dex-renamer-state.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/instant-run-support/Nexus5API23/debug/package_slice_8/dex-renamer-state.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/instant-run-support/Nexus5API23/debug/package_slice_9/dex-renamer-state.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/instant-run-support/Nexus5API23/debug/slice_0/AndroidManifest.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/instant-run-support/Nexus5API23/debug/slice_1/AndroidManifest.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/instant-run-support/Nexus5API23/debug/slice_2/AndroidManifest.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/instant-run-support/Nexus5API23/debug/slice_3/AndroidManifest.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/instant-run-support/Nexus5API23/debug/slice_4/AndroidManifest.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/instant-run-support/Nexus5API23/debug/slice_5/AndroidManifest.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/instant-run-support/Nexus5API23/debug/slice_6/AndroidManifest.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/instant-run-support/Nexus5API23/debug/slice_7/AndroidManifest.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/instant-run-support/Nexus5API23/debug/slice_8/AndroidManifest.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/instant-run-support/Nexus5API23/debug/slice_9/AndroidManifest.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/manifests/instant-run/Nexus5API23/debug/AndroidManifest.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/restart-dex/Nexus5API23/debug/build-info.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/split-apk/Nexus5API23/debug/dep/dependencies.apk" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/split-apk/Nexus5API23/debug/slices/slice_0.apk" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/split-apk/Nexus5API23/debug/slices/slice_1.apk" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/split-apk/Nexus5API23/debug/slices/slice_2.apk" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/split-apk/Nexus5API23/debug/slices/slice_3.apk" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/split-apk/Nexus5API23/debug/slices/slice_4.apk" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/split-apk/Nexus5API23/debug/slices/slice_5.apk" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/split-apk/Nexus5API23/debug/slices/slice_6.apk" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/split-apk/Nexus5API23/debug/slices/slice_7.apk" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/split-apk/Nexus5API23/debug/slices/slice_8.apk" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/split-apk/Nexus5API23/debug/slices/slice_9.apk" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/transforms/dex/Nexus5API23/debug/folders/1000/10/support-annotations-23.1.1_1fef63b0176e374de0b8ec240f0158b06e1ef763/classes.dex" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/transforms/dex/Nexus5API23/debug/folders/1000/10000/instant-run-bootstrap_4c1ebb93431ac492dee4768a00fa6f442d28f7a9/classes.dex" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/transforms/dex/Nexus5API23/debug/folders/1000/10000/instant-run_49bbef27a40006c2aacfb18cfcbf5a573f8b7730/classes.dex" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/transforms/dex/Nexus5API23/debug/folders/1000/5/slice_0/classes.dex" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/transforms/dex/Nexus5API23/debug/folders/1000/5/slice_1/classes.dex" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/transforms/dex/Nexus5API23/debug/folders/1000/5/slice_2/classes.dex" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/transforms/dex/Nexus5API23/debug/folders/1000/5/slice_3/classes.dex" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/transforms/dex/Nexus5API23/debug/folders/1000/5/slice_4/classes.dex" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/transforms/dex/Nexus5API23/debug/folders/1000/5/slice_5/classes.dex" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/transforms/dex/Nexus5API23/debug/folders/1000/5/slice_6/classes.dex" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/transforms/dex/Nexus5API23/debug/folders/1000/5/slice_7/classes.dex" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/transforms/dex/Nexus5API23/debug/folders/1000/5/slice_8/classes.dex" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/transforms/dex/Nexus5API23/debug/folders/1000/5/slice_9/classes.dex" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/transforms/instantRun/Nexus5API23/debug/folders/1/5/main/android/support/design/R$anim.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/transforms/instantRun/Nexus5API23/debug/folders/1/5/main/android/support/design/R$attr.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/transforms/instantRun/Nexus5API23/debug/folders/1/5/main/android/support/design/R$bool.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/transforms/instantRun/Nexus5API23/debug/folders/1/5/main/android/support/design/R$color.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/transforms/instantRun/Nexus5API23/debug/folders/1/5/main/android/support/design/R$dimen.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/transforms/instantRun/Nexus5API23/debug/folders/1/5/main/android/support/design/R$drawable.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/transforms/instantRun/Nexus5API23/debug/folders/1/5/main/android/support/design/R$id.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/transforms/instantRun/Nexus5API23/debug/folders/1/5/main/android/support/design/R$integer.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/transforms/instantRun/Nexus5API23/debug/folders/1/5/main/android/support/design/R$layout.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/transforms/instantRun/Nexus5API23/debug/folders/1/5/main/android/support/design/R$string.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/transforms/instantRun/Nexus5API23/debug/folders/1/5/main/android/support/design/R$style.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/transforms/instantRun/Nexus5API23/debug/folders/1/5/main/android/support/design/R$styleable.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/transforms/instantRun/Nexus5API23/debug/folders/1/5/main/android/support/design/R.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/transforms/instantRun/Nexus5API23/debug/folders/1/5/main/android/support/v4/R.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/transforms/instantRun/Nexus5API23/debug/folders/1/5/main/android/support/v7/appcompat/R$anim.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/transforms/instantRun/Nexus5API23/debug/folders/1/5/main/android/support/v7/appcompat/R$attr.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/transforms/instantRun/Nexus5API23/debug/folders/1/5/main/android/support/v7/appcompat/R$bool.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/transforms/instantRun/Nexus5API23/debug/folders/1/5/main/android/support/v7/appcompat/R$color.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/transforms/instantRun/Nexus5API23/debug/folders/1/5/main/android/support/v7/appcompat/R$dimen.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/transforms/instantRun/Nexus5API23/debug/folders/1/5/main/android/support/v7/appcompat/R$drawable.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/transforms/instantRun/Nexus5API23/debug/folders/1/5/main/android/support/v7/appcompat/R$id.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/transforms/instantRun/Nexus5API23/debug/folders/1/5/main/android/support/v7/appcompat/R$integer.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/transforms/instantRun/Nexus5API23/debug/folders/1/5/main/android/support/v7/appcompat/R$layout.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/transforms/instantRun/Nexus5API23/debug/folders/1/5/main/android/support/v7/appcompat/R$string.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/transforms/instantRun/Nexus5API23/debug/folders/1/5/main/android/support/v7/appcompat/R$style.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/transforms/instantRun/Nexus5API23/debug/folders/1/5/main/android/support/v7/appcompat/R$styleable.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/transforms/instantRun/Nexus5API23/debug/folders/1/5/main/android/support/v7/appcompat/R.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/transforms/instantRun/Nexus5API23/debug/folders/1/5/main/android/support/v7/recyclerview/R$attr.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/transforms/instantRun/Nexus5API23/debug/folders/1/5/main/android/support/v7/recyclerview/R$dimen.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/transforms/instantRun/Nexus5API23/debug/folders/1/5/main/android/support/v7/recyclerview/R$id.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/transforms/instantRun/Nexus5API23/debug/folders/1/5/main/android/support/v7/recyclerview/R$styleable.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/transforms/instantRun/Nexus5API23/debug/folders/1/5/main/android/support/v7/recyclerview/R.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/transforms/instantRun/Nexus5API23/debug/folders/1/5/main/com/patrick/Sylvac_Calipers/BondStateReceiver.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/transforms/instantRun/Nexus5API23/debug/folders/1/5/main/com/patrick/Sylvac_Calipers/BuildConfig.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/transforms/instantRun/Nexus5API23/debug/folders/1/5/main/com/patrick/Sylvac_Calipers/CommunicationCharacteristics.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/transforms/instantRun/Nexus5API23/debug/folders/1/5/main/com/patrick/Sylvac_Calipers/ConnectionManager$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/transforms/instantRun/Nexus5API23/debug/folders/1/5/main/com/patrick/Sylvac_Calipers/ConnectionManager$2.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/transforms/instantRun/Nexus5API23/debug/folders/1/5/main/com/patrick/Sylvac_Calipers/ConnectionManager$3.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/transforms/instantRun/Nexus5API23/debug/folders/1/5/main/com/patrick/Sylvac_Calipers/ConnectionManager$4.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/transforms/instantRun/Nexus5API23/debug/folders/1/5/main/com/patrick/Sylvac_Calipers/ConnectionManager.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/transforms/instantRun/Nexus5API23/debug/folders/1/5/main/com/patrick/Sylvac_Calipers/DataReceiver$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/transforms/instantRun/Nexus5API23/debug/folders/1/5/main/com/patrick/Sylvac_Calipers/DataReceiver$2$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/transforms/instantRun/Nexus5API23/debug/folders/1/5/main/com/patrick/Sylvac_Calipers/DataReceiver$2$2.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/transforms/instantRun/Nexus5API23/debug/folders/1/5/main/com/patrick/Sylvac_Calipers/DataReceiver$2.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/transforms/instantRun/Nexus5API23/debug/folders/1/5/main/com/patrick/Sylvac_Calipers/DataReceiver.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/transforms/instantRun/Nexus5API23/debug/folders/1/5/main/com/patrick/Sylvac_Calipers/DataRecord.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/transforms/instantRun/Nexus5API23/debug/folders/1/5/main/com/patrick/Sylvac_Calipers/DeviceScanFragment$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/transforms/instantRun/Nexus5API23/debug/folders/1/5/main/com/patrick/Sylvac_Calipers/DeviceScanFragment$2.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/transforms/instantRun/Nexus5API23/debug/folders/1/5/main/com/patrick/Sylvac_Calipers/DeviceScanFragment$DeviceListAdapter.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/transforms/instantRun/Nexus5API23/debug/folders/1/5/main/com/patrick/Sylvac_Calipers/DeviceScanFragment$ScanTimeout.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/transforms/instantRun/Nexus5API23/debug/folders/1/5/main/com/patrick/Sylvac_Calipers/DeviceScanFragment$ViewHolder.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/transforms/instantRun/Nexus5API23/debug/folders/1/5/main/com/patrick/Sylvac_Calipers/DeviceScanFragment.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/transforms/instantRun/Nexus5API23/debug/folders/1/5/main/com/patrick/Sylvac_Calipers/HelpActivity$HelpListAdapter.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/transforms/instantRun/Nexus5API23/debug/folders/1/5/main/com/patrick/Sylvac_Calipers/HelpActivity$HelpTopic.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/transforms/instantRun/Nexus5API23/debug/folders/1/5/main/com/patrick/Sylvac_Calipers/HelpActivity.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/transforms/instantRun/Nexus5API23/debug/folders/1/5/main/com/patrick/Sylvac_Calipers/MainActivity$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/transforms/instantRun/Nexus5API23/debug/folders/1/5/main/com/patrick/Sylvac_Calipers/MainActivity$2.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/transforms/instantRun/Nexus5API23/debug/folders/1/5/main/com/patrick/Sylvac_Calipers/MainActivity.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/transforms/instantRun/Nexus5API23/debug/folders/1/5/main/com/patrick/Sylvac_Calipers/PageFragmentAdapter.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/transforms/instantRun/Nexus5API23/debug/folders/1/5/main/com/patrick/Sylvac_Calipers/R$anim.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/transforms/instantRun/Nexus5API23/debug/folders/1/5/main/com/patrick/Sylvac_Calipers/R$array.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/transforms/instantRun/Nexus5API23/debug/folders/1/5/main/com/patrick/Sylvac_Calipers/R$attr.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/transforms/instantRun/Nexus5API23/debug/folders/1/5/main/com/patrick/Sylvac_Calipers/R$bool.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/transforms/instantRun/Nexus5API23/debug/folders/1/5/main/com/patrick/Sylvac_Calipers/R$color.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/transforms/instantRun/Nexus5API23/debug/folders/1/5/main/com/patrick/Sylvac_Calipers/R$dimen.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/transforms/instantRun/Nexus5API23/debug/folders/1/5/main/com/patrick/Sylvac_Calipers/R$drawable.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/transforms/instantRun/Nexus5API23/debug/folders/1/5/main/com/patrick/Sylvac_Calipers/R$id.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/transforms/instantRun/Nexus5API23/debug/folders/1/5/main/com/patrick/Sylvac_Calipers/R$integer.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/transforms/instantRun/Nexus5API23/debug/folders/1/5/main/com/patrick/Sylvac_Calipers/R$layout.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/transforms/instantRun/Nexus5API23/debug/folders/1/5/main/com/patrick/Sylvac_Calipers/R$menu.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/transforms/instantRun/Nexus5API23/debug/folders/1/5/main/com/patrick/Sylvac_Calipers/R$raw.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/transforms/instantRun/Nexus5API23/debug/folders/1/5/main/com/patrick/Sylvac_Calipers/R$string.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/transforms/instantRun/Nexus5API23/debug/folders/1/5/main/com/patrick/Sylvac_Calipers/R$style.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/transforms/instantRun/Nexus5API23/debug/folders/1/5/main/com/patrick/Sylvac_Calipers/R$styleable.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/transforms/instantRun/Nexus5API23/debug/folders/1/5/main/com/patrick/Sylvac_Calipers/R$xml.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/transforms/instantRun/Nexus5API23/debug/folders/1/5/main/com/patrick/Sylvac_Calipers/R.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/transforms/instantRun/Nexus5API23/debug/folders/1/5/main/com/patrick/Sylvac_Calipers/RecordAdapter.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/transforms/instantRun/Nexus5API23/debug/folders/1/5/main/com/patrick/Sylvac_Calipers/RecordFragment$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/transforms/instantRun/Nexus5API23/debug/folders/1/5/main/com/patrick/Sylvac_Calipers/RecordFragment$2.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/transforms/instantRun/Nexus5API23/debug/folders/1/5/main/com/patrick/Sylvac_Calipers/RecordFragment.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/transforms/instantRun/Nexus5API23/debug/folders/1/5/main/com/patrick/Sylvac_Calipers/SettingsActivity$SettingsFragment.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/transforms/instantRun/Nexus5API23/debug/folders/1/5/main/com/patrick/Sylvac_Calipers/SettingsActivity.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/transforms/instantRunSlicer/Nexus5API23/debug/folders/1/5/slice_0/android/support/design/R$anim.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/transforms/instantRunSlicer/Nexus5API23/debug/folders/1/5/slice_0/android/support/design/R$attr.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/transforms/instantRunSlicer/Nexus5API23/debug/folders/1/5/slice_0/android/support/design/R$bool.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/transforms/instantRunSlicer/Nexus5API23/debug/folders/1/5/slice_0/android/support/design/R$color.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/transforms/instantRunSlicer/Nexus5API23/debug/folders/1/5/slice_0/android/support/design/R$dimen.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/transforms/instantRunSlicer/Nexus5API23/debug/folders/1/5/slice_0/android/support/design/R$drawable.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/transforms/instantRunSlicer/Nexus5API23/debug/folders/1/5/slice_0/android/support/design/R$id.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/transforms/instantRunSlicer/Nexus5API23/debug/folders/1/5/slice_0/android/support/design/R$integer.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/transforms/instantRunSlicer/Nexus5API23/debug/folders/1/5/slice_0/android/support/design/R$layout.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/transforms/instantRunSlicer/Nexus5API23/debug/folders/1/5/slice_0/android/support/design/R$string.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/transforms/instantRunSlicer/Nexus5API23/debug/folders/1/5/slice_0/android/support/design/R$style.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/transforms/instantRunSlicer/Nexus5API23/debug/folders/1/5/slice_0/android/support/design/R$styleable.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/transforms/instantRunSlicer/Nexus5API23/debug/folders/1/5/slice_0/android/support/design/R.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/transforms/instantRunSlicer/Nexus5API23/debug/folders/1/5/slice_0/com/android/tools/fd/dummy/slice_0.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/transforms/instantRunSlicer/Nexus5API23/debug/folders/1/5/slice_1/com/android/tools/fd/dummy/slice_1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/transforms/instantRunSlicer/Nexus5API23/debug/folders/1/5/slice_2/android/support/v4/R.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/transforms/instantRunSlicer/Nexus5API23/debug/folders/1/5/slice_2/android/support/v7/appcompat/R$anim.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/transforms/instantRunSlicer/Nexus5API23/debug/folders/1/5/slice_2/android/support/v7/appcompat/R$attr.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/transforms/instantRunSlicer/Nexus5API23/debug/folders/1/5/slice_2/android/support/v7/appcompat/R$bool.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/transforms/instantRunSlicer/Nexus5API23/debug/folders/1/5/slice_2/android/support/v7/appcompat/R$color.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/transforms/instantRunSlicer/Nexus5API23/debug/folders/1/5/slice_2/android/support/v7/appcompat/R$dimen.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/transforms/instantRunSlicer/Nexus5API23/debug/folders/1/5/slice_2/android/support/v7/appcompat/R$drawable.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/transforms/instantRunSlicer/Nexus5API23/debug/folders/1/5/slice_2/android/support/v7/appcompat/R$id.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/transforms/instantRunSlicer/Nexus5API23/debug/folders/1/5/slice_2/android/support/v7/appcompat/R$integer.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/transforms/instantRunSlicer/Nexus5API23/debug/folders/1/5/slice_2/android/support/v7/appcompat/R$layout.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/transforms/instantRunSlicer/Nexus5API23/debug/folders/1/5/slice_2/android/support/v7/appcompat/R$string.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/transforms/instantRunSlicer/Nexus5API23/debug/folders/1/5/slice_2/android/support/v7/appcompat/R$style.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/transforms/instantRunSlicer/Nexus5API23/debug/folders/1/5/slice_2/android/support/v7/appcompat/R$styleable.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/transforms/instantRunSlicer/Nexus5API23/debug/folders/1/5/slice_2/android/support/v7/appcompat/R.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/transforms/instantRunSlicer/Nexus5API23/debug/folders/1/5/slice_2/com/android/tools/fd/dummy/slice_2.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/transforms/instantRunSlicer/Nexus5API23/debug/folders/1/5/slice_3/com/android/tools/fd/dummy/slice_3.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/transforms/instantRunSlicer/Nexus5API23/debug/folders/1/5/slice_4/com/android/tools/fd/dummy/slice_4.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/transforms/instantRunSlicer/Nexus5API23/debug/folders/1/5/slice_5/com/android/tools/fd/dummy/slice_5.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/transforms/instantRunSlicer/Nexus5API23/debug/folders/1/5/slice_6/com/android/tools/fd/dummy/slice_6.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/transforms/instantRunSlicer/Nexus5API23/debug/folders/1/5/slice_7/android/support/v7/recyclerview/R$attr.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/transforms/instantRunSlicer/Nexus5API23/debug/folders/1/5/slice_7/android/support/v7/recyclerview/R$dimen.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/transforms/instantRunSlicer/Nexus5API23/debug/folders/1/5/slice_7/android/support/v7/recyclerview/R$id.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/transforms/instantRunSlicer/Nexus5API23/debug/folders/1/5/slice_7/android/support/v7/recyclerview/R$styleable.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/transforms/instantRunSlicer/Nexus5API23/debug/folders/1/5/slice_7/android/support/v7/recyclerview/R.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/transforms/instantRunSlicer/Nexus5API23/debug/folders/1/5/slice_7/buildId.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/transforms/instantRunSlicer/Nexus5API23/debug/folders/1/5/slice_7/com/android/tools/fd/dummy/slice_7.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/transforms/instantRunSlicer/Nexus5API23/debug/folders/1/5/slice_7/com/patrick/Sylvac_Calipers/BondStateReceiver.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/transforms/instantRunSlicer/Nexus5API23/debug/folders/1/5/slice_7/com/patrick/Sylvac_Calipers/BuildConfig.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/transforms/instantRunSlicer/Nexus5API23/debug/folders/1/5/slice_7/com/patrick/Sylvac_Calipers/CommunicationCharacteristics.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/transforms/instantRunSlicer/Nexus5API23/debug/folders/1/5/slice_7/com/patrick/Sylvac_Calipers/ConnectionManager$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/transforms/instantRunSlicer/Nexus5API23/debug/folders/1/5/slice_7/com/patrick/Sylvac_Calipers/ConnectionManager$2.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/transforms/instantRunSlicer/Nexus5API23/debug/folders/1/5/slice_7/com/patrick/Sylvac_Calipers/ConnectionManager$3.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/transforms/instantRunSlicer/Nexus5API23/debug/folders/1/5/slice_7/com/patrick/Sylvac_Calipers/ConnectionManager$4.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/transforms/instantRunSlicer/Nexus5API23/debug/folders/1/5/slice_7/com/patrick/Sylvac_Calipers/ConnectionManager.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/transforms/instantRunSlicer/Nexus5API23/debug/folders/1/5/slice_7/com/patrick/Sylvac_Calipers/DataReceiver$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/transforms/instantRunSlicer/Nexus5API23/debug/folders/1/5/slice_7/com/patrick/Sylvac_Calipers/DataReceiver$2$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/transforms/instantRunSlicer/Nexus5API23/debug/folders/1/5/slice_7/com/patrick/Sylvac_Calipers/DataReceiver$2$2.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/transforms/instantRunSlicer/Nexus5API23/debug/folders/1/5/slice_7/com/patrick/Sylvac_Calipers/DataReceiver$2.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/transforms/instantRunSlicer/Nexus5API23/debug/folders/1/5/slice_7/com/patrick/Sylvac_Calipers/DataReceiver.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/transforms/instantRunSlicer/Nexus5API23/debug/folders/1/5/slice_7/com/patrick/Sylvac_Calipers/DataRecord.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/transforms/instantRunSlicer/Nexus5API23/debug/folders/1/5/slice_7/com/patrick/Sylvac_Calipers/DeviceScanFragment$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/transforms/instantRunSlicer/Nexus5API23/debug/folders/1/5/slice_7/com/patrick/Sylvac_Calipers/DeviceScanFragment$2.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/transforms/instantRunSlicer/Nexus5API23/debug/folders/1/5/slice_7/com/patrick/Sylvac_Calipers/DeviceScanFragment$DeviceListAdapter.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/transforms/instantRunSlicer/Nexus5API23/debug/folders/1/5/slice_7/com/patrick/Sylvac_Calipers/DeviceScanFragment$ScanTimeout.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/transforms/instantRunSlicer/Nexus5API23/debug/folders/1/5/slice_7/com/patrick/Sylvac_Calipers/DeviceScanFragment$ViewHolder.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/transforms/instantRunSlicer/Nexus5API23/debug/folders/1/5/slice_7/com/patrick/Sylvac_Calipers/DeviceScanFragment.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/transforms/instantRunSlicer/Nexus5API23/debug/folders/1/5/slice_7/com/patrick/Sylvac_Calipers/HelpActivity$HelpListAdapter.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/transforms/instantRunSlicer/Nexus5API23/debug/folders/1/5/slice_7/com/patrick/Sylvac_Calipers/HelpActivity$HelpTopic.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/transforms/instantRunSlicer/Nexus5API23/debug/folders/1/5/slice_7/com/patrick/Sylvac_Calipers/HelpActivity.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/transforms/instantRunSlicer/Nexus5API23/debug/folders/1/5/slice_7/com/patrick/Sylvac_Calipers/MainActivity$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/transforms/instantRunSlicer/Nexus5API23/debug/folders/1/5/slice_7/com/patrick/Sylvac_Calipers/MainActivity$2.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/transforms/instantRunSlicer/Nexus5API23/debug/folders/1/5/slice_7/com/patrick/Sylvac_Calipers/MainActivity.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/transforms/instantRunSlicer/Nexus5API23/debug/folders/1/5/slice_7/com/patrick/Sylvac_Calipers/PageFragmentAdapter.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/transforms/instantRunSlicer/Nexus5API23/debug/folders/1/5/slice_7/com/patrick/Sylvac_Calipers/R$anim.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/transforms/instantRunSlicer/Nexus5API23/debug/folders/1/5/slice_7/com/patrick/Sylvac_Calipers/R$array.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/transforms/instantRunSlicer/Nexus5API23/debug/folders/1/5/slice_7/com/patrick/Sylvac_Calipers/R$attr.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/transforms/instantRunSlicer/Nexus5API23/debug/folders/1/5/slice_7/com/patrick/Sylvac_Calipers/R$bool.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/transforms/instantRunSlicer/Nexus5API23/debug/folders/1/5/slice_7/com/patrick/Sylvac_Calipers/R$color.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/transforms/instantRunSlicer/Nexus5API23/debug/folders/1/5/slice_7/com/patrick/Sylvac_Calipers/R$dimen.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/transforms/instantRunSlicer/Nexus5API23/debug/folders/1/5/slice_7/com/patrick/Sylvac_Calipers/R$drawable.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/transforms/instantRunSlicer/Nexus5API23/debug/folders/1/5/slice_7/com/patrick/Sylvac_Calipers/R$id.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/transforms/instantRunSlicer/Nexus5API23/debug/folders/1/5/slice_7/com/patrick/Sylvac_Calipers/R$integer.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/transforms/instantRunSlicer/Nexus5API23/debug/folders/1/5/slice_7/com/patrick/Sylvac_Calipers/R$layout.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/transforms/instantRunSlicer/Nexus5API23/debug/folders/1/5/slice_7/com/patrick/Sylvac_Calipers/R$menu.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/transforms/instantRunSlicer/Nexus5API23/debug/folders/1/5/slice_7/com/patrick/Sylvac_Calipers/R$raw.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/transforms/instantRunSlicer/Nexus5API23/debug/folders/1/5/slice_7/com/patrick/Sylvac_Calipers/R$string.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/transforms/instantRunSlicer/Nexus5API23/debug/folders/1/5/slice_7/com/patrick/Sylvac_Calipers/R$style.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/transforms/instantRunSlicer/Nexus5API23/debug/folders/1/5/slice_7/com/patrick/Sylvac_Calipers/R$styleable.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/transforms/instantRunSlicer/Nexus5API23/debug/folders/1/5/slice_7/com/patrick/Sylvac_Calipers/R$xml.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/transforms/instantRunSlicer/Nexus5API23/debug/folders/1/5/slice_7/com/patrick/Sylvac_Calipers/R.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/transforms/instantRunSlicer/Nexus5API23/debug/folders/1/5/slice_7/com/patrick/Sylvac_Calipers/RecordAdapter.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/transforms/instantRunSlicer/Nexus5API23/debug/folders/1/5/slice_7/com/patrick/Sylvac_Calipers/RecordFragment$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/transforms/instantRunSlicer/Nexus5API23/debug/folders/1/5/slice_7/com/patrick/Sylvac_Calipers/RecordFragment$2.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/transforms/instantRunSlicer/Nexus5API23/debug/folders/1/5/slice_7/com/patrick/Sylvac_Calipers/RecordFragment.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/transforms/instantRunSlicer/Nexus5API23/debug/folders/1/5/slice_7/com/patrick/Sylvac_Calipers/SettingsActivity$SettingsFragment.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/transforms/instantRunSlicer/Nexus5API23/debug/folders/1/5/slice_7/com/patrick/Sylvac_Calipers/SettingsActivity.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/transforms/instantRunSlicer/Nexus5API23/debug/folders/1/5/slice_8/com/android/tools/fd/dummy/slice_8.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/transforms/instantRunSlicer/Nexus5API23/debug/folders/1/5/slice_9/com/android/tools/fd/dummy/slice_9.class" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/3.3/taskArtifacts/fileHashes.bin" afterPath="$PROJECT_DIR$/.gradle/3.3/taskArtifacts/fileHashes.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/3.3/taskArtifacts/fileSnapshots.bin" afterPath="$PROJECT_DIR$/.gradle/3.3/taskArtifacts/fileSnapshots.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/3.3/taskArtifacts/taskArtifacts.bin" afterPath="$PROJECT_DIR$/.gradle/3.3/taskArtifacts/taskArtifacts.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/3.3/taskArtifacts/taskArtifacts.lock" afterPath="$PROJECT_DIR$/.gradle/3.3/taskArtifacts/taskArtifacts.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/3.3/tasks/_SylvacCalipers_compileNexus5API23DebugJavaWithJavac/localClassSetAnalysis/localClassSetAnalysis.lock" afterPath="$PROJECT_DIR$/.gradle/3.3/tasks/_SylvacCalipers_compileNexus5API23DebugJavaWithJavac/localClassSetAnalysis/localClassSetAnalysis.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/3.3/tasks/_SylvacCalipers_compileNexus5API23DebugJavaWithJavac/localJarClasspathSnapshot/localJarClasspathSnapshot.bin" afterPath="$PROJECT_DIR$/.gradle/3.3/tasks/_SylvacCalipers_compileNexus5API23DebugJavaWithJavac/localJarClasspathSnapshot/localJarClasspathSnapshot.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/3.3/tasks/_SylvacCalipers_compileNexus5API23DebugJavaWithJavac/localJarClasspathSnapshot/localJarClasspathSnapshot.lock" afterPath="$PROJECT_DIR$/.gradle/3.3/tasks/_SylvacCalipers_compileNexus5API23DebugJavaWithJavac/localJarClasspathSnapshot/localJarClasspathSnapshot.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Sylvac Bluetooth Calipers.docx" afterPath="$PROJECT_DIR$/Sylvac Bluetooth Calipers.docx" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/classes/Nexus5API23/debug/com/patrick/Sylvac_Calipers/BuildConfig.class" afterPath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/classes/Nexus5API23/debug/com/patrick/Sylvac_Calipers/BuildConfig.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/classes/Nexus5API23/debug/com/patrick/Sylvac_Calipers/DataReceiver$1.class" afterPath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/classes/Nexus5API23/debug/com/patrick/Sylvac_Calipers/DataReceiver$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/classes/Nexus5API23/debug/com/patrick/Sylvac_Calipers/DataReceiver$2$1.class" afterPath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/classes/Nexus5API23/debug/com/patrick/Sylvac_Calipers/DataReceiver$2$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/classes/Nexus5API23/debug/com/patrick/Sylvac_Calipers/DataReceiver$2$2.class" afterPath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/classes/Nexus5API23/debug/com/patrick/Sylvac_Calipers/DataReceiver$2$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/classes/Nexus5API23/debug/com/patrick/Sylvac_Calipers/DataReceiver$2.class" afterPath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/classes/Nexus5API23/debug/com/patrick/Sylvac_Calipers/DataReceiver$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/classes/Nexus5API23/debug/com/patrick/Sylvac_Calipers/DataReceiver.class" afterPath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/classes/Nexus5API23/debug/com/patrick/Sylvac_Calipers/DataReceiver.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/classes/Nexus5API23/debug/com/patrick/Sylvac_Calipers/MainActivity$1.class" afterPath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/classes/Nexus5API23/debug/com/patrick/Sylvac_Calipers/MainActivity$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/classes/Nexus5API23/debug/com/patrick/Sylvac_Calipers/MainActivity$2.class" afterPath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/classes/Nexus5API23/debug/com/patrick/Sylvac_Calipers/MainActivity$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/classes/Nexus5API23/debug/com/patrick/Sylvac_Calipers/MainActivity.class" afterPath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/classes/Nexus5API23/debug/com/patrick/Sylvac_Calipers/MainActivity.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/classes/Nexus5API23/debug/com/patrick/Sylvac_Calipers/R$raw.class" afterPath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/classes/Nexus5API23/debug/com/patrick/Sylvac_Calipers/R$raw.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/classes/Nexus5API23/debug/com/patrick/Sylvac_Calipers/R$string.class" afterPath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/classes/Nexus5API23/debug/com/patrick/Sylvac_Calipers/R$string.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/classes/Nexus5API23/debug/com/patrick/Sylvac_Calipers/R$style.class" afterPath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/classes/Nexus5API23/debug/com/patrick/Sylvac_Calipers/R$style.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/classes/Nexus5API23/debug/com/patrick/Sylvac_Calipers/R$styleable.class" afterPath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/classes/Nexus5API23/debug/com/patrick/Sylvac_Calipers/R$styleable.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/classes/Nexus5API23/debug/com/patrick/Sylvac_Calipers/R$xml.class" afterPath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/classes/Nexus5API23/debug/com/patrick/Sylvac_Calipers/R$xml.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/incremental-classes/Nexus5API23/debug/instant-run-bootstrap.jar" afterPath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/incremental-classes/Nexus5API23/debug/instant-run-bootstrap.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/incremental-verifier/Nexus5API23/debug/com/patrick/Sylvac_Calipers/BuildConfig.class" afterPath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/incremental-verifier/Nexus5API23/debug/com/patrick/Sylvac_Calipers/BuildConfig.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/incremental-verifier/Nexus5API23/debug/com/patrick/Sylvac_Calipers/DataReceiver$1.class" afterPath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/incremental-verifier/Nexus5API23/debug/com/patrick/Sylvac_Calipers/DataReceiver$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/incremental-verifier/Nexus5API23/debug/com/patrick/Sylvac_Calipers/DataReceiver$2$1.class" afterPath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/incremental-verifier/Nexus5API23/debug/com/patrick/Sylvac_Calipers/DataReceiver$2$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/incremental-verifier/Nexus5API23/debug/com/patrick/Sylvac_Calipers/DataReceiver$2$2.class" afterPath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/incremental-verifier/Nexus5API23/debug/com/patrick/Sylvac_Calipers/DataReceiver$2$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/incremental-verifier/Nexus5API23/debug/com/patrick/Sylvac_Calipers/DataReceiver$2.class" afterPath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/incremental-verifier/Nexus5API23/debug/com/patrick/Sylvac_Calipers/DataReceiver$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/incremental-verifier/Nexus5API23/debug/com/patrick/Sylvac_Calipers/DataReceiver.class" afterPath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/incremental-verifier/Nexus5API23/debug/com/patrick/Sylvac_Calipers/DataReceiver.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/incremental-verifier/Nexus5API23/debug/com/patrick/Sylvac_Calipers/MainActivity$1.class" afterPath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/incremental-verifier/Nexus5API23/debug/com/patrick/Sylvac_Calipers/MainActivity$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/incremental-verifier/Nexus5API23/debug/com/patrick/Sylvac_Calipers/MainActivity$2.class" afterPath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/incremental-verifier/Nexus5API23/debug/com/patrick/Sylvac_Calipers/MainActivity$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/incremental-verifier/Nexus5API23/debug/com/patrick/Sylvac_Calipers/MainActivity.class" afterPath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/incremental-verifier/Nexus5API23/debug/com/patrick/Sylvac_Calipers/MainActivity.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/incremental-verifier/Nexus5API23/debug/com/patrick/Sylvac_Calipers/R$raw.class" afterPath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/incremental-verifier/Nexus5API23/debug/com/patrick/Sylvac_Calipers/R$raw.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/incremental-verifier/Nexus5API23/debug/com/patrick/Sylvac_Calipers/R$string.class" afterPath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/incremental-verifier/Nexus5API23/debug/com/patrick/Sylvac_Calipers/R$string.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/incremental-verifier/Nexus5API23/debug/com/patrick/Sylvac_Calipers/R$style.class" afterPath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/incremental-verifier/Nexus5API23/debug/com/patrick/Sylvac_Calipers/R$style.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/incremental-verifier/Nexus5API23/debug/com/patrick/Sylvac_Calipers/R$styleable.class" afterPath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/incremental-verifier/Nexus5API23/debug/com/patrick/Sylvac_Calipers/R$styleable.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/incremental-verifier/Nexus5API23/debug/com/patrick/Sylvac_Calipers/R$xml.class" afterPath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/incremental-verifier/Nexus5API23/debug/com/patrick/Sylvac_Calipers/R$xml.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/incremental/packageInstantRunResourcesNexus5API23Debug/zip-cache/eZKZqJtdKghNShvxor+wHvYpnls=" afterPath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/incremental/packageInstantRunResourcesNexus5API23Debug/zip-cache/eZKZqJtdKghNShvxor+wHvYpnls=" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/incremental/packageNexus5API23Debug/zip-cache/eZKZqJtdKghNShvxor+wHvYpnls=" afterPath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/incremental/packageNexus5API23Debug/zip-cache/eZKZqJtdKghNShvxor+wHvYpnls=" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/instant-run-resources/resources-Nexus5API23/debug.ir.ap_" afterPath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/instant-run-resources/resources-Nexus5API23/debug.ir.ap_" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/res/resources-Nexus5API23-debug.ap_" afterPath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/res/resources-Nexus5API23-debug.ap_" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/split-apk/Nexus5API23/debug/dep/dependencies.apk" afterPath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/split-apk/Nexus5API23/debug/dep/dependencies.apk" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/split-apk/Nexus5API23/debug/slices/slice_7.apk" afterPath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/split-apk/Nexus5API23/debug/slices/slice_7.apk" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/transforms/dex/Nexus5API23/debug/folders/1000/5/slice_7/classes.dex" afterPath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/transforms/dex/Nexus5API23/debug/folders/1000/5/slice_7/classes.dex" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/transforms/instantRun/Nexus5API23/debug/folders/1/5/main/com/patrick/Sylvac_Calipers/BuildConfig.class" afterPath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/transforms/instantRun/Nexus5API23/debug/folders/1/5/main/com/patrick/Sylvac_Calipers/BuildConfig.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/transforms/instantRun/Nexus5API23/debug/folders/1/5/main/com/patrick/Sylvac_Calipers/DataReceiver$1.class" afterPath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/transforms/instantRun/Nexus5API23/debug/folders/1/5/main/com/patrick/Sylvac_Calipers/DataReceiver$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/transforms/instantRun/Nexus5API23/debug/folders/1/5/main/com/patrick/Sylvac_Calipers/DataReceiver$2$1.class" afterPath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/transforms/instantRun/Nexus5API23/debug/folders/1/5/main/com/patrick/Sylvac_Calipers/DataReceiver$2$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/transforms/instantRun/Nexus5API23/debug/folders/1/5/main/com/patrick/Sylvac_Calipers/DataReceiver$2$2.class" afterPath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/transforms/instantRun/Nexus5API23/debug/folders/1/5/main/com/patrick/Sylvac_Calipers/DataReceiver$2$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/transforms/instantRun/Nexus5API23/debug/folders/1/5/main/com/patrick/Sylvac_Calipers/DataReceiver$2.class" afterPath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/transforms/instantRun/Nexus5API23/debug/folders/1/5/main/com/patrick/Sylvac_Calipers/DataReceiver$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/transforms/instantRun/Nexus5API23/debug/folders/1/5/main/com/patrick/Sylvac_Calipers/DataReceiver.class" afterPath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/transforms/instantRun/Nexus5API23/debug/folders/1/5/main/com/patrick/Sylvac_Calipers/DataReceiver.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/transforms/instantRun/Nexus5API23/debug/folders/1/5/main/com/patrick/Sylvac_Calipers/MainActivity$1.class" afterPath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/transforms/instantRun/Nexus5API23/debug/folders/1/5/main/com/patrick/Sylvac_Calipers/MainActivity$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/transforms/instantRun/Nexus5API23/debug/folders/1/5/main/com/patrick/Sylvac_Calipers/MainActivity$2.class" afterPath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/transforms/instantRun/Nexus5API23/debug/folders/1/5/main/com/patrick/Sylvac_Calipers/MainActivity$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/transforms/instantRun/Nexus5API23/debug/folders/1/5/main/com/patrick/Sylvac_Calipers/MainActivity.class" afterPath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/transforms/instantRun/Nexus5API23/debug/folders/1/5/main/com/patrick/Sylvac_Calipers/MainActivity.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/transforms/instantRun/Nexus5API23/debug/folders/1/5/main/com/patrick/Sylvac_Calipers/R$raw.class" afterPath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/transforms/instantRun/Nexus5API23/debug/folders/1/5/main/com/patrick/Sylvac_Calipers/R$raw.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/transforms/instantRun/Nexus5API23/debug/folders/1/5/main/com/patrick/Sylvac_Calipers/R$string.class" afterPath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/transforms/instantRun/Nexus5API23/debug/folders/1/5/main/com/patrick/Sylvac_Calipers/R$string.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/transforms/instantRun/Nexus5API23/debug/folders/1/5/main/com/patrick/Sylvac_Calipers/R$style.class" afterPath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/transforms/instantRun/Nexus5API23/debug/folders/1/5/main/com/patrick/Sylvac_Calipers/R$style.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/transforms/instantRun/Nexus5API23/debug/folders/1/5/main/com/patrick/Sylvac_Calipers/R$styleable.class" afterPath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/transforms/instantRun/Nexus5API23/debug/folders/1/5/main/com/patrick/Sylvac_Calipers/R$styleable.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/transforms/instantRun/Nexus5API23/debug/folders/1/5/main/com/patrick/Sylvac_Calipers/R$xml.class" afterPath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/transforms/instantRun/Nexus5API23/debug/folders/1/5/main/com/patrick/Sylvac_Calipers/R$xml.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/transforms/instantRunSlicer/Nexus5API23/debug/folders/1/5/slice_7/com/patrick/Sylvac_Calipers/BuildConfig.class" afterPath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/transforms/instantRunSlicer/Nexus5API23/debug/folders/1/5/slice_7/com/patrick/Sylvac_Calipers/BuildConfig.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/transforms/instantRunSlicer/Nexus5API23/debug/folders/1/5/slice_7/com/patrick/Sylvac_Calipers/DataReceiver$1.class" afterPath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/transforms/instantRunSlicer/Nexus5API23/debug/folders/1/5/slice_7/com/patrick/Sylvac_Calipers/DataReceiver$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/transforms/instantRunSlicer/Nexus5API23/debug/folders/1/5/slice_7/com/patrick/Sylvac_Calipers/DataReceiver$2$1.class" afterPath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/transforms/instantRunSlicer/Nexus5API23/debug/folders/1/5/slice_7/com/patrick/Sylvac_Calipers/DataReceiver$2$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/transforms/instantRunSlicer/Nexus5API23/debug/folders/1/5/slice_7/com/patrick/Sylvac_Calipers/DataReceiver$2$2.class" afterPath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/transforms/instantRunSlicer/Nexus5API23/debug/folders/1/5/slice_7/com/patrick/Sylvac_Calipers/DataReceiver$2$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/transforms/instantRunSlicer/Nexus5API23/debug/folders/1/5/slice_7/com/patrick/Sylvac_Calipers/DataReceiver$2.class" afterPath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/transforms/instantRunSlicer/Nexus5API23/debug/folders/1/5/slice_7/com/patrick/Sylvac_Calipers/DataReceiver$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/transforms/instantRunSlicer/Nexus5API23/debug/folders/1/5/slice_7/com/patrick/Sylvac_Calipers/DataReceiver.class" afterPath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/transforms/instantRunSlicer/Nexus5API23/debug/folders/1/5/slice_7/com/patrick/Sylvac_Calipers/DataReceiver.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/transforms/instantRunSlicer/Nexus5API23/debug/folders/1/5/slice_7/com/patrick/Sylvac_Calipers/MainActivity$1.class" afterPath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/transforms/instantRunSlicer/Nexus5API23/debug/folders/1/5/slice_7/com/patrick/Sylvac_Calipers/MainActivity$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/transforms/instantRunSlicer/Nexus5API23/debug/folders/1/5/slice_7/com/patrick/Sylvac_Calipers/MainActivity$2.class" afterPath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/transforms/instantRunSlicer/Nexus5API23/debug/folders/1/5/slice_7/com/patrick/Sylvac_Calipers/MainActivity$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/transforms/instantRunSlicer/Nexus5API23/debug/folders/1/5/slice_7/com/patrick/Sylvac_Calipers/MainActivity.class" afterPath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/transforms/instantRunSlicer/Nexus5API23/debug/folders/1/5/slice_7/com/patrick/Sylvac_Calipers/MainActivity.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/transforms/instantRunSlicer/Nexus5API23/debug/folders/1/5/slice_7/com/patrick/Sylvac_Calipers/R$raw.class" afterPath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/transforms/instantRunSlicer/Nexus5API23/debug/folders/1/5/slice_7/com/patrick/Sylvac_Calipers/R$raw.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/transforms/instantRunSlicer/Nexus5API23/debug/folders/1/5/slice_7/com/patrick/Sylvac_Calipers/R$string.class" afterPath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/transforms/instantRunSlicer/Nexus5API23/debug/folders/1/5/slice_7/com/patrick/Sylvac_Calipers/R$string.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/transforms/instantRunSlicer/Nexus5API23/debug/folders/1/5/slice_7/com/patrick/Sylvac_Calipers/R$style.class" afterPath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/transforms/instantRunSlicer/Nexus5API23/debug/folders/1/5/slice_7/com/patrick/Sylvac_Calipers/R$style.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/transforms/instantRunSlicer/Nexus5API23/debug/folders/1/5/slice_7/com/patrick/Sylvac_Calipers/R$styleable.class" afterPath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/transforms/instantRunSlicer/Nexus5API23/debug/folders/1/5/slice_7/com/patrick/Sylvac_Calipers/R$styleable.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/transforms/instantRunSlicer/Nexus5API23/debug/folders/1/5/slice_7/com/patrick/Sylvac_Calipers/R$xml.class" afterPath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/transforms/instantRunSlicer/Nexus5API23/debug/folders/1/5/slice_7/com/patrick/Sylvac_Calipers/R$xml.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SylvacCalipers/build/outputs/apk/SylvacCalipers-Nexus5API23-debug.apk" afterPath="$PROJECT_DIR$/SylvacCalipers/build/outputs/apk/SylvacCalipers-Nexus5API23-debug.apk" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/appcompat_v7_23_1_1.xml" afterPath="$PROJECT_DIR$/.idea/libraries/appcompat_v7_23_1_1.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/design_23_1_1.xml" afterPath="$PROJECT_DIR$/.idea/libraries/design_23_1_1.xml" />
@@ -233,8 +371,6 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/support_v4_23_1_1.xml" afterPath="$PROJECT_DIR$/.idea/libraries/support_v4_23_1_1.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SylvacCalipers/SylvacCalipers.iml" afterPath="$PROJECT_DIR$/SylvacCalipers/SylvacCalipers.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SylvacCalipers/build/generated/source/buildConfig/Nexus5API23/debug/com/patrick/Sylvac_Calipers/BuildConfig.java" afterPath="$PROJECT_DIR$/SylvacCalipers/build/generated/source/buildConfig/Nexus5API23/debug/com/patrick/Sylvac_Calipers/BuildConfig.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SylvacCalipers/build/generated/source/r/Nexus5API23/debug/com/patrick/Sylvac_Calipers/R.java" afterPath="$PROJECT_DIR$/SylvacCalipers/build/generated/source/r/Nexus5API23/debug/com/patrick/Sylvac_Calipers/R.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/blame/res/Nexus5API23/debug/multi/values-af.json" afterPath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/blame/res/Nexus5API23/debug/multi/values-af.json" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/blame/res/Nexus5API23/debug/multi/values-am.json" afterPath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/blame/res/Nexus5API23/debug/multi/values-am.json" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/blame/res/Nexus5API23/debug/multi/values-ar.json" afterPath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/blame/res/Nexus5API23/debug/multi/values-ar.json" />
@@ -357,36 +493,14 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/blame/res/Nexus5API23/debug/single/drawable.json" afterPath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/blame/res/Nexus5API23/debug/single/drawable.json" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/blame/res/Nexus5API23/debug/single/layout-sw600dp-v13.json" afterPath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/blame/res/Nexus5API23/debug/single/layout-sw600dp-v13.json" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/blame/res/Nexus5API23/debug/single/layout.json" afterPath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/blame/res/Nexus5API23/debug/single/layout.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/blame/res/Nexus5API23/debug/single/raw.json" afterPath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/blame/res/Nexus5API23/debug/single/raw.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/incremental/mergeNexus5API23DebugAndroidTestResources/compile-file-map.properties" afterPath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/incremental/mergeNexus5API23DebugAndroidTestResources/compile-file-map.properties" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/incremental/mergeNexus5API23DebugAssets/merger.xml" afterPath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/incremental/mergeNexus5API23DebugAssets/merger.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/incremental/mergeNexus5API23DebugResources/compile-file-map.properties" afterPath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/incremental/mergeNexus5API23DebugResources/compile-file-map.properties" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/incremental/mergeNexus5API23DebugResources/merger.xml" afterPath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/incremental/mergeNexus5API23DebugResources/merger.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/incremental/packageInstantRunResourcesNexus5API23Debug/dex-renamer-state.txt" afterPath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/incremental/packageInstantRunResourcesNexus5API23Debug/dex-renamer-state.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/incremental/packageInstantRunResourcesNexus5API23Debug/file-input-save-data.txt" afterPath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/incremental/packageInstantRunResourcesNexus5API23Debug/file-input-save-data.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/incremental/packageNexus5API23Debug/dex-renamer-state.txt" afterPath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/incremental/packageNexus5API23Debug/dex-renamer-state.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/incremental/packageNexus5API23Debug/file-input-save-data.txt" afterPath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/incremental/packageNexus5API23Debug/file-input-save-data.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/instant-run-support/Nexus5API23/debug/manifest.crc" afterPath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/instant-run-support/Nexus5API23/debug/manifest.crc" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/instant-run-support/Nexus5API23/debug/manifest.xml" afterPath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/instant-run-support/Nexus5API23/debug/manifest.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/instant-run-support/Nexus5API23/debug/package_dependencies/dex-renamer-state.txt" afterPath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/instant-run-support/Nexus5API23/debug/package_dependencies/dex-renamer-state.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/instant-run-support/Nexus5API23/debug/package_slice_0/dex-renamer-state.txt" afterPath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/instant-run-support/Nexus5API23/debug/package_slice_0/dex-renamer-state.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/instant-run-support/Nexus5API23/debug/package_slice_1/dex-renamer-state.txt" afterPath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/instant-run-support/Nexus5API23/debug/package_slice_1/dex-renamer-state.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/instant-run-support/Nexus5API23/debug/package_slice_2/dex-renamer-state.txt" afterPath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/instant-run-support/Nexus5API23/debug/package_slice_2/dex-renamer-state.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/instant-run-support/Nexus5API23/debug/package_slice_3/dex-renamer-state.txt" afterPath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/instant-run-support/Nexus5API23/debug/package_slice_3/dex-renamer-state.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/instant-run-support/Nexus5API23/debug/package_slice_4/dex-renamer-state.txt" afterPath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/instant-run-support/Nexus5API23/debug/package_slice_4/dex-renamer-state.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/instant-run-support/Nexus5API23/debug/package_slice_5/dex-renamer-state.txt" afterPath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/instant-run-support/Nexus5API23/debug/package_slice_5/dex-renamer-state.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/instant-run-support/Nexus5API23/debug/package_slice_6/dex-renamer-state.txt" afterPath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/instant-run-support/Nexus5API23/debug/package_slice_6/dex-renamer-state.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/instant-run-support/Nexus5API23/debug/package_slice_7/dex-renamer-state.txt" afterPath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/instant-run-support/Nexus5API23/debug/package_slice_7/dex-renamer-state.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/instant-run-support/Nexus5API23/debug/package_slice_8/dex-renamer-state.txt" afterPath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/instant-run-support/Nexus5API23/debug/package_slice_8/dex-renamer-state.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/instant-run-support/Nexus5API23/debug/package_slice_9/dex-renamer-state.txt" afterPath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/instant-run-support/Nexus5API23/debug/package_slice_9/dex-renamer-state.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/manifests/full/Nexus5API23/debug/AndroidManifest.xml" afterPath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/manifests/full/Nexus5API23/debug/AndroidManifest.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/manifests/instant-run/Nexus5API23/debug/AndroidManifest.xml" afterPath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/manifests/instant-run/Nexus5API23/debug/AndroidManifest.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/restart-dex/Nexus5API23/debug/build-info.xml" afterPath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/restart-dex/Nexus5API23/debug/build-info.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/symbols/Nexus5API23/debug/R.txt" afterPath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/symbols/Nexus5API23/debug/R.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/transforms/instantRunSlicer/Nexus5API23/debug/folders/1/5/slice_7/buildId.txt" afterPath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/transforms/instantRunSlicer/Nexus5API23/debug/folders/1/5/slice_7/buildId.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SylvacCalipers/build/outputs/logs/manifest-merger-Nexus5API23-debug-report.txt" afterPath="$PROJECT_DIR$/SylvacCalipers/build/outputs/logs/manifest-merger-Nexus5API23-debug-report.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SylvacCalipers/src/main/AndroidManifest.xml" afterPath="$PROJECT_DIR$/SylvacCalipers/src/main/AndroidManifest.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SylvacCalipers/src/main/java/com/patrick/Sylvac_Calipers/DataReceiver.java" afterPath="$PROJECT_DIR$/SylvacCalipers/src/main/java/com/patrick/Sylvac_Calipers/DataReceiver.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SylvacCalipers/src/main/java/com/patrick/Sylvac_Calipers/MainActivity.java" afterPath="$PROJECT_DIR$/SylvacCalipers/src/main/java/com/patrick/Sylvac_Calipers/MainActivity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build.gradle" afterPath="$PROJECT_DIR$/build.gradle" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/dex-cache/cache.xml" afterPath="$PROJECT_DIR$/build/intermediates/dex-cache/cache.xml" />
     </list>
     <ignored path="Sylvac Measurements.iws" />
@@ -444,28 +558,13 @@
       <file leaf-file-name="DataReceiver.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/SylvacCalipers/src/main/java/com/patrick/Sylvac_Calipers/DataReceiver.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="264">
-              <caret line="112" column="42" selection-start-line="112" selection-start-column="42" selection-end-line="112" selection-end-column="42" />
+            <state relative-caret-position="616">
+              <caret line="168" column="43" selection-start-line="167" selection-start-column="22" selection-end-line="168" selection-end-column="43" />
               <folding>
                 <element signature="method#scrollList#0;class#DataReceiver#0" expanded="false" />
                 <element signature="method#saveAllRecords#0;class#DataReceiver#0" expanded="false" />
-                <element signature="e#9004#11039#0" expanded="true" />
-                <element signature="e#11038#11039#0" expanded="true" />
                 <element signature="method#resetCurrentRecord#0;class#DataReceiver#0" expanded="false" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AndroidManifest.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/SylvacCalipers/src/main/AndroidManifest.xml">
-          <provider editor-type-id="android-manifest">
-            <state />
-          </provider>
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="198">
-              <caret line="9" column="1" selection-start-line="9" selection-start-column="1" selection-end-line="9" selection-end-column="1" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -473,14 +572,19 @@
       <file leaf-file-name="MainActivity.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/SylvacCalipers/src/main/java/com/patrick/Sylvac_Calipers/MainActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-79">
+            <state relative-caret-position="968">
               <caret line="65" column="58" selection-start-line="65" selection-start-column="58" selection-end-line="65" selection-end-column="58" />
               <folding>
+                <element signature="imports" expanded="false" />
                 <element signature="method#onCreateOptionsMenu#0;class#MainActivity#0" expanded="false" />
                 <element signature="method#onOptionsItemSelected#0;class#MainActivity#0" expanded="false" />
+                <element signature="e#6483#6484#0" expanded="false" />
+                <element signature="e#6514#6515#0" expanded="false" />
                 <element signature="method#setConnectionStatus#0;class#MainActivity#0" expanded="false" />
-                <element signature="e#6939#7180#0" expanded="true" />
-                <element signature="e#7179#7180#0" expanded="true" />
+                <element signature="e#6729#6730#0" expanded="false" />
+                <element signature="e#6785#6786#0" expanded="false" />
+                <element signature="e#6832#6833#0" expanded="false" />
+                <element signature="e#6875#6876#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -517,12 +621,12 @@
   <component name="GradleLocalSettings">
     <option name="myGradleHomes">
       <map>
-        <entry key="$PROJECT_DIR$" value="C:\Users\HRTWPS\.gradle\wrapper\dists\gradle-3.3-all\55gk2rcmfc6p2dg9u9ohc3hw9\gradle-3.3" />
+        <entry key="$PROJECT_DIR$" value="C:\Program Files (x86)\gradle-3.5" />
       </map>
     </option>
     <option name="myGradleVersions">
       <map>
-        <entry key="$PROJECT_DIR$" value="3.3" />
+        <entry key="$PROJECT_DIR$" value="3.5" />
       </map>
     </option>
     <option name="availableProjects">
@@ -628,7 +732,7 @@
                 <option name="name" value="installNexus5API23DebugAndroidTest" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
-                <option name="description" value="Initializes a new Gradle build. [incubating]" />
+                <option name="description" value="Initializes a new Gradle build." />
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
                 <option name="name" value="init" />
               </ExternalTaskPojo>
@@ -911,7 +1015,7 @@
                 <option name="name" value="generateNexus5API23DebugAndroidTestSources" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
-                <option name="description" value="Generates Gradle wrapper files. [incubating]" />
+                <option name="description" value="Generates Gradle wrapper files." />
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
                 <option name="name" value="wrapper" />
               </ExternalTaskPojo>
@@ -1912,7 +2016,7 @@
     <option name="modificationStamps">
       <map>
         <entry key="$PROJECT_DIR$" value="4446909671719" />
-        <entry key="C:\Android Projects\SylvacMeasurements" value="4468861974896" />
+        <entry key="C:\Android Projects\SylvacMeasurements" value="4474141140310" />
       </map>
     </option>
     <option name="projectBuildClasspath">
@@ -1927,13 +2031,13 @@
                       <ExternalModuleBuildClasspathPojo>
                         <option name="entries">
                           <list>
-                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/build/gradle/2.3.0/gradle-2.3.0.jar" />
-                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/build/gradle-core/2.3.0/gradle-core-2.3.0.jar" />
-                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/build/builder/2.3.0/builder-2.3.0.jar" />
-                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/lint/lint/25.3.0/lint-25.3.0.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/build/gradle/2.3.2/gradle-2.3.2.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/build/gradle-core/2.3.2/gradle-core-2.3.2.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/build/builder/2.3.2/builder-2.3.2.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/lint/lint/25.3.2/lint-25.3.2.jar" />
                             <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/build/transform-api/2.0.0-deprecated-use-gradle-api/transform-api-2.0.0-deprecated-use-gradle-api.jar" />
-                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/build/gradle-api/2.3.0/gradle-api-2.3.0.jar" />
-                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/databinding/compilerCommon/2.3.0/compilerCommon-2.3.0.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/build/gradle-api/2.3.2/gradle-api-2.3.2.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/databinding/compilerCommon/2.3.2/compilerCommon-2.3.2.jar" />
                             <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/org/ow2/asm/asm/5.0.4/asm-5.0.4-sources.jar" />
                             <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/org/ow2/asm/asm/5.0.4/asm-5.0.4.jar" />
                             <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/org/ow2/asm/asm-commons/5.0.4/asm-commons-5.0.4.jar" />
@@ -1942,41 +2046,41 @@
                             <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/org/jacoco/org.jacoco.report/0.7.5.201505241946/org.jacoco.report-0.7.5.201505241946.jar" />
                             <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/net/sf/jopt-simple/jopt-simple/4.9/jopt-simple-4.9.jar" />
                             <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/google/protobuf/protobuf-java/3.0.0/protobuf-java-3.0.0.jar" />
-                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/build/builder-model/2.3.0/builder-model-2.3.0.jar" />
-                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/build/builder-test-api/2.3.0/builder-test-api-2.3.0.jar" />
-                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/sdklib/25.3.0/sdklib-25.3.0.jar" />
-                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/sdk-common/25.3.0/sdk-common-25.3.0.jar" />
-                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/common/25.3.0/common-25.3.0.jar" />
-                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/build/manifest-merger/25.3.0/manifest-merger-25.3.0.jar" />
-                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/ddms/ddmlib/25.3.0/ddmlib-25.3.0.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/build/builder-model/2.3.2/builder-model-2.3.2.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/build/builder-test-api/2.3.2/builder-test-api-2.3.2.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/sdklib/25.3.2/sdklib-25.3.2.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/sdk-common/25.3.2/sdk-common-25.3.2.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/common/25.3.2/common-25.3.2.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/build/manifest-merger/25.3.2/manifest-merger-25.3.2.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/ddms/ddmlib/25.3.2/ddmlib-25.3.2.jar" />
                             <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/jack/jack-api/0.13.0/jack-api-0.13.0.jar" />
                             <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/jill/jill-api/0.10.0/jill-api-0.10.0.jar" />
-                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/analytics-library/protos/25.3.0/protos-25.3.0.jar" />
-                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/analytics-library/shared/25.3.0/shared-25.3.0.jar" />
-                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/analytics-library/tracker/25.3.0/tracker-25.3.0.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/analytics-library/protos/25.3.2/protos-25.3.2.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/analytics-library/shared/25.3.2/shared-25.3.2.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/analytics-library/tracker/25.3.2/tracker-25.3.2.jar" />
                             <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/squareup/javawriter/2.5.0/javawriter-2.5.0.jar" />
                             <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/org/bouncycastle/bcpkix-jdk15on/1.48/bcpkix-jdk15on-1.48.jar" />
                             <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/org/bouncycastle/bcprov-jdk15on/1.48/bcprov-jdk15on-1.48.jar" />
                             <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/org/ow2/asm/asm-tree/5.0.4/asm-tree-5.0.4.jar" />
-                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/lint/lint-checks/25.3.0/lint-checks-25.3.0.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/lint/lint-checks/25.3.2/lint-checks-25.3.2.jar" />
                             <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/org/eclipse/jdt/core/compiler/ecj/4.6.1/ecj-4.6.1.jar" />
                             <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/google/guava/guava/18.0/guava-18.0.jar" />
-                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/databinding/baseLibrary/2.3.0/baseLibrary-2.3.0.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/databinding/baseLibrary/2.3.2/baseLibrary-2.3.2.jar" />
                             <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/org/antlr/antlr4/4.5.3/antlr4-4.5.3.jar" />
                             <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/commons-io/commons-io/2.4/commons-io-2.4.jar" />
                             <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/googlecode/juniversalchardet/juniversalchardet/1.0.3/juniversalchardet-1.0.3.jar" />
-                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/annotations/25.3.0/annotations-25.3.0.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/annotations/25.3.2/annotations-25.3.2.jar" />
                             <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/net/sf/proguard/proguard-base/5.3.2/proguard-base-5.3.2.jar" />
                             <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/org/ow2/asm/asm-debug-all/5.0.1/asm-debug-all-5.0.1.jar" />
-                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/layoutlib/layoutlib-api/25.3.0/layoutlib-api-25.3.0.jar" />
-                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/dvlib/25.3.0/dvlib-25.3.0.jar" />
-                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/repository/25.3.0/repository-25.3.0.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/layoutlib/layoutlib-api/25.3.2/layoutlib-api-25.3.2.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/dvlib/25.3.2/dvlib-25.3.2.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/repository/25.3.2/repository-25.3.2.jar" />
                             <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/google/code/gson/gson/2.2.4/gson-2.2.4.jar" />
                             <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/org/apache/commons/commons-compress/1.8.1/commons-compress-1.8.1.jar" />
                             <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/org/apache/httpcomponents/httpclient/4.1.1/httpclient-4.1.1.jar" />
                             <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/org/apache/httpcomponents/httpmime/4.1/httpmime-4.1.jar" />
                             <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/net/sf/kxml/kxml2/2.3.0/kxml2-2.3.0.jar" />
-                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/lint/lint-api/25.3.0/lint-api-25.3.0.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/lint/lint-api/25.3.2/lint-api-25.3.2.jar" />
                             <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/org/ow2/asm/asm-analysis/5.0.4/asm-analysis-5.0.4.jar" />
                             <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/intellij/annotations/12.0/annotations-12.0.jar" />
                             <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/google/jimfs/jimfs/1.1/jimfs-1.1.jar" />
@@ -1996,13 +2100,13 @@
                       <ExternalModuleBuildClasspathPojo>
                         <option name="entries">
                           <list>
-                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/build/gradle/2.3.0/gradle-2.3.0.jar" />
-                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/build/gradle-core/2.3.0/gradle-core-2.3.0.jar" />
-                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/build/builder/2.3.0/builder-2.3.0.jar" />
-                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/lint/lint/25.3.0/lint-25.3.0.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/build/gradle/2.3.2/gradle-2.3.2.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/build/gradle-core/2.3.2/gradle-core-2.3.2.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/build/builder/2.3.2/builder-2.3.2.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/lint/lint/25.3.2/lint-25.3.2.jar" />
                             <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/build/transform-api/2.0.0-deprecated-use-gradle-api/transform-api-2.0.0-deprecated-use-gradle-api.jar" />
-                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/build/gradle-api/2.3.0/gradle-api-2.3.0.jar" />
-                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/databinding/compilerCommon/2.3.0/compilerCommon-2.3.0.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/build/gradle-api/2.3.2/gradle-api-2.3.2.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/databinding/compilerCommon/2.3.2/compilerCommon-2.3.2.jar" />
                             <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/org/ow2/asm/asm/5.0.4/asm-5.0.4-sources.jar" />
                             <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/org/ow2/asm/asm/5.0.4/asm-5.0.4.jar" />
                             <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/org/ow2/asm/asm-commons/5.0.4/asm-commons-5.0.4.jar" />
@@ -2011,41 +2115,41 @@
                             <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/org/jacoco/org.jacoco.report/0.7.5.201505241946/org.jacoco.report-0.7.5.201505241946.jar" />
                             <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/net/sf/jopt-simple/jopt-simple/4.9/jopt-simple-4.9.jar" />
                             <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/google/protobuf/protobuf-java/3.0.0/protobuf-java-3.0.0.jar" />
-                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/build/builder-model/2.3.0/builder-model-2.3.0.jar" />
-                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/build/builder-test-api/2.3.0/builder-test-api-2.3.0.jar" />
-                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/sdklib/25.3.0/sdklib-25.3.0.jar" />
-                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/sdk-common/25.3.0/sdk-common-25.3.0.jar" />
-                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/common/25.3.0/common-25.3.0.jar" />
-                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/build/manifest-merger/25.3.0/manifest-merger-25.3.0.jar" />
-                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/ddms/ddmlib/25.3.0/ddmlib-25.3.0.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/build/builder-model/2.3.2/builder-model-2.3.2.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/build/builder-test-api/2.3.2/builder-test-api-2.3.2.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/sdklib/25.3.2/sdklib-25.3.2.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/sdk-common/25.3.2/sdk-common-25.3.2.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/common/25.3.2/common-25.3.2.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/build/manifest-merger/25.3.2/manifest-merger-25.3.2.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/ddms/ddmlib/25.3.2/ddmlib-25.3.2.jar" />
                             <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/jack/jack-api/0.13.0/jack-api-0.13.0.jar" />
                             <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/jill/jill-api/0.10.0/jill-api-0.10.0.jar" />
-                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/analytics-library/protos/25.3.0/protos-25.3.0.jar" />
-                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/analytics-library/shared/25.3.0/shared-25.3.0.jar" />
-                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/analytics-library/tracker/25.3.0/tracker-25.3.0.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/analytics-library/protos/25.3.2/protos-25.3.2.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/analytics-library/shared/25.3.2/shared-25.3.2.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/analytics-library/tracker/25.3.2/tracker-25.3.2.jar" />
                             <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/squareup/javawriter/2.5.0/javawriter-2.5.0.jar" />
                             <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/org/bouncycastle/bcpkix-jdk15on/1.48/bcpkix-jdk15on-1.48.jar" />
                             <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/org/bouncycastle/bcprov-jdk15on/1.48/bcprov-jdk15on-1.48.jar" />
                             <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/org/ow2/asm/asm-tree/5.0.4/asm-tree-5.0.4.jar" />
-                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/lint/lint-checks/25.3.0/lint-checks-25.3.0.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/lint/lint-checks/25.3.2/lint-checks-25.3.2.jar" />
                             <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/org/eclipse/jdt/core/compiler/ecj/4.6.1/ecj-4.6.1.jar" />
                             <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/google/guava/guava/18.0/guava-18.0.jar" />
-                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/databinding/baseLibrary/2.3.0/baseLibrary-2.3.0.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/databinding/baseLibrary/2.3.2/baseLibrary-2.3.2.jar" />
                             <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/org/antlr/antlr4/4.5.3/antlr4-4.5.3.jar" />
                             <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/commons-io/commons-io/2.4/commons-io-2.4.jar" />
                             <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/googlecode/juniversalchardet/juniversalchardet/1.0.3/juniversalchardet-1.0.3.jar" />
-                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/annotations/25.3.0/annotations-25.3.0.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/annotations/25.3.2/annotations-25.3.2.jar" />
                             <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/net/sf/proguard/proguard-base/5.3.2/proguard-base-5.3.2.jar" />
                             <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/org/ow2/asm/asm-debug-all/5.0.1/asm-debug-all-5.0.1.jar" />
-                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/layoutlib/layoutlib-api/25.3.0/layoutlib-api-25.3.0.jar" />
-                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/dvlib/25.3.0/dvlib-25.3.0.jar" />
-                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/repository/25.3.0/repository-25.3.0.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/layoutlib/layoutlib-api/25.3.2/layoutlib-api-25.3.2.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/dvlib/25.3.2/dvlib-25.3.2.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/repository/25.3.2/repository-25.3.2.jar" />
                             <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/google/code/gson/gson/2.2.4/gson-2.2.4.jar" />
                             <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/org/apache/commons/commons-compress/1.8.1/commons-compress-1.8.1.jar" />
                             <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/org/apache/httpcomponents/httpclient/4.1.1/httpclient-4.1.1.jar" />
                             <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/org/apache/httpcomponents/httpmime/4.1/httpmime-4.1.jar" />
                             <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/net/sf/kxml/kxml2/2.3.0/kxml2-2.3.0.jar" />
-                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/lint/lint-api/25.3.0/lint-api-25.3.0.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/lint/lint-api/25.3.2/lint-api-25.3.2.jar" />
                             <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/org/ow2/asm/asm-analysis/5.0.4/asm-analysis-5.0.4.jar" />
                             <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/intellij/annotations/12.0/annotations-12.0.jar" />
                             <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/google/jimfs/jimfs/1.1/jimfs-1.1.jar" />
@@ -2150,6 +2254,76 @@
               <option name="name" value="app" />
               <option name="projectBuildClasspath">
                 <list>
+                  <option value="C:/Program Files (x86)/gradle-3.5/lib/ant-1.9.6.jar" />
+                  <option value="C:/Program Files (x86)/gradle-3.5/lib/ant-launcher-1.9.6.jar" />
+                  <option value="C:/Program Files (x86)/gradle-3.5/lib/gradle-base-services-3.5.jar" />
+                  <option value="C:/Program Files (x86)/gradle-3.5/lib/gradle-base-services-groovy-3.5.jar" />
+                  <option value="C:/Program Files (x86)/gradle-3.5/lib/gradle-cli-3.5.jar" />
+                  <option value="C:/Program Files (x86)/gradle-3.5/lib/gradle-core-3.5.jar" />
+                  <option value="C:/Program Files (x86)/gradle-3.5/lib/gradle-docs-3.5.jar" />
+                  <option value="C:/Program Files (x86)/gradle-3.5/lib/gradle-installation-beacon-3.5.jar" />
+                  <option value="C:/Program Files (x86)/gradle-3.5/lib/gradle-jvm-services-3.5.jar" />
+                  <option value="C:/Program Files (x86)/gradle-3.5/lib/gradle-launcher-3.5.jar" />
+                  <option value="C:/Program Files (x86)/gradle-3.5/lib/gradle-logging-3.5.jar" />
+                  <option value="C:/Program Files (x86)/gradle-3.5/lib/gradle-messaging-3.5.jar" />
+                  <option value="C:/Program Files (x86)/gradle-3.5/lib/gradle-model-core-3.5.jar" />
+                  <option value="C:/Program Files (x86)/gradle-3.5/lib/gradle-model-groovy-3.5.jar" />
+                  <option value="C:/Program Files (x86)/gradle-3.5/lib/gradle-native-3.5.jar" />
+                  <option value="C:/Program Files (x86)/gradle-3.5/lib/gradle-open-api-3.5.jar" />
+                  <option value="C:/Program Files (x86)/gradle-3.5/lib/gradle-process-services-3.5.jar" />
+                  <option value="C:/Program Files (x86)/gradle-3.5/lib/gradle-resources-3.5.jar" />
+                  <option value="C:/Program Files (x86)/gradle-3.5/lib/gradle-runtime-api-info-3.5.jar" />
+                  <option value="C:/Program Files (x86)/gradle-3.5/lib/gradle-script-kotlin-0.8.0.jar" />
+                  <option value="C:/Program Files (x86)/gradle-3.5/lib/gradle-tooling-api-3.5.jar" />
+                  <option value="C:/Program Files (x86)/gradle-3.5/lib/gradle-ui-3.5.jar" />
+                  <option value="C:/Program Files (x86)/gradle-3.5/lib/gradle-version-info-3.5.jar" />
+                  <option value="C:/Program Files (x86)/gradle-3.5/lib/gradle-wrapper-3.5.jar" />
+                  <option value="C:/Program Files (x86)/gradle-3.5/lib/groovy-all-2.4.10.jar" />
+                  <option value="C:/Program Files (x86)/gradle-3.5/lib/plugins/gradle-announce-3.5.jar" />
+                  <option value="C:/Program Files (x86)/gradle-3.5/lib/plugins/gradle-antlr-3.5.jar" />
+                  <option value="C:/Program Files (x86)/gradle-3.5/lib/plugins/gradle-build-cache-http-3.5.jar" />
+                  <option value="C:/Program Files (x86)/gradle-3.5/lib/plugins/gradle-build-comparison-3.5.jar" />
+                  <option value="C:/Program Files (x86)/gradle-3.5/lib/plugins/gradle-build-init-3.5.jar" />
+                  <option value="C:/Program Files (x86)/gradle-3.5/lib/plugins/gradle-code-quality-3.5.jar" />
+                  <option value="C:/Program Files (x86)/gradle-3.5/lib/plugins/gradle-composite-builds-3.5.jar" />
+                  <option value="C:/Program Files (x86)/gradle-3.5/lib/plugins/gradle-dependency-management-3.5.jar" />
+                  <option value="C:/Program Files (x86)/gradle-3.5/lib/plugins/gradle-diagnostics-3.5.jar" />
+                  <option value="C:/Program Files (x86)/gradle-3.5/lib/plugins/gradle-ear-3.5.jar" />
+                  <option value="C:/Program Files (x86)/gradle-3.5/lib/plugins/gradle-ide-3.5.jar" />
+                  <option value="C:/Program Files (x86)/gradle-3.5/lib/plugins/gradle-ide-native-3.5.jar" />
+                  <option value="C:/Program Files (x86)/gradle-3.5/lib/plugins/gradle-ide-play-3.5.jar" />
+                  <option value="C:/Program Files (x86)/gradle-3.5/lib/plugins/gradle-ivy-3.5.jar" />
+                  <option value="C:/Program Files (x86)/gradle-3.5/lib/plugins/gradle-jacoco-3.5.jar" />
+                  <option value="C:/Program Files (x86)/gradle-3.5/lib/plugins/gradle-javascript-3.5.jar" />
+                  <option value="C:/Program Files (x86)/gradle-3.5/lib/plugins/gradle-jetty-3.5.jar" />
+                  <option value="C:/Program Files (x86)/gradle-3.5/lib/plugins/gradle-language-groovy-3.5.jar" />
+                  <option value="C:/Program Files (x86)/gradle-3.5/lib/plugins/gradle-language-java-3.5.jar" />
+                  <option value="C:/Program Files (x86)/gradle-3.5/lib/plugins/gradle-language-jvm-3.5.jar" />
+                  <option value="C:/Program Files (x86)/gradle-3.5/lib/plugins/gradle-language-native-3.5.jar" />
+                  <option value="C:/Program Files (x86)/gradle-3.5/lib/plugins/gradle-language-scala-3.5.jar" />
+                  <option value="C:/Program Files (x86)/gradle-3.5/lib/plugins/gradle-maven-3.5.jar" />
+                  <option value="C:/Program Files (x86)/gradle-3.5/lib/plugins/gradle-osgi-3.5.jar" />
+                  <option value="C:/Program Files (x86)/gradle-3.5/lib/plugins/gradle-platform-base-3.5.jar" />
+                  <option value="C:/Program Files (x86)/gradle-3.5/lib/plugins/gradle-platform-jvm-3.5.jar" />
+                  <option value="C:/Program Files (x86)/gradle-3.5/lib/plugins/gradle-platform-native-3.5.jar" />
+                  <option value="C:/Program Files (x86)/gradle-3.5/lib/plugins/gradle-platform-play-3.5.jar" />
+                  <option value="C:/Program Files (x86)/gradle-3.5/lib/plugins/gradle-plugin-development-3.5.jar" />
+                  <option value="C:/Program Files (x86)/gradle-3.5/lib/plugins/gradle-plugin-use-3.5.jar" />
+                  <option value="C:/Program Files (x86)/gradle-3.5/lib/plugins/gradle-plugins-3.5.jar" />
+                  <option value="C:/Program Files (x86)/gradle-3.5/lib/plugins/gradle-publish-3.5.jar" />
+                  <option value="C:/Program Files (x86)/gradle-3.5/lib/plugins/gradle-reporting-3.5.jar" />
+                  <option value="C:/Program Files (x86)/gradle-3.5/lib/plugins/gradle-resources-http-3.5.jar" />
+                  <option value="C:/Program Files (x86)/gradle-3.5/lib/plugins/gradle-resources-s3-3.5.jar" />
+                  <option value="C:/Program Files (x86)/gradle-3.5/lib/plugins/gradle-resources-sftp-3.5.jar" />
+                  <option value="C:/Program Files (x86)/gradle-3.5/lib/plugins/gradle-scala-3.5.jar" />
+                  <option value="C:/Program Files (x86)/gradle-3.5/lib/plugins/gradle-signing-3.5.jar" />
+                  <option value="C:/Program Files (x86)/gradle-3.5/lib/plugins/gradle-test-kit-3.5.jar" />
+                  <option value="C:/Program Files (x86)/gradle-3.5/lib/plugins/gradle-testing-base-3.5.jar" />
+                  <option value="C:/Program Files (x86)/gradle-3.5/lib/plugins/gradle-testing-jvm-3.5.jar" />
+                  <option value="C:/Program Files (x86)/gradle-3.5/lib/plugins/gradle-testing-native-3.5.jar" />
+                  <option value="C:/Program Files (x86)/gradle-3.5/lib/plugins/gradle-tooling-api-builders-3.5.jar" />
+                  <option value="C:/Program Files (x86)/gradle-3.5/lib/plugins/gradle-workers-3.5.jar" />
+                  <option value="C:/Program Files (x86)/gradle-3.5/lib/plugins/ivy-2.2.0.jar" />
                   <option value="$PROJECT_DIR$/buildSrc/src/main/java" />
                   <option value="$PROJECT_DIR$/buildSrc/src/main/groovy" />
                 </list>
@@ -2262,6 +2436,11 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane />
+      </pane>
       <pane id="AndroidView">
         <subPane>
           <PATH>
@@ -2270,62 +2449,15 @@
               <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SylvacMeasurements" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SylvacCalipers" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="res" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidResFolderNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SylvacMeasurements" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SylvacCalipers" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="res" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidResFolderNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="raw" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidResFolderTypeNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SylvacMeasurements" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SylvacCalipers" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
       <pane id="PackagesPane" />
-      <pane id="Scratches" />
-      <pane id="Scope" />
-      <pane id="ProjectPane">
-        <subPane />
-      </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="android.project.structure.last.selected" value="SylvacCalipers" />
     <property name="android.project.structure.proportion" value="0.15" />
-    <property name="device.picker.selection" value="04444f3e4386baf1" />
+    <property name="device.picker.selection" value="205X1601427" />
     <property name="settings.editor.selected.configurable" value="debugger.stepping" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
     <property name="UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager2.WIDTH" value="444" />
@@ -3008,7 +3140,14 @@
       <option name="project" value="LOCAL" />
       <updated>1490322824302</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="Added new notification sound that plays after a full set of data points is received.">
+      <created>1490581621720</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1490581621721</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TodoView">
@@ -3124,7 +3263,8 @@
     <MESSAGE value="Added a connection attempt limit for each new connection, this stops an infinite loops with being disconnected from the remote device.&#10;Added the feature of completely disconnecting from the device and refreshing the cache if service discovery times out; changed from 2s to 10s.&#10;Extracted the register BondStateReceiver to its own function so it can be called publicly. This allows for the receiver to be registered upon attempting a new connection.&#10;Added an extra filter for the menu option 'Disconnect device' so the BroadcastReceiver now handles this action.&#10;Renamed 'Record' class to be 'DataRecord'&#10;&#10;Renamed the Fragment titles to 'Scan' and 'Data' to better reflect their purpose.&#10;Updated the content of the FAQ and Troubleshooting section." />
     <MESSAGE value="Cleaned up the connection manager:&#10;- removed a lot of uneccessary connection garbage (notify / timeouts etc)&#10;- more informative connection status details&#10;- added title bar status&#10;- moved all connection broadcast receivers to the Connection manager class.&#10;&#10;TODO: &#10;- potentially add timeouts,&#10;- update help info in the menu&#10;- unit testing" />
     <MESSAGE value="Added a MediaScan on files to refresh the MTP, only works on NEW files. appending still requires a phone restart." />
-    <option name="LAST_COMMIT_MESSAGE" value="Added a MediaScan on files to refresh the MTP, only works on NEW files. appending still requires a phone restart." />
+    <MESSAGE value="Added new notification sound that plays after a full set of data points is received." />
+    <option name="LAST_COMMIT_MESSAGE" value="Added new notification sound that plays after a full set of data points is received." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -3142,33 +3282,33 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/SylvacCalipers/src/main/res/layout/main.xml">
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="418">
           <caret line="19" column="41" selection-start-line="19" selection-start-column="41" selection-end-line="19" selection-end-column="41" />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SylvacCalipers/src/main/res/layout/bluetooth_device.xml">
-      <provider selected="true" editor-type-id="android-designer2">
+      <provider editor-type-id="android-designer2">
         <state />
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SylvacCalipers/src/main/res/layout/bluetooth_device.xml">
       <provider editor-type-id="text-editor">
         <state relative-caret-position="550">
           <caret line="25" column="4" selection-start-line="25" selection-start-column="4" selection-end-line="25" selection-end-column="4" />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SylvacCalipers/src/main/res/layout/record_fragment.xml">
       <provider selected="true" editor-type-id="android-designer2">
         <state />
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SylvacCalipers/src/main/res/layout/record_fragment.xml">
       <provider editor-type-id="text-editor">
         <state relative-caret-position="242">
           <caret line="68" column="48" selection-start-line="68" selection-start-column="48" selection-end-line="68" selection-end-column="48" />
         </state>
+      </provider>
+      <provider selected="true" editor-type-id="android-designer2">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/SylvacCalipers/src/main/java/com/patrick/Sylvac_Calipers/RecordAdapter.java">
@@ -3180,23 +3320,23 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/patrick/Sylvac_Calipers/ConnectDialog.java" />
     <entry file="file://$PROJECT_DIR$/SylvacCalipers/src/main/res/layout/devicescan_fragment.xml">
-      <provider selected="true" editor-type-id="android-designer2">
-        <state />
-      </provider>
       <provider editor-type-id="text-editor">
         <state relative-caret-position="550">
           <caret line="25" column="0" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SylvacCalipers/src/main/res/xml/preferences.xml">
       <provider selected="true" editor-type-id="android-designer2">
         <state />
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SylvacCalipers/src/main/res/xml/preferences.xml">
       <provider editor-type-id="text-editor">
         <state relative-caret-position="243">
           <caret line="36" column="25" selection-start-line="36" selection-start-column="25" selection-end-line="36" selection-end-column="25" />
         </state>
+      </provider>
+      <provider selected="true" editor-type-id="android-designer2">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/patrick/Sylvac_Calipers/BluetoothReceiver.java" />
@@ -3208,13 +3348,13 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/SylvacCalipers/build/intermediates/res/merged/debug/values/values.xml" />
     <entry file="file://$PROJECT_DIR$/SylvacCalipers/src/main/res/layout/activity_main.xml">
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="484">
           <caret line="22" column="36" selection-start-line="22" selection-start-column="36" selection-end-line="22" selection-end-column="36" />
         </state>
+      </provider>
+      <provider editor-type-id="android-designer2">
+        <state />
       </provider>
     </entry>
     <entry file="file://$USER_HOME$/AppData/Local/Android/sdk2/sources/android-23/android/bluetooth/BluetoothGatt.java">
@@ -3256,13 +3396,13 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/SylvacCalipers/src/main/res/menu/menu.xml">
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="362">
           <caret line="28" column="9" selection-start-line="28" selection-start-column="9" selection-end-line="28" selection-end-column="9" />
         </state>
+      </provider>
+      <provider editor-type-id="android-designer2">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/SylvacCalipers/src/main/java/com/patrick/Sylvac_Calipers/SettingsActivity.java">
@@ -3280,23 +3420,23 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/SylvacCalipers/src/main/res/layout/help_fragment.xml">
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SylvacCalipers/src/main/res/layout/help_topic.xml">
       <provider editor-type-id="android-designer2">
         <state />
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SylvacCalipers/src/main/res/layout/help_topic.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="110">
           <caret line="11" column="42" selection-start-line="11" selection-start-column="42" selection-end-line="11" selection-end-column="42" />
         </state>
+      </provider>
+      <provider editor-type-id="android-designer2">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/SylvacCalipers/src/main/res/values/help_info.xml">
@@ -3381,7 +3521,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -3389,7 +3528,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -3397,7 +3535,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="220">
           <caret line="10" column="17" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -3427,35 +3564,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-980">
           <caret line="158" column="5" selection-start-line="158" selection-start-column="5" selection-end-line="158" selection-end-column="5" />
-          <folding>
-            <element signature="docComment;class#DeviceScanFragment#0" expanded="false" />
-            <element signature="docComment;class#ScanTimeout#0;class#DeviceScanFragment#0" expanded="false" />
-            <element signature="class#ScanTimeout#0;class#DeviceScanFragment#0" expanded="false" />
-            <element signature="method#run#0;class#ScanTimeout#0;class#DeviceScanFragment#0" expanded="false" />
-            <element signature="docComment;method#onCreateView#0;class#DeviceScanFragment#0" expanded="false" />
-            <element signature="method#onCreateView#0;class#DeviceScanFragment#0" expanded="false" />
-            <element signature="docComment;method#onActivityCreated#0;class#DeviceScanFragment#0" expanded="false" />
-            <element signature="method#onActivityCreated#0;class#DeviceScanFragment#0" expanded="false" />
-            <element signature="docComment;method#onResume#0;class#DeviceScanFragment#0" expanded="false" />
-            <element signature="docComment;method#onPause#0;class#DeviceScanFragment#0" expanded="false" />
-            <element signature="docComment;method#initializeBluetooth#0;class#DeviceScanFragment#0" expanded="false" />
-            <element signature="method#initializeBluetooth#0;class#DeviceScanFragment#0" expanded="false" />
-            <element signature="docComment;method#scanForDevices#0;class#DeviceScanFragment#0" expanded="false" />
-            <element signature="docComment;method#onActivityResult#0;class#DeviceScanFragment#0" expanded="false" />
-            <element signature="method#onActivityResult#0;class#DeviceScanFragment#0" expanded="false" />
-            <element signature="method#setParent#0;class#DeviceScanFragment#0" expanded="false" />
-            <element signature="docComment;class#DeviceListAdapter#0;class#DeviceScanFragment#0" expanded="false" />
-            <element signature="class#DeviceListAdapter#0;class#DeviceScanFragment#0" expanded="false" />
-            <element signature="method#DeviceListAdapter#0;class#DeviceListAdapter#0;class#DeviceScanFragment#0" expanded="false" />
-            <element signature="docComment;method#addDevice#0;class#DeviceListAdapter#0;class#DeviceScanFragment#0" expanded="false" />
-            <element signature="method#addDevice#0;class#DeviceListAdapter#0;class#DeviceScanFragment#0" expanded="false" />
-            <element signature="docComment;method#getView#0;class#DeviceListAdapter#0;class#DeviceScanFragment#0" expanded="false" />
-            <element signature="method#getView#0;class#DeviceListAdapter#0;class#DeviceScanFragment#0" expanded="false" />
-            <element signature="docComment;class#ViewHolder#0;class#DeviceScanFragment#0" expanded="false" />
-            <element signature="class#ViewHolder#0;class#DeviceScanFragment#0" expanded="false" />
-            <element signature="docComment;field#mLeScanCallback#0;class#DeviceScanFragment#0" expanded="false" />
-            <element signature="docComment;field#mOnItemClickListener#0;class#DeviceScanFragment#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -3471,62 +3579,46 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3036">
           <caret line="260" column="0" selection-start-line="260" selection-start-column="0" selection-end-line="260" selection-end-column="0" />
-          <folding>
-            <element signature="docComment;class#ConnectionManager#0" expanded="false" />
-            <element signature="docComment;method#ConnectionManager#0;class#ConnectionManager#0" expanded="false" />
-            <element signature="method#ConnectionManager#0;class#ConnectionManager#0" expanded="false" />
-            <element signature="docComment;method#initializeBluetooth#0;class#ConnectionManager#0" expanded="false" />
-            <element signature="method#initializeBluetooth#0;class#ConnectionManager#0" expanded="false" />
-            <element signature="docComment;method#enableIndication#0;class#ConnectionManager#0" expanded="false" />
-            <element signature="method#enableIndication#0;class#ConnectionManager#0" expanded="false" />
-            <element signature="docComment;method#broadcastUpdate#0;class#ConnectionManager#0" expanded="false" />
-            <element signature="method#broadcastUpdate#0;class#ConnectionManager#0" expanded="false" />
-            <element signature="method#registerReceivers#0;class#ConnectionManager#0" expanded="false" />
-            <element signature="method#unRegisterReceivers#0;class#ConnectionManager#0" expanded="false" />
-            <element signature="method#setTitle#0;class#ConnectionManager#0" expanded="false" />
-            <element signature="e#9301#9302#0" expanded="false" />
-            <element signature="e#9384#9385#0" expanded="false" />
-            <element signature="method#onServicesDiscovered#0;class#9473:11718" expanded="false" />
-            <element signature="e#11388#11389#0" expanded="false" />
-            <element signature="e#11454#11455#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/SylvacCalipers/src/main/AndroidManifest.xml">
-      <provider editor-type-id="android-manifest">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="198">
           <caret line="9" column="1" selection-start-line="9" selection-start-column="1" selection-end-line="9" selection-end-column="1" />
           <folding />
         </state>
       </provider>
+      <provider editor-type-id="android-manifest">
+        <state />
+      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/SylvacCalipers/src/main/java/com/patrick/Sylvac_Calipers/MainActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-79">
+        <state relative-caret-position="968">
           <caret line="65" column="58" selection-start-line="65" selection-start-column="58" selection-end-line="65" selection-end-column="58" />
           <folding>
+            <element signature="imports" expanded="false" />
             <element signature="method#onCreateOptionsMenu#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onOptionsItemSelected#0;class#MainActivity#0" expanded="false" />
+            <element signature="e#6483#6484#0" expanded="false" />
+            <element signature="e#6514#6515#0" expanded="false" />
             <element signature="method#setConnectionStatus#0;class#MainActivity#0" expanded="false" />
-            <element signature="e#6939#7180#0" expanded="true" />
-            <element signature="e#7179#7180#0" expanded="true" />
+            <element signature="e#6729#6730#0" expanded="false" />
+            <element signature="e#6785#6786#0" expanded="false" />
+            <element signature="e#6832#6833#0" expanded="false" />
+            <element signature="e#6875#6876#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/SylvacCalipers/src/main/java/com/patrick/Sylvac_Calipers/DataReceiver.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="112" column="42" selection-start-line="112" selection-start-column="42" selection-end-line="112" selection-end-column="42" />
+        <state relative-caret-position="616">
+          <caret line="168" column="43" selection-start-line="167" selection-start-column="22" selection-end-line="168" selection-end-column="43" />
           <folding>
             <element signature="method#scrollList#0;class#DataReceiver#0" expanded="false" />
             <element signature="method#saveAllRecords#0;class#DataReceiver#0" expanded="false" />
-            <element signature="e#9004#11039#0" expanded="true" />
-            <element signature="e#11038#11039#0" expanded="true" />
             <element signature="method#resetCurrentRecord#0;class#DataReceiver#0" expanded="false" />
           </folding>
         </state>
