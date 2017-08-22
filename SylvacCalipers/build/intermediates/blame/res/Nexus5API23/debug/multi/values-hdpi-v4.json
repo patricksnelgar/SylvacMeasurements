@@ -1,5 +1,31 @@
 [
     {
+        "outputFile": "C:\\Users\\hrtpxs\\Documents\\Android\\SylvacMeasurements\\SylvacCalipers\\build\\intermediates\\incremental\\mergeNexus5API23DebugResources\\merged.dir\\values-hdpi-v4\\values-hdpi-v4.xml",
+        "map": [
+            {
+                "to": {
+                    "startLine": 2,
+                    "startColumn": 4,
+                    "startOffset": 55,
+                    "endLine": 6,
+                    "endColumn": 13,
+                    "endOffset": 327
+                },
+                "from": {
+                    "file": "C:\\Users\\hrtpxs\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-23.1.1.aar\\83144190419448885cc7c964fe4b9c89\\res\\values-hdpi\\values-hdpi.xml",
+                    "position": {
+                        "startLine": 4,
+                        "startColumn": 4,
+                        "startOffset": 235,
+                        "endLine": 8,
+                        "endColumn": 13,
+                        "endOffset": 507
+                    }
+                }
+            }
+        ]
+    },
+    {
         "outputFile": "C:\\Android Projects\\SylvacMeasurements\\SylvacCalipers\\build\\intermediates\\incremental\\mergeNexus5API23DebugResources\\merged.dir\\values-hdpi-v4\\values-hdpi-v4.xml",
         "map": [
             {

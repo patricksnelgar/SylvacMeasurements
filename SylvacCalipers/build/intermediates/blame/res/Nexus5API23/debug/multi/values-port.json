@@ -22,5 +22,29 @@
                 }
             }
         ]
+    },
+    {
+        "outputFile": "C:\\Users\\hrtpxs\\Documents\\Android\\SylvacMeasurements\\SylvacCalipers\\build\\intermediates\\incremental\\mergeNexus5API23DebugResources\\merged.dir\\values-port\\values-port.xml",
+        "map": [
+            {
+                "to": {
+                    "startLine": 2,
+                    "startColumn": 4,
+                    "startOffset": 55,
+                    "endColumn": 55,
+                    "endOffset": 106
+                },
+                "from": {
+                    "file": "C:\\Users\\hrtpxs\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-23.1.1.aar\\83144190419448885cc7c964fe4b9c89\\res\\values-port\\values-port.xml",
+                    "position": {
+                        "startLine": 4,
+                        "startColumn": 4,
+                        "startOffset": 229,
+                        "endColumn": 55,
+                        "endOffset": 280
+                    }
+                }
+            }
+        ]
     }
 ]
