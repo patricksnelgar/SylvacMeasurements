@@ -20,7 +20,6 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import java.io.File;
-import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -50,7 +49,6 @@ public class DataReceiver extends BroadcastReceiver {
     private List<DataRecord> listDataRecords;
     private RecordAdapter listRecordsAdapter;
     private FileOutputStream mFileStream;
-    private char space = (int) 32;
 
     SharedPreferences mPrefs;
 
@@ -80,7 +78,6 @@ public class DataReceiver extends BroadcastReceiver {
      * Handles the composure of a record based on user preferences.
      * Writes out to a file automatically on the completion of a record if the preference is enabled.
      *
-     * @param context
      * @param intent: Holds the action to perform; save data, measurement received, or clear all records.
      */
     @Override
@@ -92,7 +89,8 @@ public class DataReceiver extends BroadcastReceiver {
         String data = "NULL";
 
         if(intent.hasExtra(CommunicationCharacteristics.MEASUREMENT_DATA))
-            data = new String(intent.getStringExtra(CommunicationCharacteristics.MEASUREMENT_DATA)).trim();
+            data = intent.getStringExtra(CommunicationCharacteristics.MEASUREMENT_DATA).trim();
+        assert action != null;
         switch (action){
             case RecordFragment.MEASUREMENT_RECEIVED:{
                 // User can set the device to not beep on receive.
@@ -103,16 +101,17 @@ public class DataReceiver extends BroadcastReceiver {
 
                 mMeasurementCount++;
                 // using "   " resulted in the whitespace being removed
-                mCurrentRecord += data +space+space+space;
+                char space = (int) 32;
+                mCurrentRecord += data + space + space + space;
                 mCurrentRecordView.setText(mCurrentRecord);
 
                 // All value for a record have been received
                 if(mMeasurementCount >= valuesPerRecord){
                     if(mPrefs.getBoolean(MainActivity.PREFERENCE_BEEP_ON_RECEIVE, false)){
                         try {
-                            Thread.sleep(200);
+                            Thread.sleep(500);
                         } catch (Exception e){
-
+                            Log.e(TAG, "Could not sleep thread: " + e.getLocalizedMessage());
                         }
                         mParentActivity.playRecordSound();
                     }
@@ -121,8 +120,8 @@ public class DataReceiver extends BroadcastReceiver {
                     int nextID = currentID + 1;
                     // Set the next recordID text field
                     mCurrentEntryID.setText(String.valueOf(nextID));
-                    // Update the preferences to relect the incremented ID
-                    mPrefs.edit().putInt(MainActivity.PREFERENCE_CURRENT_ID, nextID).commit();
+                    // Update the preferences to reflect the incremented ID
+                    mPrefs.edit().putInt(MainActivity.PREFERENCE_CURRENT_ID, nextID).apply();
 
                     // Create a new record from the measurements
                     DataRecord newEntry = new DataRecord(String.valueOf(currentID), mCurrentRecord);
@@ -138,11 +137,17 @@ public class DataReceiver extends BroadcastReceiver {
                     mCurrentRecord="";
 
                     // Handles the auto-saving of data to a file.
-                    if(mPrefs.getBoolean(MainActivity.PREFERNCE_AUTO_SAVE, false)){
+                    if(mPrefs.getBoolean(MainActivity.PREFERENCE_AUTO_SAVE, false)){
                         String mDir = Environment.getExternalStorageDirectory().toString();
                         File mFolderPath = new File(mDir + "/SavedData");
                         // Create the folder structure if not found
-                        if(!mFolderPath.exists()) mFolderPath.mkdirs();
+                        if(!mFolderPath.exists()) {
+                            boolean dirsMade = mFolderPath.mkdirs();
+                            if (!dirsMade) {
+                                Log.e(TAG, "Could not make directories");
+                                Toast.makeText(mParentActivity.getApplicationContext(), "Could not create directories", Toast.LENGTH_SHORT).show();
+                            }
+                        }
                         final File mOutput = new File(mFolderPath,mPrefs.getString(MainActivity.PREFERENCE_AUTO_SAVE_FILENAME, "----"));
                         try {
                             mFileStream = new FileOutputStream(mOutput,true);
@@ -153,8 +158,6 @@ public class DataReceiver extends BroadcastReceiver {
                             mFileStream.flush();
                             mFileStream.close();
 
-                        } catch (FileNotFoundException e) {
-                            e.printStackTrace();
                         } catch (IOException e) {
                             e.printStackTrace();
                         }
@@ -208,11 +211,17 @@ public class DataReceiver extends BroadcastReceiver {
         builder.setPositiveButton("Save Data", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {
-                boolean saveSuccessful = false;
+                boolean saveSuccessful;
 
                 String mDir = Environment.getExternalStorageDirectory().toString();
                 File mFolderPath = new File(mDir + "/SavedData");
-                if(!mFolderPath.exists()) mFolderPath.mkdirs();
+                if(!mFolderPath.exists()) {
+                    boolean dirsMade = mFolderPath.mkdirs();
+                    if (!dirsMade) {
+                        Log.e(TAG, "Could not make directories");
+                        Toast.makeText(mParentActivity.getApplicationContext(), "Could not create directories", Toast.LENGTH_SHORT).show();
+                    }
+                }
                 final File mOutput = new File(mFolderPath,filenameView.getText().toString() + ".csv");
                 Log.i(TAG, mOutput.getAbsoluteFile().toString());
 

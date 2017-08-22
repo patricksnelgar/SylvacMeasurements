@@ -15,9 +15,11 @@ import android.content.Intent;
 import android.content.IntentFilter;
 import android.os.Handler;
 import android.support.v4.content.LocalBroadcastManager;
+import android.support.v7.app.ActionBar;
 import android.util.Log;
 
 import java.util.List;
+import java.util.Objects;
 import java.util.Set;
 
 import static com.patrick.Sylvac_Calipers.RecordFragment.MEASUREMENT_RECEIVED;
@@ -49,7 +51,7 @@ public class ConnectionManager implements CommunicationCharacteristics{
      * Constructor for ConnectionManager class, initializes the Bluetooth adapter,
      * configures the Receivers and starts the connection process.
      */
-    public ConnectionManager(MainActivity pParent, String mTargetDeviceAddress) {
+    ConnectionManager(MainActivity pParent, String mTargetDeviceAddress) {
         mMainActivity = pParent;
         mBluetoothDeviceAddress = mTargetDeviceAddress;
         if (mBluetoothAdpater == null || mBluetoothManager == null)
@@ -58,7 +60,7 @@ public class ConnectionManager implements CommunicationCharacteristics{
         mHandler = new Handler();
     }
 
-    public void connect(String address){
+    void connect(String address){
         mMainActivity.stopScan();
         if(mBluetoothAdpater == null || address == null){
             Log.e(TAG, "Adapter not set or invalid address");
@@ -100,14 +102,13 @@ public class ConnectionManager implements CommunicationCharacteristics{
         Log.d(TAG, "Trying to create new connection");
         mMainActivity.setConnectionStatus("Creating new connection.");
         mBluetoothDeviceAddress = address;
-        return;
     }
 
     /**
      * Initializes the BluetoothManager and Adapter,
      * returning a flag as to whether it is successful or not.
      */
-    public boolean initializeBluetooth(){
+    private boolean initializeBluetooth(){
         if(mBluetoothManager == null){
             mBluetoothManager = (BluetoothManager)this.mMainActivity.getSystemService(Context.BLUETOOTH_SERVICE);
             if(mBluetoothManager == null){
@@ -128,7 +129,7 @@ public class ConnectionManager implements CommunicationCharacteristics{
      * sets a flag in the notification characteristic of the service which 'subscribes' the user to this service.
      * then enables the 'indication' descriptor of the characteristic so the BluetoothGattCallback is fired when data is sent out.
      */
-    public void enableIndication(){
+    private void enableIndication(){
         if(mBluetoothGatt == null) {
             Log.e(TAG,"Gatt server is null");
             return;
@@ -191,7 +192,7 @@ public class ConnectionManager implements CommunicationCharacteristics{
      * @param intentAction
      * @param characteristic
      */
-    public void broadcastUpdate(String intentAction, BluetoothGattCharacteristic characteristic){
+    private void broadcastUpdate(String intentAction, BluetoothGattCharacteristic characteristic){
 
         if (TX_RECEIVED_DATA_UUID.equals(characteristic.getUuid())) {
             Intent _intent = new Intent(intentAction);
@@ -206,17 +207,17 @@ public class ConnectionManager implements CommunicationCharacteristics{
         }
     }
 
-    public void registerReceivers(){
+    void registerReceivers(){
         LocalBroadcastManager.getInstance(mMainActivity).registerReceiver(broadcastReceiver, new IntentFilter(ACTION_DISCONNECT_DEVICE));
         mMainActivity.getBaseContext().registerReceiver(bondStateReceiver, new IntentFilter(BluetoothDevice.ACTION_BOND_STATE_CHANGED));
     }
 
-    public void unRegisterReceivers(){
+    void unRegisterReceivers(){
         LocalBroadcastManager.getInstance(mMainActivity).unregisterReceiver(broadcastReceiver);
         mMainActivity.getBaseContext().unregisterReceiver(bondStateReceiver);
     }
 
-    public void closeGatt(){
+    void closeGatt(){
         Log.d(TAG, "Closing connection");
         mMainActivity.setConnectionStatus("Connection closed.");
         if(mBluetoothGatt!= null) {
@@ -229,7 +230,8 @@ public class ConnectionManager implements CommunicationCharacteristics{
         mMainActivity.runOnUiThread(new Runnable() {
             @Override
             public void run() {
-                mMainActivity.getSupportActionBar().setTitle(title);
+                ActionBar actionBar = mMainActivity.getSupportActionBar();
+                Objects.requireNonNull(actionBar).setTitle(title);
             }
         });
     }
@@ -285,8 +287,7 @@ public class ConnectionManager implements CommunicationCharacteristics{
         @Override
         public void onReceive(Context context, Intent intent) {
             String action = intent.getAction();
-            Log.d(TAG, "received: " + action);
-            if(action.equals(ACTION_DISCONNECT_DEVICE)){
+            if(action != null && action.equals(ACTION_DISCONNECT_DEVICE)){
                 Log.d(TAG, "User disconnect");
                 mMainActivity.setConnectionStatus("User disconnect.");
                 setTitle("Disconnected - " + mBluetoothGatt.getDevice().getName());
@@ -302,7 +303,7 @@ public class ConnectionManager implements CommunicationCharacteristics{
         @Override
         public void onReceive(Context context, Intent intent) {
             String action = intent.getAction();
-            if(action.equals(BluetoothDevice.ACTION_BOND_STATE_CHANGED)){
+            if(action != null && action.equals(BluetoothDevice.ACTION_BOND_STATE_CHANGED)){
                 bonded = true;
                 int bondState = intent.getIntExtra(BluetoothDevice.EXTRA_BOND_STATE, -1);
                 int previousBondState = intent.getIntExtra(BluetoothDevice.EXTRA_PREVIOUS_BOND_STATE, -1);

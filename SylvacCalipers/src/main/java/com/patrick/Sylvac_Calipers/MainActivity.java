@@ -23,6 +23,9 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.widget.Toast;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * Author:      Patrick Snelgar
  * Name:        MainActivity
@@ -35,21 +38,15 @@ public class MainActivity extends AppCompatActivity {
     public static final String PREFERENCE_ONLY_SYLVAC = "sylvac_devices";
     public static final String PREFERENCE_CURRENT_ID = "current_ID";
     public static final String PREFERENCE_AUTO_SAVE_FILENAME = "auto_save_filename";
-    public static final String PREFERNCE_AUTO_SAVE = "auto_save";
+    public static final String PREFERENCE_AUTO_SAVE = "auto_save";
     public static final int DEFAULT_PREF_VALUES_PER_ENTRY = 3;
 
     private String TAG = MainActivity.class.getSimpleName();
 
     private static final int REQUEST_ENABLE_BT = 1;
-    private PageFragmentAdapter mAdapter;
-    private ViewPager mPager;
-    private Toolbar mToolbar;
-    private TabLayout mTabLayout;
-    private SharedPreferences mPrefs;
     private MediaPlayer mPlayer;
     private MediaPlayer mRecordPlayer;
 
-    private RecordFragment fRecord;
     private DeviceScanFragment fScan;
 
     /**
@@ -63,31 +60,31 @@ public class MainActivity extends AppCompatActivity {
         mPlayer = MediaPlayer.create(this, R.raw.received);
         mPlayer.setOnErrorListener(mPlayerErrorListener);
 
-        mRecordPlayer = MediaPlayer.create(this, R.raw.who);
+        mRecordPlayer = MediaPlayer.create(this, R.raw.record);
 
         PreferenceManager.setDefaultValues(this, R.xml.preferences, false);
-        mPrefs = PreferenceManager.getDefaultSharedPreferences(this);
+        SharedPreferences mPrefs = PreferenceManager.getDefaultSharedPreferences(this);
         mPrefs.edit().putInt(PREFERENCE_CURRENT_ID, 0).apply();
 
-        mToolbar = (Toolbar) findViewById(R.id.toolbar);
+        Toolbar mToolbar = (Toolbar) findViewById(R.id.toolbar);
+        mToolbar.setTitle(R.string.app_title);
         setSupportActionBar(mToolbar);
-        getSupportActionBar().setTitle(getString(R.string.app_title));
 
-        mAdapter = new PageFragmentAdapter(getSupportFragmentManager());
+        PageFragmentAdapter mAdapter = new PageFragmentAdapter(getSupportFragmentManager());
 
         fScan = new DeviceScanFragment();
         fScan.setParent(this);
 
-        fRecord = new RecordFragment();
+        RecordFragment fRecord = new RecordFragment();
         fRecord.setParent(this);
 
         mAdapter.addFragment(fScan, "Scan");
         mAdapter.addFragment(fRecord, "Data");
 
-        mPager = (ViewPager) findViewById(R.id.view_pager);
+        ViewPager mPager = (ViewPager) findViewById(R.id.view_pager);
         mPager.setAdapter(mAdapter);
 
-        mTabLayout = (TabLayout) findViewById(R.id.tab_layout);
+        TabLayout mTabLayout = (TabLayout) findViewById(R.id.tab_layout);
         mTabLayout.setupWithViewPager(mPager);
 
         // Check if the local device supports Bluetooth LE
@@ -98,18 +95,25 @@ public class MainActivity extends AppCompatActivity {
 
         // Need permissions in OS 23+
         if(Build.VERSION.SDK_INT >= 23) {
+
+            List<String> permissionList = new ArrayList<>();
             // Request access to storage for saving files
             if (ContextCompat.checkSelfPermission(this, Manifest.permission.WRITE_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED ||
                     ContextCompat.checkSelfPermission(this, Manifest.permission.READ_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED) {
-                ActivityCompat.requestPermissions(this,
-                        new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE, Manifest.permission.READ_EXTERNAL_STORAGE}, 100); //Any number
+                permissionList.add(Manifest.permission.WRITE_EXTERNAL_STORAGE);
+                permissionList.add(Manifest.permission.READ_EXTERNAL_STORAGE);
             }
-
 
             // Request location access for BT scan results
             if(ContextCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED){
-                ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.ACCESS_COARSE_LOCATION}, 101);
+                permissionList.add(Manifest.permission.ACCESS_COARSE_LOCATION);
             }
+
+            if(ContextCompat.checkSelfPermission(this, Manifest.permission.BLUETOOTH_ADMIN) != PackageManager.PERMISSION_GRANTED) {
+               permissionList.add(Manifest.permission.BLUETOOTH_ADMIN);
+            }
+
+            if(permissionList.size() > 0) ActivityCompat.requestPermissions(this, permissionList.toArray(new String[permissionList.size()]), 100) ;
         }
     }
 
@@ -154,9 +158,7 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    public void playOnReceiveSound(){
-        mPlayer.start();
-    }
+    public void playOnReceiveSound(){ mPlayer.start(); }
 
     public void playRecordSound() { mRecordPlayer.start(); }
 

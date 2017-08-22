@@ -1,29 +1,19 @@
 package com.patrick.Sylvac_Calipers;
 
-import android.content.Context;
-import android.content.Intent;
 import android.content.IntentFilter;
 import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.preference.Preference;
 import android.preference.PreferenceManager;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v4.content.LocalBroadcastManager;
-import android.util.Log;
 import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.inputmethod.EditorInfo;
-import android.widget.AdapterView;
-import android.widget.Button;
 import android.widget.EditText;
-import android.widget.ListView;
 import android.widget.TextView;
-
-import java.util.ArrayList;
-import java.util.List;
 
 /**
  * Author:      Patrick Snelgar
@@ -43,14 +33,13 @@ public class RecordFragment extends Fragment {
     private SharedPreferences mPrefs;
     private int previousRecordID;
     private int currentRecordID;
-    private int valuesPerRecord;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         PreferenceManager.setDefaultValues(getContext(), R.xml.preferences, false);
         mPrefs = PreferenceManager.getDefaultSharedPreferences(mParentActivity);
-        valuesPerRecord = Integer.parseInt(mPrefs.getString(MainActivity.PREFERENCE_VALUES_PER_ENTRY, "-1"));
+        int valuesPerRecord = Integer.parseInt(mPrefs.getString(MainActivity.PREFERENCE_VALUES_PER_ENTRY, "-1"));
         if(valuesPerRecord == -1) valuesPerRecord = MainActivity.DEFAULT_PREF_VALUES_PER_ENTRY;
 
         mPrefs.registerOnSharedPreferenceChangeListener(mPreferenceChange);
@@ -69,7 +58,7 @@ public class RecordFragment extends Fragment {
                                 event.getKeyCode() == KeyEvent.KEYCODE_ENTER) {
                     try {
                         currentRecordID = Integer.parseInt(mRecordId.getText().toString());
-                        mPrefs.edit().putInt(MainActivity.PREFERENCE_CURRENT_ID, currentRecordID).commit();
+                        mPrefs.edit().putInt(MainActivity.PREFERENCE_CURRENT_ID, currentRecordID).apply();
                     } catch (Exception e){
                         currentRecordID = previousRecordID;
                         mRecordId.setText(String.format("%n"+mPrefs.getInt(MainActivity.PREFERENCE_CURRENT_ID, 0)).trim());

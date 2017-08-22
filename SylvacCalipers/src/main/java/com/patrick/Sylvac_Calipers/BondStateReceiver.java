@@ -25,7 +25,7 @@ public class BondStateReceiver extends BroadcastReceiver {
     @Override
     public void onReceive(Context context, Intent intent) {
         // BluetoothDevice that the bond state change occurred on is included in the Intent
-        BluetoothDevice device = (BluetoothDevice) intent.getParcelableExtra(BluetoothDevice.EXTRA_DEVICE);
+        BluetoothDevice device = intent.getParcelableExtra(BluetoothDevice.EXTRA_DEVICE);
         int bondState = intent.getIntExtra(BluetoothDevice.EXTRA_BOND_STATE, -1);
         Log.d(TAG, "Bond state change! device: " +
                 device.getAddress() + "newstate: " +

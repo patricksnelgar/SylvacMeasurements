@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.preference.Preference;
 import android.preference.PreferenceFragment;
 import android.preference.PreferenceManager;
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.MenuItem;
@@ -22,9 +23,12 @@ public class SettingsActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        getSupportActionBar().setTitle("Preferences");
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        getSupportActionBar().setDisplayShowHomeEnabled(true);
+        ActionBar actionBar = getSupportActionBar();
+        assert actionBar != null;
+
+        actionBar.setTitle("Preferences");
+        actionBar.setDisplayHomeAsUpEnabled(true);
+        actionBar.setDisplayShowHomeEnabled(true);
 
         _settings = new SettingsFragment();
     }
@@ -51,17 +55,18 @@ public class SettingsActivity extends AppCompatActivity {
             getPreferenceScreen().getSharedPreferences().registerOnSharedPreferenceChangeListener(this);
 
             Preference _p = getPreferenceManager().findPreference(MainActivity.PREFERENCE_VALUES_PER_ENTRY);
-            _p.setSummary("Number of measurements per entry: " + getPreferenceManager().getSharedPreferences().getString(MainActivity.PREFERENCE_VALUES_PER_ENTRY, "Error"));
-            _p = getPreferenceManager().findPreference(MainActivity.PREFERENCE_AUTO_SAVE_FILENAME);
-            boolean enablefilename = PreferenceManager.getDefaultSharedPreferences(getContext()).getBoolean(MainActivity.PREFERNCE_AUTO_SAVE,false);
-            _p.setSummary("Autosave file: " + getPreferenceManager().getDefaultSharedPreferences(getContext()).getString(MainActivity.PREFERENCE_AUTO_SAVE_FILENAME, "----"));
-            _p.setEnabled(enablefilename);
+            if (_p != null) {
+                _p.setSummary("Number of measurements per entry: " + getPreferenceManager().getSharedPreferences().getString(MainActivity.PREFERENCE_VALUES_PER_ENTRY, "Error"));
+                _p = getPreferenceManager().findPreference(MainActivity.PREFERENCE_AUTO_SAVE_FILENAME);
+                boolean enablefilename = PreferenceManager.getDefaultSharedPreferences(getContext()).getBoolean(MainActivity.PREFERENCE_AUTO_SAVE,false);
+                _p.setSummary("Autosave file: " + getPreferenceManager().getDefaultSharedPreferences(getContext()).getString(MainActivity.PREFERENCE_AUTO_SAVE_FILENAME, "----"));
+                _p.setEnabled(enablefilename);
+            }
+
         }
 
         /**
          * Listener to update the summary for some of the preferences when they change
-         * @param sharedPreferences
-         * @param key
          */
         @Override
         public void onSharedPreferenceChanged(SharedPreferences sharedPreferences, String key) {
@@ -72,7 +77,7 @@ public class SettingsActivity extends AppCompatActivity {
                     Preference _p = findPreference(key);
                     _p.setSummary("Number of measurements per entry: " + prefs.getString(key, "Error"));
                     break;
-                case MainActivity.PREFERNCE_AUTO_SAVE:
+                case MainActivity.PREFERENCE_AUTO_SAVE:
                     boolean enable = getPreferenceManager().getSharedPreferences().getBoolean(key, false);
                     Preference mPrefFile = findPreference(MainActivity.PREFERENCE_AUTO_SAVE_FILENAME);
                     mPrefFile.setEnabled(enable);
@@ -80,6 +85,8 @@ public class SettingsActivity extends AppCompatActivity {
                 case MainActivity.PREFERENCE_AUTO_SAVE_FILENAME:
                     Preference mPrefFileName = findPreference(key);
                     mPrefFileName.setSummary("Autosave file: " + getPreferenceManager().getSharedPreferences().getString(key, "----"));
+                    break;
+                case MainActivity.PREFERENCE_CURRENT_ID:
                     break;
                 default:
                     Log.e("Settings", "Preference " + key + " not handled");

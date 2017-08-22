@@ -7,15 +7,12 @@ import android.bluetooth.BluetoothManager;
 import android.bluetooth.le.BluetoothLeScanner;
 import android.bluetooth.le.ScanCallback;
 import android.bluetooth.le.ScanResult;
-import android.bluetooth.le.ScanSettings;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
-import android.location.LocationManager;
 import android.os.Bundle;
 import android.os.Handler;
 import android.preference.PreferenceManager;
-import android.provider.Settings;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.util.Log;
@@ -41,7 +38,6 @@ public class DeviceScanFragment extends Fragment {
     private static final int REQUEST_ENABLE_BT = 15;
     final String TAG = DeviceScanFragment.class.getSimpleName();
 
-    private long SCAN_TIMEOUT = 10000;
     private Handler mHandler;
     private MainActivity mMainActivity;
     private SharedPreferences mSharedPreferences;
@@ -74,17 +70,13 @@ public class DeviceScanFragment extends Fragment {
 
     /**
      * Creates the view for the fragment.
-     * @param inflater
-     * @param container
-     * @param savedInstanceState
-     * @return
      */
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
         Log.d("Scan Fragment", "SavedBundle: " + (savedInstanceState==null));
 
-        View createView = inflater.inflate(R.layout.devicescan_fragment, container, false);;
+        View createView = inflater.inflate(R.layout.devicescan_fragment, container, false);
         mTextViewStatus = (TextView) createView.findViewById(R.id.textViewStatus);
         mListViewDiscoveredDevices = (ListView) createView.findViewById(R.id.listViewDiscoveredDevices);
         mListViewDiscoveredDevices.setOnItemClickListener(mOnItemClickListener);
@@ -93,7 +85,6 @@ public class DeviceScanFragment extends Fragment {
 
     /**
      * Called once the parent activity is created, this is important for the use of some variables and devices.
-     * @param savedInstanceState
      */
     @Override
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
@@ -113,11 +104,6 @@ public class DeviceScanFragment extends Fragment {
 
         mConn = new ConnectionManager(mMainActivity, null);
         scanForDevices(true);
-    }
-
-    public void resetConnectionManager(){
-        //mConn.disconnect();
-        mConn = new ConnectionManager(mMainActivity, null);
     }
 
     /**
@@ -163,19 +149,18 @@ public class DeviceScanFragment extends Fragment {
      */
     private void initializeBluetooth(){
         final BluetoothManager mManager = (BluetoothManager) getActivity().getSystemService(Context.BLUETOOTH_SERVICE);
+        assert mManager != null;
         mBluetoothAdapter = mManager.getAdapter();
         mBluetoothLeScanner = mBluetoothAdapter.getBluetoothLeScanner();
         if(mBluetoothAdapter == null) {
             Toast.makeText(mMainActivity, "Bluetooth not initialized", Toast.LENGTH_SHORT).show();
             mMainActivity.finish();
-            return;
         }
     }
 
     /**
      * Starts a BluetoothLeScan for nearby Bluetooth devices.
      * Also starts the scan timeout runnable.
-     * @param scan
      */
     public void scanForDevices(boolean scan) {
         mMainActivity.runOnUiThread(new Runnable() {
@@ -188,18 +173,21 @@ public class DeviceScanFragment extends Fragment {
         if(mBluetoothLeScanner != null) {
             if (scan) {
                 if(!mScanning) {
+                    long SCAN_TIMEOUT = 10000;
                     mHandler.postDelayed(mScanTimeoutRunnable, SCAN_TIMEOUT);
                     setStatus("Scanning...");
                     Log.d(TAG, "Scanning...");
 
                     mScanning = true;
-                    mBluetoothLeScanner.startScan(
-                            new ArrayList(),
-                            new ScanSettings.Builder().setScanMode(ScanSettings.CALLBACK_TYPE_ALL_MATCHES).build(),
-                            mLeScanCallback);
+                    //mBluetoothLeScanner.startScan(
+                    //        new ArrayList(),
+                    //        new ScanSettings.Builder().setScanMode(ScanSettings.CALLBACK_TYPE_ALL_MATCHES).build(),
+                    //        mLeScanCallback);
+                    mBluetoothLeScanner.startScan(mLeScanCallback);
                 }
             } else {
                 mScanning = false;
+                mBluetoothLeScanner.flushPendingScanResults(mLeScanCallback);
                 mBluetoothLeScanner.stopScan(mLeScanCallback);
                 mHandler.removeCallbacks(mScanTimeoutRunnable);
                 setStatus("Scanning stopped.");
@@ -211,9 +199,6 @@ public class DeviceScanFragment extends Fragment {
     /**
      * User may be asked to turn bluetooth on, if they choose not to the
      * application will exit.
-     * @param requestCode
-     * @param resultCode
-     * @param data
      */
     @Override
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
@@ -238,20 +223,19 @@ public class DeviceScanFragment extends Fragment {
         private ArrayList<BluetoothDevice> mDevices;
         private Context mContext;
 
-        public DeviceListAdapter(Context context, ArrayList<BluetoothDevice> devices) {
+        DeviceListAdapter(Context context, ArrayList<BluetoothDevice> devices) {
             mDevices = devices;
             mContext = context;
         }
 
-        public void clear(){
+        void clear(){
             mDevices.clear();
         }
 
         /**
          * Adds a device to the list if it has not been seen before
-         * @param d
          */
-        public void addDevice(BluetoothDevice d){
+        void addDevice(BluetoothDevice d){
             boolean deviceExists = false;
             if (d.getName() == null) return;
             for (BluetoothDevice mDevice : mDevices){
@@ -284,16 +268,12 @@ public class DeviceScanFragment extends Fragment {
             return position;
         }
 
-        public BluetoothDevice getDevice(int position) {
+        BluetoothDevice getDevice(int position) {
             return mDevices.get(position);
         }
 
         /**
          * Function to handle setting the fields in the XML layout for the list view.
-         * @param position
-         * @param convertView
-         * @param parent
-         * @return
          */
         @Override
         public View getView(int position, View convertView, ViewGroup parent) {
@@ -301,7 +281,7 @@ public class DeviceScanFragment extends Fragment {
 
             if(convertView == null) {
                 LayoutInflater mInflater = (LayoutInflater) mContext.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-                convertView = mInflater.inflate(R.layout.bluetooth_device, null);
+                convertView = mInflater != null ? mInflater.inflate(R.layout.bluetooth_device, null) : null;
                 vHolder = new ViewHolder();
                 vHolder.textAddress = (TextView) convertView.findViewById(R.id.textDeviceAddress);
                 vHolder.textName = (TextView) convertView.findViewById(R.id.textDeviceName);
@@ -342,6 +322,11 @@ public class DeviceScanFragment extends Fragment {
         @Override
         public void onScanResult(int callbackType, ScanResult result) {
             final BluetoothDevice device = result.getDevice();
+            if(device!=null){
+                Log.d(TAG, "Device found: " + device.getAddress());
+            } else {
+                Log.e(TAG, "Device found is null");
+            }
             mMainActivity.runOnUiThread(new Runnable() {
                 @Override
                 public void run() {
@@ -367,7 +352,10 @@ public class DeviceScanFragment extends Fragment {
 
             if(mConn == null){
                 mConn = new ConnectionManager(mMainActivity, null);
+            } else {
+                mConn.closeGatt();
             }
+
             mConn.connect(mTargetDeviceAddress);
         }
     };

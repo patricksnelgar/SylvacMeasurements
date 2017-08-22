@@ -1,6 +1,7 @@
 package com.patrick.Sylvac_Calipers;
 
 import android.content.Context;
+import android.support.annotation.NonNull;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -18,11 +19,12 @@ public class RecordAdapter extends ArrayAdapter<DataRecord> {
 
     private static final String TAG = RecordAdapter.class.getSimpleName();
 
-    public RecordAdapter(Context context, int resourceID, List<DataRecord> dataRecords){
+    RecordAdapter(Context context, int resourceID, List<DataRecord> dataRecords){
         super(context, resourceID, dataRecords);
     }
 
-    public View getView(int position, View convertView, ViewGroup parent){
+    @NonNull
+    public View getView(int position, View convertView, @NonNull ViewGroup parent){
         DataRecord _single = getItem(position);
 
         if(convertView == null) convertView = LayoutInflater.from(getContext()).inflate(R.layout.single_record, parent, false);
@@ -30,8 +32,8 @@ public class RecordAdapter extends ArrayAdapter<DataRecord> {
         TextView textViewID = (TextView) convertView.findViewById(R.id.textRecordID);
         TextView textViewData = (TextView) convertView.findViewById(R.id.textRecordData);
 
-        textViewID.setText(_single.getEntryID().trim());
-        textViewData.setText(_single.getMeasurementsString());
+        textViewID.setText(_single != null ? _single.getEntryID().trim() : null);
+        textViewData.setText(_single != null ? _single.getMeasurementsString() : null);
 
         return convertView;
     }

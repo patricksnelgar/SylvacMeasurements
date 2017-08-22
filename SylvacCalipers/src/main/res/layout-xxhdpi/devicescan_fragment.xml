@@ -5,11 +5,11 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:keepScreenOn="true">
+
     <ListView
         android:id="@+id/listViewDiscoveredDevices"
         android:layout_width="match_parent"
-        android:layout_height="420dp">
-        </ListView>
+        android:layout_height="420dp" />
 
     <TextView
         android:text="Status: Idle"

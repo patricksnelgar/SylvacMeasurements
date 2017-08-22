@@ -1,7 +1,8 @@
 apply plugin: 'com.android.application'
 android {
     compileSdkVersion 23
-    buildToolsVersion '25.0.0'
+    buildToolsVersion '26.0.0'
+    flavorDimensions "default"
     defaultConfig {
         applicationId "com.patrick.Sylvac_Calipers"
         minSdkVersion 23
@@ -15,6 +16,7 @@ android {
     }
     productFlavors {
         Nexus5API23 {
+            dimension "default"
         }
     }
 }

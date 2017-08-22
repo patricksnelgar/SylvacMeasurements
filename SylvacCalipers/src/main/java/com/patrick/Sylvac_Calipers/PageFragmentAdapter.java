@@ -14,15 +14,14 @@ import java.util.List;
  */
 public class PageFragmentAdapter extends FragmentStatePagerAdapter {
 
-    private static final int NUM_ITEMS = 2;
     private final List<String> tabTitles = new ArrayList<>();
     private final List<Fragment> mFragmentList = new ArrayList<>();
 
-    public PageFragmentAdapter(FragmentManager fm) {
+    PageFragmentAdapter(FragmentManager fm) {
         super(fm);
     }
 
-    public void addFragment(Fragment frag, String title){
+    void addFragment(Fragment frag, String title){
         mFragmentList.add(frag);
         tabTitles.add(title);
     }
