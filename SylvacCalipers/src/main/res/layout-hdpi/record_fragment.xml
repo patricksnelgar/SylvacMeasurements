@@ -9,8 +9,10 @@
 
     <ListView
         android:id="@+id/listRecordEntries"
-        android:layout_width="fill_parent"
-        android:layout_height="265dp"
+        android:layout_width="match_parent"
+        android:layout_height="1133dp"
+        android:layout_above="@+id/layoutRecordIDSection"
+        android:layout_marginBottom="5dp"
         android:layout_weight="90"
         android:choiceMode="singleChoice"
         android:clickable="true"
@@ -23,8 +25,8 @@
         android:footerDividersEnabled="false"
         android:longClickable="true"
         android:minHeight="57dp"
-        android:paddingEnd="8dp"
         android:paddingStart="8dp"
+        android:paddingEnd="8dp"
         android:scrollIndicators="right"
         android:smoothScrollbar="true"
         android:stackFromBottom="true" />
@@ -40,7 +42,7 @@
         android:layout_marginRight="0dp"
         android:layout_alignParentTop="false"
         android:layout_alignParentStart="false"
-        android:layout_below="@+id/listRecordEntries">
+        android:layout_above="@+id/currentRecordView">
 
         <ImageView
             android:layout_width="match_parent"
@@ -60,7 +62,8 @@
             android:textAppearance="@style/Base.TextAppearance.AppCompat.Display1"
             android:paddingRight="7dp"
             android:clickable="false"
-            android:focusable="false" />
+            android:focusable="false"
+            android:textSize="30sp"/>
 
         <EditText
             android:layout_width="fill_parent"
@@ -77,7 +80,8 @@
             android:maxLines="1"
             android:minLines="1"
             android:singleLine="true"
-            android:selectAllOnFocus="true" />
+            android:selectAllOnFocus="true"
+            android:textSize="30sp"/>
 
         <ImageView
             android:layout_width="match_parent"
@@ -95,14 +99,14 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
-        android:layout_alignWithParentIfMissing="false"
-        android:layout_below="@+id/layoutRecordIDSection"
         android:layout_centerInParent="false"
+        android:layout_alignParentBottom="true"
         android:lines="2"
         android:maxLines="2"
         android:minLines="1"
         android:paddingLeft="5dp"
-        android:text="- - - - - - - - - - - - - - - - - - - - - - - - - - - -- - - - "
-        android:textSize="18sp" />
+        android:layout_marginBottom="65dp"
+        android:text="- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - "
+        android:textSize="24sp" />
 
 </RelativeLayout>

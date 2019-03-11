@@ -4,9 +4,9 @@
       <root url="jar://$PROJECT_DIR$/SylvacCalipers/build/intermediates/exploded-aar/com.android.support/support-v4/23.1.1/annotations.zip!/" />
     </ANNOTATIONS>
     <CLASSES>
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/support-v4-23.1.1.aar/30930df2790df9248e1b2f9a6dbff7af/res" />
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/support-v4-23.1.1.aar/30930df2790df9248e1b2f9a6dbff7af/jars/classes.jar!/" />
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/support-v4-23.1.1.aar/30930df2790df9248e1b2f9a6dbff7af/jars/libs/internal_impl-23.1.1.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/support-v4-23.1.1.aar/abde4f00d2fbdbfd7c1104e5acba3df5/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/support-v4-23.1.1.aar/abde4f00d2fbdbfd7c1104e5acba3df5/jars/libs/internal_impl-23.1.1.jar!/" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/support-v4-23.1.1.aar/abde4f00d2fbdbfd7c1104e5acba3df5/jars/classes.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>

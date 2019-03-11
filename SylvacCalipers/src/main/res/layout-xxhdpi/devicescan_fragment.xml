@@ -9,7 +9,7 @@
     <ListView
         android:id="@+id/listViewDiscoveredDevices"
         android:layout_width="match_parent"
-        android:layout_height="420dp" />
+        android:layout_height="1200dp" />
 
     <TextView
         android:text="Status: Idle"
