@@ -46,177 +46,10 @@
     <option name="LOGCAT_FORMAT_STRING" value="%1$s %4$c/%5$s: %6$s" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="284b0099-2e74-4125-b413-4860cd650fa8" name="Default" comment="Code clean up.&#10;Configured layouts to work for both nexus 5 and the Intermec CN51 device.">
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_appcompat_v7_23_1_1_aar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_design_23_1_1_aar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_recyclerview_v7_23_1_1_aar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_support_annotations_23_1_1_jar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_support_v4_23_1_1_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/appcompat_v7_23_1_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/appcompat_v7_23_1_1.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/design_23_1_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/design_23_1_1.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/recyclerview_v7_23_1_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/recyclerview_v7_23_1_1.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/support_v4_23_1_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/support_v4_23_1_1.xml" afterDir="false" />
+    <list default="true" id="284b0099-2e74-4125-b413-4860cd650fa8" name="Default" comment="Altered layouts to better fit T380 screen.">
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SylvacCalipers/SylvacCalipers.iml" beforeDir="false" afterPath="$PROJECT_DIR$/SylvacCalipers/SylvacCalipers.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SylvacCalipers/build/generated/source/buildConfig/Nexus5API23/debug/com/patrick/Sylvac_Calipers/BuildConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/SylvacCalipers/build/generated/source/buildConfig/Nexus5API23/debug/com/patrick/Sylvac_Calipers/BuildConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SylvacCalipers/build/generated/source/buildConfig/androidTest/Nexus5API23/debug/com/patrick/Sylvac_Calipers/test/BuildConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/SylvacCalipers/build/generated/source/buildConfig/androidTest/Nexus5API23/debug/com/patrick/Sylvac_Calipers/test/BuildConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SylvacCalipers/build/generated/source/r/Nexus5API23/debug/com/patrick/Sylvac_Calipers/R.java" beforeDir="false" afterPath="$PROJECT_DIR$/SylvacCalipers/build/generated/source/r/Nexus5API23/debug/com/patrick/Sylvac_Calipers/R.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/blame/res/Nexus5API23/debug/multi/values-af.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/blame/res/Nexus5API23/debug/multi/values-am.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/blame/res/Nexus5API23/debug/multi/values-ar.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/blame/res/Nexus5API23/debug/multi/values-az-rAZ.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/blame/res/Nexus5API23/debug/multi/values-bg.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/blame/res/Nexus5API23/debug/multi/values-bn-rBD.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/blame/res/Nexus5API23/debug/multi/values-ca.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/blame/res/Nexus5API23/debug/multi/values-cs.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/blame/res/Nexus5API23/debug/multi/values-da.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/blame/res/Nexus5API23/debug/multi/values-de.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/blame/res/Nexus5API23/debug/multi/values-el.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/blame/res/Nexus5API23/debug/multi/values-en-rAU.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/blame/res/Nexus5API23/debug/multi/values-en-rGB.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/blame/res/Nexus5API23/debug/multi/values-en-rIN.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/blame/res/Nexus5API23/debug/multi/values-es-rUS.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/blame/res/Nexus5API23/debug/multi/values-es.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/blame/res/Nexus5API23/debug/multi/values-et-rEE.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/blame/res/Nexus5API23/debug/multi/values-eu-rES.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/blame/res/Nexus5API23/debug/multi/values-fa.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/blame/res/Nexus5API23/debug/multi/values-fi.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/blame/res/Nexus5API23/debug/multi/values-fr-rCA.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/blame/res/Nexus5API23/debug/multi/values-fr.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/blame/res/Nexus5API23/debug/multi/values-gl-rES.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/blame/res/Nexus5API23/debug/multi/values-gu-rIN.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/blame/res/Nexus5API23/debug/multi/values-h320dp-v13.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/blame/res/Nexus5API23/debug/multi/values-h720dp-v13.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/blame/res/Nexus5API23/debug/multi/values-hdpi-v4.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/blame/res/Nexus5API23/debug/multi/values-hi.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/blame/res/Nexus5API23/debug/multi/values-hr.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/blame/res/Nexus5API23/debug/multi/values-hu.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/blame/res/Nexus5API23/debug/multi/values-hy-rAM.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/blame/res/Nexus5API23/debug/multi/values-in.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/blame/res/Nexus5API23/debug/multi/values-is-rIS.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/blame/res/Nexus5API23/debug/multi/values-it.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/blame/res/Nexus5API23/debug/multi/values-iw.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/blame/res/Nexus5API23/debug/multi/values-ja.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/blame/res/Nexus5API23/debug/multi/values-ka-rGE.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/blame/res/Nexus5API23/debug/multi/values-kk-rKZ.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/blame/res/Nexus5API23/debug/multi/values-km-rKH.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/blame/res/Nexus5API23/debug/multi/values-kn-rIN.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/blame/res/Nexus5API23/debug/multi/values-ko.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/blame/res/Nexus5API23/debug/multi/values-ky-rKG.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/blame/res/Nexus5API23/debug/multi/values-land.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/blame/res/Nexus5API23/debug/multi/values-large-v4.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/blame/res/Nexus5API23/debug/multi/values-ldltr-v21.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/blame/res/Nexus5API23/debug/multi/values-ldrtl-v23.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/blame/res/Nexus5API23/debug/multi/values-lo-rLA.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/blame/res/Nexus5API23/debug/multi/values-lt.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/blame/res/Nexus5API23/debug/multi/values-lv.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/blame/res/Nexus5API23/debug/multi/values-mk-rMK.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/blame/res/Nexus5API23/debug/multi/values-ml-rIN.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/blame/res/Nexus5API23/debug/multi/values-mn-rMN.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/blame/res/Nexus5API23/debug/multi/values-mr-rIN.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/blame/res/Nexus5API23/debug/multi/values-ms-rMY.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/blame/res/Nexus5API23/debug/multi/values-my-rMM.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/blame/res/Nexus5API23/debug/multi/values-nb.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/blame/res/Nexus5API23/debug/multi/values-ne-rNP.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/blame/res/Nexus5API23/debug/multi/values-nl.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/blame/res/Nexus5API23/debug/multi/values-pa-rIN.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/blame/res/Nexus5API23/debug/multi/values-pl.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/blame/res/Nexus5API23/debug/multi/values-port.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/blame/res/Nexus5API23/debug/multi/values-pt-rBR.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/blame/res/Nexus5API23/debug/multi/values-pt-rPT.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/blame/res/Nexus5API23/debug/multi/values-pt.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/blame/res/Nexus5API23/debug/multi/values-ro.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/blame/res/Nexus5API23/debug/multi/values-ru.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/blame/res/Nexus5API23/debug/multi/values-si-rLK.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/blame/res/Nexus5API23/debug/multi/values-sk.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/blame/res/Nexus5API23/debug/multi/values-sl.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/blame/res/Nexus5API23/debug/multi/values-sq-rAL.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/blame/res/Nexus5API23/debug/multi/values-sr.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/blame/res/Nexus5API23/debug/multi/values-sv.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/blame/res/Nexus5API23/debug/multi/values-sw.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/blame/res/Nexus5API23/debug/multi/values-sw600dp-v13.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/blame/res/Nexus5API23/debug/multi/values-ta-rIN.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/blame/res/Nexus5API23/debug/multi/values-te-rIN.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/blame/res/Nexus5API23/debug/multi/values-th.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/blame/res/Nexus5API23/debug/multi/values-tl.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/blame/res/Nexus5API23/debug/multi/values-tr.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/blame/res/Nexus5API23/debug/multi/values-uk.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/blame/res/Nexus5API23/debug/multi/values-ur-rPK.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/blame/res/Nexus5API23/debug/multi/values-uz-rUZ.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/blame/res/Nexus5API23/debug/multi/values-v11.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/blame/res/Nexus5API23/debug/multi/values-v12.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/blame/res/Nexus5API23/debug/multi/values-v14.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/blame/res/Nexus5API23/debug/multi/values-v17.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/blame/res/Nexus5API23/debug/multi/values-v18.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/blame/res/Nexus5API23/debug/multi/values-v21.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/blame/res/Nexus5API23/debug/multi/values-v22.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/blame/res/Nexus5API23/debug/multi/values-v23.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/blame/res/Nexus5API23/debug/multi/values-vi.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/blame/res/Nexus5API23/debug/multi/values-w360dp-v13.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/blame/res/Nexus5API23/debug/multi/values-w480dp-v13.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/blame/res/Nexus5API23/debug/multi/values-w500dp-v13.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/blame/res/Nexus5API23/debug/multi/values-w600dp-v13.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/blame/res/Nexus5API23/debug/multi/values-w720dp-v13.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/blame/res/Nexus5API23/debug/multi/values-xlarge-land-v4.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/blame/res/Nexus5API23/debug/multi/values-xlarge-v4.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/blame/res/Nexus5API23/debug/multi/values-zh-rCN.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/blame/res/Nexus5API23/debug/multi/values-zh-rHK.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/blame/res/Nexus5API23/debug/multi/values-zh-rTW.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/blame/res/Nexus5API23/debug/multi/values-zu.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/blame/res/Nexus5API23/debug/multi/values.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/blame/res/Nexus5API23/debug/single/anim.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/blame/res/Nexus5API23/debug/single/color-v11.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/blame/res/Nexus5API23/debug/single/color-v23.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/blame/res/Nexus5API23/debug/single/color.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/blame/res/Nexus5API23/debug/single/drawable-hdpi.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/blame/res/Nexus5API23/debug/single/drawable-ldpi.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/blame/res/Nexus5API23/debug/single/drawable-ldrtl-hdpi.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/blame/res/Nexus5API23/debug/single/drawable-ldrtl-mdpi.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/blame/res/Nexus5API23/debug/single/drawable-ldrtl-xhdpi.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/blame/res/Nexus5API23/debug/single/drawable-ldrtl-xxhdpi.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/blame/res/Nexus5API23/debug/single/drawable-ldrtl-xxxhdpi.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/blame/res/Nexus5API23/debug/single/drawable-mdpi.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/blame/res/Nexus5API23/debug/single/drawable-v21.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/blame/res/Nexus5API23/debug/single/drawable-v23.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/blame/res/Nexus5API23/debug/single/drawable-xhdpi.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/blame/res/Nexus5API23/debug/single/drawable-xxhdpi.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/blame/res/Nexus5API23/debug/single/drawable-xxxhdpi.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/blame/res/Nexus5API23/debug/single/drawable.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/blame/res/Nexus5API23/debug/single/layout-sw600dp-v13.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/blame/res/Nexus5API23/debug/single/layout.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/blame/res/Nexus5API23/debug/single/menu.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/blame/res/Nexus5API23/debug/single/raw.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/blame/res/Nexus5API23/debug/single/xml.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/incremental/mergeNexus5API23DebugAndroidTestResources/compile-file-map.properties" beforeDir="false" afterPath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/incremental/mergeNexus5API23DebugAndroidTestResources/compile-file-map.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/incremental/mergeNexus5API23DebugAndroidTestResources/merger.xml" beforeDir="false" afterPath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/incremental/mergeNexus5API23DebugAndroidTestResources/merger.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/incremental/mergeNexus5API23DebugAssets/merger.xml" beforeDir="false" afterPath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/incremental/mergeNexus5API23DebugAssets/merger.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/incremental/mergeNexus5API23DebugJniLibFolders/merger.xml" beforeDir="false" afterPath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/incremental/mergeNexus5API23DebugJniLibFolders/merger.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/incremental/mergeNexus5API23DebugResources/compile-file-map.properties" beforeDir="false" afterPath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/incremental/mergeNexus5API23DebugResources/compile-file-map.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/incremental/mergeNexus5API23DebugResources/merger.xml" beforeDir="false" afterPath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/incremental/mergeNexus5API23DebugResources/merger.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/incremental/mergeNexus5API23DebugShaders/merger.xml" beforeDir="false" afterPath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/incremental/mergeNexus5API23DebugShaders/merger.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/manifest/androidTest/Nexus5API23/debug/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/manifest/androidTest/Nexus5API23/debug/AndroidManifest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/manifests/full/Nexus5API23/debug/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/manifests/full/Nexus5API23/debug/AndroidManifest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/symbols/Nexus5API23/debug/R.txt" beforeDir="false" afterPath="$PROJECT_DIR$/SylvacCalipers/build/intermediates/symbols/Nexus5API23/debug/R.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SylvacCalipers/build/outputs/logs/manifest-merger-Nexus5API23-debug-report.txt" beforeDir="false" afterPath="$PROJECT_DIR$/SylvacCalipers/build/outputs/logs/manifest-merger-Nexus5API23-debug-report.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SylvacCalipers/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/SylvacCalipers/src/main/AndroidManifest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SylvacCalipers/src/main/res/layout-hdpi/devicescan_fragment.xml" beforeDir="false" afterPath="$PROJECT_DIR$/SylvacCalipers/src/main/res/layout-hdpi/devicescan_fragment.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SylvacCalipers/src/main/res/layout-hdpi/record_fragment.xml" beforeDir="false" afterPath="$PROJECT_DIR$/SylvacCalipers/src/main/res/layout-hdpi/record_fragment.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SylvacCalipers/src/main/res/layout-hdpi/single_record.xml" beforeDir="false" afterPath="$PROJECT_DIR$/SylvacCalipers/src/main/res/layout-hdpi/single_record.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SylvacCalipers/src/main/res/layout-xxhdpi/devicescan_fragment.xml" beforeDir="false" afterPath="$PROJECT_DIR$/SylvacCalipers/src/main/res/layout-xxhdpi/devicescan_fragment.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SylvacCalipers/src/main/res/layout/activity_main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/SylvacCalipers/src/main/res/layout/activity_main.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SylvacCalipers/src/main/res/layout/bluetooth_device.xml" beforeDir="false" afterPath="$PROJECT_DIR$/SylvacCalipers/src/main/res/layout/bluetooth_device.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SylvacCalipers/src/main/res/layout/help_fragment.xml" beforeDir="false" afterPath="$PROJECT_DIR$/SylvacCalipers/src/main/res/layout/help_fragment.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SylvacCalipers/src/main/res/layout/preference_toolbar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/SylvacCalipers/src/main/res/layout/preference_toolbar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SylvacCalipers/src/main/res/layout/record_fragment.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SylvacCalipers/src/main/res/layout/single_record.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SylvacCalipers/src/main/res/values/styles.xml" beforeDir="false" afterPath="$PROJECT_DIR$/SylvacCalipers/src/main/res/values/styles.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SylvacMeasurements.iml" beforeDir="false" afterPath="$PROJECT_DIR$/SylvacMeasurements.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/local.properties" beforeDir="false" afterPath="$PROJECT_DIR$/local.properties" afterDir="false" />
     </list>
     <ignored path="Sylvac Measurements.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -267,36 +100,39 @@
     <session id="-1128810639">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="1" />
+          <entry key="project.closed" value="2" />
+          <entry key="project.open.time.7" value="1" />
           <entry key="project.open.time.8" value="2" />
-          <entry key="project.opened" value="2" />
+          <entry key="project.opened" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="gradle" value="2" />
+          <entry key="gradle" value="4" />
           <entry key="java" value="2" />
+          <entry key="properties" value="1" />
           <entry key="xml" value="39" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="Groovy" value="2" />
+          <entry key="Groovy" value="4" />
           <entry key="JAVA" value="2" />
+          <entry key="Properties" value="1" />
           <entry key="XML" value="39" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="gradle" value="9" />
-          <entry key="txt" value="8" />
+          <entry key="txt" value="62" />
           <entry key="xml" value="273" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="Groovy" value="9" />
-          <entry key="PLAIN_TEXT" value="8" />
+          <entry key="PLAIN_TEXT" value="62" />
           <entry key="XML" value="273" />
         </counts>
       </usages-collector>
@@ -314,12 +150,12 @@
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/SylvacCalipers/src/main/res/layout-hdpi/single_record.xml">
-          <provider editor-type-id="android-designer2" />
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="353">
-              <caret line="23" column="31" lean-forward="true" selection-start-line="23" selection-start-column="31" selection-end-line="23" selection-end-column="31" />
+            <state relative-caret-position="391">
+              <caret line="23" column="31" selection-start-line="23" selection-start-column="31" selection-end-line="23" selection-end-column="31" />
             </state>
           </provider>
+          <provider editor-type-id="android-designer2" />
         </entry>
       </file>
     </leaf>
@@ -2761,68 +2597,12 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="ProjectPane" />
       <pane id="AndroidView">
         <subPane>
           <expand>
             <path>
               <item name="SylvacMeasurements" type="1abcf292:AndroidViewProjectNode" />
-              <item name="SylvacCalipers" type="feadf853:AndroidModuleNode" />
-            </path>
-            <path>
-              <item name="SylvacMeasurements" type="1abcf292:AndroidViewProjectNode" />
-              <item name="SylvacCalipers" type="feadf853:AndroidModuleNode" />
-              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
-            </path>
-            <path>
-              <item name="SylvacMeasurements" type="1abcf292:AndroidViewProjectNode" />
-              <item name="SylvacCalipers" type="feadf853:AndroidModuleNode" />
-              <item name="res" type="d4f16f75:AndroidResFolderNode" />
-            </path>
-            <path>
-              <item name="SylvacMeasurements" type="1abcf292:AndroidViewProjectNode" />
-              <item name="SylvacCalipers" type="feadf853:AndroidModuleNode" />
-              <item name="res" type="d4f16f75:AndroidResFolderNode" />
-              <item name="layout" type="ddeffd01:AndroidResFolderTypeNode" />
-            </path>
-            <path>
-              <item name="SylvacMeasurements" type="1abcf292:AndroidViewProjectNode" />
-              <item name="SylvacCalipers" type="feadf853:AndroidModuleNode" />
-              <item name="res" type="d4f16f75:AndroidResFolderNode" />
-              <item name="layout" type="ddeffd01:AndroidResFolderTypeNode" />
-              <item name="devicescan_fragment" type="c431d0b8:AndroidResGroupNode" />
-            </path>
-            <path>
-              <item name="SylvacMeasurements" type="1abcf292:AndroidViewProjectNode" />
-              <item name="SylvacCalipers" type="feadf853:AndroidModuleNode" />
-              <item name="res" type="d4f16f75:AndroidResFolderNode" />
-              <item name="layout" type="ddeffd01:AndroidResFolderTypeNode" />
-              <item name="record_fragment" type="c431d0b8:AndroidResGroupNode" />
-            </path>
-            <path>
-              <item name="SylvacMeasurements" type="1abcf292:AndroidViewProjectNode" />
-              <item name="SylvacCalipers" type="feadf853:AndroidModuleNode" />
-              <item name="res" type="d4f16f75:AndroidResFolderNode" />
-              <item name="layout" type="ddeffd01:AndroidResFolderTypeNode" />
-              <item name="single_record" type="c431d0b8:AndroidResGroupNode" />
-            </path>
-            <path>
-              <item name="SylvacMeasurements" type="1abcf292:AndroidViewProjectNode" />
-              <item name="SylvacCalipers" type="feadf853:AndroidModuleNode" />
-              <item name="res" type="d4f16f75:AndroidResFolderNode" />
-              <item name="menu" type="ddeffd01:AndroidResFolderTypeNode" />
-            </path>
-            <path>
-              <item name="SylvacMeasurements" type="1abcf292:AndroidViewProjectNode" />
-              <item name="SylvacCalipers" type="feadf853:AndroidModuleNode" />
-              <item name="res" type="d4f16f75:AndroidResFolderNode" />
-              <item name="values" type="ddeffd01:AndroidResFolderTypeNode" />
-            </path>
-            <path>
-              <item name="SylvacMeasurements" type="1abcf292:AndroidViewProjectNode" />
-              <item name="SylvacCalipers" type="feadf853:AndroidModuleNode" />
-              <item name="res" type="d4f16f75:AndroidResFolderNode" />
-              <item name="xml" type="ddeffd01:AndroidResFolderTypeNode" />
+              <item name="Gradle Scripts" type="ae0cef3a:AndroidBuildScriptsGroupNode" />
             </path>
           </expand>
           <select />
@@ -2830,6 +2610,7 @@
       </pane>
       <pane id="PackagesPane" />
       <pane id="Scope" />
+      <pane id="ProjectPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -2875,7 +2656,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Android App.SylvacCalipers debug">
+  <component name="RunManager" selected="Android App.SylvacCalipers release">
     <configuration default="true" type="AndroidRunConfigurationType" factoryName="Android Application">
       <module name="" />
       <option name="DEPLOY" value="true" />
@@ -3061,6 +2842,7 @@
       </method>
     </configuration>
     <configuration name="SylvacCalipers release" type="AndroidRunConfigurationType" factoryName="Android App">
+      <module name="SylvacCalipers" />
       <option name="DEPLOY" value="true" />
       <option name="DEPLOY_APK_FROM_BUNDLE" value="false" />
       <option name="DEPLOY_AS_INSTANT" value="false" />
@@ -3450,7 +3232,14 @@
       <option name="project" value="LOCAL" />
       <updated>1490322824302</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="Altered layouts to better fit T380 screen.">
+      <created>1552344627642</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1552344627642</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TodoView">
@@ -3474,7 +3263,6 @@
       <window_info id="Favorites" order="5" side_tool="true" />
       <window_info id="Captures" order="6" side_tool="true" />
       <window_info id="Capture Tool" order="7" />
-      <window_info anchor="bottom" id="Build" weight="0.30985916" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32936078" />
       <window_info anchor="bottom" id="Run" order="2" />
@@ -3483,14 +3271,13 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Gradle Console" order="7" side_tool="true" />
-      <window_info anchor="bottom" id="Android Profiler" order="8" />
+      <window_info anchor="bottom" id="Android Profiler" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
       <window_info anchor="bottom" id="Logcat" order="10" />
       <window_info anchor="bottom" id="Version Control" order="11" />
       <window_info anchor="bottom" id="Terminal" order="12" />
       <window_info active="true" anchor="bottom" id="Messages" order="13" visible="true" weight="0.32911393" />
-      <window_info active="true" anchor="right" id="Preview" sideWeight="0.49945828" visible="true" weight="0.32995737" />
-      <window_info anchor="right" id="Assistant" weight="0.32995737" />
+      <window_info anchor="bottom" id="Build" order="14" visible="true" weight="0.30985916" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -3499,6 +3286,8 @@
       <window_info anchor="right" id="Gradle" order="5" />
       <window_info anchor="right" id="Palette&#9;" order="6" />
       <window_info anchor="right" id="Theme Preview" order="7" />
+      <window_info active="true" anchor="right" id="Preview" order="8" sideWeight="0.49945828" visible="true" weight="0.32995737" />
+      <window_info anchor="right" id="Assistant" order="9" weight="0.32995737" />
     </layout>
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -3558,7 +3347,8 @@
     <MESSAGE value="Added a connection attempt limit for each new connection, this stops an infinite loops with being disconnected from the remote device.&#10;Added the feature of completely disconnecting from the device and refreshing the cache if service discovery times out; changed from 2s to 10s.&#10;Extracted the register BondStateReceiver to its own function so it can be called publicly. This allows for the receiver to be registered upon attempting a new connection.&#10;Added an extra filter for the menu option 'Disconnect device' so the BroadcastReceiver now handles this action.&#10;Renamed 'Record' class to be 'DataRecord'&#10;&#10;Renamed the Fragment titles to 'Scan' and 'Data' to better reflect their purpose.&#10;Updated the content of the FAQ and Troubleshooting section." />
     <MESSAGE value="Cleaned up the connection manager:&#10;- removed a lot of uneccessary connection garbage (notify / timeouts etc)&#10;- more informative connection status details&#10;- added title bar status&#10;- moved all connection broadcast receivers to the Connection manager class.&#10;&#10;TODO: &#10;- potentially add timeouts,&#10;- update help info in the menu&#10;- unit testing" />
     <MESSAGE value="Added a MediaScan on files to refresh the MTP, only works on NEW files. appending still requires a phone restart." />
-    <option name="LAST_COMMIT_MESSAGE" value="Added a MediaScan on files to refresh the MTP, only works on NEW files. appending still requires a phone restart." />
+    <MESSAGE value="Altered layouts to better fit T380 screen." />
+    <option name="LAST_COMMIT_MESSAGE" value="Altered layouts to better fit T380 screen." />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/SylvacCalipers/src/main/res/layout-normal/help_fragment.xml" />
@@ -3603,13 +3393,6 @@
       </provider>
     </entry>
     <entry file="file://$USER_HOME$/AppData/Local/Android/sdk2/sources/android-23/android/content/ContextWrapper.java" />
-    <entry file="file://$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="74" selection-start-line="5" selection-start-column="74" selection-end-line="5" selection-end-column="74" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/SylvacCalipers/src/main/java/com/patrick/Sylvac_Calipers/BondStateReceiver.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="425">
@@ -3666,11 +3449,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="646">
           <caret line="62" column="57" selection-start-line="62" selection-start-column="57" selection-end-line="62" selection-end-column="57" />
-          <folding>
-            <element signature="method#onCreateOptionsMenu#0;class#MainActivity#0" />
-            <element signature="method#onOptionsItemSelected#0;class#MainActivity#0" />
-            <element signature="method#setConnectionStatus#0;class#MainActivity#0" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -3681,37 +3459,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/SylvacCalipers/build.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="29" selection-start-line="4" selection-start-column="29" selection-end-line="4" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/build.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/SylvacCalipers/src/main/java/com/patrick/Sylvac_Calipers/DataReceiver.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
           <caret line="121" column="68" selection-start-line="121" selection-start-column="68" selection-end-line="122" selection-end-column="75" />
-          <folding>
-            <element signature="method#saveAllRecords#0;class#DataReceiver#0" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/SylvacCalipers/src/main/res/layout/help_fragment.xml">
-      <provider selected="true" editor-type-id="android-designer2" />
       <provider editor-type-id="text-editor" />
+      <provider selected="true" editor-type-id="android-designer2" />
     </entry>
     <entry file="file://$PROJECT_DIR$/SylvacCalipers/src/main/res/layout/help_topic.xml">
-      <provider selected="true" editor-type-id="android-designer2" />
       <provider editor-type-id="text-editor" />
+      <provider selected="true" editor-type-id="android-designer2" />
     </entry>
     <entry file="file://$PROJECT_DIR$/SylvacCalipers/src/main/java/com/patrick/Sylvac_Calipers/DeviceScanFragment.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -3721,44 +3482,44 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/SylvacCalipers/src/main/res/layout-xxhdpi/devicescan_fragment.xml">
-      <provider editor-type-id="android-designer2" />
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
           <caret line="11" column="41" selection-start-line="11" selection-start-column="41" selection-end-line="11" selection-end-column="41" />
         </state>
       </provider>
+      <provider editor-type-id="android-designer2" />
     </entry>
     <entry file="file://$PROJECT_DIR$/SylvacCalipers/src/main/res/layout/status_fragment.xml">
-      <provider selected="true" editor-type-id="android-designer2" />
       <provider editor-type-id="text-editor" />
+      <provider selected="true" editor-type-id="android-designer2" />
     </entry>
     <entry file="file://$PROJECT_DIR$/SylvacCalipers/src/main/res/layout/bluetooth_device.xml">
-      <provider selected="true" editor-type-id="android-designer2" />
       <provider editor-type-id="text-editor" />
+      <provider selected="true" editor-type-id="android-designer2" />
     </entry>
     <entry file="file://$PROJECT_DIR$/SylvacCalipers/src/main/res/layout/preference_toolbar.xml">
-      <provider editor-type-id="android-designer2" />
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
           <caret line="9" column="50" selection-start-line="9" selection-start-column="37" selection-end-line="9" selection-end-column="50" />
         </state>
       </provider>
+      <provider editor-type-id="android-designer2" />
     </entry>
     <entry file="file://$PROJECT_DIR$/SylvacCalipers/src/main/res/layout/save_data_layout.xml">
-      <provider selected="true" editor-type-id="android-designer2" />
       <provider editor-type-id="text-editor" />
+      <provider selected="true" editor-type-id="android-designer2" />
     </entry>
     <entry file="file://$PROJECT_DIR$/SylvacCalipers/src/main/AndroidManifest.xml">
-      <provider editor-type-id="android-manifest" />
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="595">
           <caret line="35" lean-forward="true" selection-start-line="35" selection-end-line="35" />
         </state>
       </provider>
+      <provider editor-type-id="android-manifest" />
     </entry>
     <entry file="file://$PROJECT_DIR$/SylvacCalipers/src/main/res/xml/preferences.xml">
-      <provider editor-type-id="android-designer2" />
       <provider selected="true" editor-type-id="text-editor" />
+      <provider editor-type-id="android-designer2" />
     </entry>
     <entry file="file://$PROJECT_DIR$/SylvacCalipers/src/main/res/values/strings.xml">
       <provider selected="true" editor-type-id="text-editor" />
@@ -3784,8 +3545,8 @@
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/SylvacCalipers/src/main/res/menu/menu.xml">
-      <provider editor-type-id="android-designer2" />
       <provider selected="true" editor-type-id="text-editor" />
+      <provider editor-type-id="android-designer2" />
     </entry>
     <entry file="file://$PROJECT_DIR$/SylvacCalipers/src/main/java/com/patrick/Sylvac_Calipers/PageFragmentAdapter.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -3795,56 +3556,71 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/SylvacCalipers/src/main/res/layout/main.xml">
-      <provider editor-type-id="android-designer2" />
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="221">
           <caret line="13" column="62" selection-start-line="13" selection-start-column="62" selection-end-line="13" selection-end-column="62" />
         </state>
       </provider>
+      <provider editor-type-id="android-designer2" />
     </entry>
     <entry file="file://$PROJECT_DIR$/SylvacCalipers/src/main/res/layout/activity_main.xml">
-      <provider editor-type-id="android-designer2" />
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
           <caret line="16" column="70" selection-start-line="16" selection-start-column="70" selection-end-line="16" selection-end-column="70" />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SylvacCalipers/src/main/res/layout/record_fragment.xml">
       <provider editor-type-id="android-designer2" />
-      <provider selected="true" editor-type-id="text-editor" />
     </entry>
+    <entry file="file://$PROJECT_DIR$/SylvacCalipers/src/main/res/layout/record_fragment.xml" />
     <entry file="file://$PROJECT_DIR$/SylvacCalipers/src/main/res/layout-xxhdpi/record_fragment.xml">
-      <provider selected="true" editor-type-id="android-designer2" />
       <provider editor-type-id="text-editor" />
+      <provider selected="true" editor-type-id="android-designer2" />
     </entry>
     <entry file="file://$PROJECT_DIR$/SylvacCalipers/src/main/res/layout-hdpi/record_fragment.xml">
-      <provider editor-type-id="android-designer2" />
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="503">
           <caret line="65" column="34" selection-start-line="65" selection-start-column="34" selection-end-line="65" selection-end-column="34" />
         </state>
       </provider>
+      <provider editor-type-id="android-designer2" />
     </entry>
     <entry file="file://$PROJECT_DIR$/SylvacCalipers/src/main/res/layout-hdpi/devicescan_fragment.xml">
-      <provider editor-type-id="android-designer2" />
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="221">
           <caret line="13" column="42" selection-start-line="13" selection-start-column="42" selection-end-line="13" selection-end-column="42" />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SylvacCalipers/src/main/res/layout/single_record.xml">
-      <provider selected="true" editor-type-id="android-designer2" />
-      <provider editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SylvacCalipers/src/main/res/layout-hdpi/single_record.xml">
       <provider editor-type-id="android-designer2" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SylvacCalipers/src/main/res/layout/single_record.xml" />
+    <entry file="file://$PROJECT_DIR$/build.gradle">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="353">
-          <caret line="23" column="31" lean-forward="true" selection-start-line="23" selection-start-column="31" selection-end-line="23" selection-end-column="31" />
+        <state relative-caret-position="289">
+          <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SylvacCalipers/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="29" selection-start-line="4" selection-start-column="29" selection-end-line="4" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="74" selection-start-line="5" selection-start-column="74" selection-end-line="5" selection-end-column="74" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SylvacCalipers/src/main/res/layout-hdpi/single_record.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="23" column="31" selection-start-line="23" selection-start-column="31" selection-end-line="23" selection-end-column="31" />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2" />
     </entry>
   </component>
 </project>
