@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:keepScreenOn="true">
+
+    <ListView
+        android:id="@+id/listViewDiscoveredDevices"
+        android:layout_width="match_parent"
+        android:layout_height="420dp" />
+
+    <TextView
+        android:text="Status: Idle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/listViewDiscoveredDevices"
+        android:layout_alignParentStart="true"
+        android:id="@+id/textViewStatus"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:lines="1"
+        android:textAppearance="@android:style/TextAppearance.Material.Large" />
+
+</RelativeLayout>

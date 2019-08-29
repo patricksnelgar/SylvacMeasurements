@@ -1,0 +1,4 @@
+#Fri Aug 30 09:43:42 NZST 2019
+base.0=C\:\\Users\\hrtpxs\\Documents\\Android\\SylvacMeasurements\\SylvacCalipers\\build\\intermediates\\dex\\Nexus5API23Nexus5v11\\mergeDexNexus5API23Nexus5v11\\out\\classes.dex
+path.0=classes.dex
+renamed.0=classes.dex
