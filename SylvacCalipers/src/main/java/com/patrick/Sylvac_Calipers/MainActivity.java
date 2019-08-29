@@ -38,8 +38,13 @@ public class MainActivity extends AppCompatActivity {
     public static final String PREFERENCE_ONLY_SYLVAC = "sylvac_devices";
     public static final String PREFERENCE_CURRENT_ID = "current_ID";
     public static final String PREFERENCE_AUTO_SAVE_FILENAME = "auto_save_filename";
+    public static final String PREFERENCE_ENABLE_BLOCK_MODE = "enable_block_mode";
+    public static final String PREFERNCE_RECORDS_PER_BLOCK = "records_per_block";
+    public static final String PREFERENCE_BLOCK_ID_INCREMENT = "block_id_increment";
     public static final String PREFERENCE_AUTO_SAVE = "auto_save";
     public static final int DEFAULT_PREF_VALUES_PER_ENTRY = 3;
+    public static final int DEFAULT_RECORDS_PER_BLOCK = 4;
+    public static final int DEFAULT_BLOCK_ID_INCREMENT = 10;
 
     private String TAG = MainActivity.class.getSimpleName();
 

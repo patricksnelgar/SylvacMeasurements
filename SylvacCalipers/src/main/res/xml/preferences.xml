@@ -2,13 +2,12 @@
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
     <PreferenceCategory android:title="Record Preferences">
         <EditTextPreference
-            android:title="Values Per Entry"
+            android:title="Measurements per record"
             android:key="values_per_entry"
-            android:summary="Number of measurements per entry: 3"
-            android:numeric="integer"
+            android:summary="Number of measurements per record: 3"
+            android:inputType="number"
             android:defaultValue="3"
             android:singleLine="true"
-            android:editable="true"
             android:selectAllOnFocus="true" />
         <!--<CheckBoxPreference
             android:title="Enable Editing"
@@ -20,8 +19,28 @@
             android:key="beep_on_receive"
             android:summary="Play a sound when a measurement is received"
             android:defaultValue="true" />
+        <SwitchPreference
+            android:title="Enable block mode"
+            android:defaultValue="false"
+            android:key="enable_block_mode" />
+        <EditTextPreference
+            android:title="Records per block"
+            android:enabled="false"
+            android:inputType="number"
+            android:selectAllOnFocus="true"
+            android:summary="Number of records per block: "
+            android:defaultValue="4"
+            android:key="records_per_block" />
+        <EditTextPreference
+            android:title="Block ID increment"
+            android:summary="Increment ID between blocks by: "
+            android:inputType="number"
+            android:selectAllOnFocus="true"
+            android:defaultValue="10"
+            android:enabled="false"
+            android:key="block_id_increment" />
     </PreferenceCategory>
-    <PreferenceCategory android:title="Connection Preferences">
+    <!-- <PreferenceCategory android:title="Connection Preferences">
         <SwitchPreference
             android:title="Only Sylvac Devices"
             android:key="sylvac_devices"
@@ -32,9 +51,8 @@
             android:key="auto_connect"
             android:summary="Connect to previously paired devices automatically"
             android:defaultValue="false"
-            android:editable="false"
             android:enabled="false" />
-    </PreferenceCategory>
+    </PreferenceCategory> -->
     <PreferenceCategory android:title="Data Preferences">
         <CheckBoxPreference
             android:title="Auto Save"

@@ -57,12 +57,31 @@ public class SettingsActivity extends AppCompatActivity {
             Preference _p = getPreferenceManager().findPreference(MainActivity.PREFERENCE_VALUES_PER_ENTRY);
             if (_p != null) {
                 _p.setSummary("Number of measurements per entry: " + getPreferenceManager().getSharedPreferences().getString(MainActivity.PREFERENCE_VALUES_PER_ENTRY, "Error"));
-                _p = getPreferenceManager().findPreference(MainActivity.PREFERENCE_AUTO_SAVE_FILENAME);
-                boolean enablefilename = PreferenceManager.getDefaultSharedPreferences(getContext()).getBoolean(MainActivity.PREFERENCE_AUTO_SAVE,false);
+            }
+
+
+            _p = getPreferenceManager().findPreference(MainActivity.PREFERENCE_AUTO_SAVE_FILENAME);
+            if(_p != null){
+                boolean enablefilename = PreferenceManager.getDefaultSharedPreferences(getContext()).getBoolean(MainActivity.PREFERENCE_AUTO_SAVE, false);
                 _p.setSummary("Autosave file: " + getPreferenceManager().getDefaultSharedPreferences(getContext()).getString(MainActivity.PREFERENCE_AUTO_SAVE_FILENAME, "----"));
                 _p.setEnabled(enablefilename);
             }
 
+            _p = getPreferenceManager().findPreference(MainActivity.PREFERENCE_ENABLE_BLOCK_MODE);
+            if(_p != null){
+                boolean blockModeEnabled = getPreferenceManager().getDefaultSharedPreferences(getContext()).getBoolean(MainActivity.PREFERENCE_ENABLE_BLOCK_MODE, false);
+
+                Preference _q = getPreferenceManager().findPreference(MainActivity.PREFERNCE_RECORDS_PER_BLOCK);
+                Preference _s = getPreferenceManager().findPreference(MainActivity.PREFERENCE_BLOCK_ID_INCREMENT);
+
+                if(_q != null && _s != null) {
+                    _q.setSummary("Number of records per block: " + getPreferenceManager().getSharedPreferences().getString(MainActivity.PREFERNCE_RECORDS_PER_BLOCK, "NA"));
+                    _q.setEnabled(blockModeEnabled);
+
+                    _s.setSummary("Increment ID between blocks by: " + getPreferenceManager().getSharedPreferences().getString(MainActivity.PREFERENCE_BLOCK_ID_INCREMENT, "NA"));
+                    _s.setEnabled(blockModeEnabled);
+                }
+            }
         }
 
         /**
@@ -87,6 +106,22 @@ public class SettingsActivity extends AppCompatActivity {
                     mPrefFileName.setSummary("Autosave file: " + getPreferenceManager().getSharedPreferences().getString(key, "----"));
                     break;
                 case MainActivity.PREFERENCE_CURRENT_ID:
+                    break;
+                case MainActivity.PREFERENCE_ENABLE_BLOCK_MODE:
+                    boolean blockModeEnabled = getPreferenceManager().getSharedPreferences().getBoolean(key, false);
+                    Preference mPrefRecordsPerBlock = findPreference(MainActivity.PREFERNCE_RECORDS_PER_BLOCK);
+                    Preference mPrefBlockIDIncrement = findPreference(MainActivity.PREFERENCE_BLOCK_ID_INCREMENT);
+
+                    mPrefRecordsPerBlock.setEnabled(blockModeEnabled);
+                    mPrefBlockIDIncrement.setEnabled(blockModeEnabled);
+                    break;
+                case MainActivity.PREFERNCE_RECORDS_PER_BLOCK:
+                    mPrefRecordsPerBlock = findPreference(key);
+                    mPrefRecordsPerBlock.setSummary("Number of records per block: " + getPreferenceManager().getSharedPreferences().getString(key, "NA"));
+                    break;
+                case MainActivity.PREFERENCE_BLOCK_ID_INCREMENT:
+                    mPrefBlockIDIncrement = findPreference(key);
+                    mPrefBlockIDIncrement.setSummary("Increment ID between blocks by: " + getPreferenceManager().getSharedPreferences().getString(key, "NA"));
                     break;
                 default:
                     Log.e("Settings", "Preference " + key + " not handled");

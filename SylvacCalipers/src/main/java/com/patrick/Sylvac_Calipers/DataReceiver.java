@@ -45,7 +45,10 @@ public class DataReceiver extends BroadcastReceiver {
     private ListView mHistory;
     private Handler mHandler = new Handler(Looper.getMainLooper());
     private int mMeasurementCount = 0;
+    private int mRecordCount = 0;
     public int valuesPerRecord;
+    public int recordsPerBlock;
+    public int blockIDIncrement;
     private List<DataRecord> listDataRecords;
     private RecordAdapter listRecordsAdapter;
     private FileOutputStream mFileStream;
@@ -84,7 +87,13 @@ public class DataReceiver extends BroadcastReceiver {
     public void onReceive(Context context, Intent intent) {
         // Get the values from Preferences
         valuesPerRecord = Integer.parseInt(mPrefs.getString(MainActivity.PREFERENCE_VALUES_PER_ENTRY, "-1"));
-        if(valuesPerRecord == -1) valuesPerRecord = MainActivity.DEFAULT_PREF_VALUES_PER_ENTRY;
+        recordsPerBlock = Integer.parseInt(mPrefs.getString(MainActivity.PREFERNCE_RECORDS_PER_BLOCK, "-1"));
+        blockIDIncrement = Integer.parseInt(mPrefs.getString(MainActivity.PREFERENCE_BLOCK_ID_INCREMENT, "-1"));
+        if(valuesPerRecord < 0 || recordsPerBlock < 0 || blockIDIncrement < 0) {
+            Log.e("DataReceiver", "Could not get values from preferences");
+            return;
+        }
+
         String action = intent.getAction();
         String data = "NULL";
 
@@ -118,6 +127,18 @@ public class DataReceiver extends BroadcastReceiver {
 
                     int currentID = mPrefs.getInt(MainActivity.PREFERENCE_CURRENT_ID, 0);
                     int nextID = currentID + 1;
+
+                    if(mPrefs.getBoolean(MainActivity.PREFERENCE_ENABLE_BLOCK_MODE, false)) {
+                        Log.d("DataReciever", "Block mode is used");
+                        mRecordCount++;
+                        Log.d("DataReceiver", "Record count is: " + mRecordCount);
+                        if(mRecordCount == recordsPerBlock) {
+                            // +1 is needed to correctly align the block IDs
+                            nextID = ((currentID + blockIDIncrement) - recordsPerBlock) + 1;
+                            mRecordCount = 0;
+                        }
+
+                    }
                     // Set the next recordID text field
                     mCurrentEntryID.setText(String.valueOf(nextID));
                     // Update the preferences to reflect the incremented ID
