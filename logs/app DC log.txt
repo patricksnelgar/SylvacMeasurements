@@ -1,0 +1,65 @@
+03-21 14:05:36.089 com.patrick.Sylvac_Calipers D/BluetoothGatt: connect() - device: CF:27:3E:12:F6:9F, auto: false
+03-21 14:05:36.089 com.patrick.Sylvac_Calipers D/BluetoothGatt: registerApp()
+03-21 14:05:36.089 com.patrick.Sylvac_Calipers D/BluetoothGatt: registerApp() - UUID=2e0c4995-1887-4819-9af9-d2fcbe460223
+03-21 14:05:36.091 ? D/BtGatt.GattService: registerClient() - UUID=2e0c4995-1887-4819-9af9-d2fcbe460223
+03-21 14:05:36.091 com.patrick.Sylvac_Calipers D/BluetoothGatt: requestConnectionPriority() - params: 2
+03-21 14:05:36.092 com.patrick.Sylvac_Calipers D/ConnectionManager: BT Services cache refreshedd
+03-21 14:05:36.092 com.patrick.Sylvac_Calipers D/BluetoothGatt: refresh() - device: CF:27:3E:12:F6:9F
+03-21 14:05:36.096 ? D/BtGatt.GattService: onClientRegistered() - UUID=2e0c4995-1887-4819-9af9-d2fcbe460223, clientIf=5
+03-21 14:05:36.097 com.patrick.Sylvac_Calipers D/BluetoothGatt: onClientRegistered() - status=0 clientIf=5
+03-21 14:05:36.099 ? D/BtGatt.GattService: clientConnect() - address=CF:27:3E:12:F6:9F, isDirect=true
+03-21 14:05:36.100 ? D/bt_btif_config: btif_get_address_type: Device [cf:27:3e:12:f6:9f] address type 1
+03-21 14:05:36.100 ? D/bt_btif_config: btif_get_device_type: Device [cf:27:3e:12:f6:9f] type 2
+03-21 14:05:36.264 ? W/bt_smp: smp_br_connect_callback is called on unexpected transport 2
+03-21 14:05:36.264 ? W/bt_btif: bta_dm_acl_change info: 0x0
+03-21 14:05:36.264 ? D/bt_btif_config: btif_get_device_type: Device [cf:27:3e:12:f6:9f] type 2
+03-21 14:05:36.267 ? I/BluetoothBondStateMachine: bondStateChangeCallback: Status: 0 Address: CF:27:3E:12:F6:9F newState: 1
+03-21 14:05:36.267 ? I/BluetoothBondStateMachine: sspRequestCallback: [B@d400d4d name: [B@ee15002 cod: 7936 pairingVariant 2 passkey: 0
+03-21 14:05:36.267 ? D/bt_btif_dm: remote version info [cf:27:3e:12:f6:9f]: 0, 0, 0
+03-21 14:05:36.269 ? E/BluetoothRemoteDevices: state12newState0
+03-21 14:05:36.270 ? I/BluetoothBondStateMachine: Bond State Change Intent:CF:27:3E:12:F6:9F OldState: 10 NewState: 11
+03-21 14:05:36.270 ? I/BluetoothBondStateMachine: Entering PendingCommandState State
+03-21 14:05:36.273 ? D/BtGatt.GattService: onConnected() - clientIf=5, connId=5, address=CF:27:3E:12:F6:9F
+03-21 14:05:36.274 com.patrick.Sylvac_Calipers D/BluetoothGatt: onClientConnectionState() - status=0 clientIf=5 device=CF:27:3E:12:F6:9F
+03-21 14:05:36.274 com.patrick.Sylvac_Calipers D/BluetoothGatt: discoverServices() - device: CF:27:3E:12:F6:9F
+03-21 14:05:36.277 ? W/BluetoothEventManager: CachedBluetoothDevice for device CF:27:3E:12:F6:9F not found, calling readPairedDevices().
+03-21 14:05:36.277 ? D/BtGatt.GattService: discoverServices() - address=CF:27:3E:12:F6:9F, connId=5
+03-21 14:05:36.280 ? E/BluetoothEventManager: Got bonding state changed for CF:27:3E:12:F6:9F, but we have no record of that device.
+03-21 14:05:36.281 com.patrick.Sylvac_Calipers I/BluetoothGattCallback: Connected to GATT server.
+03-21 14:05:36.289 ? V/LocalBluetoothPreferences: Found no reason to show the dialog - do not show dialog.
+03-21 14:05:36.331 ? D/BluetoothManagerService: Added callback: android.bluetooth.IBluetoothManagerCallback$Stub$Proxy@793b092:true
+03-21 14:05:36.391 ? D/MediaPlayer: setSubtitleAnchor in MediaPlayer
+03-21 14:05:36.895 ? W/bt_bta_gattc: bta_gattc_explore_srvc no more services found
+03-21 14:05:36.895 ? D/BtGatt.GattService: onSearchCompleted() - connId=5, status=0
+03-21 14:05:36.896 ? E/bt_btif_gatt: bta_to_btif_uuid: Unknown UUID length 46809!
+03-21 14:05:36.897 com.patrick.Sylvac_Calipers D/BluetoothGatt: onSearchComplete() = Device=CF:27:3E:12:F6:9F Status=0
+03-21 14:05:36.897 com.patrick.Sylvac_Calipers D/BluetoothGattCallback: Service discovery complete
+03-21 14:05:37.898 com.patrick.Sylvac_Calipers D/BluetoothGatt: setCharacteristicNotification() - uuid: c1b25010-caaf-6d0e-4c33-7dae30052840 enable: true
+03-21 14:05:37.900 ? D/BtGatt.GattService: registerForNotification() - address=CF:27:3E:12:F6:9F enable: true
+03-21 14:05:37.900 ? D/BtGatt.GattService: onRegisterForNotifications() - address=null, status=0, registered=1, charUuid=c1b25010-caaf-6d0e-4c33-7dae30052840
+03-21 14:06:06.281 ? I/BluetoothBondStateMachine: bondStateChangeCallback: Status: 1 Address: CF:27:3E:12:F6:9F newState: 0
+03-21 14:06:06.281 ? D/BluetoothAdapterProperties: Failed to remove device: CF:27:3E:12:F6:9F
+03-21 14:06:06.283 ? I/BluetoothBondStateMachine: Bond State Change Intent:CF:27:3E:12:F6:9F OldState: 11 NewState: 10
+03-21 14:06:06.284 ? D/HidService: getHidService(): returning com.android.bluetooth.hid.HidService@e47b2dd
+03-21 14:06:06.287 ? I/BluetoothBondStateMachine: StableState(): Entering Off State
+03-21 14:06:06.294 ? W/BluetoothEventManager: CachedBluetoothDevice for device CF:27:3E:12:F6:9F not found, calling readPairedDevices().
+03-21 14:06:06.295 ? E/BluetoothEventManager: Got bonding state changed for CF:27:3E:12:F6:9F, but we have no record of that device.
+03-21 14:06:06.363 ? W/BluetoothEventManager: showUnbondMessage: Not displaying any message for reason: 9
+03-21 14:06:11.342 ? W/bt_btif: bta_gattc_conn_cback() - cif=3 connected=0 conn_id=3 reason=0x0016
+03-21 14:06:11.342 ? W/bt_btif: bta_gattc_conn_cback() - cif=4 connected=0 conn_id=4 reason=0x0016
+03-21 14:06:11.342 ? W/bt_btif: bta_gattc_conn_cback() - cif=5 connected=0 conn_id=5 reason=0x0016
+03-21 14:06:11.342 ? I/bt_btm_sec: btm_sec_disconnected clearing pending flag handle:64 reason:22
+03-21 14:06:11.342 ? E/bt_btif: bta_gattc_mark_bg_conn unable to find the bg connection mask for: cf:27:3e:12:f6:9f
+03-21 14:06:11.342 ? D/BtGatt.GattService: onDisconnected() - clientIf=5, connId=5, address=CF:27:3E:12:F6:9F
+03-21 14:06:11.342 com.patrick.Sylvac_Calipers D/BluetoothGatt: onClientConnectionState() - status=22 clientIf=5 device=CF:27:3E:12:F6:9F
+03-21 14:06:11.343 com.patrick.Sylvac_Calipers I/BluetoothGattCallback: Disconnected from GATT Server.
+03-21 14:06:11.343 com.patrick.Sylvac_Calipers D/BluetoothGatt: cancelOpen() - device: CF:27:3E:12:F6:9F
+03-21 14:06:11.344 ? D/BtGatt.GattService: clientDisconnect() - address=CF:27:3E:12:F6:9F, connId=null
+03-21 14:06:11.346 com.patrick.Sylvac_Calipers D/BluetoothGatt: close()
+03-21 14:06:11.346 com.patrick.Sylvac_Calipers D/BluetoothGatt: unregisterApp() - mClientIf=5
+03-21 14:06:11.346 ? D/BtGatt.GattService: unregisterClient() - clientIf=5
+03-21 14:06:11.347 ? E/BluetoothRemoteDevices: state12newState1
+03-21 14:06:11.351 ? E/bt_btif: No such connection need to be cancelled
+03-21 14:06:11.351 ? E/bt_btif: bta_gattc_mark_bg_conn unable to find the bg connection mask for: cf:27:3e:12:f6:9f
+03-21 14:06:11.351 ? D/BluetoothMapService: onReceive
+03-21 14:06:11.351 ? D/BluetoothMapService: onReceive: android.bluetooth.device.action.ACL_DISCONNECTED
