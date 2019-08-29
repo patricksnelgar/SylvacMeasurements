@@ -1,18 +1,31 @@
 apply plugin: 'com.android.application'
 android {
     compileSdkVersion 23
-    buildToolsVersion '23.0.3'
-
+    flavorDimensions "default"
     defaultConfig {
         applicationId "com.patrick.Sylvac_Calipers"
-        minSdkVersion 21
+        minSdkVersion 23
         targetSdkVersion 23
     }
-
     buildTypes {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
+        }
+
+        nexus5v11 {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
+        }
+    }
+
+    lintOptions {
+        checkReleaseBuilds false
+    }
+
+    productFlavors {
+        Nexus5API23 {
+            dimension "default"
         }
     }
 }
