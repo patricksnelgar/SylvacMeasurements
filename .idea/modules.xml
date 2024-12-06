@@ -2,8 +2,11 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/SylvacCalipers/SylvacCalipers.iml" filepath="$PROJECT_DIR$/SylvacCalipers/SylvacCalipers.iml" />
       <module fileurl="file://$PROJECT_DIR$/SylvacMeasurements.iml" filepath="$PROJECT_DIR$/SylvacMeasurements.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/SylvacCalipers/SylvacMeasurements.SylvacCalipers.iml" filepath="$PROJECT_DIR$/.idea/modules/SylvacCalipers/SylvacMeasurements.SylvacCalipers.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/SylvacCalipers/SylvacMeasurements.SylvacCalipers.androidTest.iml" filepath="$PROJECT_DIR$/.idea/modules/SylvacCalipers/SylvacMeasurements.SylvacCalipers.androidTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/SylvacCalipers/SylvacMeasurements.SylvacCalipers.main.iml" filepath="$PROJECT_DIR$/.idea/modules/SylvacCalipers/SylvacMeasurements.SylvacCalipers.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/SylvacCalipers/SylvacMeasurements.SylvacCalipers.unitTest.iml" filepath="$PROJECT_DIR$/.idea/modules/SylvacCalipers/SylvacMeasurements.SylvacCalipers.unitTest.iml" />
     </modules>
   </component>
 </project>

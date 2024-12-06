@@ -14,8 +14,8 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.os.Handler;
-import android.support.v4.content.LocalBroadcastManager;
-import android.support.v7.app.ActionBar;
+import androidx.localbroadcastmanager.content.LocalBroadcastManager;
+import androidx.appcompat.app.ActionBar;
 import android.util.Log;
 
 import java.util.List;
@@ -23,6 +23,8 @@ import java.util.Objects;
 import java.util.Set;
 
 import static com.patrick.Sylvac_Calipers.RecordFragment.MEASUREMENT_RECEIVED;
+
+import androidx.appcompat.app.ActionBar;
 
 /**
  * Author:      Patrick Snelgar
@@ -36,7 +38,7 @@ public class ConnectionManager implements CommunicationCharacteristics{
     private static final String TAG = ConnectionManager.class.getSimpleName();
 
     // Bluetooth objects used for connection
-    private BluetoothAdapter mBluetoothAdpater;
+    private BluetoothAdapter mBluetoothAdapter;
     private BluetoothManager mBluetoothManager;
     private BluetoothGatt mBluetoothGatt;
     private Handler mHandler;
@@ -54,7 +56,7 @@ public class ConnectionManager implements CommunicationCharacteristics{
     ConnectionManager(MainActivity pParent, String mTargetDeviceAddress) {
         mMainActivity = pParent;
         mBluetoothDeviceAddress = mTargetDeviceAddress;
-        if (mBluetoothAdpater == null || mBluetoothManager == null)
+        if (mBluetoothAdapter == null || mBluetoothManager == null)
             Log.d(TAG, "init:" + initializeBluetooth());
 
         mHandler = new Handler();
@@ -62,7 +64,7 @@ public class ConnectionManager implements CommunicationCharacteristics{
 
     void connect(String address){
         mMainActivity.stopScan();
-        if(mBluetoothAdpater == null || address == null){
+        if(mBluetoothAdapter == null || address == null){
             Log.e(TAG, "Adapter not set or invalid address");
             mMainActivity.setConnectionStatus("Error connecting.");
             return;
@@ -81,12 +83,12 @@ public class ConnectionManager implements CommunicationCharacteristics{
         }
 
         // New connection
-        final BluetoothDevice device = mBluetoothAdpater.getRemoteDevice(address);
+        final BluetoothDevice device = mBluetoothAdapter.getRemoteDevice(address);
         if(device == null){
             Log.e(TAG, "Device not found");
             return;
         }
-        Set<BluetoothDevice> bonded  = mBluetoothAdpater.getBondedDevices();
+        Set<BluetoothDevice> bonded  = mBluetoothAdapter.getBondedDevices();
         if(bonded.size() > 0) {
             for (BluetoothDevice bDevice : bonded) {
                 if (device.equals(bDevice)) {
@@ -116,8 +118,8 @@ public class ConnectionManager implements CommunicationCharacteristics{
                 return false;
             }
         }
-        mBluetoothAdpater = mBluetoothManager.getAdapter();
-        if(mBluetoothAdpater == null){
+        mBluetoothAdapter = mBluetoothManager.getAdapter();
+        if(mBluetoothAdapter == null){
             Log.e(TAG, "COULD NOT GET BLUETOOTH ADAPTER");
             return false;
         }

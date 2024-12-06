@@ -5,17 +5,18 @@ import android.os.Bundle;
 import android.preference.Preference;
 import android.preference.PreferenceFragment;
 import android.preference.PreferenceManager;
-import android.support.v7.app.ActionBar;
-import android.support.v7.app.AppCompatActivity;
+import androidx.appcompat.app.ActionBar;
 import android.util.Log;
 import android.view.MenuItem;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 /**
  * Author:      Patrick Snelgar
  * Name:        SettingsActivity
  * Description: Activity to show and change the Preferences for the application
  */
-public class SettingsActivity extends AppCompatActivity {
+public class SettingsActivity extends androidx.appcompat.app.AppCompatActivity {
 
     private SettingsFragment _settings;
 

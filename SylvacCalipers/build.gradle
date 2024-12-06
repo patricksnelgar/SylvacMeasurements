@@ -1,11 +1,10 @@
 apply plugin: 'com.android.application'
 android {
-    compileSdkVersion 23
-    flavorDimensions "default"
+    compileSdk 34
     defaultConfig {
         applicationId "com.patrick.Sylvac_Calipers"
-        minSdkVersion 23
-        targetSdkVersion 23
+        minSdkVersion 33
+        targetSdkVersion 33
     }
     buildTypes {
         release {
@@ -13,19 +12,17 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
         }
     }
-    productFlavors {
-        Nexus5API23 {
-            dimension "default"
-        }
-    }
 
-    lintOptions {
-        checkReleaseBuilds false
-    }
+    namespace "com.patrick.Sylvac_Calipers"
 }
 
 dependencies {
-    compile 'com.android.support:appcompat-v7:23.1.1'
-    compile 'com.android.support:support-v4:23.1.1'
-    compile 'com.android.support:design:23.1.1'
+    implementation "androidx.appcompat:appcompat:1.7.0"
+    implementation "androidx.coordinatorlayout:coordinatorlayout:1.2.0"
+    implementation 'com.google.android.material:material:1.12.0'
+    implementation 'androidx.viewpager2:viewpager2:1.1.0'
+    implementation "androidx.fragment:fragment:1.8.5"
+    implementation "androidx.annotation:annotation:1.9.1"
+    implementation "androidx.core:core:1.13.0"
 }
+

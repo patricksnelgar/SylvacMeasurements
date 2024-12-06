@@ -1,0 +1,4 @@
+com.patrick.Sylvac_Calipers.test.SylvacCalipers-androidTest-0 C:\Users\hrtpxs\StudioProjects\SylvacMeasurements\SylvacCalipers\build\generated\res\resValues\androidTest\debug
+com.patrick.Sylvac_Calipers.test.SylvacCalipers-mergeDebugAndroidTestResources-1 C:\Users\hrtpxs\StudioProjects\SylvacMeasurements\SylvacCalipers\build\intermediates\incremental\debugAndroidTest\mergeDebugAndroidTestResources\merged.dir
+com.patrick.Sylvac_Calipers.test.SylvacCalipers-mergeDebugAndroidTestResources-2 C:\Users\hrtpxs\StudioProjects\SylvacMeasurements\SylvacCalipers\build\intermediates\incremental\debugAndroidTest\mergeDebugAndroidTestResources\stripped.dir
+com.patrick.Sylvac_Calipers.test.SylvacCalipers-debugAndroidTest-3 C:\Users\hrtpxs\StudioProjects\SylvacMeasurements\SylvacCalipers\build\intermediates\merged_res\debugAndroidTest\mergeDebugAndroidTestResources

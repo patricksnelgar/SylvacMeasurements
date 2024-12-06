@@ -1,6 +1,7 @@
 package com.patrick.Sylvac_Calipers;
 
 import android.Manifest;
+import android.annotation.SuppressLint;
 import android.bluetooth.BluetoothAdapter;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -10,13 +11,14 @@ import android.os.Build;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.provider.Settings;
-import android.support.design.widget.TabLayout;
-import android.support.v4.app.ActivityCompat;
-import android.support.v4.content.ContextCompat;
-import android.support.v4.content.LocalBroadcastManager;
-import android.support.v4.view.ViewPager;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
+import com.google.android.material.tabs.TabLayout;
+
+
+import androidx.core.app.ActivityCompat;
+import androidx.core.content.ContextCompat;
+import androidx.localbroadcastmanager.content.LocalBroadcastManager;
+import androidx.viewpager.widget.ViewPager;
+import androidx.appcompat.widget.Toolbar;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -31,7 +33,7 @@ import java.util.List;
  * Name:        MainActivity
  * Description: main entry point of the application, handles the different fragments and provides the context for preferences.
  */
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends androidx.appcompat.app.AppCompatActivity {
 
     public static final String PREFERENCE_VALUES_PER_ENTRY = "values_per_entry";
     public static final String PREFERENCE_BEEP_ON_RECEIVE = "beep_on_receive";
@@ -57,6 +59,7 @@ public class MainActivity extends AppCompatActivity {
     /**
      * Called when the activity is first created.
      */
+    @SuppressLint("ObsoleteSdkInt")
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -89,7 +92,7 @@ public class MainActivity extends AppCompatActivity {
         ViewPager mPager = (ViewPager) findViewById(R.id.view_pager);
         mPager.setAdapter(mAdapter);
 
-        TabLayout mTabLayout = (TabLayout) findViewById(R.id.tab_layout);
+        TabLayout mTabLayout = findViewById(R.id.tab_layout);
         mTabLayout.setupWithViewPager(mPager);
 
         // Check if the local device supports Bluetooth LE
@@ -98,29 +101,27 @@ public class MainActivity extends AppCompatActivity {
             finish();
         }
 
-        // Need permissions in OS 23+
-        if(Build.VERSION.SDK_INT >= 23) {
 
-            List<String> permissionList = new ArrayList<>();
-            // Request access to storage for saving files
-            if (ContextCompat.checkSelfPermission(this, Manifest.permission.WRITE_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED ||
-                    ContextCompat.checkSelfPermission(this, Manifest.permission.READ_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED) {
-                permissionList.add(Manifest.permission.WRITE_EXTERNAL_STORAGE);
-                permissionList.add(Manifest.permission.READ_EXTERNAL_STORAGE);
-            }
 
-            // Request location access for BT scan results
-            if(ContextCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED){
-                permissionList.add(Manifest.permission.ACCESS_COARSE_LOCATION);
-            }
+        List<String> permissionList = new ArrayList<>();
 
-            if(ContextCompat.checkSelfPermission(this, Manifest.permission.BLUETOOTH_ADMIN) != PackageManager.PERMISSION_GRANTED) {
-               permissionList.add(Manifest.permission.BLUETOOTH_ADMIN);
-            }
 
-            if(permissionList.size() > 0) ActivityCompat.requestPermissions(this, permissionList.toArray(new String[permissionList.size()]), 100) ;
+        // Request location access for BT scan results
+        if(ContextCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED){
+            permissionList.add(Manifest.permission.ACCESS_COARSE_LOCATION);
         }
+
+        if(ContextCompat.checkSelfPermission(this, Manifest.permission.BLUETOOTH_ADMIN) != PackageManager.PERMISSION_GRANTED ||
+            ContextCompat.checkSelfPermission(this, Manifest.permission.BLUETOOTH_SCAN) != PackageManager.PERMISSION_GRANTED ||
+            ContextCompat.checkSelfPermission(this, Manifest.permission.BLUETOOTH_CONNECT) != PackageManager.PERMISSION_GRANTED){
+           permissionList.add(Manifest.permission.BLUETOOTH_ADMIN);
+           permissionList.add(Manifest.permission.BLUETOOTH_SCAN);
+           permissionList.add(Manifest.permission.BLUETOOTH_CONNECT);
+        }
+
+        if(permissionList.size() > 0) ActivityCompat.requestPermissions(this, permissionList.toArray(new String[permissionList.size()]), 100) ;
     }
+
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu){
