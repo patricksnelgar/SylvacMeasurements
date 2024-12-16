@@ -3,12 +3,9 @@
           package="com.patrick.Sylvac_Calipers"
           android:versionName="1.4">
 
-    <uses-permission android:name="android.permission.BLUETOOTH"/>
-    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN"/>
-    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <uses-feature android:name="android.hardware.bluetooth_le" android:required="true"/>
-    <uses-feature android:name="android.hardware.bluetooth" android:required="true" />
-    <uses-permission android:name="android.permission.BLUETOOTH_SCAN" />
+    <uses-permission android:name="android.permission.BLUETOOTH_SCAN"
+                     android:usesPermissionFlags="neverForLocation" />
     <uses-permission android:name="android.permission.BLUETOOTH_CONNECT" />
 
     <application
@@ -19,7 +16,6 @@
             android:name="com.patrick.Sylvac_Calipers.MainActivity"
             android:exported="true"
             android:windowSoftInputMode="adjustPan"
-            android:screenOrientation="fullSensor"
             android:theme="@style/TealBaseTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
