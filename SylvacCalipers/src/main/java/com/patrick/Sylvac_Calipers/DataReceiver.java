@@ -170,6 +170,14 @@ public class DataReceiver extends BroadcastReceiver {
                             }
                         }
                         final File mOutput = new File(mFolderPath,mPrefs.getString(MainActivity.PREFERENCE_AUTO_SAVE_FILENAME, "----"));
+                        if(!mOutput.exists()){
+                            Log.d(TAG, "Auto save file does not exist.");
+                            try {
+                                mOutput.createNewFile();
+                            } catch (IOException e) {
+                                e.printStackTrace();
+                            }
+                        }
                         try {
                             mFileStream = new FileOutputStream(mOutput,true);
                             PrintWriter mPw = new PrintWriter(mFileStream);

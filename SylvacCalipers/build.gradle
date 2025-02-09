@@ -13,6 +13,10 @@ android {
         }
     }
 
+    buildFeatures {
+        buildConfig = true
+    }
+
     namespace "com.patrick.Sylvac_Calipers"
 }
 
