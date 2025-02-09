@@ -2,15 +2,20 @@ package com.patrick.Sylvac_Calipers;
 
 import android.Manifest;
 import android.annotation.SuppressLint;
+import android.app.Activity;
 import android.bluetooth.BluetoothAdapter;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.media.MediaPlayer;
+import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
+import android.os.Environment;
 import android.preference.PreferenceManager;
 import android.provider.Settings;
+
+import com.google.android.material.snackbar.Snackbar;
 import com.google.android.material.tabs.TabLayout;
 
 
@@ -23,6 +28,7 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.Toast;
 
 import java.util.ArrayList;
@@ -105,16 +111,29 @@ public class MainActivity extends androidx.appcompat.app.AppCompatActivity {
 
         List<String> permissionList = new ArrayList<>();
 
-
-        // Request location access for BT scan results
-        if(ContextCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED){
-            permissionList.add(Manifest.permission.ACCESS_COARSE_LOCATION);
+        if(!Environment.isExternalStorageManager()) {
+            Log.d(TAG, "No permission to write external storage");
+            //startActivityForResult(new Intent(Settings.ACTION_MANAGE_APP_ALL_FILES_ACCESS_PERMISSION, Uri.parse("package: com.patrick.Sylvac_Calipers")), 501);
+            Snackbar.make(findViewById(android.R.id.content), "File permissions needed.", Snackbar.LENGTH_INDEFINITE)
+                    .setAction("Settings", new View.OnClickListener() {
+                        @Override
+                        public void onClick(View view) {
+                            try {
+                                Uri uri = Uri.parse("package:" +  getPackageName());
+                                Intent intent = new Intent(Settings.ACTION_MANAGE_APP_ALL_FILES_ACCESS_PERMISSION, uri);
+                                startActivity(intent);
+                            } catch(Exception e) {
+                                Log.e(TAG, "Error requesting app file permissions: " + e.getLocalizedMessage());
+                                Intent intent = new Intent();
+                                intent.setAction(Settings.ACTION_MANAGE_ALL_FILES_ACCESS_PERMISSION);
+                                startActivity(intent);
+                            }
+                        }
+                    }).show();
         }
 
-        if(ContextCompat.checkSelfPermission(this, Manifest.permission.BLUETOOTH_ADMIN) != PackageManager.PERMISSION_GRANTED ||
-            ContextCompat.checkSelfPermission(this, Manifest.permission.BLUETOOTH_SCAN) != PackageManager.PERMISSION_GRANTED ||
-            ContextCompat.checkSelfPermission(this, Manifest.permission.BLUETOOTH_CONNECT) != PackageManager.PERMISSION_GRANTED){
-           permissionList.add(Manifest.permission.BLUETOOTH_ADMIN);
+        if(ActivityCompat.checkSelfPermission(this, android.Manifest.permission.BLUETOOTH_CONNECT) != PackageManager.PERMISSION_GRANTED ||
+                ActivityCompat.checkSelfPermission(this, android.Manifest.permission.BLUETOOTH_SCAN) != PackageManager.PERMISSION_GRANTED){
            permissionList.add(Manifest.permission.BLUETOOTH_SCAN);
            permissionList.add(Manifest.permission.BLUETOOTH_CONNECT);
         }
